@@ -1,0 +1,14 @@
+.desktop {
+    display: none;
+}
+
+/* DESKTOP - 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
