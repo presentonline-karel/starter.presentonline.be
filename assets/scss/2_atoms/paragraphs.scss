@@ -1,0 +1,13 @@
+/* STANDARD LAYOUT FOR PARAGRAPHS */
+p, .p {
+    font-family: $paragraph-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $neutrals-900;
+
+    &.p-lg {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}

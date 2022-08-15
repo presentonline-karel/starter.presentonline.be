@@ -1,56 +1,101 @@
-/*.button {
-    display: inline-block;
-    margin: 0;
-    padding: 10px 20px;
+.button {
+    // GENERAL STYLES FOR BUTTON
+    &-primary,
+    &-secondary,
+    &-white {
+        display: inline-block;
+        margin: 0;
+        padding: 12px 24px;
 
-    border-radius: $border-radius-medium;
-    border: none;
+        border-radius: $border-radius-medium;
+        border: none;
 
-    color: $neutrals-100;
-    background-color: $primary-500;
+        font-family: $title-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        letter-spacing: -1%;
 
-    font-family: $title-font;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
+        transition: all $transition-time-short;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-    transition: all $transition-time-short;
-
-    &:hover {
-        cursor: pointer;
-        background-color: $primary-600;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
     }
 
-    &:focus {
-        background: $primary-500;
+    // PRIMARY BUTTON
+    &-primary {
+        background-color: $primary-500;
+        color: $neutrals-100;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary-600;
+        }
     }
 
-    //WHITE BUTTONS
+    // SECONDARY BUTTON
+    &-secondary {
+        background-color: $primary-100;
+        color: $primary-500;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary-200;
+        }
+    }
+
+    // WHITE BUTTON
     &-white {
         background-color: $neutrals-100;
-        color: $primary-600;
+        color: $primary-500;
 
         &:hover {
-            background-color: $neutrals-100;
+            cursor: pointer;
+            background-color: $primary-100;
         }
     }
+}
 
-    //FILTER BUTTON
-    &-filter {
-        background-color: $primary-100;
-        color: $neutrals-900;
-        border-radius: 0;
-        transition: $transition-time-short;
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .button {
+        &-primary {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 500;
+        }
 
-        &:hover {
+        //PRIMARY BUTTON PRIMARY-500
+        &.primary-500 {
             background-color: $primary-500;
             color: $neutrals-100;
+
+            &:hover {
+                background-color: $primary-600;
+            }
+        }
+
+        //PRIMARY BUTTON PRIMARY-100
+        &.primary-100 {
+            background-color: $primary-100;
+            color: $primary-500;
+
+            &:hover {
+                background-color: $primary-200;
+            }
+        }
+
+        //PRIMARY BUTTON WHITE
+        &.white {
+            background-color: $neutrals-100;
+            color: $primary-500;
+
+            &:hover {
+                background-color: $primary-100;
+            }
         }
     }
-}*/
+}

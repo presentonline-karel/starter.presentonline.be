@@ -1,0 +1,28 @@
+/* ICONS IN BUTTONS */
+.button {
+    i {
+        font-size: 12px;
+        line-height: 12px;
+        transition: $transition-time-short;
+        position: relative;
+        bottom: 1px;
+    }
+
+    .anchor-first {
+        margin-left: $icon-margin-button;
+    }
+
+    .icon-first {
+        margin-right: $icon-margin-button;
+    }
+
+    &:hover {
+        .anchor-first {
+            margin-left: $icon-margin-button-hover;
+        }
+
+        .icon-first {
+            margin-right: $icon-margin-button-hover;
+        }
+    }
+}

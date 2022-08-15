@@ -1,0 +1,65 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
+    color: $neutrals-1100;
+    font-weight: 600;
+    letter-spacing: -1%;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -1.5%;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* DESKTOP - 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    h1 {
+        font-size: 72px;
+        line-height: 72px;
+    }
+    
+    h2 {
+        font-size: 56px;
+        line-height: 60px;
+    }
+    
+    h3 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+    
+    h4 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    
+    h5 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h6 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
