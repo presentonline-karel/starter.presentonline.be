@@ -1,0 +1,99 @@
+.footer {
+    padding: 40px 16px 24px 16px;
+    background-color: $primary-500;
+    position: relative;
+
+    .back-to-top {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: $neutrals-100;
+        border-radius: $border-radius-medium;
+        position: absolute;
+        top: 40px;
+        right: 16px;
+
+        i {
+            font-size: 16px;
+            line-height: 16px;
+            width: 16px;
+            height: 16px;
+            top: 12px;
+            left: 12px;
+            color: $primary-500;
+            position: relative;
+        }
+
+        &:hover {
+            background-color: $primary-100;
+        }
+    }
+
+    .intro {
+        margin-bottom: 40px;
+
+        .footer-logo {
+            width: 100px;
+            height: 40px;
+            object-fit: contain;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $neutrals-100;
+            margin-bottom: 16px;
+        }
+    }
+
+    .contact,
+    .sitemap {
+        margin-bottom: 32px;
+    }
+
+    &__block {
+        h6 {
+            color: $neutrals-100;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__a {
+        color: $neutrals-100;
+        display: block;
+        margin-bottom: 7px;
+        font-family: $paragraph-font;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        transition: all $transition-time-short;
+
+        &:hover {
+            color: $primary-100;
+
+            .tag {
+                background-color: $primary-100;
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .tag {
+            margin-right: 7px;
+            transition: all $transition-time-short;
+        }
+    }
+
+    &-line {
+        background-color: $neutrals-100;
+        height: 0.5px;
+        margin-bottom: 20px;
+    }
+
+    &__copyright {
+        text-align: center;
+        color: $neutrals-100;
+    }
+}

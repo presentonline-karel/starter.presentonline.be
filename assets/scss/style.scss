@@ -16,3 +16,31 @@
 @import "./2_atoms/tags";
 @import "./2_atoms/titles";
 @import "./2_atoms/containers";
+
+
+
+/* MOLECULES */
+@import "./3_molecules/list";
+@import "./3_molecules/socials";
+
+//home
+@import "./3_molecules/home/testimonial";
+@import "./3_molecules/home/bullet";
+@import "./3_molecules/home/client";
+@import "./3_molecules/home/service";
+
+
+
+/* ORGANISMS */
+@import "./4_organisms/nav";
+@import "./4_organisms/sections";
+@import "./4_organisms/cta";
+@import "./4_organisms/content";
+@import "./4_organisms/footer";
+
+//home
+@import "./4_organisms/home/header-home";
+@import "./4_organisms/home/clients";
+@import "./4_organisms/home/services";
+@import "./4_organisms/home/cta";
+@import "./4_organisms/home/testimonials";

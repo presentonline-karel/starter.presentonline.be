@@ -1,0 +1,14 @@
+.clients-section {
+    background-color: $neutrals-200;
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .clients {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}

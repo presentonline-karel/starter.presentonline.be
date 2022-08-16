@@ -1,0 +1,28 @@
+.socials {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    .social {
+        width: 40px;
+        height: 40px;
+        background-color: $neutrals-100;
+        border-radius: $border-radius-medium;
+        text-align: center;
+        transition: all $transition-time-short;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary-100;
+        }
+
+        i {
+            color: $primary-500;
+            font-size: 20px;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            padding-top: 10px;
+        }
+    }
+}

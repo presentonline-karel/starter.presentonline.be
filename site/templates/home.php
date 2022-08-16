@@ -1,29 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php snippet('general/header') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PO Starter Kit</title>
+<!-- CONTAINER HOME -->
+<div class="container container-home">
 
-    <!-- STYLESHEETS -->
-    <?= css('build/css/style.css') ?>
+    <!-- HEADER HOME -->
+    <header class="header header-home">
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <!-- NAV -->
+        <?php snippet('general/nav') ?>
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+        <!-- HEADER HOME - CONTENT -->
+        <div class="header-home__content">
+            <div class="header-home__content__text">
+                <h1>No troubles,<br> Yes <span>amazing vacation!</span></h1>
+                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
-<body>
-    <h1>PO Starter Kit</h1>
-    <button class="button button-primary">Explore <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
-    <button class="button button-secondary">Explore</button>
-    <button class="button button-white">Explore</button>
-</body>
+                <div class="buttons">
+                    <a class="button button-primary" href="#">Get started</a>
+                    <a class="button button-secondary" href="#">Live demo <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
 
-</html>
+            <div class="header-home__content__image">
+                <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- CLIENTS -->
+    <section class="clients-section section">
+        <h2>Our clients</h2>
+
+        <div class="clients">
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
+            </div>
+
+            <div class="client">
+                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SERVICES -->
+    <section class="services-section section">
+        <h2>Services</h2>
+
+        <div class="services">
+            <div class="service">
+                <div class="service__icon-container">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+
+                <h3>Holiday planning</h3>
+                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            </div>
+
+            <div class="service">
+                <div class="service__icon-container">
+                    <i class="fa fa-plane" aria-hidden="true"></i>
+                </div>
+
+                <h3>Flight followup</h3>
+                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            </div>
+
+            <div class="service">
+                <div class="service__icon-container">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                </div>
+
+                <h3>Transport provider</h3>
+                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to dive in? Start your free trial now!</h2>
+        <a class="button-white" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+    </section>
+
+
+
+    <!-- CONTENT -->
+    <section class="content">
+
+        <!-- Content image -->
+        <div class="content__image">
+            <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
+        </div>
+
+        <!-- Content text -->
+        <div class="content__text">
+            <h2>Our approach</h2>
+            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+
+            <ul class="list">
+                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 1</li>
+                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 2</li>
+                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 3</li>
+                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 4</li>
+            </ul>
+
+            <a class="button-primary" href="#">Explore <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+    </section>
+
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section">
+        <h2 class="testimonials__title"><?= $page->testimonialsTitle() ?></h2>
+
+        <!-- Testimonials items -->
+        <?php if ($page->testimonials()->isNotEmpty()) : ?>
+            <div class="testimonials-items">
+                <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+
+                    <!-- testimonial -->
+                    <div class="slide-container testimonial">
+                        <img class="testimonial__logo" src="<?= $site->url() ?>/assets/img/logo-client-2.svg" />
+
+                        <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
+
+                        <p class="testimonial__p"><?= $testimonial->testimonial() ?></p>
+
+                        <div class="testimonial__id flex">
+
+                            <!-- Testimonial image (+fallback) -->
+                            <?php if ($testimonialImageWebp = $testimonial->imageWebp()->toFile()) : ?>
+                                <?php if ($testimonialImageJpg = $testimonial->imageWebp()->toFile()) : ?>
+                                    <picture>
+                                        <source srcSet="<?= $testimonialImageWebp->url() ?>" type="image/webp" />
+                                        <source srcSet="<?= $testimonialImageJpg->url() ?>" type="image/jpg" />
+                                        <img class="testimonial__id__picture" src="<?= $testimonialImageJpg->url() ?>" alt="<?= $testimonialImageJpg->alt() ?>" />
+                                    </picture>
+                                <?php endif; ?>
+                            <?php endif; ?>
+
+                            <div>
+                                <h5 class="testimonial__id__name"><?= $testimonial->name() ?></h5>
+                                <p class="testimonial__id__function"><?= $testimonial->function() ?></p>
+                            </div>
+                        </div>
+
+                        <div class="arrows flex">
+                            <div class="prev">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="next">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <!-- testimonials bullets -->
+            <div class="bullets">
+                <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+                    <div class="bullet"></div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    </section>
+
+
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
+
+        <div class="buttons">
+            <a class="button button-primary" href="#">Free trial</a>
+            <a class="button button-primary" href="#">Live demo <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+    </section>
+</div>
+
+
+
+<!-- JS SCRIPTS -->
+<?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
+
+<?php snippet('general/footer') ?>

@@ -1,0 +1,63 @@
+title: Home
+icon: home
+
+options:
+  changeSlug: false
+
+columns:
+
+  #HOME TEXT CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Testimonials
+      testimonialsHeadline:
+        label: Getuigenissen
+        type: headline
+        numbered: false
+      testimonialsTitle:
+        label: Titel getuigenissen
+        type: text
+      testimonials:
+        label: Getuigenissen
+        type: structure
+        columns:
+          logo:
+            width: 1/8
+          imageJpg:
+            width: 1/8
+          name:
+            width: 2/8
+          function:
+            width: 2/8
+          testimonial:
+            width: 3/8
+        fields:
+          logo:
+            label: Logo klant
+            type: files
+            max: 1
+            required: true
+          imageWebp:
+            label: Foto WEBP
+            type: files
+            max: 1
+          imageJpg:
+            label: Foto JPG
+            type: files
+            max: 1
+          name:
+            label: Naam
+            type: text
+          function:
+            label: Functie
+            type: text
+          testimonial:
+            label: Getuigenis
+            type: writer
+            inline: true
+
+      #line
+      line-a:
+        type: line

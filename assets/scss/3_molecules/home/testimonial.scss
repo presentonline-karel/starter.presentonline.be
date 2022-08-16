@@ -1,0 +1,131 @@
+//to make testimonial slider work
+.slide-container {
+    display: none;
+    opacity: 0;
+    transition: all $transition-time-short;
+
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.testimonial {
+    width: 100%;
+    background-color: $neutrals-100;
+    padding: 24px;
+    position: relative;
+    border-radius: $border-radius-medium;
+    box-shadow: $card-shadow;
+
+    &__logo {
+        width: 100px;
+        height: 40px;
+        margin-bottom: 32px;
+    }
+    
+    .quotes {
+        font-size: 50px;
+        line-height: 50px;
+        position: absolute;
+        top: 88px;
+        left: 24px;
+        color: $primary-200;
+        z-index: 0;
+    }
+
+    &__p {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+    }
+
+    &__id {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        &__picture {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: $border-radius-medium;
+        }
+
+        &__name {
+            color: $primary-500;
+            margin-bottom: 3px;
+        }
+
+        &__function {
+            line-height: 16px;
+        }
+    }
+
+    .arrows {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 7px;
+        
+        .prev, .next {
+            width: 40px;
+            height: 40px;
+            border-radius: $border-radius-medium;
+            background-color: $primary-500;
+            text-align: center;
+            transition: all $transition-time-short;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $primary-600;
+            }
+
+            i {
+                font-size: 16px;
+                line-height: 16px;
+                width: 14px;
+                height: 16px;
+                color: $neutrals-100;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .testimonial {
+        padding: 105px 50px 75px 50px;
+        text-align: left;
+
+        .quotes {
+            top: 75px;
+            left: 50px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .testimonial {
+        padding: 105px 190px 75px 190px;
+
+        .quotes {
+            top: 75px;
+            left: 190px;
+        }
+
+        .arrows {
+            position: absolute;
+            transform: translate(0%, -50%);
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+        }
+    }
+}

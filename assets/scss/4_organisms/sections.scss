@@ -1,0 +1,59 @@
+.section {
+    padding: 64px 16px;
+}
+
+/* TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-portrait) {
+    .section {
+        padding: 75px 50px;
+    }
+}
+
+/* TABLET LANDSCAPE */
+@media only screen and (min-width: $tablet-landscape) {
+    .section {
+        padding: 75px 170px;
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .section {
+        padding: 125px 100px;
+    }
+}
+
+/* DESKTOP - 1600px */
+@media only screen and (min-width: $desktop-5) {
+    .section {
+        padding: 125px 180px !important;
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .section {
+        padding: 125px 340px !important;
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .section {
+        padding: 125px 660px !important;
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .section {
+        padding: 125px 1100px !important;
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .section {
+        padding: 125px 1300px !important;
+    }
+}
