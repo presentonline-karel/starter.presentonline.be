@@ -1,0 +1,16 @@
+.header {
+    &__content {
+        &__text {
+            padding: 24px 16px 48px 16px;
+            text-align: center;
+
+            h1 {
+                margin-bottom: 16px;
+            }
+
+            p {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

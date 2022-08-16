@@ -1,0 +1,14 @@
+//ABOUT CTAs
+.container-blog {
+    .cta {
+        background-color: $primary-100;
+        
+        h2 {
+            color: $neutrals-1100;
+
+            span {
+                color: $primary-500;
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
 <div id="container" class="container container-home">
 
     <!-- HEADER HOME -->
-    <header class="header header-home">
+    <header id="header" class="header header-home">
 
         <!-- NAV -->
         <?php snippet('general/nav') ?>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="header-home__content__image">
+            <div class="header__content__image">
                 <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
             </div>
         </div>
@@ -30,7 +30,7 @@
 
 
     <!-- CLIENTS -->
-    <section class="clients-section section">
+    <section id="clients" class="clients-section section">
         <h2>Our clients</h2>
 
         <div class="clients">
@@ -71,7 +71,7 @@
 
 
     <!-- SERVICES -->
-    <section class="services-section section">
+    <section id="services" class="services-section section">
         <h2>Services</h2>
 
         <div class="services">
@@ -107,7 +107,7 @@
 
 
     <!-- CTA -->
-    <section class="cta">
+    <section id="cta-1" class="cta">
         <h2>Ready to dive in?<br> Start your free trial now!</h2>
         <a class="button-white" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
     </section>
@@ -115,7 +115,7 @@
 
 
     <!-- CONTENT -->
-    <section class="content">
+    <section id="content" class="content">
 
         <!-- Content image -->
         <div class="content__image">
@@ -141,7 +141,7 @@
 
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials section">
+    <section id="testimonials" class="testimonials section">
         <h2><?= $page->testimonialsTitle() ?></h2>
 
         <!-- Testimonials items -->
@@ -200,7 +200,7 @@
 
 
     <!-- CTA -->
-    <section class="cta">
+    <section id="cta-2" class="cta">
         <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
 
         <div class="buttons">

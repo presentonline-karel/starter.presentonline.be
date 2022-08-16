@@ -30,10 +30,18 @@
 @import "./3_molecules/home/client";
 @import "./3_molecules/home/service";
 
+//about
+@import "./3_molecules/about/history-item";
+@import "./3_molecules/about/employee";
+
+//blog
+@import "./3_molecules/blog/article";
+
 
 
 /* ORGANISMS */
 @import "./4_organisms/nav";
+@import "./4_organisms/header";
 @import "./4_organisms/sections";
 @import "./4_organisms/cta";
 @import "./4_organisms/content";
@@ -45,3 +53,13 @@
 @import "./4_organisms/home/services";
 @import "./4_organisms/home/cta";
 @import "./4_organisms/home/testimonials";
+
+//about
+@import "./4_organisms/about/history";
+@import "./4_organisms/about/team";
+@import "./4_organisms/about/cta";
+
+//blog
+@import "./4_organisms/blog/blog-filter";
+@import "./4_organisms/blog/articles";
+@import "./4_organisms/blog/cta";

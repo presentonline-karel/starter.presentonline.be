@@ -1,0 +1,81 @@
+.blog-filter {
+    padding: 0px 16px 32px 16px;
+
+    .form-filter {
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        margin-bottom: 16px;
+
+        .input {
+            width: calc(100% - 118px);
+            height: 100%;
+            padding: 8px 16px;
+
+            border-radius: $border-radius-medium 0 0 $border-radius-medium;
+            border: none !important;
+
+            color: $neutrals-1100;
+            background-color: $neutrals-400;
+
+            font-family: $paragraph-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::-webkit-input-placeholder, &:-ms-input-placeholder, &::placeholder {
+                color: $neutrals-900;
+            }
+        }
+
+        .button-primary {
+            width: 118px;
+            border-radius: 0 $border-radius-medium $border-radius-medium 0;
+        }
+    }
+
+    .filter-tags {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__remove {
+            padding: 0 8px 0 0;
+            border-right: 1px solid $neutrals-1100;
+            display: block;
+
+            &__tag {
+                white-space: nowrap;
+                background-color: $primary-500 !important;
+                color: $neutrals-100 !important;
+            }
+        }
+
+        &__tags {
+            padding: 0 0 0 8px;
+            display: inline-block;
+            width: auto;
+            height: 24px;
+            overflow-x: auto;
+            white-space: nowrap;
+            overflow-y: hidden;
+        }
+
+        .tag {
+            border: none;
+            outline: none;
+
+            background-color: $neutrals-400;
+            color: $neutrals-1100;
+            border-radius: $border-radius-medium;
+        }
+    }
+}

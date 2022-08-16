@@ -1,0 +1,17 @@
+.team {
+    background-color: $neutrals-200;
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-bottom: 32px;
+    }
+
+    .employees {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 8px;
+    }
+}
