@@ -2,7 +2,7 @@
         <footer id="footer" class="footer">
 
             <!-- Back to top -->
-            <a class="back-to-top" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+            <a class="back-to-top" href="#container"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
             <div class="footer-blocks">
                 <div class="footer__block intro">

@@ -1,7 +1,7 @@
 <?php snippet('general/header') ?>
 
 <!-- CONTAINER FAQ -->
-<div class="container container-faq">
+<div id="container" class="container container-faq">
 
     <!-- FAQs -->
     <main class="faqs">

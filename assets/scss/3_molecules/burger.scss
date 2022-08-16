@@ -1,0 +1,83 @@
+.nav {
+
+    //GENERAL STYLES
+    .burger {
+        z-index: 100;
+        position: absolute;
+        right: 16px;
+        top: 28px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        //BURGER LAYOUT
+        .burger-line {
+            width: 10px;
+            height: 3px;
+            background-color: $neutrals-1100;
+            margin-top: 3px;
+            transition: all $transition-time-short ease;
+            position: relative;
+            z-index: 101;
+        }
+
+        .line1 {
+            width: 25px;
+        }
+
+        .line2 {
+            width: 20px;
+        }
+
+        .line3 {
+            width: 15px;
+        }
+
+        //CROSS LAYOUT
+        &.toggle {
+            z-index: 100;
+
+            .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+                bottom: 3px;
+                right: 1px;
+            }
+
+            .line2 {
+                display: none;
+            }
+
+            .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+                top: 7px;
+                right: 1px;
+            }
+
+            .burger-line {
+                background-color: $neutrals-100;
+                width: 25px;
+                height: 3px;
+                position: relative;
+            }
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .nav {
+        .burger {
+            right: 48px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media screen and (min-width: $desktop-1) {
+    .nav {
+        .burger {
+            display: none;
+        }
+    }
+}

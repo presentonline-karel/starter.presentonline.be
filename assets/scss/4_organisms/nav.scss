@@ -5,87 +5,14 @@
     padding: 24px 16px;
     overflow-x: hidden;
     overflow-y: hidden;
-
-    //MENU SHADOW
-    &-dark {
-        box-shadow: $menu-shadow;
-    }
+    box-shadow: $menu-shadow;
 
     .logo {
         width: 100px;
         height: 40px;
         object-fit: contain;
         position: relative;
-        top: 3px;
-    }
-
-    .burger {
-        z-index: 100;
-        position: absolute;
-        right: 16px;
-        top: 28px;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        //BURGER LAYOUT
-        div {
-            width: 10px;
-            height: 3px;
-            background-color: $neutrals-100;
-            margin-top: 3px;
-            transition: all $transition-time-short ease;
-            position: relative;
-            z-index: 101;
-        }
-
-        .line1 {
-            width: 25px;
-        }
-
-        .line2 {
-            width: 20px;
-        }
-
-        .line3 {
-            width: 15px;
-        }
-
-        //DARK BURGER LAYOUT
-        &.dark {
-            div {
-                background-color: $neutrals-900;
-            }
-        }
-
-        //CROSS LAYOUT
-        &.toggle {
-            z-index: 100;
-
-            .line1 {
-                transform: rotate(-45deg) translate(-5px, 6px);
-                bottom: 3px;
-                right: 1px;
-            }
-
-            .line2 {
-                display: none;
-            }
-
-            .line3 {
-                transform: rotate(45deg) translate(-5px, -6px);
-                top: 7px;
-                right: 1px;
-            }
-
-            div {
-                background-color: $neutrals-100;
-                width: 25px;
-                height: 3px;
-                position: relative;
-            }
-        }
+        top: 4px;
     }
 
     //MOBILE MENU
@@ -115,7 +42,7 @@
         .button {
             display: inline;
             position: absolute;
-            bottom: 50px;
+            bottom: 40px;
             transform: translate(-50%, 0%);
             left: 50%;
             z-index: 100;
@@ -146,7 +73,6 @@
 
             .nav__link__item {
                 display: inline-block;
-                //opacity: 1;
                 color: $neutrals-100;
 
                 &.active {
@@ -167,10 +93,10 @@
         .nav__link {
             display: block;
             font-family: $title-font;
-            font-size: 34px;
-            line-height: 42px;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-size: 56px;
+            line-height: 60px;
+            font-weight: 600;
+            margin-bottom: 24px;
             color: $neutrals-100;
             text-align: left;
             padding: 0 16px;
@@ -182,7 +108,7 @@
         }
     }
 
-    .quotation-button {
+    .primary-cta {
         display: none;
     }
 
@@ -199,23 +125,19 @@
     }
 }
 
-/* TABLET 768PX - SPACING AANPASSEN NAAR /8 */
+/* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .nav {
-        padding: 30px 50px 20px 50px;
+        padding: 32px 48px 24px 48px;
 
         .nav-links {
             .nav__link {
-                padding: 0 50px;
+                padding: 0 48px;
             }
 
             .logo {
-                left: 50px;
+                left: 48px;
             }
-        }
-
-        .burger {
-            right: 50px;
         }
     }
 }
@@ -224,11 +146,10 @@
 @media screen and (min-width: $desktop-1) {
     .nav {
         height: 110px;
-        padding: 30px 100px 30px 100px;
+        //padding: 32px 96px 32px 96px;
         justify-content: space-between;
         align-items: center;
-        gap: 75px;
-        height: 110px;
+        //gap: 75px;
 
         .nav-links {
             justify-content: center;
@@ -298,10 +219,6 @@
             .logo {
                 display: none;
             }
-        }
-
-        .burger {
-            display: none;
         }
 
         .quotation-button {

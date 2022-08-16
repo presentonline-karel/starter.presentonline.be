@@ -1,7 +1,7 @@
 <?php snippet('general/header') ?>
 
 <!-- CONTAINER HOME -->
-<div class="container container-home">
+<div id="container" class="container container-home">
 
     <!-- HEADER HOME -->
     <header class="header header-home">
@@ -108,7 +108,7 @@
 
     <!-- CTA -->
     <section class="cta">
-        <h2>Ready to dive in? Start your free trial now!</h2>
+        <h2>Ready to dive in?<br> Start your free trial now!</h2>
         <a class="button-white" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
     </section>
 
@@ -142,7 +142,7 @@
 
     <!-- TESTIMONIALS -->
     <section class="testimonials section">
-        <h2 class="testimonials__title"><?= $page->testimonialsTitle() ?></h2>
+        <h2><?= $page->testimonialsTitle() ?></h2>
 
         <!-- Testimonials items -->
         <?php if ($page->testimonials()->isNotEmpty()) : ?>

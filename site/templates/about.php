@@ -1,11 +1,13 @@
 <?php snippet('general/header') ?>
 
 <!-- CONTAINER ABOUT -->
-<div class="container container-about">
+<div id="container" class="container container-about">
 
     <!-- HEADER ABOUT -->
     <header class="header header-about">
-        <!-- CONTENT -->
+        
+        <!-- NAV -->
+        <?php snippet('general/nav') ?>
     </header>
 
 

@@ -1,7 +1,7 @@
 <?php snippet('general/header') ?>
 
 <!-- CONTAINER CONTACT -->
-<div class="container container-contact">
+<div id="container" class="container container-contact">
 
     <!-- HEADER CONTACT -->
     <header class="header header-contact">

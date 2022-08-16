@@ -1,5 +1,5 @@
 <!-- NAV DARK -->
-<nav class="nav nav-dark flex">
+<nav class="nav flex">
 
     <!-- Nav logo -->
     <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
@@ -31,21 +31,21 @@
             </ul>
         <?php endif; ?>
 
-        <!-- Free quotation button mobile -->
+        <!-- Primary CTA -->
         <a class="button button-primary button-white mobile" href="<?= $site->url() ?>/contact">Gratis offerte <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
     </div>
 
 
 
-    <!-- Free quotation button desktop -->
-    <a class="button button-primary quotation-button desktop" href="<?= $site->url() ?>/contact">Gratis offerte</a>
+    <!-- Primary CTA -->
+    <a class="button button-primary primary-cta desktop" href="<?= $site->url() ?>/contact">Gratis offerte</a>
 
 
 
     <!-- Menu burger/cross -->
-    <div class="burger dark">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+    <div class="burger">
+        <div class="burger-line line1"></div>
+        <div class="burger-line line2"></div>
+        <div class="burger-line line3"></div>
     </div>
 </nav>

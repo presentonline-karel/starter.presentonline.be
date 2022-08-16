@@ -17,6 +17,7 @@
     position: relative;
     border-radius: $border-radius-medium;
     box-shadow: $card-shadow;
+    border: 0.5px solid $neutrals-400;
 
     &__logo {
         width: 100px;

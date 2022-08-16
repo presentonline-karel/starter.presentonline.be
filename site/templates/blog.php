@@ -1,7 +1,7 @@
 <?php snippet('general/header') ?>
 
 <!-- CONTAINER BLOG -->
-<div class="container container-blog">
+<div id="container" class="container container-blog">
 
     <!-- HEADER BLOG -->
     <header class="header header-blog">
