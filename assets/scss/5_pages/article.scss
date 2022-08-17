@@ -56,3 +56,18 @@
         margin: 0 auto;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .article-page {
+        &__header {
+            padding: 48px 48px 64px 48px;
+            text-align: center;
+        }
+
+        &__section {
+            padding: 48px 48px 64px 48px;
+            text-align: center;
+        }
+    }
+}

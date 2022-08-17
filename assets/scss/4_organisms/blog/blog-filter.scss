@@ -79,3 +79,10 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .blog-filter {
+        padding: 0px 48px 48px 48px;
+    }
+}

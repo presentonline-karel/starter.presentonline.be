@@ -2,7 +2,7 @@
 .container-home {
     .cta {
         background-color: $primary-500;
-        
+
         h2 {
             color: $neutrals-100;
         }
@@ -28,6 +28,25 @@
                     display: block;
                     width: 100%;
                     text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .container-home {
+        .cta {
+            &:last-of-type {
+                .buttons {
+                    justify-content: flex-start;
+
+                    .button {
+                        display: inline-block;
+                        width: initial;
+                        text-align: initial;
+                    }
                 }
             }
         }

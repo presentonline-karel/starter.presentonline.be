@@ -12,3 +12,12 @@
         gap: 8px;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .clients-section {
+        .clients {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

@@ -100,3 +100,15 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .footer {
+        padding: 64px 48px 24px 48px;
+
+        .back-to-top {
+            top: 64px;
+            right: 48px;
+        }
+    }
+}

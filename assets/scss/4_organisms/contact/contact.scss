@@ -50,3 +50,16 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .contact {
+        &__info {
+            padding: 64px 48px;
+        }
+    
+        &__form-section {
+            padding: 64px 48px;
+        }
+    }
+}

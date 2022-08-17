@@ -20,3 +20,13 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .container-error {
+        .error-content {
+            max-width: 610px;
+            padding: 0px;
+        }
+    }
+}

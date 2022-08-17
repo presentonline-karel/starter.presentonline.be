@@ -94,7 +94,21 @@
     }
 }
 
-/* DESKTOP - 1280px */
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .testimonial {
+        padding: 48px;
+
+        .quotes {
+            top: 112px;
+            left: 48px;
+            color: $primary-200;
+            z-index: 0;
+        }
+    }
+}
+
+/* DESKTOP - 1280px
 @media only screen and (min-width: $desktop-1) {
     .testimonial {
         padding: 105px 50px 75px 50px;
@@ -107,7 +121,7 @@
     }
 }
 
-/* DESKTOP 1440PX */
+/* DESKTOP 1440PX
 @media screen and (min-width: $desktop-3) {
     .testimonial {
         padding: 105px 190px 75px 190px;
@@ -129,4 +143,4 @@
             padding: 0 50px;
         }
     }
-}
+} */

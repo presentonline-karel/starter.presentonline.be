@@ -14,3 +14,14 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header {
+        &__content {
+            &__text {
+                padding: 48px;
+            }
+        }
+    }
+}

@@ -7,3 +7,12 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header-faq {
+        &__content {
+            padding: 48px 48px 64px 48px;
+        }
+    }
+}

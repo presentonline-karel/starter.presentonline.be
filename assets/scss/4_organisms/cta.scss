@@ -5,3 +5,10 @@
         margin-bottom: 24px;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .cta {
+        padding: 64px 48px;
+    }
+}

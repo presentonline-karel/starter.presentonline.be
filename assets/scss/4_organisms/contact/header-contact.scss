@@ -53,3 +53,24 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header-contact {
+        &__content {
+            padding: 48px 48px 64px 48px;
+
+            &__text {
+                .buttons {
+                    justify-content: flex-start;
+                    
+                    .button {
+                        display: inline-block;
+                        width: initial;
+                        text-align: initial;
+                    }
+                }
+            }
+        }
+    }
+}

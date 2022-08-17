@@ -7,3 +7,10 @@
         margin-bottom: 32px;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .services-section {
+        padding: 64px 48px;
+    }
+}

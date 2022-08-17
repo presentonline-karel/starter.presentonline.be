@@ -8,3 +8,10 @@
         margin-top: 24px;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .faqs {
+        padding: 0 48px 64px 48px;
+    }
+}
