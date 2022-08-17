@@ -37,6 +37,12 @@
 //blog
 @import "./3_molecules/blog/article";
 
+//faq
+@import "./3_molecules/faq/faq";
+
+//article
+@import "./3_molecules/article/related-article";
+
 
 
 /* ORGANISMS */
@@ -63,3 +69,15 @@
 @import "./4_organisms/blog/blog-filter";
 @import "./4_organisms/blog/articles";
 @import "./4_organisms/blog/cta";
+
+//article
+@import "./4_organisms/article/keep-reading";
+
+//faq
+@import "./4_organisms/faq/faqs";
+@import "./4_organisms/faq/header-faq";
+
+
+
+/* PAGES */
+@import "./5_pages/article";
