@@ -1,0 +1,52 @@
+.contact {
+    &__info {
+        padding: 48px 16px;
+        background-color: $neutrals-200;
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        &__items {
+            margin-bottom: 32px;
+
+            .info-item {
+                display: block;
+                color: $neutrals-1100;
+                line-height: 16px;
+                margin-bottom: 8px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                i {
+                    color: $primary-500;
+                    margin-right: 6px;
+                }
+            }
+        }
+
+        .socials {
+            .social {
+                background-color: $primary-500;
+
+                i {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    }
+
+    &__form-section {
+        padding: 64px 16px;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+    }
+}

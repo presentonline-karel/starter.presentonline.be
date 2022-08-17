@@ -23,6 +23,7 @@
 @import "./3_molecules/list";
 @import "./3_molecules/socials";
 @import "./3_molecules/burger";
+@import "./3_molecules/forms";
 
 //home
 @import "./3_molecules/home/testimonial";
@@ -76,6 +77,11 @@
 //faq
 @import "./4_organisms/faq/faqs";
 @import "./4_organisms/faq/header-faq";
+
+//contact
+@import "./4_organisms/contact/header-contact";
+@import "./4_organisms/contact/contact";
+@import "./4_organisms/contact/maps";
 
 
 

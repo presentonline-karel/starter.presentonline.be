@@ -1,0 +1,55 @@
+.header-contact {
+    &__content {
+        padding: 24px 16px 48px 16px;
+
+        &__text {
+            margin-bottom: 32px;
+
+            h1 {
+                margin-bottom: 16px;
+            }
+
+            p {
+                margin-bottom: 16px;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+
+                .button {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__hours {
+            h4 {
+                margin-bottom: 16px;
+            }
+
+            &__item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 32px;
+                margin-bottom: 2px;
+
+                .day {
+                    font-weight: 600;
+                    line-height: 20px;
+                    color: $neutrals-1100;
+                    width: 78px;
+                }
+
+                .hour {
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
