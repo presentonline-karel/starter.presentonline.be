@@ -11,3 +11,10 @@
         gap: 24px 8px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .blogposts__articles {
+        padding: 0 178px 96px 178px;
+    }
+}

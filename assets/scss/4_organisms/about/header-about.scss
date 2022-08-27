@@ -1,0 +1,49 @@
+.header-about {
+    .header__content {
+        .header-about__content__image {
+            display: none;
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header-about {
+        .header__content {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            gap: 72px;
+            height: calc(100vh - 80px);
+            padding: 48px 48px 96px 48px;
+
+            &__text {
+                text-align: left;
+                padding: 0;
+                width: calc(100% - 40%);
+            }
+
+            .header-about__content__image {
+                display: block;
+                max-width: 505px;
+                width: 40%;
+                height: 100%;
+                max-height: 678px;
+                object-fit: cover;
+                border-radius: $border-radius-medium;
+            }
+        }
+
+        .header__content__image {
+            display: none;
+        }
+
+        .scroll-down {
+            position: absolute;
+            transform: translate(-50%, 0%);
+            left: 50%;
+            bottom: 48px;
+        }
+    }
+}

@@ -71,3 +71,22 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .article-page {
+        padding: 0 178px 64px 178px;
+
+        &__header {
+            padding: 48px 0px 64px 0px;
+        }
+
+        &__img {
+            border-radius: $border-radius-medium;
+        }
+
+        &__section {
+            padding: 48px 0px 64px 0px;
+        }
+    }
+}

@@ -27,6 +27,17 @@
     user-select: none;
 }
 
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .testimonials {
+        padding: 96px 178px;
+
+        h2 {
+            margin-bottom: 48px;
+        }
+    }
+}
+
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .testimonials {

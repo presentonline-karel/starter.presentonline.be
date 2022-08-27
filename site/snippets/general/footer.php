@@ -46,7 +46,7 @@
 
             <hr class="line footer-line">
 
-            <p class="footer__copyright">©YourWebsite. All rights reserved.<br> Website door <a href="#">Present Online</a></p>
+            <p class="footer__copyright">©YourWebsite. All rights reserved.<br class="mobile"> Website door <a href="#">Present Online</a></p>
         </footer>
 
         <!-- MOBILE NAV SCRIPT -->

@@ -25,6 +25,11 @@
                 <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
             </div>
         </div>
+
+        <!-- Scroll down -->
+        <a href="<?= $site->url() ?>/home#clients">
+            <i class="scroll-down fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
     </header>
 
 

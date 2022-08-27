@@ -14,3 +14,21 @@
         padding: 64px 48px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .services-section {
+        padding: 96px 48px;
+
+        h2 {
+            margin-bottom: 48px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+        }
+    }
+}

@@ -15,3 +15,10 @@
         padding: 0 48px 64px 48px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .faqs {
+        padding: 0 178px 64px 178px;
+    }
+}

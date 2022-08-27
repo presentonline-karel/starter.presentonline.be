@@ -13,6 +13,10 @@
             }
         }
     }
+
+    .scroll-down {
+        display: none;
+    }
 }
 
 /* TABLET 768PX */
@@ -22,6 +26,25 @@
             &__text {
                 padding: 48px;
             }
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header {
+        &__content {
+            &__text {
+                padding: 48px 178px 96px 178px;
+            }
+        }
+
+        .scroll-down {
+            display: block;
+            color: $primary-500;
+            font-size: 20px;
+            line-height: 20px;
+            position: absolute;
         }
     }
 }

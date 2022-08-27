@@ -33,3 +33,10 @@
         margin-bottom: 8px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .service {
+        margin-bottom: 0;
+    }
+}

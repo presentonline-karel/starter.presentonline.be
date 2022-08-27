@@ -21,3 +21,12 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .clients-section {
+        h2 {
+            margin-bottom: 48px;
+        }
+    }
+}

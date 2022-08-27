@@ -17,3 +17,10 @@
         line-height: 72px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .history-item {
+        margin-bottom: 0;
+    }
+}

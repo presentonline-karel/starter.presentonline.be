@@ -74,3 +74,20 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header-contact {
+        &__content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 236px;
+
+            &__text {
+                width: 40%;
+                max-width: 506px;
+            }
+        }
+    }
+}

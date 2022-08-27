@@ -3,13 +3,11 @@
 <!-- CONTAINER ARTICLE -->
 <div id="container" class="container container-article">
 
+    <!-- NAV -->
+    <?php snippet('general/nav') ?>
+
     <!-- ARTICLE -->
     <main class="article-page">
-
-        <!-- NAV -->
-        <?php snippet('general/nav') ?>
-
-
 
         <!-- Article header -->
         <div class="article-page__header">

@@ -15,3 +15,22 @@
         gap: 24px 8px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .team {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 72px;
+
+        &__text {
+            width: 33%;
+        }
+
+        .employees {
+            width: 66%;
+            gap: 48px 8px;
+        }
+    }
+}

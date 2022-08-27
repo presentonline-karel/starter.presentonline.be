@@ -86,3 +86,10 @@
         padding: 0px 48px 48px 48px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .blog-filter {
+        padding: 0px 178px 96px 178px;
+    }
+}

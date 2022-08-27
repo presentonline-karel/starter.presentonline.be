@@ -31,3 +31,11 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .keep-reading {
+        padding: 96px 178px;
+        gap: 72px;
+    }
+}

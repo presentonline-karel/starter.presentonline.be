@@ -17,11 +17,18 @@
 
                 <a class="button-primary" href="#">Our history <i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
             </div>
+
+            <img class="header-about__content__image" src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
         </div>
 
         <div class="header__content__image">
             <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
         </div>
+
+        <!-- Scroll down -->
+        <a href="<?= $site->url() ?>/about#history">
+            <i class="scroll-down fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
     </header>
 
 
@@ -78,8 +85,10 @@
 
     <!-- TEAM -->
     <section class="team section">
-        <h2>Who is making it happen every day?</h2>
-        <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+        <div class="team__text">
+            <h2>Who is making it happen every day?</h2>
+            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+        </div>
 
         <div class="employees">
             <div class="employee">

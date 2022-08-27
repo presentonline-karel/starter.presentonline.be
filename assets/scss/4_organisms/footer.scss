@@ -112,3 +112,35 @@
         }
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .footer {
+        &-blocks {
+            display: grid;
+            grid-template-columns: 400px min-content auto;
+            grid-template-rows: auto;
+            grid-template-areas: "intro sitemap contact";
+            gap: 96px;
+
+            .intro {
+                grid-area: intro;
+            }
+
+            .contact {
+                grid-area: contact;
+                display: block;
+            }
+
+            .sitemap {
+                grid-area: sitemap;
+            }
+        }
+
+        &__copyright {
+            .mobile {
+                display: none;
+            }
+        }
+    }
+}

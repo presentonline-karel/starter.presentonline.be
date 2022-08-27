@@ -6,3 +6,19 @@
         margin-bottom: 64px;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .history {
+        h2 {
+            margin-bottom: 96px;
+        }
+
+        &__numbers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 155px;
+        }
+    }
+}
