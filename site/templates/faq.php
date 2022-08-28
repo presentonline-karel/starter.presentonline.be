@@ -35,7 +35,7 @@
 
         <div class="faq">
             <div class="faq__question">
-                <h4 class="faq__question__title">What is the best form of marketing?</h4>
+                <h4 class="faq__question__title">Can I buy the product in advance?</h4>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </div>
 
@@ -48,7 +48,7 @@
 
         <div class="faq">
             <div class="faq__question">
-                <h4 class="faq__question__title">What is the best form of marketing?</h4>
+                <h4 class="faq__question__title">Is Crete accesible from any type of public transport?</h4>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </div>
 

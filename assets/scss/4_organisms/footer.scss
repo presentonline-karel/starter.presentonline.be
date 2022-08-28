@@ -150,9 +150,24 @@
     .footer {
         padding: 96px 96px 24px 96px;
 
+        //Intro
+        .intro {
+            .footer-logo {
+                width: 125px;
+                height: 50px;
+                margin-bottom: 24px;
+            }
+        }
+
         .back-to-top {
             top: 96px;
             right: 96px;
+        }
+
+        &__block {
+            h4 {
+                margin-bottom: 24px;
+            }
         }
     }
 }

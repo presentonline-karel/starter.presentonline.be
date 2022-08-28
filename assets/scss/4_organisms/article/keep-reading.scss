@@ -46,3 +46,13 @@
         padding: 96px 308px;
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .keep-reading {
+        h2 {
+            font-size: 40px;
+            line-height: 44px;
+        }
+    }
+}

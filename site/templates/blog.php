@@ -31,7 +31,7 @@
             <!-- Filter search -->
             <form class="form form-filter">
                 <input class="input input-filter" placeholder="Search on title...">
-                <button class="button-primary button-filter">Search <i class="anchor-first fa fa-search" aria-hidden="true"></i></button>
+                <button class="button-primary button-filter">Search <i class="anchor-first no-hover fa fa-search" aria-hidden="true"></i></button>
             </form>
 
             <!-- Filter tags -->

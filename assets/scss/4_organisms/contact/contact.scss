@@ -138,6 +138,14 @@
     .contact {
         &__info {
             padding: 96px 128px 96px 96px;
+
+            p {
+                margin-bottom: 24px;
+            }
+
+            .socials {
+                margin-bottom: 32px;
+            }
         }
 
         &__form-section {

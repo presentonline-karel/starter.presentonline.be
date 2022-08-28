@@ -19,10 +19,28 @@
     &:hover {
         .anchor-first {
             margin-left: $icon-margin-button-hover;
+
+            &.no-hover {
+                margin-left: $icon-margin-button;
+            }
         }
 
         .icon-first {
             margin-right: $icon-margin-button-hover;
+
+            &.no-hover {
+                margin-left: $icon-margin-button;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .button-primary, .button-secondary, .button-white {
+        i {
+            font-size: 14px;
+            line-height: 14px;
         }
     }
 }

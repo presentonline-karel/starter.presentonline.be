@@ -43,3 +43,13 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .team {
+        h2 {
+            font-size: 40px;
+            line-height: 44px;
+        }
+    }
+}

@@ -47,3 +47,15 @@
         color: $neutrals-1100;
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .related-articles__article {
+        &__top {
+            i {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+}

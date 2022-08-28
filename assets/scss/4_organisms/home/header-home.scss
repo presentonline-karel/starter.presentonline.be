@@ -140,27 +140,8 @@
     .header-home {
         &__content {
             &__text {
-                width: 720px;
+                width: 50%;
                 padding: 0 16px 0 96px;
-            }
-
-            .header__content__image {
-                height: 100vh;
-                width: 60%;
-                transform: skew(-10deg);
-                position: absolute;
-                top: 0;
-                right: -12%;
-                overflow: hidden;
-
-                img {
-                    width: 120%;
-                    height: 120%;
-                    object-fit: cover;
-                    transform: skew(10deg);
-                    position: absolute;
-                    left: -10%;
-                }
             }
         }
     }
