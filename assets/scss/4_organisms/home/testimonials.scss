@@ -41,10 +41,9 @@
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .testimonials {
-        padding: 125px 310px;
-        text-align: center;
+        padding: 128px 308px;
 
-        &__title {
+        h2 {
             margin-bottom: 72px;
         }
     }

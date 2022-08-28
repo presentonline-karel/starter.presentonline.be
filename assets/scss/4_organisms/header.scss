@@ -48,3 +48,31 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .header {
+        &__content {
+            &__text {
+                padding: 88px 308px 96px 308px;
+            }
+        }
+    }
+
+    //Header FAQ & Blog
+    .header-faq, .header-blog {
+        p {
+            padding: 0px 106px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .header {
+        .scroll-down {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+}

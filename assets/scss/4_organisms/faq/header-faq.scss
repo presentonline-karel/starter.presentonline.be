@@ -26,3 +26,12 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .header-faq {
+        &__content {
+            padding: 88px 308px 96px 308px;
+        }
+    }
+}

@@ -34,3 +34,12 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .team {
+        .employees {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

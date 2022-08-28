@@ -2,13 +2,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $title-font;
     color: $neutrals-1100;
     font-weight: 600;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
 }
 
 h1 {
     font-size: 40px;
     line-height: 44px;
-    letter-spacing: -1.5%;
+    letter-spacing: -0.015em;
 }
 
 h2 {

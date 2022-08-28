@@ -64,3 +64,14 @@
         margin-bottom: 0;
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .article {
+        &__content {
+            &__tags {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

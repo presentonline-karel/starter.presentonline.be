@@ -91,3 +91,12 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .header-contact {
+        &__content {
+            padding: 88px 96px 96px 96px;
+        }
+    }
+}

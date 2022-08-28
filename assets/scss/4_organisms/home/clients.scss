@@ -30,3 +30,18 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .clients-section {
+        background-color: $neutrals-100;
+
+        h2 {
+            margin-bottom: 72px;
+        }
+
+        .clients {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}

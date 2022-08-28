@@ -12,7 +12,7 @@
         <!-- HEADER HOME - CONTENT -->
         <div class="header-home__content">
             <div class="header-home__content__text">
-                <h1>No troubles,<br> Yes <span>amazing vacation!</span></h1>
+                <h1>No troubles, yes <span>amazing vacation!</span></h1>
                 <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
                 <div class="buttons">
@@ -27,8 +27,8 @@
         </div>
 
         <!-- Scroll down -->
-        <a href="<?= $site->url() ?>/home#clients">
-            <i class="scroll-down fa fa-chevron-down" aria-hidden="true"></i>
+        <a class="scroll-down" href="<?= $site->url() ?>/home#clients">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </a>
     </header>
 
@@ -107,14 +107,22 @@
                 <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
             </div>
         </div>
+
+        <!-- CTA DESKTOP -->
+        <div class="cta__content">
+            <h2>Ready to dive in?<br> Start your free trial now!</h2>
+            <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
     </section>
 
 
 
-    <!-- CTA -->
+    <!-- CTA MOBILE -->
     <section id="cta-1" class="cta">
-        <h2>Ready to dive in?<br> Start your free trial now!</h2>
-        <a class="button-white" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        <div class="cta__content">
+            <h2>Ready to dive in?<br> Start your free trial now!</h2>
+            <a class="button-white" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
     </section>
 
 
@@ -206,11 +214,13 @@
 
     <!-- CTA -->
     <section id="cta-2" class="cta">
-        <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
+        <div class="cta__content">
+            <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
 
-        <div class="buttons">
-            <a class="button button-primary" href="#">Free trial</a>
-            <a class="button button-primary" href="#">Live demo <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            <div class="buttons">
+                <a class="button button-primary" href="#">Free trial</a>
+                <a class="button button-primary" href="#">Live demo <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
         </div>
     </section>
 </div>

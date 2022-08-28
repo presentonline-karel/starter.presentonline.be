@@ -26,8 +26,8 @@
         </div>
 
         <!-- Scroll down -->
-        <a href="<?= $site->url() ?>/about#history">
-            <i class="scroll-down fa fa-chevron-down" aria-hidden="true"></i>
+        <a class="scroll-down" href="<?= $site->url() ?>/about#history">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
         </a>
     </header>
 
@@ -125,8 +125,10 @@
 
     <!-- CTA -->
     <section id="cta-1" class="cta">
-        <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
-        <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        <div class="cta__content">
+            <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
+            <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
     </section>
 </div>
 

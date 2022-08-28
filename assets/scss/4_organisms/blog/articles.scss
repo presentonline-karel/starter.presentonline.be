@@ -18,3 +18,11 @@
         padding: 0 178px 96px 178px;
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .blogposts__articles {
+        padding: 0 96px 0px 96px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

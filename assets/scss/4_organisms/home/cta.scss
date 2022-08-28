@@ -1,14 +1,23 @@
 //HOME CTAs
 .container-home {
     .cta {
-        background-color: $primary-500;
+
+        //First CTA
+        &__content {
+            background-color: $primary-500;
+        }
 
         h2 {
             color: $neutrals-100;
         }
 
+        //Second CTA
         &:last-of-type {
             background-color: $primary-100;
+
+            .cta__content {
+                background-color: $primary-100;
+            }
 
             h2 {
                 color: $neutrals-1100;
@@ -32,11 +41,20 @@
             }
         }
     }
+
+    //Desktop CTA services
+    .services-section {
+        .cta__content {
+            display: none;
+        }
+    }
 }
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .container-home {
+
+        //Second CTA
         .cta {
             &:last-of-type {
                 .buttons {
@@ -48,6 +66,25 @@
                         text-align: initial;
                     }
                 }
+            }
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .container-home {
+
+        //First CTA
+        #cta-1 {
+            display: none;
+        }
+
+        //Desktop CTA services
+        .services-section {
+            .cta__content {
+                display: flex;
+                background-color: $primary-100;
             }
         }
     }

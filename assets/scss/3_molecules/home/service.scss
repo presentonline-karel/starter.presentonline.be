@@ -40,3 +40,26 @@
         margin-bottom: 0;
     }
 }
+
+/* DESKTOP 1280PX */
+@media screen and (min-width: $desktop-1) {
+    .service {
+        &__icon-container {
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .service {
+        h3 {
+            font-size: 32px;
+            line-height: 36px;
+        }
+    }
+}

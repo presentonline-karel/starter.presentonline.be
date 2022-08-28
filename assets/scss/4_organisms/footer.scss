@@ -144,3 +144,15 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .footer {
+        padding: 96px 96px 24px 96px;
+
+        .back-to-top {
+            top: 96px;
+            right: 96px;
+        }
+    }
+}

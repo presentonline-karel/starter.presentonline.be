@@ -132,3 +132,16 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .contact {
+        &__info {
+            padding: 96px 128px 96px 96px;
+        }
+
+        &__form-section {
+            padding: 96px;
+        }
+    }
+}

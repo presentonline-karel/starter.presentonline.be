@@ -60,9 +60,9 @@
 }
 
 /* DESKTOP 1280PX */
-@media only screen and (min-width: $desktop-1) {
+@media only screen and (min-width: $desktop-3) {
     .button {
-        &-primary {
+        &-primary, &-secondary, &-white {
             font-size: 20px;
             line-height: 20px;
             font-weight: 500;

@@ -1,5 +1,5 @@
 <!-- NAV DARK -->
-<nav class="nav flex">
+<nav class="nav <?php if($page->title() == "Home") { echo("nav-home"); } ?> flex">
 
     <!-- Nav logo -->
     <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
@@ -38,7 +38,9 @@
 
 
     <!-- Primary CTA -->
-    <a class="button button-primary primary-cta desktop" href="<?= $site->url() ?>/contact">Gratis offerte</a>
+    <?php if($page->title() != "Home"): ?>
+        <a class="button button-primary primary-cta desktop" href="<?= $site->url() ?>/contact">Gratis offerte</a>
+    <?php endif; ?>
 
 
 

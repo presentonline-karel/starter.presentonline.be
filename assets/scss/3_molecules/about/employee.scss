@@ -12,3 +12,18 @@
         margin-bottom: 0 !important;
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .employee {
+        &__img {
+            width: 120px;
+            height: 120px;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+}

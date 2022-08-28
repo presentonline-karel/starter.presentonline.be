@@ -63,3 +63,21 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .content {
+        padding: 128px 96px;
+
+        &__image {
+            width: 505px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .content {
+        padding: 128px 202px 128px 96px;
+    }
+}

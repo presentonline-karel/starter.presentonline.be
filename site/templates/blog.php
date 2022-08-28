@@ -116,8 +116,10 @@
 
     <!-- CTA -->
     <section id="cta-1" class="cta">
-        <h2>Got inspired?<br> Try our product <span>for free for a month.</span></h2>
-        <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        <div class="cta__content">
+            <h2>Got inspired?<br> Try our product <span>for free for a month.</span></h2>
+            <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
     </section>
 </div>
 

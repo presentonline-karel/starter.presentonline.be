@@ -24,3 +24,19 @@
         margin-bottom: 0;
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .history-item {
+        h5 {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 16px;
+        }
+    
+        h1 {
+            font-size: 100px;
+            line-height: 100px;
+        }
+    }
+}

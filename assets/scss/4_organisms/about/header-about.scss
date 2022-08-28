@@ -47,3 +47,33 @@
         }
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .header-about {
+        .header__content {
+            height: calc(100vh - 110px);
+            padding: 88px 96px 128px 96px;
+
+            &__text {
+                h1 {
+                    margin-bottom: 24px;
+                }
+
+                p {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .header-about {
+        .header__content {
+            height: calc(100vh - 130px);
+            padding: 88px 202px 128px 96px;
+        }
+    }
+}

@@ -6,6 +6,10 @@
         text-align: center;
         margin-bottom: 32px;
     }
+
+    .cta {
+        display: none;
+    }
 }
 
 /* TABLET 768PX */
@@ -29,6 +33,26 @@
             justify-content: space-between;
             align-items: flex-start;
             gap: 24px;
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .services-section {
+        padding: 128px 96px;
+        background-color: $neutrals-200;
+
+        h2 {
+            margin-bottom: 72px;
+        }
+
+        .services {
+            margin-bottom: 72px;
+        }
+
+        .cta {
+            display: block;
         }
     }
 }

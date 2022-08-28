@@ -93,3 +93,10 @@
         padding: 0px 178px 96px 178px;
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .blog-filter {
+        padding: 0px 414px 96px 414px;
+    }
+}

@@ -39,3 +39,10 @@
         gap: 72px;
     }
 }
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .keep-reading {
+        padding: 96px 308px;
+    }
+}
