@@ -153,3 +153,72 @@
         }
     }
 }
+
+/* DESKTOP - 1600px */
+@media only screen and (min-width: $desktop-5) {
+    .contact {
+        &__info {
+            padding: 96px 128px 96px 178px;
+        }
+
+        &__form-section {
+            padding: 96px 178px 96px 96px;
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .contact {
+        &__info {
+            padding: 96px 128px 96px 336px;
+            width: 45%;
+        }
+
+        &__form-section {
+            padding: 96px 336px 96px 96px;
+            width: 55%;
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .contact {
+        &__info {
+            padding: 96px 128px 96px 656px;
+        }
+
+        &__form-section {
+            padding: 96px 656px 96px 96px;
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .contact {
+        &__info {
+            padding: 96px 128px 96px 1096px;
+            width: 47%;
+        }
+
+        &__form-section {
+            padding: 96px 1096px 96px 96px;
+            width: 53%;
+        }
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .contact {
+        &__info {
+            padding: 96px 128px 96px 1296px;
+        }
+
+        &__form-section {
+            padding: 96px 1296px 96px 96px;
+        }
+    }
+}

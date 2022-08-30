@@ -56,3 +56,38 @@
         }
     }
 }
+
+/* DESKTOP - 1600px */
+@media only screen and (min-width: $desktop-5) {
+    .keep-reading {
+        padding: 96px 388px !important;
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .keep-reading {
+        padding: 96px 548px !important;
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .keep-reading {
+        padding: 96px 868px !important;
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .keep-reading {
+        padding: 96px 1308px !important;
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .keep-reading {
+        padding: 96px 1508px !important;
+    }
+}

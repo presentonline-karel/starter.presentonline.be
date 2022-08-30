@@ -276,34 +276,34 @@
 /* DESKTOP - 1600px */
 @media only screen and (min-width: $desktop-5) {
     .nav {
-        padding: 30px 180px 20px 180px;
+        padding: 45px 176px;
     }
 }
 
 /* DESKTOP - HD */
 @media only screen and (min-width: $desktop-hd) {
     .nav {
-        padding: 30px 340px 20px 340px;
+        padding: 45px 336px;
     }
 }
 
 /* DESKTOP - QHD */
 @media only screen and (min-width: $desktop-qhd) {
     .nav {
-        padding: 30px 660px 20px 660px;
+        padding: 45px 656px;
     }
 }
 
 /* DESKTOP - WQHD */
 @media only screen and (min-width: $desktop-wqhd) {
     .nav {
-        padding: 30px 1100px 20px 1100px;
+        padding: 45px 1096px;
     }
 }
 
 /* DESKTOP - 4K */
 @media only screen and (min-width: $desktop-4k) {
     .nav {
-        padding: 30px 1300px 20px 1300px;
+        padding: 45px 1296px;
     }
 }

@@ -44,6 +44,8 @@
 /* DESKTOP 1280PX */
 @media screen and (min-width: $desktop-1) {
     .service {
+        background-color: $neutrals-100;
+
         &__icon-container {
             margin-bottom: 24px;
         }

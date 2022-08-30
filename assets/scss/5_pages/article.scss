@@ -143,3 +143,38 @@
         }
     }
 }
+
+/* DESKTOP - 1600px */
+@media only screen and (min-width: $desktop-5) {
+    .article-page {
+        padding: 0px 388px 64px 388px;
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .article-page {
+        padding: 0px 548px 64px 548px;
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .article-page {
+        padding: 0px 868px 64px 868px;
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .article-page {
+        padding: 0px 1308px 64px 1308px;
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .article-page {
+        padding: 0px 1508px 64px 1508px;
+    }
+}

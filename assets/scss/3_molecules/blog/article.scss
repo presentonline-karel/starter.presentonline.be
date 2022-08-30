@@ -75,3 +75,15 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .article {
+        &__content {
+            h3 {
+                font-size: 32px;
+                line-height: 36px;
+            }
+        }
+    }
+}

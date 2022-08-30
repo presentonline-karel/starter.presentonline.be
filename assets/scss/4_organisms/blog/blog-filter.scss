@@ -141,3 +141,38 @@
         }
     }
 }
+
+/* DESKTOP - 1600px */
+@media only screen and (min-width: $desktop-5) {
+    .blog-filter {
+        padding: 0px 494px 96px 494px;
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .blog-filter {
+        padding: 0px 654px 96px 654px;
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .blog-filter {
+        padding: 0px 974px 96px 974px;
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .blog-filter {
+        padding: 0px 1414px 96px 1414px;
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .blog-filter {
+        padding: 0px 1614px 96px 1614px;
+    }
+}
