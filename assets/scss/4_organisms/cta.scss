@@ -5,6 +5,19 @@
         h2 {
             margin-bottom: 24px;
         }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+
+            .button {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -13,6 +26,16 @@
     .cta {
         &__content {
             padding: 64px 48px;
+
+            .buttons {
+                justify-content: flex-start;
+
+                .button {
+                    display: inline-block;
+                    width: initial;
+                    text-align: initial;
+                }
+            }
         }
     }
 }

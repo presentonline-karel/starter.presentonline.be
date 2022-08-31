@@ -14,14 +14,8 @@
 
                     <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
-                    <div class="socials">
-                        <a class="social" href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a class="social" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a class="social" href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a class="social" href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        <a class="social" href="#" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                        <a class="social" href="#" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
-                    </div>
+                    <!-- SNIPPET - SOCIALS -->
+                    <?php snippet('general/socials') ?>
                 </div>
 
                 <div class="footer__block contact">

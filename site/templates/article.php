@@ -14,8 +14,8 @@
             <span class="publication-date">8 Aug. 2022</span>
 
             <div class="tags">
-                <span class="tag">Company</span>
-                <span class="tag">Product</span>
+                <span class="tag tag-grey">Company</span>
+                <span class="tag tag-grey">Product</span>
             </div>
 
             <h1>Why you should buy our amazing product</h1>
@@ -76,11 +76,11 @@
                 </div>
 
                 <div class="tags">
-                    <span class="tag">Company</span>
-                    <span class="tag">Product</span>
+                    <span class="tag tag-primary">Company</span>
+                    <span class="tag tag-primary">Product</span>
                 </div>
 
-                <p class="related-articles__article__min-read">11min read</p>
+                <p class="min-read">11min read</p>
             </article>
 
             <!-- article -->
@@ -91,11 +91,11 @@
                 </div>
 
                 <div class="tags">
-                    <span class="tag">Company</span>
-                    <span class="tag">Product</span>
+                    <span class="tag tag-primary">Company</span>
+                    <span class="tag tag-primary">Product</span>
                 </div>
 
-                <p class="related-articles__article__min-read">11min read</p>
+                <p class="min-read">11min read</p>
             </article>
         </div>
     </section>

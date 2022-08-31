@@ -1,12 +1,12 @@
-title: Home
-icon: home
+title: About
+icon: grid-top
 
 options:
   changeSlug: false
 
 columns:
 
-  #HOME TEXT CONTENT
+  #ABOUT TEXT CONTENT
   - width: 1/2
     sections:
     fields:
@@ -18,9 +18,6 @@ columns:
       heroTitle:
         label: Hero titel
         type: text
-      heroTitleSpan:
-        label: Hero titel - gekleurd deel
-        type: text
       heroIntro:
         label: Hero intro tekst
         type: writer
@@ -28,7 +25,7 @@ columns:
       heroButtons:
         label: Hero buttons
         type: structure
-        max: 2
+        max: 1
         columns:
           anker:
             width: 2/8
@@ -47,6 +44,9 @@ columns:
             label: Pagina op website
             type: pages
             max: 1
+          pageId:
+            label: Id op pagina (best afblijven)
+            type: text
           externalUrl:
             label: Externe webpagina URL
             type: text
@@ -56,121 +56,33 @@ columns:
             required: true
       line-a:
         type: line
+    
 
 
-
-      #Clients
-      clientHeadline:
-        label: Klanten
+      #History
+      historyHeadline:
+        label: Ervaring
         type: headline
-      clientsTitle:
-        label: Klanten titel
+      historyTitle:
+        label: Ervaring titel
         type: text
-      clients:
-        label: Klanten
+      history:
+        label: Ervaring
         type: structure
-        columns:
-          logo:
-            width: 1/3
-          url:
-            width: 2/3
         fields:
-          logo:
-            label: Logo klant
-            type: files
-            max: 1
-            required: true
-          url:
-            label: Link website klant
+          title:
+            label: Ervaring titel
             type: text
+          number:
+            label: Ervaring nummer
+            type: text
+          withPlus:
+            label: met +
+            type: toggle
+        max: 3
       line-b:
         type: line
-
-
-
-      #Services
-      servicesHeadline:
-        label: Diensten
-        type: headline
-      servicesTitle:
-        label: Diensten titel
-        type: text
-      services:
-        label: Diensten
-        type: structure
-        max: 6
-        columns:
-          icon:
-            width: 1/6
-          title:
-            width: 2/6
-          paragraph:
-            width: 3/6
-        fields:
-          icon:
-            label: Icoontje
-            type: select
-            options:
-              planning: Planning
-              followup: Followup
-              transport: Transport
-            required: true
-          title:
-            label: Titel
-            type: text
-            required: true
-          paragraph:
-            label: Paragraaf
-            type: writer
-            inline: true
-            required: true
-      line-c:
-        type: line
-
-
-
-      #CTA1
-      firstCtaHeadline:
-        label: CTA1
-        type: headline
-      firstCtaTitle:
-        label: CTA titel
-        type: text
-      firstCtaTitleSpan:
-        label: CTA titel - gekleurd deel
-        type: text
-      firstCtaButtons:
-        label: CTA buttons
-        type: structure
-        max: 2
-        columns:
-          anker:
-            width: 2/8
-          page:
-            width: 2/8
-          externalUrl:
-            width: 3/8
-          chevronCheckbox:
-            width: 1/8
-        fields:
-          anker:
-            label: Tekst
-            type: text
-            required: true
-          page:
-            label: Pagina op website
-            type: pages
-            max: 1
-          externalUrl:
-            label: Externe webpagina URL
-            type: text
-          chevronCheckbox:
-            label: Pijltje
-            type: toggle
-            required: true
-      line-d:
-        type: line
-      
+    
 
 
       #Content
@@ -220,68 +132,62 @@ columns:
             label: Pijltje
             type: toggle
             required: true
-      line-e:
+      line-c:
         type: line
-      
-      
 
-      #Testimonials
-      testimonialsHeadline:
-        label: Getuigenissen
+
+
+      #Team
+      teamHeadline:
+        label: Team
         type: headline
-      testimonialsTitle:
-        label: Getuigenissen titel
+      teamTitle:
+        label: Team titel
         type: text
-      testimonials:
-        label: Getuigenissen
+      teamText:
+        label: Team tekst
+        type: writer
+        inline: true
+      team:
+        label: Team
         type: structure
         columns:
-          logo:
-            width: 1/8
-          imageTestimonial:
-            width: 1/8
+          image:
+            width: 2/8
           name:
-            width: 2/8
+            width: 3/8
           function:
-            width: 2/8
-          testimonial:
             width: 3/8
         fields:
-          logo:
-            label: Logo klant
+          image:
+            label: Foto
             type: files
             max: 1
             required: true
-          imageTestimonial:
-            label: Foto klant
-            type: files
-            max: 1
           name:
             label: Naam
             type: text
+            required: true
           function:
             label: Functie
             type: text
-          testimonial:
-            label: Getuigenis
-            type: writer
-            inline: true
-      line-f:
+            required: true
+      line-d:
         type: line
 
 
 
-      #CTA2
-      secondCtaHeadline:
-        label: CTA2
+      #CTA1
+      firstCtaHeadline:
+        label: CTA1
         type: headline
-      secondCtaTitle:
+      firstCtaTitle:
         label: CTA titel
         type: text
-      secondCtaTitleSpan:
+      firstCtaTitleSpan:
         label: CTA titel - gekleurd deel
         type: text
-      secondCtaButtons:
+      firstCtaButtons:
         label: CTA buttons
         type: structure
         max: 2
@@ -310,10 +216,10 @@ columns:
             label: Pijltje
             type: toggle
             required: true
-
-
   
-  #HOME IMAGE CONTENT
+
+
+  #ABOUT IMAGE CONTENT
   - width: 1/2
     sections:
     fields:

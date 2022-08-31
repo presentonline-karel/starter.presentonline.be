@@ -41,10 +41,10 @@
                 </div>
 
                 <div class="filter-tags__tags">
-                    <button class="tag">Company</button>
-                    <button class="tag">Product</button>
-                    <button class="tag">Other tag</button>
-                    <button class="tag">Some more</button>
+                    <button class="tag tag-grey">Company</button>
+                    <button class="tag tag-grey">Product</button>
+                    <button class="tag tag-grey">Other tag</button>
+                    <button class="tag tag-grey">Some more</button>
                 </div>
             </div>
         </div>
@@ -58,8 +58,8 @@
 
                 <div class="article__content">
                     <div class="article__content__tags">
-                        <span class="tag">Company</span>
-                        <span class="tag">Product</span>
+                        <span class="tag tag-primary">Company</span>
+                        <span class="tag tag-primary">Product</span>
                     </div>
 
                     <h3>Why you should go to Crete, the island</h3>
@@ -77,8 +77,8 @@
 
                 <div class="article__content">
                     <div class="article__content__tags">
-                        <span class="tag">Company</span>
-                        <span class="tag">Product</span>
+                        <span class="tag tag-primary">Company</span>
+                        <span class="tag tag-primary">Product</span>
                     </div>
 
                     <h3>Why you should go to Crete, the island</h3>
@@ -96,8 +96,8 @@
 
                 <div class="article__content">
                     <div class="article__content__tags">
-                        <span class="tag">Company</span>
-                        <span class="tag">Product</span>
+                        <span class="tag tag-primary">Company</span>
+                        <span class="tag tag-primary">Product</span>
                     </div>
 
                     <h3>Why you should go to Crete, the island</h3>

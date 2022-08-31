@@ -16,8 +16,8 @@
                 <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
                 <div class="buttons">
-                    <a class="button button-primary" href="#">Get started</a>
-                    <a class="button button-secondary" href="#">Live demo <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a class="button button-primary" href="<?= $site->url() ?>/home#services">Read more <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <a class="button button-secondary" href="<?= $site->url() ?>/contact">Contact <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
                 </div>
             </div>
 
@@ -120,8 +120,8 @@
     <!-- CTA MOBILE -->
     <section id="cta-1" class="cta">
         <div class="cta__content">
-            <h2>Ready to dive in?<br> Start your free trial now!</h2>
-            <a class="button-white" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            <h2>Ready to dive in?<br> Contact us for a free trial!</h2>
+            <a class="button-white" href="<?= $site->url() ?>/contact">Free quotation <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
         </div>
     </section>
 

@@ -31,21 +31,15 @@
 
     .tags {
         margin-bottom: 16px;
-
-        .tag {
-            background-color: $primary-100;
-            color: $primary-500;
-            border: 0.5px solid $primary-200;
-        }
     }
 
-    &__min-read {
+    /*&__min-read {
         font-family: $title-font;
         font-size: 14px;
         line-height: 14px;
         font-weight: 500;
         color: $neutrals-1100;
-    }
+    }*/
 }
 
 /* DESKTOP 1440PX */

@@ -26,19 +26,6 @@
                     color: $primary-500;
                 }
             }
-
-            .buttons {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 8px;
-
-                .button {
-                    display: block;
-                    width: 100%;
-                    text-align: center;
-                }
-            }
         }
     }
 
@@ -46,27 +33,6 @@
     .services-section {
         .cta__content {
             display: none;
-        }
-    }
-}
-
-/* TABLET 768PX */
-@media only screen and (min-width: $tablet-portrait) {
-    .container-home {
-
-        //Second CTA
-        .cta {
-            &:last-of-type {
-                .buttons {
-                    justify-content: flex-start;
-
-                    .button {
-                        display: inline-block;
-                        width: initial;
-                        text-align: initial;
-                    }
-                }
-            }
         }
     }
 }
