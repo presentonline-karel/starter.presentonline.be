@@ -17,7 +17,8 @@ columns:
         type: headline
       heroTitle:
         label: Hero titel
-        type: text
+        type: writer
+        inline: true
       heroTitleSpan:
         label: Hero titel - gekleurd deel
         type: text
@@ -36,24 +37,35 @@ columns:
             width: 2/8
           externalUrl:
             width: 3/8
-          chevronCheckbox:
+          iconCheckbox:
             width: 1/8
         fields:
           anker:
             label: Tekst
             type: text
             required: true
-          page:
+          pageUrl:
             label: Pagina op website
             type: pages
             max: 1
+          idPage:
+            label: Id op pagina (best afblijven)
+            type: text
           externalUrl:
             label: Externe webpagina URL
             type: text
-          chevronCheckbox:
-            label: Pijltje
-            type: toggle
-            required: true
+          iconCheckbox:
+            label: Icoontje
+            type: checkboxes
+            options:
+              chevronRight: Chevron rechts
+              chevronBottom: Chevron bodem
+          typeOfButton:
+            label: Type button
+            type: checkboxes
+            options:
+              button-primary: Primair
+              button-secondary: Secundair
       line-a:
         type: line
 
@@ -167,7 +179,6 @@ columns:
           chevronCheckbox:
             label: Pijltje
             type: toggle
-            required: true
       line-d:
         type: line
       
@@ -309,7 +320,6 @@ columns:
           chevronCheckbox:
             label: Pijltje
             type: toggle
-            required: true
 
 
   

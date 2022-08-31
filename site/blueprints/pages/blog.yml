@@ -1,0 +1,74 @@
+title: Blog
+icon: book
+
+options:
+  changeSlug: false
+
+columns:
+
+  #BLOG ARTICLES
+  - width: 1/2
+    sections:
+      listed:
+        headline: Listed pages
+        type: pages
+        status: listed
+      unlisted:
+        headline: Unlisted pages
+        type: pages
+        status: unlisted
+      drafts:
+        headline: Pages in draft
+        type: pages
+        status: draft
+  
+
+
+  #BLOG CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Hero
+      heroHeadline:
+        label: Hero
+        type: headline
+      heroTitle:
+        label: Hero titel
+        type: text
+      heroIntro:
+        label: Hero intro tekst
+        type: writer
+        inline: true
+      heroButtons:
+        label: Hero buttons
+        type: structure
+        max: 1
+        columns:
+          anker:
+            width: 2/8
+          page:
+            width: 2/8
+          externalUrl:
+            width: 3/8
+          chevronCheckbox:
+            width: 1/8
+        fields:
+          anker:
+            label: Tekst
+            type: text
+            required: true
+          page:
+            label: Pagina op website
+            type: pages
+            max: 1
+          pageId:
+            label: Id op pagina (best afblijven)
+            type: text
+          externalUrl:
+            label: Externe webpagina URL
+            type: text
+          chevronCheckbox:
+            label: Pijltje
+            type: toggle
+            required: true

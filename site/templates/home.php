@@ -12,13 +12,26 @@
         <!-- HEADER HOME - CONTENT -->
         <div class="header-home__content">
             <div class="header-home__content__text">
-                <h1>No troubles, yes <span>amazing vacation!</span></h1>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+                <h1><?= $page->heroTitle() ?> <span><?= $page->heroTitleSpan() ?></span></h1>
+                <p><?= $page->heroIntro() ?></p>
 
-                <div class="buttons">
+                <!-- Hero buttons -->
+                <?php if($page->heroButtons()->isNotEmpty()): ?>
+                    <div class="buttons">
+                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                            <?php if($button->iconCheckbox()->isNotEmpty()): ?>
+
+                            <?php else: ?>
+                                <p>NoIcon</p>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php /* <div class="buttons">
                     <a class="button button-primary" href="<?= $site->url() ?>/home#services">Read more <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i></a>
                     <a class="button button-secondary" href="<?= $site->url() ?>/contact">Contact <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
-                </div>
+                </div> */ ?>
             </div>
 
             <div class="header__content__image">

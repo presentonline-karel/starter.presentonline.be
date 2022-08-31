@@ -1,0 +1,129 @@
+title: Contact
+icon: email
+
+options:
+  changeSlug: false
+
+columns:
+
+  #CONTACT TEXT CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Hero
+      heroHeadline:
+        label: Header
+        type: headline
+      heroTitle:
+        label: Header titel
+        type: text
+      heroIntro:
+        label: Header intro tekst
+        type: writer
+        inline: true
+      heroButtons:
+        label: Hero buttons
+        type: structure
+        max: 2
+        columns:
+          anker:
+            width: 2/8
+          page:
+            width: 2/8
+          externalUrl:
+            width: 3/8
+          chevronCheckbox:
+            width: 1/8
+        fields:
+          anker:
+            label: Tekst
+            type: text
+            required: true
+          contact:
+            label: Soort contact
+            type: checkboxes
+            options:
+              email: Email
+              phone: Telefoon
+          emailTelephone:
+            label: Email/ GSM-nummer
+            type: text
+          externalUrl:
+            label: Externe webpagina URL
+            type: text
+      line-a:
+        type: line
+      
+
+
+      #Contact - Info
+      contactInfo:
+        label: Contact info
+        type: headline
+      contactInfoTitle:
+        label: Contact info titel
+        type: text
+      contactInfoText:
+        label: Contact info tekst
+        type: writer
+        inline: true
+      contactItems:
+        label: Contactmogelijkheden
+        type: structure
+        fields:
+          typeOf:
+            label: Type contactmogelijkheid
+            type: select
+            options:
+              telephone: Telefoon
+              mail: Email
+          emailTelephone:
+            label: Email/ GSM-nummer
+            type: text
+            required: true
+      line-b:
+        type: line
+      
+
+
+      #Contact Maps
+      contactMaps:
+        label: Google Maps
+        type: headline
+      mapsUrl:
+        label: Google Maps embed URL
+        type: text
+  
+
+
+  #CONTACT OPENING HOURS
+  - width: 1/2
+    sections:
+    fields:
+
+      #Openinghours
+      headerOpeninghours:
+        label: Openingsuren
+        type: headline
+        numbered: false
+      openingHours:
+        label: Openingsuren
+        type: structure
+        max: 8
+        columns:
+          day:
+            width: 3/8
+          value:
+            width: 5/8
+        fields:
+          day:
+            label: Dag
+            type: text
+            required: true
+          value:
+            label: Uren
+            type: text
+            required: true
+      line-c:
+        type: line
