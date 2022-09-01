@@ -49,12 +49,41 @@
                     <button class="filter-tags__remove__tag tag">Remove tags</button>
                 </div>
 
-                <div class="filter-tags__tags">
-                    <button class="tag tag-grey">Company</button>
-                    <button class="tag tag-grey">Product</button>
-                    <button class="tag tag-grey">Other tag</button>
-                    <button class="tag tag-grey">Some more</button>
-                </div>
+                <!-- Get articles from content + initialize tags array -->
+                <?php $articles = $page->children(); ?>
+                <?php $tagsCollection = []; ?>
+
+                <!-- Tags -->
+                <?php if($articles->isNotEmpty()): ?>
+
+                    <!-- Make array with all unique tags -->
+                    <?php foreach($articles as $article): ?>
+                        <?php foreach($article->tags() as $tags): ?>
+
+                            <!-- Turn article tags into an array -->
+                            <?php $articleTags = explode(", ", $tags); ?>
+
+                            <!-- Add tag to collection if not already in there -->
+                            <?php foreach($articleTags as $tag): ?>
+                                <?php if(!in_array($tag, $tagsCollection)): ?>
+                                    <?php array_push($tagsCollection, $tag); ?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+
+
+
+                    <!-- Tags for blog filter -->
+                    <?php if(count($tagsCollection) > 0): ?>
+                        <div class="filter-tags__tags">
+                            <?php foreach($tagsCollection as $tag): ?>
+                                <button class="tag tag-grey"><?= $tag ?></button>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -62,62 +91,46 @@
 
         <!-- BLOGPOSTS - ARTICLES -->
         <main class="blogposts__articles">
-            <article class="article">
-                <img class="article__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
+            
+            <!-- ARTICLES -->
+            <?php if($articles->isNotEmpty()): ?>
 
-                <div class="article__content">
-                    <div class="article__content__tags">
-                        <span class="tag tag-primary">Company</span>
-                        <span class="tag tag-primary">Product</span>
-                    </div>
+                <!-- Article -->
+                <?php foreach($articles as $article): ?>
+                    <article class="article">
 
-                    <h3>Why you should go to Crete, the island</h3>
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
+                        <!-- cover image -->
+                        <img class="article__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
 
-                    <div class="article__content__bottom">
-                        <button class="button-primary">Lees blog <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
-                        <span class="min-read">11min read</span>
-                    </div>
-                </div>
-            </article>
+                        <!-- text content -->
+                        <div class="article__content">
 
-            <article class="article">
-                <img class="article__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
+                            <!-- tags -->
+                            <?php if($article->tags()->isNotEmpty()): ?>
+                                <div class="article__content__tags">
 
-                <div class="article__content">
-                    <div class="article__content__tags">
-                        <span class="tag tag-primary">Company</span>
-                        <span class="tag tag-primary">Product</span>
-                    </div>
+                                    <!-- tag -->
+                                    <?php foreach(explode(", ", $article->tags()) as $tag): ?>
+                                        <span class="tag tag-primary"><?= $tag ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
 
-                    <h3>Why you should go to Crete, the island</h3>
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
+                            <!-- title -->
+                            <h3><?= $article->articleTitle() ?></h3>
 
-                    <div class="article__content__bottom">
-                        <button class="button-primary">Lees blog <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
-                        <span class="min-read">11min read</span>
-                    </div>
-                </div>
-            </article>
+                            <!-- intro -->
+                            <p><?= $article->articleIntro() ?></p>
 
-            <article class="article">
-                <img class="article__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
-
-                <div class="article__content">
-                    <div class="article__content__tags">
-                        <span class="tag tag-primary">Company</span>
-                        <span class="tag tag-primary">Product</span>
-                    </div>
-
-                    <h3>Why you should go to Crete, the island</h3>
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
-
-                    <div class="article__content__bottom">
-                        <button class="button-primary">Lees blog <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
-                        <span class="min-read">11min read</span>
-                    </div>
-                </div>
-            </article>
+                            <!-- button + min-read -->
+                            <div class="article__content__bottom">
+                                <a class="button-primary" href="<?= $article->url() ?>">Lees artikel <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+                                <span class="min-read"><?= $article->minRead() ?>min read</span>
+                            </div>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </main>
     </div>
 

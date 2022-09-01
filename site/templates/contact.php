@@ -12,8 +12,8 @@
         <!-- HEADER CONTACT - CONTENT -->
         <div class="header-contact__content">
             <div class="header-contact__content__text">
-                <h1>Get in touch</h1>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.</p>
+                <h1><?= $page->heroTitle() ?></h1>
+                <p><?= $page->heroIntro() ?></p>
 
                 <div class="buttons">
                     <a class="button button-primary" href="#"><i class="icon-first fa fa-phone" aria-hidden="true"></i> Bellen</a>
@@ -21,44 +21,20 @@
                 </div>
             </div>
 
-            <div class="header-contact__content__hours">
-                <h4>Openingsuren</h4>
+            <!-- Openinghours -->
+            <?php if($page->openingHours()->isNotEmpty()): ?>
+                <div class="header-contact__content__hours">
+                    <h4>Openingsuren</h4>
 
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Maandag</p>
-                    <p class="hour">08:00 - 20:00</p>
+                    <!-- openinghour -->
+                    <?php foreach($page->openingHours()->toStructure() as $openinghour): ?>
+                        <div class="header-contact__content__hours__item">
+                            <p class="day"><?= $openinghour->day() ?></p>
+                            <p class="hour"><?= $openinghour->value() ?></p>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Dinsdag</p>
-                    <p class="hour">08:00 - 20:00</p>
-                </div>
-
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Woensdag</p>
-                    <p class="hour">08:00 - 20:00</p>
-                </div>
-
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Donderdag</p>
-                    <p class="hour">08:00 - 20:00</p>
-                </div>
-
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Vrijdag</p>
-                    <p class="hour">08:00 - 20:00</p>
-                </div>
-
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Zaterdag</p>
-                    <p class="hour">08:00 - 20:00</p>
-                </div>
-
-                <div class="header-contact__content__hours__item">
-                    <p class="day">Zondag</p>
-                    <p class="hour">Gesloten</p>
-                </div>
-            </div>
+            <?php endif; ?>
         </div>
     </header>
 
@@ -69,8 +45,8 @@
 
         <!-- INFO -->
         <div class="contact__info">
-            <h2>Contact info</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.</p>
+            <h2><?= $page->contactInfoTitle() ?></h2>
+            <p><?= $page->contactInfoText() ?></p>
 
             <div class="contact__info__items">
                 <a class="info-item p" href="#">
@@ -89,7 +65,7 @@
 
         <!-- FORMSECTION -->
         <div class="contact__form-section">
-            <h2>Or fill in our form</h2>
+            <h2>Of vul ons formulier in</h2>
 
             <!-- Contactform -->
             <form class="contact-form form">
@@ -131,7 +107,7 @@
     <section class="maps">
 
         <!-- Maps widget -->
-        <iframe class="maps__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20010.737409779438!2d4.335697066645055!3d51.17591594832772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f3fc0ac00573%3A0xaa07251a0773698b!2sHoboken%2C%202660%20Antwerpen!5e0!3m2!1snl!2sbe!4v1660726573267!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="maps__iframe" src="<?= $page->mapsUrl() ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 </div>
 

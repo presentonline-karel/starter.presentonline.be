@@ -11,16 +11,29 @@
 
         <!-- Article header -->
         <div class="article-page__header">
-            <span class="publication-date">8 Aug. 2022</span>
 
-            <div class="tags">
-                <span class="tag tag-grey">Company</span>
-                <span class="tag tag-grey">Product</span>
-            </div>
+            <!-- convert article publication date to PHP date/time object -->
+            <?php $date = strtotime($page->publicationDate()); ?>
 
-            <h1>Why you should buy our amazing product</h1>
+            <!-- publication date -->
+            <span class="publication-date"><?= date("j F Y", $date); ?></span>
 
-            <p class="article__header__intro">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.</p>
+            <!-- tags -->
+            <?php if ($page->tags()->isNotEmpty()) : ?>
+                <div class="tags">
+
+                    <!-- tag -->
+                    <?php foreach (explode(", ", $page->tags()) as $tag) : ?>
+                        <span class="tag tag-grey"><?= $tag ?></span>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+
+            <!-- title -->
+            <h1><?= $page->articleTitle() ?></h1>
+
+            <!-- intro -->
+            <p class="article__header__intro"><?= $page->articleIntro() ?></p>
         </div>
 
 
@@ -32,10 +45,8 @@
 
         <!-- Article section -->
         <div class="article-page__section">
-            <h3>Why is growth marketing the best form of marketing?</h3>
-            <p>
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.<br><br> Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.
-            </p>
+            <h3><?= $page->articleFirstSubtitle() ?></h3>
+            <p><?= $page->articleFirstParagraph() ?></p>
         </div>
 
 
@@ -47,57 +58,55 @@
 
         <!-- Article section -->
         <div class="article-page__section">
-            <h3>Why is growth marketing the best form of marketing?</h3>
-            <p>
-                Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.<br><br> Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.
-            </p>
+            <h3><?= $page->articleSecondSubtitle() ?></h3>
+            <p><?= $page->articleSecondParagraph() ?></p>
         </div>
 
 
 
         <!-- Button - Back to all blogs -->
-        <a class="button-primary" href="#">Alle blogs <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a class="button-primary" href="<?php $site->url() ?>/blog">Alle blogs <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
     </main>
 
 
 
     <!-- KEEP READING -->
     <section class="keep-reading section">
-        <h2>Or keep reading</h2>
+        <h2>Gerelateerde<br> artikels</h2>
 
         <!-- Related articles -->
-        <div class="related-articles">
+        <?php if ($page->relatedArticles()->isNotEmpty()) : ?>
+            <div class="related-articles">
 
-            <!-- article -->
-            <article class="related-articles__article">
-                <div class="related-articles__article__top">
-                    <h5>Another serious blogpost for something different</h5>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </div>
+                <!-- get related articles -->
+                <?php $relatedArticles = $page->relatedArticles()->toPages(); ?>
 
-                <div class="tags">
-                    <span class="tag tag-primary">Company</span>
-                    <span class="tag tag-primary">Product</span>
-                </div>
+                <!-- article -->
+                <?php foreach ($relatedArticles as $relatedArticle) : ?>
+                    <article class="related-articles__article">
 
-                <p class="min-read">11min read</p>
-            </article>
+                        <!-- top -->
+                        <div class="related-articles__article__top">
+                            <h5><?= $relatedArticle->articleTitle() ?></h5>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </div>
 
-            <!-- article -->
-            <article class="related-articles__article">
-                <div class="related-articles__article__top">
-                    <h5>Another serious blogpost for something different</h5>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                </div>
+                        <!-- tags -->
+                        <?php if ($relatedArticle->tags()->isNotEmpty()) : ?>
+                            <div class="tags">
 
-                <div class="tags">
-                    <span class="tag tag-primary">Company</span>
-                    <span class="tag tag-primary">Product</span>
-                </div>
+                                <!-- tag -->
+                                <?php foreach (explode(", ", $relatedArticle->tags()) as $tag) : ?>
+                                    <span class="tag tag-primary"><?= $tag ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
 
-                <p class="min-read">11min read</p>
-            </article>
-        </div>
+                        <p class="min-read"><?= $relatedArticle->minRead() ?>min read</p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
     </section>
 </div>
 

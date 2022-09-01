@@ -11,59 +11,37 @@
 
         <!-- HEADER FAQ - CONTENT -->
         <div class="header-faq__content">
-            <h1>Frequently asked questions</h1>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.</p>
+            <h1><?= $page->heroTitle() ?></h1>
+            <p><?= $page->heroIntro() ?></p>
         </div>
     </header>
 
 
 
     <!-- FAQs -->
-    <main class="faqs">
-        <div class="faq">
-            <div class="faq__question">
-                <h4 class="faq__question__title">What is the best form of marketing?</h4>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
+    <?php if ($page->faqs()->isNotEmpty()) : ?>
+        <main class="faqs">
 
-            <div class="faq__answer">
-                <p class="faq__answer__p">
-                    Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.
-                </p>
-            </div>
-        </div>
+            <!-- faq -->
+            <?php foreach ($page->faqs()->toStructure() as $faq) : ?>
+                <div class="faq">
+                    <div class="faq__question">
+                        <h4 class="faq__question__title"><?= $faq->question() ?></h4>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
 
-        <div class="faq">
-            <div class="faq__question">
-                <h4 class="faq__question__title">Can I buy the product in advance?</h4>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
+                    <div class="faq__answer">
+                        <p class="faq__answer__p">
+                            <?= $faq->answer() ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
 
-            <div class="faq__answer">
-                <p class="faq__answer__p">
-                    Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.
-                </p>
-            </div>
-        </div>
-
-        <div class="faq">
-            <div class="faq__question">
-                <h4 class="faq__question__title">Is Crete accesible from any type of public transport?</h4>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </div>
-
-            <div class="faq__answer">
-                <p class="faq__answer__p">
-                    Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.
-                </p>
-            </div>
-        </div>
-
-
-
-        <!-- Button - Back home -->
-        <a class="button-primary" href="#">Home <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
-    </main>
+            <!-- Button - Back home -->
+            <a class="button-primary" href="<?= $site->url() ?>/home">Home <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        </main>
+    <?php endif; ?>
 </div>
 
 

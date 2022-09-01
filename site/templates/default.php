@@ -10,8 +10,8 @@
 
     <!-- ERROR-CONTAINER -->
     <section class="error-content">
-        <h1>Oooppsss</h1>
-        <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken.</p>
+        <h1><?= $page->errorPageTitle() ?></h1>
+        <p><?= $page->errorPageParagraph() ?></p>
 
         <a class="button-primary" href="<?= $site->url() ?>">Home <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
     </section>

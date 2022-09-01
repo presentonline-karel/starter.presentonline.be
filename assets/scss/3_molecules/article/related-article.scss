@@ -32,20 +32,16 @@
     .tags {
         margin-bottom: 16px;
     }
-
-    /*&__min-read {
-        font-family: $title-font;
-        font-size: 14px;
-        line-height: 14px;
-        font-weight: 500;
-        color: $neutrals-1100;
-    }*/
 }
 
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .related-articles__article {
         &__top {
+            h5 {
+                max-width: 328px;
+            }
+
             i {
                 font-size: 20px;
                 line-height: 20px;
