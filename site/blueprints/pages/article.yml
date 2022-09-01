@@ -84,13 +84,10 @@ columns:
         type: headline
       relatedArticles:
         label: Gerelateerde artikels
-        type: structure
+        type: pages
+        query: page.siblings(true)
         max: 2
-        fields:
-          article:
-            label: Artikel
-            type: pages
-            query: page.siblings(true)
+            
 
   
 

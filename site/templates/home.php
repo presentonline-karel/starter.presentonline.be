@@ -18,20 +18,13 @@
                 <!-- Hero buttons -->
                 <?php if($page->heroButtons()->isNotEmpty()): ?>
                     <div class="buttons">
-                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
-                            <?php if($button->iconCheckbox()->isNotEmpty()): ?>
 
-                            <?php else: ?>
-                                <p>NoIcon</p>
-                            <?php endif; ?>
+                        <!-- button -->
+                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-
-                <?php /* <div class="buttons">
-                    <a class="button button-primary" href="<?= $site->url() ?>/home#services">Read more <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i></a>
-                    <a class="button button-secondary" href="<?= $site->url() ?>/contact">Contact <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
-                </div> */ ?>
             </div>
 
             <div class="header__content__image">
@@ -49,50 +42,68 @@
 
     <!-- CLIENTS -->
     <section id="clients" class="clients-section section">
-        <h2>Our clients</h2>
+        <h2><?= $page->clientsTitle() ?></h2>
 
-        <div class="clients">
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
-            </div>
+        <!-- Clients -->
+        <?php if($page->clients()->isNotEmpty()): ?>
+            <div class="clients">
 
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
-            </div>
+                <!-- client -->
+                <?php foreach($page->clients()->toStructure() as $client): ?>
 
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
+                    <?php if($client->url()->isNotEmpty()): ?>
+                        <a class="client" href="<?= $client->url() ?>" target="_blank">
+                            <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo">
+                        </a>
+                    <?php else: ?>
+                        <div class="client">
+                            <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo">
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
-
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
-            </div>
-
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
-            </div>
-
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
-            </div>
-
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-1.svg" alt="client logo">
-            </div>
-
-            <div class="client">
-                <img src="<?= $site->url() ?>/assets/img/logo-client-2.svg" alt="client logo">
-            </div>
-        </div>
+        <?php endif; ?>
     </section>
 
 
 
     <!-- SERVICES -->
     <section id="services" class="services-section section">
-        <h2>Services</h2>
+        <h2><?= $page->servicesTitle() ?></h2>
 
-        <div class="services">
+        <!-- Services -->
+        <?php if($page->services()->isNotEmpty()): ?>
+            <div class="services">
+
+                <!-- service -->
+                <?php foreach($page->services()->toStructure() as $service): ?>
+                    <div class="service">
+
+                        <!-- service - icon -->
+                        <div class="service__icon-container">
+                            <?php switch ($service->icon()) {
+                                case "planning":
+                                    ?><i class="fa fa-calendar" aria-hidden="true"></i><?php
+                                    break;
+                                case "followup":
+                                    ?><i class="fa fa-plane" aria-hidden="true"></i><?php
+                                    break;
+                                case "transport":
+                                    ?><i class="fa fa-car" aria-hidden="true"></i><?php
+                                    break;
+                                default:
+                                ?><i class="fa fa-check" aria-hidden="true"></i><?php
+                            } ?>
+                        </div>
+
+                        <h3><?= $service->title() ?></h3>
+                        <p><?= $service->paragraph() ?></p>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+
+        <!-- <div class="services">
             <div class="service">
                 <div class="service__icon-container">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -119,7 +130,7 @@
                 <h3>Transport provider</h3>
                 <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
             </div>
-        </div>
+        </div> -->
 
         <!-- CTA DESKTOP -->
         <div class="cta__content">
@@ -133,36 +144,25 @@
     <!-- CTA MOBILE -->
     <section id="cta-1" class="cta">
         <div class="cta__content">
-            <h2>Ready to dive in?<br> Contact us for a free trial!</h2>
-            <a class="button-white" href="<?= $site->url() ?>/contact">Free quotation <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
+
+            <!-- CTA buttons -->
+            <?php if($page->firstCtaButtons()->isNotEmpty()): ?>
+                <div class="buttons">
+
+                    <!-- button -->
+                    <?php foreach($page->firstCtaButtons()->toStructure() as $button): ?>
+                        <a class="button-white" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
 
 
     <!-- CONTENT -->
-    <section id="content" class="content">
-
-        <!-- Content image -->
-        <div class="content__image">
-            <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
-        </div>
-
-        <!-- Content text -->
-        <div class="content__text">
-            <h2>Our approach</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
-
-            <ul class="list">
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 1</li>
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 2</li>
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 3</li>
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 4</li>
-            </ul>
-
-            <a class="button-primary" href="#">Explore <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
-        </div>
-    </section>
+    <?php snippet('general/content') ?>
 
 
 
@@ -228,12 +228,18 @@
     <!-- CTA -->
     <section id="cta-2" class="cta">
         <div class="cta__content">
-            <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
+            <h2><?= $page->secondCtaTitle() ?> <span><?= $page->secondCtaTitleSpan() ?></span></h2>
 
-            <div class="buttons">
-                <a class="button button-primary" href="#">Free trial</a>
-                <a class="button button-primary" href="#">Live demo <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
-            </div>
+            <!-- CTA buttons -->
+            <?php if($page->secondCtaButtons()->isNotEmpty()): ?>
+                <div class="buttons">
+
+                    <!-- button -->
+                    <?php foreach($page->secondCtaButtons()->toStructure() as $button): ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 </div>

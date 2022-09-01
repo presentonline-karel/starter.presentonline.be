@@ -12,10 +12,19 @@
         <!-- HEADER BLOG - CONTENT -->
         <div class="header__content">
             <div class="header__content__text">
-                <h1>Get to know our company</h1>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.</p>
+                <h1><?= $page->heroTitle() ?></h1>
+                <p><?= $page->heroIntro() ?></p>
 
-                <a class="button-primary" href="#">Our insights <i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
+                <!-- Hero buttons -->
+                <?php if($page->heroButtons()->isNotEmpty()): ?>
+                    <div class="buttons">
+
+                        <!-- button -->
+                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </header>
@@ -23,7 +32,7 @@
 
 
     <!-- BLOGPOSTS -->
-    <div class="blogposts">
+    <div id="blogposts" class="blogposts">
 
         <!-- BLOG FILTER -->
         <div class="blog-filter">
@@ -117,8 +126,18 @@
     <!-- CTA -->
     <section id="cta-1" class="cta">
         <div class="cta__content">
-            <h2>Got inspired?<br> Try our product <span>for free for a month.</span></h2>
-            <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
+
+            <!-- CTA buttons -->
+            <?php if($page->firstCtaButtons()->isNotEmpty()): ?>
+                <div class="buttons">
+
+                    <!-- button -->
+                    <?php foreach($page->firstCtaButtons()->toStructure() as $button): ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 </div>

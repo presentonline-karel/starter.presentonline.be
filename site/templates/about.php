@@ -12,10 +12,19 @@
         <!-- HEADER ABOUT - CONTENT -->
         <div class="header__content">
             <div class="header__content__text">
-                <h1>The team behind the project</h1>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de. En dan komt er nog zin uitgeschreven door.</p>
+                <h1><?= $page->heroTitle() ?></h1>
+                <p><?= $page->heroIntro() ?></p>
 
-                <a class="button-primary" href="#">Our history <i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
+                <!-- Hero buttons -->
+                <?php if($page->heroButtons()->isNotEmpty()): ?>
+                    <div class="buttons">
+
+                        <!-- button -->
+                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <img class="header-about__content__image" src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
@@ -35,90 +44,52 @@
 
     <!-- HISTORY -->
     <section id="history" class="history section">
-        <h2>Our history</h2>
+        <h2><?= $page->historyTitle() ?></h2>
 
-        <div class="history__numbers">
-            <div class="history-item">
-                <h5 class="history-item__label">Onze start</h5>
-                <h1 class="history-item__number counter" data-target="2016">2016</h1>
-            </div>
+        <!-- History numbers -->
+        <?php if($page->history()->isNotEmpty()): ?>
+            <div class="history__numbers">
 
-            <div class="history-item">
-                <h5 class="history-item__label">Tevreden klanten</h5>
-                <h1 class="history-item__number counter plus" data-target="50">50+</h1>
+                <!-- number -->
+                <?php foreach($page->history()->toStructure() as $historyItem): ?>
+                    <div class="history-item">
+                        <h5 class="history-item__label"><?= $historyItem->title() ?></h5>
+                        <h1 class="history-item__number counter <?php if($historyItem->withPlus() == "true") { echo("plus"); } ?>" data-target="<?= $historyItem->number() ?>"><?= $historyItem->number() ?></h1>
+                    </div>
+                <?php endforeach; ?>
             </div>
-
-            <div class="history-item">
-                <h5 class="history-item__label">Another number</h5>
-                <h1 class="history-item__number counter plus" data-target="100">100+</h1>
-            </div>
-        </div>
+        <?php endif; ?>
     </section>
 
 
 
     <!-- CONTENT -->
-    <section class="content">
-
-        <!-- Content image -->
-        <div class="content__image">
-            <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
-        </div>
-
-        <!-- Content text -->
-        <div class="content__text">
-            <h2>Our approach</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
-
-            <ul class="list">
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 1</li>
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 2</li>
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 3</li>
-                <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> Bullet point 4</li>
-            </ul>
-
-            <a class="button-primary" href="#">Explore <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
-        </div>
-    </section>
+    <?php snippet('general/content') ?>
 
 
 
     <!-- TEAM -->
     <section class="team section">
         <div class="team__text">
-            <h2>Who is making it happen every day?</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            <h2><?= $page->teamTitle() ?></h2>
+            <p><?= $page->teamText() ?></p>
         </div>
 
-        <div class="employees">
-            <div class="employee">
-                <img class="employee__img" src="<?= $site->url() ?>/assets/img/karel.jpg" alt="employee image">
+        <!-- Employees -->
+        <?php if($page->team()->isNotEmpty()): ?>
+            <div class="employees">
 
-                <h5>Karel Decoene</h5>
-                <p>Co-founder / CTO</p>
+                <!-- employee -->
+                <?php foreach($page->team()->toStructure() as $employee): ?>
+                    <div class="employee">
+                        <img class="employee__img" src="<?= $site->url() ?>/assets/img/karel.jpg" alt="employee image">
+
+                        <h5><?= $employee->name() ?></h5>
+                        <p><?= $employee->function() ?></p>
+                    </div>
+                <?php endforeach; ?>
             </div>
-
-            <div class="employee">
-                <img class="employee__img" src="<?= $site->url() ?>/assets/img/karel.jpg" alt="employee image">
-
-                <h5>Karel Decoene</h5>
-                <p>Co-founder / CTO</p>
-            </div>
-
-            <div class="employee">
-                <img class="employee__img" src="<?= $site->url() ?>/assets/img/karel.jpg" alt="employee image">
-
-                <h5>Karel Decoene</h5>
-                <p>Co-founder / CTO</p>
-            </div>
-
-            <div class="employee">
-                <img class="employee__img" src="<?= $site->url() ?>/assets/img/karel.jpg" alt="employee image">
-
-                <h5>Karel Decoene</h5>
-                <p>Co-founder / CTO</p>
-            </div>
-        </div>
+        <?php endif; ?>
     </section>
 
 
@@ -126,8 +97,18 @@
     <!-- CTA -->
     <section id="cta-1" class="cta">
         <div class="cta__content">
-            <h2>Ready to dive in?<br> <span>Start your free trial now!</span></h2>
-            <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
+
+            <!-- CTA buttons -->
+            <?php if($page->firstCtaButtons()->isNotEmpty()): ?>
+                <div class="buttons">
+
+                    <!-- button -->
+                    <?php foreach($page->firstCtaButtons()->toStructure() as $button): ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 </div>

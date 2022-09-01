@@ -26,46 +26,66 @@ columns:
         label: Hero intro tekst
         type: writer
         inline: true
+
+      #buttons  
       heroButtons:
         label: Hero buttons
         type: structure
         max: 2
         columns:
-          anker:
+          typeOfButton:
             width: 2/8
-          page:
+          anchor:
             width: 2/8
-          externalUrl:
-            width: 3/8
-          iconCheckbox:
-            width: 1/8
+          icon:
+            width: 2/8
         fields:
-          anker:
+          anchor:
             label: Tekst
             type: text
             required: true
-          pageUrl:
-            label: Pagina op website
-            type: pages
-            max: 1
-          idPage:
-            label: Id op pagina (best afblijven)
-            type: text
-          externalUrl:
-            label: Externe webpagina URL
-            type: text
-          iconCheckbox:
+          icon:
             label: Icoontje
             type: checkboxes
+            max: 1
+            required: true
             options:
+              noIcon: Geen icon
               chevronRight: Chevron rechts
               chevronBottom: Chevron bodem
           typeOfButton:
             label: Type button
             type: checkboxes
+            max: 1
             options:
               button-primary: Primair
               button-secondary: Secundair
+          destination:
+            type: select
+            label: Button verwijst naar
+            max: 1
+            required: true
+            options:
+              internal: Pagina op website
+              external: Externe Webpagina
+          internalPage:
+            label: Pagina op website
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Id op pagina
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: Externe webpagina URL
+            type: text
+            required: true
+            when:
+              destination: external
       line-a:
         type: line
 
@@ -151,34 +171,58 @@ columns:
       firstCtaTitleSpan:
         label: CTA titel - gekleurd deel
         type: text
+      #buttons  
       firstCtaButtons:
-        label: CTA buttons
+        label: CTA1 buttons
         type: structure
         max: 2
         columns:
-          anker:
+          typeOfButton:
             width: 2/8
-          page:
+          anchor:
             width: 2/8
-          externalUrl:
-            width: 3/8
-          chevronCheckbox:
-            width: 1/8
+          icon:
+            width: 2/8
         fields:
-          anker:
+          anchor:
             label: Tekst
             type: text
             required: true
-          page:
+          icon:
+            label: Icoontje
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: Geen icon
+              chevronRight: Chevron rechts
+              chevronBottom: Chevron bodem
+          destination:
+            type: select
+            label: Button verwijst naar
+            max: 1
+            required: true
+            options:
+              internal: Pagina op website
+              external: Externe Webpagina
+          internalPage:
             label: Pagina op website
             type: pages
             max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Id op pagina
+            type: text
+            when:
+              destination: internal
           externalUrl:
             label: Externe webpagina URL
             type: text
-          chevronCheckbox:
-            label: Pijltje
-            type: toggle
+            required: true
+            when:
+              destination: external
       line-d:
         type: line
       
@@ -202,35 +246,65 @@ columns:
           bulletPoint:
             type: text
             required: true
-      contentButton:
-        label: Content button
+      #buttons  
+      contentButtons:
+        label: Content buttons
         type: structure
         max: 2
         columns:
-          anker:
+          typeOfButton:
             width: 2/8
-          page:
+          anchor:
             width: 2/8
-          externalUrl:
-            width: 3/8
-          chevronCheckbox:
-            width: 1/8
+          icon:
+            width: 2/8
         fields:
-          anker:
+          anchor:
             label: Tekst
             type: text
             required: true
-          page:
+          icon:
+            label: Icoontje
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: Geen icon
+              chevronRight: Chevron rechts
+              chevronBottom: Chevron bodem
+          typeOfButton:
+            label: Type button
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primair
+              button-secondary: Secundair
+          destination:
+            type: select
+            label: Button verwijst naar
+            max: 1
+            required: true
+            options:
+              internal: Pagina op website
+              external: Externe Webpagina
+          internalPage:
             label: Pagina op website
             type: pages
             max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Id op pagina
+            type: text
+            when:
+              destination: internal
           externalUrl:
             label: Externe webpagina URL
             type: text
-          chevronCheckbox:
-            label: Pijltje
-            type: toggle
             required: true
+            when:
+              destination: external
       line-e:
         type: line
       
@@ -292,34 +366,65 @@ columns:
       secondCtaTitleSpan:
         label: CTA titel - gekleurd deel
         type: text
+      #buttons  
       secondCtaButtons:
-        label: CTA buttons
+        label: Content buttons
         type: structure
         max: 2
         columns:
-          anker:
+          typeOfButton:
             width: 2/8
-          page:
+          anchor:
             width: 2/8
-          externalUrl:
-            width: 3/8
-          chevronCheckbox:
-            width: 1/8
+          icon:
+            width: 2/8
         fields:
-          anker:
+          anchor:
             label: Tekst
             type: text
             required: true
-          page:
+          icon:
+            label: Icoontje
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: Geen icon
+              chevronRight: Chevron rechts
+              chevronBottom: Chevron bodem
+          typeOfButton:
+            label: Type button
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primair
+              button-secondary: Secundair
+          destination:
+            type: select
+            label: Button verwijst naar
+            max: 1
+            required: true
+            options:
+              internal: Pagina op website
+              external: Externe Webpagina
+          internalPage:
             label: Pagina op website
             type: pages
             max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Id op pagina
+            type: text
+            when:
+              destination: internal
           externalUrl:
             label: Externe webpagina URL
             type: text
-          chevronCheckbox:
-            label: Pijltje
-            type: toggle
+            required: true
+            when:
+              destination: external
 
 
   
