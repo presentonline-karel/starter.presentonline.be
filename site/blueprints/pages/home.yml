@@ -167,7 +167,8 @@ columns:
         type: headline
       firstCtaTitle:
         label: CTA titel
-        type: text
+        type: writer
+        inline: true
       firstCtaTitleSpan:
         label: CTA titel - gekleurd deel
         type: text
@@ -362,7 +363,8 @@ columns:
         type: headline
       secondCtaTitle:
         label: CTA titel
-        type: text
+        type: writer
+        inline: true
       secondCtaTitleSpan:
         label: CTA titel - gekleurd deel
         type: text

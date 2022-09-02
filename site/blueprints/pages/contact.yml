@@ -23,7 +23,7 @@ columns:
         type: writer
         inline: true
 
-      #buttons (fix it)
+      #buttons
       heroButtons:
         label: Hero buttons
         type: structure
@@ -47,10 +47,9 @@ columns:
             options:
               button-primary: Primair
               button-secondary: Secundair
-          typeButtonContact:
-            label: Type button
-            type: checkboxes
-            min: 1
+          typeButton:
+            label: Externe link/ Contact link
+            type: select
             max: 1
             required: true
             options:
@@ -61,31 +60,6 @@ columns:
             label: Externe webpagina URL
             type: text
             required: true
-            when:
-              typeButtonContact: external
-          telephone:
-            label: GSM/Telefoon nummer
-            type: text
-            required: true
-            when:
-              typeButtonContact: email
-          email:
-            label: Email
-            type: text
-            required: true
-            when:
-              typeButtonContact: telephone
-          typeButton:
-            label: Type button
-            type: checkboxes
-            max: 1
-            required: true
-            options:
-              external: Externe link
-              telephone: Telefoon
-              email: Email
-          text:
-            type: text
             when:
               typeButton: external
       line-a:
@@ -104,21 +78,6 @@ columns:
         label: Contact info tekst
         type: writer
         inline: true
-      #fix it
-      contactItems:
-        label: Contactmogelijkheden
-        type: structure
-        fields:
-          typeOf:
-            label: Type contactmogelijkheid
-            type: select
-            options:
-              telephone: Telefoon
-              mail: Email
-          emailTelephone:
-            label: Email/ GSM-nummer
-            type: text
-            required: true
       line-b:
         type: line
       

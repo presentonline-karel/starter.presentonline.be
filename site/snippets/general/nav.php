@@ -31,15 +31,27 @@
             </ul>
         <?php endif; ?>
 
-        <!-- Primary CTA -->
-        <a class="button button-primary button-white mobile" href="<?= $site->url() ?>/contact">Gratis offerte <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+        <!-- Primary CTA mobile -->
+        <?php if($site->ctaButton()->isNotEmpty()): ?>
+
+            <!-- button -->
+            <?php foreach($site->ctaButton()->toStructure() as $button): ?>
+                <a class="button button-white mobile <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 
 
 
     <!-- Primary CTA -->
     <?php if($page->title() != "Home"): ?>
-        <a class="button button-primary primary-cta desktop" href="<?= $site->url() ?>/contact">Gratis offerte</a>
+        <?php if($site->ctaButton()->isNotEmpty()): ?>
+
+            <!-- button -->
+            <?php foreach($site->ctaButton()->toStructure() as $button): ?>
+                <a class="button primary-cta desktop <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+            <?php endforeach; ?>
+        <?php endif; ?>
     <?php endif; ?>
 
 

@@ -26,10 +26,11 @@ tabs:
       - width: 2/3
         sections:
         fields:
+
+          #Navigation
           menuHeadline:
-            label: Menu
+            label: Navigatie
             type: headline
-            numbered: false
           navigationLinks:
             label: Menu items
             type: structure
@@ -50,8 +51,135 @@ tabs:
               section:
                 label: id op pagina
                 type: text
+          ctaHeadline:
+            label: Navigatie - CTA Button
+            type: headline
+            numbered: false
+          ctaButton:
+            label: Hero buttons
+            type: structure
+            max: 1
+            columns:
+              typeOfButton:
+                width: 2/8
+              anchor:
+                width: 2/8
+              icon:
+                width: 2/8
+            fields:
+              anchor:
+                label: Tekst
+                type: text
+                required: true
+              icon:
+                label: Icoontje
+                type: checkboxes
+                max: 1
+                required: true
+                options:
+                  noIcon: Geen icon
+                  chevronRight: Chevron rechts
+                  chevronBottom: Chevron bodem
+              typeOfButton:
+                label: Type button
+                type: checkboxes
+                max: 1
+                options:
+                  button-primary: Primair
+                  button-secondary: Secundair
+              destination:
+                type: select
+                label: Button verwijst naar
+                max: 1
+                required: true
+                options:
+                  internal: Pagina op website
+                  external: Externe Webpagina
+              internalPage:
+                label: Pagina op website
+                type: pages
+                max: 1
+                required: true
+                when:
+                  destination: internal
+              idPage:
+                label: Id op pagina
+                type: text
+                when:
+                  destination: internal
+              externalUrl:
+                label: Externe webpagina URL
+                type: text
+                required: true
+                when:
+                  destination: external
           line-a:
             type: line
+          
+
+
+          #Contact
+          contactHeadline:
+            label: Contact/Socials
+            type: headline
+          email:
+            label: Email
+            type: text
+          telephone:
+            label: Telefoonnummer
+            type: text
+          socialsHeadline:
+            label: Sociale media
+            type: headline
+            numbered: false
+          socials:
+            label: Socials
+            type: structure
+            columns:
+              social:
+                width: 1/4
+              url:
+                width: 3/4
+            fields:
+              social:
+                type: select
+                options:
+                  facebook: Facebook
+                  instagram: Instagram
+                  linkedin: LinkedIn
+                  twitter: Twitter
+              url:
+                type: url
+          line-b:
+            type: line
+          
+
+
+          #Footer
+          footerHeadline:
+            label: Footer
+            type: headline
+          intro:
+            label: Footer intro
+            type: writer
+            inline: true
+          sitemap:
+            label: Sitemap
+            type: structure
+            fields:
+              anchor:
+                label: Link text
+                type: text
+                required: true
+              page:
+                label: Pagina
+                type: pages
+                required: true
+                max: 1
+              section:
+                label: Sectie op pagina
+                type: text
+          
 
             
     

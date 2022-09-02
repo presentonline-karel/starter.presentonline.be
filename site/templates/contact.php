@@ -15,10 +15,16 @@
                 <h1><?= $page->heroTitle() ?></h1>
                 <p><?= $page->heroIntro() ?></p>
 
-                <div class="buttons">
-                    <a class="button button-primary" href="#"><i class="icon-first fa fa-phone" aria-hidden="true"></i> Bellen</a>
-                    <a class="button button-secondary" href="#"><i class="icon-first fa fa-envelope" aria-hidden="true"></i> Mailen</a>
-                </div>
+                <!-- Hero buttons -->
+                <?php if($page->heroButtons()->isNotEmpty()): ?>
+                    <div class="buttons">
+
+                        <!-- button -->
+                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->typeButton() == "external") { echo($button->externalUrl()); } elseif($button->typeButton() == "telephone") { echo("tel:" . $site->telephone()); } elseif($button->typeButton() == "email") { echo("mailto:" . $site->email()); } ?>"><?php if($button->typeButton() == "telephone") { ?> <i class="icon-first fa fa-phone" aria-hidden="true"></i> <?php } elseif($button->typeButton() == "email") { ?> <i class="icon-first fa fa-envelope" aria-hidden="true"></i> <?php } ?> <?= $button->anchor() ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <!-- Openinghours -->
@@ -49,12 +55,20 @@
             <p><?= $page->contactInfoText() ?></p>
 
             <div class="contact__info__items">
-                <a class="info-item p" href="#">
-                    <i class="fa fa-phone" aria-hidden="true"></i> 0478 69 58 69
-                </a>
-                <a class="info-item p" href="#">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> info@yourwebsite.be
-                </a>
+
+                <!-- Telephone -->
+                <?php if($site->telephone()->isNotEmpty()): ?>
+                    <a class="info-item p" href="tel:<?= $site->telephone() ?>">
+                        <i class="fa fa-phone" aria-hidden="true"></i> <?= $site->telephone() ?>
+                    </a>
+                <?php endif; ?>
+
+                <!-- Email -->
+                <?php if($site->email()->isNotEmpty()): ?>
+                    <a class="info-item p" href="mailto:<?= $site->email() ?>">
+                        <i class="fa fa-envelope" aria-hidden="true"></i> <?= $site->email() ?>
+                    </a>
+                <?php endif; ?>
             </div>
 
             <!-- SNIPPET - SOCIALS -->

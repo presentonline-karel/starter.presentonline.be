@@ -7,12 +7,13 @@
             <div class="footer-blocks">
                 <div class="footer__block intro">
 
-                    <!-- logo -->
+                    <!-- Logo -->
                     <?php if ($site->logoLight()->isNotEmpty()) : ?>
                         <img class="footer-logo" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
                     <?php endif; ?>
 
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+                    <!-- Intro -->
+                    <p><?= $site->intro() ?></p>
 
                     <!-- SNIPPET - SOCIALS -->
                     <?php snippet('general/socials') ?>
@@ -22,19 +23,27 @@
                     <h4>Contact</h4>
 
                     <div class="contact-info">
-                        <a class="footer__a" href="tel:0478693669"><i class="fa fa-phone" aria-hidden="true"></i> 0477 69 36 69</a>
-                        <a class="footer__a" href="mailto:info@presentonline.be"><i class="fa fa-envelope" aria-hidden="true"></i> info@test.be</a>
+
+                        <!-- Telephone -->
+                        <?php if($site->telephone()->isNotEmpty()): ?>
+                            <a class="footer__a" href="tel:<?= $site->telephone() ?>"><i class="fa fa-phone" aria-hidden="true"></i> <?= $site->telephone() ?></a>
+                        <?php endif; ?>
+
+                        <!-- Email -->
+                        <?php if($site->email()->isNotEmpty()): ?>
+                            <a class="footer__a" href="mailto:<?= $site->email() ?>"><i class="fa fa-envelope" aria-hidden="true"></i> <?= $site->email() ?></a>
+                        <?php endif; ?>
                     </div>
                 </div>
 
                 <div class="footer__block sitemap">
                     <h4>Sitemap</h4>
 
-                    <a class="footer__a" href="#">Home</a>
-                    <a class="footer__a" href="#">About us</a>
-                    <a class="footer__a" href="#">Blog</a>
-                    <a class="footer__a" href="#">FAQ</a>
-                    <a class="footer__a" href="#">Contact</a>
+                    <?php if($site->sitemap()->isNotEmpty()): ?>
+                        <?php foreach($site->sitemap()->toStructure() as $sitemapItem): ?>
+                            <a class="footer__a" href="<?php $sitemapItem->page()->toPage()->url() . $sitemapItem->section() ?>"><?= $sitemapItem->anchor() ?></a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
 
