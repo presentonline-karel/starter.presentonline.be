@@ -39,7 +39,9 @@
 
 
         <!-- Image -->
-        <img class="article-page__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
+        <?php if($page->headerImage()->isNotEmpty()): ?>
+            <img class="article-page__img" src="<?= $page->headerImage()->toFile()->url() ?>" alt="<?= $page->headerImage()->toFile()->alt() ?>" />
+        <?php endif; ?>
 
 
 
@@ -52,7 +54,9 @@
 
 
         <!-- Image -->
-        <img class="article-page__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
+        <?php if($page->sectionImage()->isNotEmpty()): ?>
+            <img class="article-page__img" src="<?= $page->sectionImage()->toFile()->url() ?>" alt="<?= $page->sectionImage()->toFile()->alt() ?>" />
+        <?php endif; ?>
 
 
 

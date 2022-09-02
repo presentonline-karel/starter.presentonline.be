@@ -100,7 +100,9 @@
                     <article class="article">
 
                         <!-- cover image -->
-                        <img class="article__img" src="<?= $site->url() ?>/assets/img/header.jpg" />
+                        <?php if($article->headerImage()->isNotEmpty()): ?>
+                            <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" />
+                        <?php endif; ?>
 
                         <!-- text content -->
                         <div class="article__content">

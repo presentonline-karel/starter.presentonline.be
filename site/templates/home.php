@@ -27,9 +27,12 @@
                 <?php endif; ?>
             </div>
 
-            <div class="header__content__image">
-                <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
-            </div>
+            <!-- Hero image -->
+            <?php if($page->heroImage()->isNotEmpty()): ?>
+                <div class="header__content__image">
+                    <img src="<?= $page->heroImage()->toFile()->url() ?>" alt="<?= $page->heroImage()->toFile()->alt() ?>">
+                </div>
+            <?php endif; ?>
         </div>
 
         <!-- Scroll down -->
@@ -177,23 +180,24 @@
 
                     <!-- testimonial -->
                     <div class="slide-container testimonial">
-                        <img class="testimonial__logo" src="<?= $site->url() ?>/assets/img/logo-client-2.svg" />
+                        
+                        <!-- testimonial company logo -->
+                        <?php if($testimonial->logo()->isNotEmpty()): ?>
+                            <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" />
+                        <?php endif; ?>
 
+                        <!-- quotes-bg -->
                         <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
 
+                        <!-- testimonial -->
                         <p class="testimonial__p"><?= $testimonial->testimonial() ?></p>
 
+                        <!-- person -->
                         <div class="testimonial__id flex">
 
-                            <!-- Testimonial image (+fallback) -->
-                            <?php if ($testimonialImageWebp = $testimonial->imageWebp()->toFile()) : ?>
-                                <?php if ($testimonialImageJpg = $testimonial->imageWebp()->toFile()) : ?>
-                                    <picture>
-                                        <source srcSet="<?= $testimonialImageWebp->url() ?>" type="image/webp" />
-                                        <source srcSet="<?= $testimonialImageJpg->url() ?>" type="image/jpg" />
-                                        <img class="testimonial__id__picture" src="<?= $testimonialImageJpg->url() ?>" alt="<?= $testimonialImageJpg->alt() ?>" />
-                                    </picture>
-                                <?php endif; ?>
+                            <!-- image -->
+                            <?php if($testimonial->imageTestimonial()->isNotEmpty()): ?>
+                                <img class="testimonial__id__picture" src="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" alt="<?= $testimonial->imageTestimonial()->toFile()->alt() ?>" />
                             <?php endif; ?>
 
                             <div>
@@ -202,6 +206,7 @@
                             </div>
                         </div>
 
+                        <!-- arrows -->
                         <div class="arrows flex">
                             <div class="prev">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -213,6 +218,8 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            
 
             <!-- testimonials bullets -->
             <div class="bullets">

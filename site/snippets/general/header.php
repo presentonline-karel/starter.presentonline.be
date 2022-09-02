@@ -16,5 +16,18 @@
 
         <!-- STYLESHEET -->
         <?= css('build/css/style.css') ?>
+
+        <!-- GOOGLE ANALYTICS -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4S49SPXNK"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-Y4S49SPXNK');
+        </script>
     </head>
     <body>

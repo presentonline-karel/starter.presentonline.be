@@ -27,7 +27,10 @@
                 <?php endif; ?>
             </div>
 
-            <img class="header-about__content__image" src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
+            <!-- Hero image -->
+            <?php if($page->heroImage()->isNotEmpty()): ?>
+                <img class="header-about__content__image" src="<?= $page->heroImage()->toFile()->url() ?>" alt="<?= $page->heroImage()->toFile()->alt() ?>">
+            <?php endif; ?>
         </div>
 
         <div class="header__content__image">
@@ -82,7 +85,11 @@
                 <!-- employee -->
                 <?php foreach($page->team()->toStructure() as $employee): ?>
                     <div class="employee">
-                        <img class="employee__img" src="<?= $site->url() ?>/assets/img/karel.jpg" alt="employee image">
+
+                        <!-- image -->
+                        <?php if($employee->image()->isNotEmpty()): ?>
+                            <img class="employee__img" src="<?= $employee->image()->toFile()->url() ?>" alt="<?= $employee->image()->toFile()->alt() ?>">
+                        <?php endif; ?>
 
                         <h5><?= $employee->name() ?></h5>
                         <p><?= $employee->function() ?></p>

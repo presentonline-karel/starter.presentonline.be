@@ -1,9 +1,11 @@
 <section id="content" class="content">
 
     <!-- Content image -->
-    <div class="content__image">
-        <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
-    </div>
+    <?php if($page->contentImage()->isNotEmpty()): ?>
+        <div class="content__image">
+            <img src="<?= $page->contentImage()->toFile()->url() ?>" alt="<?= $page->contentImage()->toFile()->alt() ?>">
+        </div>
+    <?php endif; ?>
 
     <!-- Content text -->
     <div class="content__text">
