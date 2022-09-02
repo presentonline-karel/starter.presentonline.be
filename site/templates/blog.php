@@ -97,39 +97,45 @@
 
                 <!-- Article -->
                 <?php foreach($articles as $article): ?>
-                    <article class="article">
+                    <article>
+                        <a class="article" href="<?= $article->url() ?>">
+                            <div>
 
-                        <!-- cover image -->
-                        <?php if($article->headerImage()->isNotEmpty()): ?>
-                            <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" />
-                        <?php endif; ?>
+                                <!-- cover image -->
+                                <?php if($article->headerImage()->isNotEmpty()): ?>
+                                    <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" />
+                                <?php endif; ?>
 
-                        <!-- text content -->
-                        <div class="article__content">
+                                <!-- text content -->
+                                <div class="article__content">
 
-                            <!-- tags -->
-                            <?php if($article->tags()->isNotEmpty()): ?>
-                                <div class="article__content__tags">
+                                    <!-- tags -->
+                                    <?php if($article->tags()->isNotEmpty()): ?>
+                                        <div class="article__content__tags">
 
-                                    <!-- tag -->
-                                    <?php foreach(explode(", ", $article->tags()) as $tag): ?>
-                                        <span class="tag tag-primary"><?= $tag ?></span>
-                                    <?php endforeach; ?>
+                                            <!-- tag -->
+                                            <?php foreach(explode(", ", $article->tags()) as $tag): ?>
+                                                <span class="tag tag-primary"><?= $tag ?></span>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <!-- title -->
+                                    <h3><?= $article->articleTitle() ?></h3>
+
+                                    <!-- intro -->
+                                    <p><?= $article->articleIntro() ?></p>
                                 </div>
-                            <?php endif; ?>
+                            </div>
 
-                            <!-- title -->
-                            <h3><?= $article->articleTitle() ?></h3>
 
-                            <!-- intro -->
-                            <p><?= $article->articleIntro() ?></p>
 
                             <!-- button + min-read -->
                             <div class="article__content__bottom">
-                                <a class="button-primary" href="<?= $article->url() ?>">Lees artikel <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+                                <button class="button-primary">Lees artikel <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
                                 <span class="min-read"><?= $article->minRead() ?>min read</span>
                             </div>
-                        </div>
+                        </a>
                     </article>
                 <?php endforeach; ?>
             <?php endif; ?>

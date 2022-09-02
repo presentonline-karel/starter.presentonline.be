@@ -162,11 +162,20 @@
         .back-to-top {
             top: 96px;
             right: 96px;
+            transition: all $transition-time-short;
         }
 
         &__block {
             h4 {
                 margin-bottom: 24px;
+            }
+        }
+
+        &__copyright {
+            span {
+                padding-right: 8px;
+                margin-right: 8px;
+                border-right: 2px solid $neutrals-100;
             }
         }
     }

@@ -49,7 +49,7 @@
 
             <hr class="line footer-line">
 
-            <p class="footer__copyright">©YourWebsite. All rights reserved.<br class="mobile"> Website door <a href="#">Present Online</a></p>
+            <p class="footer__copyright"><span>©Bakery. Website gemaakt met</span><br class="mobile"> <a href="https://presentonline.be" target="_blank">Present Online Starter Kit</a></p>
         </footer>
 
         <!-- MOBILE NAV SCRIPT -->

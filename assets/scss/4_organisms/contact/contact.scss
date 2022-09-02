@@ -145,6 +145,12 @@
 
             .socials {
                 margin-bottom: 32px;
+
+                .social {
+                    &:hover {
+                        background-color: $primary-100;
+                    }
+                }
             }
         }
 

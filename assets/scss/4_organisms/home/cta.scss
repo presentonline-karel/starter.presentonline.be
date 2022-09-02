@@ -51,6 +51,12 @@
             .cta__content {
                 display: flex;
                 background-color: $primary-100;
+
+                h2 {
+                    span {
+                        color: $primary-500;
+                    }
+                }
             }
         }
     }

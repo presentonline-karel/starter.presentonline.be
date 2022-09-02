@@ -53,6 +53,7 @@
             padding: 0 8px 0 0;
             border-right: 1px solid $neutrals-1100;
             display: block;
+            margin-right: 8px;
 
             &__tag {
                 white-space: nowrap;
@@ -62,7 +63,7 @@
         }
 
         &__tags {
-            padding: 0 0 0 8px;
+            //padding: 0 0 0 8px;
             display: inline-block;
             width: auto;
             height: 24px;
@@ -96,6 +97,32 @@
 @media only screen and (min-width: $desktop-1) {
     .blog-filter {
         padding: 0px 414px 96px 414px;
+
+        .filter-tags {
+            &__tags {
+                overflow-y: hidden;
+
+                /* width */
+                &::-webkit-scrollbar {
+                    height: 5px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: $primary-100;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: $primary-200;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $primary-500;
+                }
+            }
+        }
     }
 }
 
@@ -121,13 +148,14 @@
             &__remove {
                 padding: 0 16px 0 0;
                 border-right: 1px solid $neutrals-500;
+                margin-right: 16px;
             }
-    
+
             &__tags {
-                padding: 0 0 0 16px;
+                //padding: 0 0 0 16px;
                 height: 40px;
             }
-    
+
             .tag {
                 font-size: 16px;
                 line-height: 16px;

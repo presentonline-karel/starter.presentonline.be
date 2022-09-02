@@ -21,7 +21,7 @@
 
                         <!-- button -->
                         <?php foreach($page->heroButtons()->toStructure() as $button): ?>
-                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->typeButton() == "external") { echo($button->externalUrl()); } elseif($button->typeButton() == "telephone") { echo("tel:" . $site->telephone()); } elseif($button->typeButton() == "email") { echo("mailto:" . $site->email()); } ?>"><?php if($button->typeButton() == "telephone") { ?> <i class="icon-first fa fa-phone" aria-hidden="true"></i> <?php } elseif($button->typeButton() == "email") { ?> <i class="icon-first fa fa-envelope" aria-hidden="true"></i> <?php } ?> <?= $button->anchor() ?></a>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->typeButton() == "external") { echo($button->externalUrl()); } elseif($button->typeButton() == "telephone") { echo("tel:" . $site->telephone()); } elseif($button->typeButton() == "email") { echo("mailto:" . $site->email()); } ?>"><?php if($button->typeButton() == "telephone") { ?> <i class="icon-first no-hover fa fa-phone" aria-hidden="true"></i> <?php } elseif($button->typeButton() == "email") { ?> <i class="icon-first no-hover fa fa-envelope" aria-hidden="true"></i> <?php } ?> <?= $button->anchor() ?></a>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -87,7 +87,7 @@
 
                     <!-- name -->
                     <div class="input-group">
-                        <label class="input-group__label">Name</label>
+                        <label class="input-group__label">Naam</label>
                         <input class="input contact-form__input name" type="text" placeholder="Naam" />
                     </div>
 
@@ -100,7 +100,7 @@
 
                 <!-- subject -->
                 <div class="input-group">
-                    <label class="input-group__label">Subject</label>
+                    <label class="input-group__label">Onderwerp</label>
                     <input class="input contact-form__input subject" type="text" placeholder="Onderwerp" />
                 </div>
 
@@ -110,7 +110,7 @@
                     <textarea class="input textarea contact-form__input message" type="text" placeholder="Boodschap"></textarea>
                 </div>
 
-                <button class="button-primary" type="submit">Send <i class="anchor-first fa fa-paper-plane" aria-hidden="true"></i></button>
+                <button class="button-primary" type="submit">Verstuur <i class="anchor-first fa fa-paper-plane" aria-hidden="true"></i></button>
             </form>
         </div>
     </main>

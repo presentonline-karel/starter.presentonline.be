@@ -106,39 +106,20 @@
             </div>
         <?php endif; ?>
 
-        <!-- <div class="services">
-            <div class="service">
-                <div class="service__icon-container">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                </div>
-
-                <h3>Holiday planning</h3>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
-            </div>
-
-            <div class="service">
-                <div class="service__icon-container">
-                    <i class="fa fa-plane" aria-hidden="true"></i>
-                </div>
-
-                <h3>Flight followup</h3>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
-            </div>
-
-            <div class="service">
-                <div class="service__icon-container">
-                    <i class="fa fa-car" aria-hidden="true"></i>
-                </div>
-
-                <h3>Transport provider</h3>
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
-            </div>
-        </div> -->
-
         <!-- CTA DESKTOP -->
         <div class="cta__content">
-            <h2>Ready to dive in?<br> Start your free trial now!</h2>
-            <a class="button-primary" href="#">Free trial <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
+            <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
+
+            <!-- CTA buttons -->
+            <?php if($page->firstCtaButtons()->isNotEmpty()): ?>
+                <div class="buttons">
+
+                    <!-- button -->
+                    <?php foreach($page->firstCtaButtons()->toStructure() as $button): ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -219,7 +200,7 @@
                 <?php endforeach; ?>
             </div>
 
-            
+
 
             <!-- testimonials bullets -->
             <div class="bullets">

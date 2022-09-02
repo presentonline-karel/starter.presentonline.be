@@ -87,26 +87,28 @@
 
                 <!-- article -->
                 <?php foreach ($relatedArticles as $relatedArticle) : ?>
-                    <article class="related-articles__article">
+                    <article>
+                        <a class="related-articles__article" href="<?= $relatedArticle->url() ?>">
 
-                        <!-- top -->
-                        <div class="related-articles__article__top">
-                            <h5><?= $relatedArticle->articleTitle() ?></h5>
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </div>
-
-                        <!-- tags -->
-                        <?php if ($relatedArticle->tags()->isNotEmpty()) : ?>
-                            <div class="tags">
-
-                                <!-- tag -->
-                                <?php foreach (explode(", ", $relatedArticle->tags()) as $tag) : ?>
-                                    <span class="tag tag-primary"><?= $tag ?></span>
-                                <?php endforeach; ?>
+                            <!-- top -->
+                            <div class="related-articles__article__top">
+                                <h5><?= $relatedArticle->articleTitle() ?></h5>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
                             </div>
-                        <?php endif; ?>
 
-                        <p class="min-read"><?= $relatedArticle->minRead() ?>min read</p>
+                            <!-- tags -->
+                            <?php if ($relatedArticle->tags()->isNotEmpty()) : ?>
+                                <div class="tags">
+
+                                    <!-- tag -->
+                                    <?php foreach (explode(", ", $relatedArticle->tags()) as $tag) : ?>
+                                        <span class="tag tag-primary"><?= $tag ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <p class="min-read"><?= $relatedArticle->minRead() ?>min read</p>
+                        </a>
                     </article>
                 <?php endforeach; ?>
             </div>

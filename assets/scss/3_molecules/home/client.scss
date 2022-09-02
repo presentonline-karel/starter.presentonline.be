@@ -25,6 +25,11 @@
         .client {
             width: 100%;
             height: 120px;
+            transition: all $transition-time-short ease-in-out;
+
+            &:hover {
+                box-shadow: $card-shadow-hover;
+            }
 
             img {
                 width: 120px;
