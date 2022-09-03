@@ -2,7 +2,7 @@
         <footer id="footer" class="footer">
 
             <!-- Back to top -->
-            <a class="back-to-top" href="#container"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+            <a class="back-to-top" href="#container" aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
             <div class="footer-blocks">
                 <div class="footer__block intro">
@@ -41,7 +41,7 @@
 
                     <?php if($site->sitemap()->isNotEmpty()): ?>
                         <?php foreach($site->sitemap()->toStructure() as $sitemapItem): ?>
-                            <a class="footer__a" href="<?php $sitemapItem->page()->toPage()->url() . $sitemapItem->section() ?>"><?= $sitemapItem->anchor() ?></a>
+                            <a class="footer__a" href="<?= $sitemapItem->page()->toPage()->url() . $sitemapItem->section() ?>"><?= $sitemapItem->anchor() ?></a>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </div>

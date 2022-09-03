@@ -179,6 +179,25 @@ tabs:
               section:
                 label: Sectie op pagina
                 type: text
+          line-c:
+            type: line
+
+
+
+          metaHeadline:
+            label: Meta info
+            type: headline
+          metaDescription:
+            label: Meta beschrijving (Google)
+            type: text
+          titleWebsite:
+            label: Titel website
+            type: text
+          previewImage:
+            label: Social media preview image
+            type: files
+            max: 1
+            layout: cards
           
 
             

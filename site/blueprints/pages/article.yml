@@ -104,6 +104,7 @@ columns:
       headerImage:
         label: Artikel header foto
         type: files
+        layout: cards
         max: 1
       line-e:
         type: line
@@ -115,5 +116,6 @@ columns:
       sectionImage:
         label: Artikel sectie foto
         type: files
+        layout: cards
         max: 1
       
