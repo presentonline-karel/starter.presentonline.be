@@ -56,11 +56,15 @@
 
                     <?php if($client->url()->isNotEmpty()): ?>
                         <a class="client" href="<?= $client->url() ?>" target="_blank">
-                            <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo">
+                            <?php if($client->logo()->isNotEmpty()): ?>
+                                <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo">
+                            <?php endif; ?>
                         </a>
                     <?php else: ?>
                         <div class="client">
-                            <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo">
+                            <?php if($client->logo()->isNotEmpty()): ?>
+                                <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo">
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
