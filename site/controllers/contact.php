@@ -29,7 +29,7 @@ return function ($kirby, $pages, $page, $site) {
                 $kirby->email([
                     'template' => 'email',
                     'from'     => 'contact@presentonline.be',
-                    'replyTo'  => $data['email'],
+                    'replyTo'  => esc($data['email']),
                     'to'       => $site->email(),
                     'subject'  => esc($data['name']) . ' - STARTER KIT - contactformulier',
                     'data'     => [
