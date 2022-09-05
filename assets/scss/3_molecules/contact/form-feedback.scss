@@ -115,8 +115,8 @@
 @media only screen and (min-width: $tablet-portrait) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 100px);
-        left: 50px;
+        width: calc(100vw - 96px);
+        left: 48px;
     }
 }
 
@@ -124,9 +124,9 @@
 @media screen and (min-width: $desktop-1) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 200px);
-        margin-bottom: 20px;
-        left: 100px;
+        width: calc(100vw - 192px);
+        margin-bottom: 24px;
+        left: 96px;
     }
 }
 
@@ -134,35 +134,35 @@
 @media screen and (min-width: $desktop-5) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 360px);
-        left: 180px;
+        width: calc(100vw - 352px);
+        left: 176px;
     }
 }
 
-/* DESKTOP - 1920PX */
+/* DESKTOP - HD */
 @media screen and (min-width: $desktop-hd) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 680px);
-        left: 340px;
+        width: calc(100vw - 672px);
+        left: 336px;
     }
 }
 
-/* DESKTOP - 2560PX */
+/* DESKTOP - QHD */
 @media screen and (min-width: $desktop-qhd) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 1320px);
-        left: 660px;
+        width: calc(100vw - 1312px);
+        left: 656px;
     }
 }
 
-/* DESKTOP - 3440PX */
+/* DESKTOP - WQHD */
 @media screen and (min-width: $desktop-wqhd) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 2200px);
-        left: 1100px;
+        width: calc(100vw - 2192px);
+        left: 1096px;
     }
 }
 
@@ -170,7 +170,7 @@
 @media screen and (min-width: $desktop-4k) {
     //FORM FEEDBACK AFTER SUBMIT
     .alert {
-        width: calc(100vw - 2600px);
-        left: 1300px;
+        width: calc(100vw - 2592px);
+        left: 1296px;
     }
 }
