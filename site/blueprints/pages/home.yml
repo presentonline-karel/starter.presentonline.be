@@ -143,9 +143,9 @@ columns:
             label: Icoontje
             type: select
             options:
-              planning: Planning
-              followup: Followup
-              transport: Transport
+              coffee: Koffie
+              cake: Taart
+              heart: Hartje
             required: true
           title:
             label: Titel

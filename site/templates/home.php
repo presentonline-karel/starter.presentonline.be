@@ -89,14 +89,14 @@
                         <!-- service - icon -->
                         <div class="service__icon-container">
                             <?php switch ($service->icon()) {
-                                case "planning":
-                                    ?><i class="fa fa-calendar" aria-hidden="true"></i><?php
+                                case "coffee":
+                                    ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
                                     break;
-                                case "followup":
-                                    ?><i class="fa fa-plane" aria-hidden="true"></i><?php
+                                case "cake":
+                                    ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
                                     break;
-                                case "transport":
-                                    ?><i class="fa fa-car" aria-hidden="true"></i><?php
+                                case "heart":
+                                    ?><i class="fa fa-heart" aria-hidden="true"></i><?php
                                     break;
                                 default:
                                 ?><i class="fa fa-check" aria-hidden="true"></i><?php
@@ -240,5 +240,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
+
+
 
 <?php snippet('general/footer') ?>

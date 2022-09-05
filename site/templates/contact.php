@@ -6,6 +6,23 @@
     <!-- HEADER CONTACT -->
     <header class="header header-contact">
 
+        <!-- ERROR/SUCCESS MESSAGE - CONTACT FORM -->
+        <?php if ($success) : ?>
+            <div class="alert success">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <p><?= $success ?></p>
+            </div>
+        <?php else : ?>
+            <?php if (isset($alert['error'])) : ?>
+                <div class="alert error">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    <p><?= $alert['error'] ?></p>
+                </div>
+            <?php endif ?>
+        <?php endif; ?>
+
+        
+
         <!-- NAV -->
         <?php snippet('general/nav') ?>
 
@@ -82,36 +99,7 @@
             <h2>Of vul ons formulier in</h2>
 
             <!-- Contactform -->
-            <form class="contact-form form">
-                <div class="flex-desktop">
-
-                    <!-- name -->
-                    <div class="input-group">
-                        <label class="input-group__label">Naam</label>
-                        <input class="input contact-form__input name" type="text" placeholder="Naam" />
-                    </div>
-
-                    <!-- email -->
-                    <div class="input-group">
-                        <label class="input-group__label">Email</label>
-                        <input class="input contact-form__input email" type="text" placeholder="Email" />
-                    </div>
-                </div>
-
-                <!-- subject -->
-                <div class="input-group">
-                    <label class="input-group__label">Onderwerp</label>
-                    <input class="input contact-form__input subject" type="text" placeholder="Onderwerp" />
-                </div>
-
-                <!-- message -->
-                <div class="input-group">
-                    <label class="input-group__label">Boodschap</label>
-                    <textarea class="input textarea contact-form__input message" type="text" placeholder="Boodschap"></textarea>
-                </div>
-
-                <button class="button-primary" type="submit">Verstuur <i class="anchor-first fa fa-paper-plane" aria-hidden="true"></i></button>
-            </form>
+            <?php snippet('contact/form') ?>
         </div>
     </main>
 
@@ -124,5 +112,12 @@
         <iframe class="maps__iframe" src="<?= $page->mapsUrl() ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 </div>
+
+
+
+<!-- JS SCRIPTS -->
+<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
+
+
 
 <?php snippet('general/footer') ?>
