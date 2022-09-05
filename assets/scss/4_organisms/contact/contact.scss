@@ -48,18 +48,6 @@
         h2 {
             margin-bottom: 40px;
         }
-
-        /*.contact-form {
-            .flex-desktop {
-                .input-group.error:last-of-type {
-                    margin-bottom: 8px;
-                }
-
-                .input-group.success:last-of-type {
-                    margin-bottom: 8px;
-                }
-            }
-        }*/
     }
 }
 
@@ -133,11 +121,9 @@
                     justify-content: space-between;
                     align-items: flex-start;
                     gap: 24px;
-                    margin-bottom: 0px; //16px
 
                     .input-group {
                         width: 100%;
-                        //margin-bottom: 0;
                     }
                 }
             }

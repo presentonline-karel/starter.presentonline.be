@@ -19,7 +19,6 @@
     &.success {
         .input {
             border: 1px solid $success-500;
-            margin-bottom: 8px;
         }
 
         i.fa-check-circle {
@@ -29,7 +28,6 @@
     }
 
     &.error {
-        margin-bottom: 8px;
         padding-bottom: 24px;
 
         .input {
@@ -53,10 +51,6 @@
         margin-bottom: 0px;
     }
 
-    .input {
-        margin-bottom: 16px;
-    }
-
     small {
         font-family: $paragraph-font;
         visibility: hidden;
@@ -70,16 +64,16 @@
 .alert {
     position: fixed;
     z-index: 1;
-    left: 20px;
-    bottom: 20px;
-    width: calc(100vw - 40px);
-    padding: 10px 20px;
+    left: 16px;
+    bottom: 24px;
+    width: calc(100vw - 32px);
+    padding: 12px 24px;
     border-radius: $border-radius-small;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 7px;
+    gap: 8px;
 
     i {
         display: block;
