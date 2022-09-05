@@ -1,5 +1,5 @@
 <?php
-return function ($kirby, $pages, $page) {
+return function ($kirby, $pages, $page, $site) {
     $alert = null;
 
     if ($kirby->request()->is('POST') && get('submit')) {
@@ -30,7 +30,7 @@ return function ($kirby, $pages, $page) {
                     'template' => 'email',
                     'from'     => 'contact@presentonline.be',
                     'replyTo'  => $data['email'],
-                    'to'       => 'hi@karrel.be',
+                    'to'       => $site->email(),
                     'subject'  => esc($data['name']) . ' - STARTER KIT - contactformulier',
                     'data'     => [
                         'name'   => esc($data['name']),
