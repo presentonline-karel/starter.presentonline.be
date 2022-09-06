@@ -33,9 +33,12 @@
             <?php endif; ?>
         </div>
 
-        <div class="header__content__image">
-            <img src="<?= $site->url() ?>/assets/img/header.jpg" alt="header image">
-        </div>
+        <!-- Hero image -->
+        <?php if($page->heroImage()->isNotEmpty()): ?>
+            <div class="header__content__image">
+                <img src="<?= $page->heroImage()->toFile()->url() ?>" alt="<?= $page->heroImage()->toFile()->alt() ?>">
+            </div>
+        <?php endif; ?>
 
         <!-- Scroll down -->
         <a class="scroll-down" href="<?= $site->url() ?>/about#history">
@@ -124,5 +127,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/about/counter-animation.js', ['defer' => true]) ?>
+
+
 
 <?php snippet('general/footer') ?>

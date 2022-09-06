@@ -16,12 +16,12 @@
                 <p><?= $page->heroIntro() ?></p>
 
                 <!-- Hero buttons -->
-                <?php if($page->heroButtons()->isNotEmpty()): ?>
+                <?php if ($page->heroButtons()->isNotEmpty()) : ?>
                     <div class="buttons">
 
                         <!-- button -->
-                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
-                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                        <?php foreach ($page->heroButtons()->toStructure() as $button) : ?>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if ($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif ($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -79,30 +79,34 @@
                     <?php if(count($tagsCollection) > 0): ?>
                         <div class="filter-tags__tags">
                             <?php foreach($tagsCollection as $tag): ?>
-                                <button class="tag tag-grey"><?= $tag ?></button>
+                                <button class="tag tag-grey filter-tag"><?= $tag ?></button>
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
+
+            <!-- Blog search/tags feedback -->
+            <p class="search-feedback min-read">Search feedback</p>
         </div>
+
 
 
 
         <!-- BLOGPOSTS - ARTICLES -->
         <main class="blogposts__articles">
-            
+
             <!-- ARTICLES -->
-            <?php if($articles->isNotEmpty()): ?>
+            <?php if ($articles->isNotEmpty()) : ?>
 
                 <!-- Article -->
-                <?php foreach($articles as $article): ?>
-                    <article>
+                <?php foreach ($articles as $article) : ?>
+                    <article class="article-searchable">
                         <a class="article" href="<?= $article->url() ?>">
                             <div>
 
                                 <!-- cover image -->
-                                <?php if($article->headerImage()->isNotEmpty()): ?>
+                                <?php if ($article->headerImage()->isNotEmpty()) : ?>
                                     <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" />
                                 <?php endif; ?>
 
@@ -110,18 +114,18 @@
                                 <div class="article__content">
 
                                     <!-- tags -->
-                                    <?php if($article->tags()->isNotEmpty()): ?>
+                                    <?php if ($article->tags()->isNotEmpty()) : ?>
                                         <div class="article__content__tags">
 
                                             <!-- tag -->
-                                            <?php foreach(explode(", ", $article->tags()) as $tag): ?>
+                                            <?php foreach (explode(", ", $article->tags()) as $tag) : ?>
                                                 <span class="tag tag-primary"><?= $tag ?></span>
                                             <?php endforeach; ?>
                                         </div>
                                     <?php endif; ?>
 
                                     <!-- title -->
-                                    <h3><?= $article->articleTitle() ?></h3>
+                                    <h3 class="article-title"><?= $article->articleTitle() ?></h3>
 
                                     <!-- intro -->
                                     <p><?= $article->articleIntro() ?></p>
@@ -150,17 +154,25 @@
             <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
 
             <!-- CTA buttons -->
-            <?php if($page->firstCtaButtons()->isNotEmpty()): ?>
+            <?php if ($page->firstCtaButtons()->isNotEmpty()) : ?>
                 <div class="buttons">
 
                     <!-- button -->
-                    <?php foreach($page->firstCtaButtons()->toStructure() as $button): ?>
-                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php foreach ($page->firstCtaButtons()->toStructure() as $button) : ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if ($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif ($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
     </section>
 </div>
+
+
+
+<!-- JS SCRIPTS -->
+<?= js('build/js/blog/blog-search.js', ['defer' => true]) ?>
+<?= js('build/js/blog/blog-tags.js', ['defer' => true]) ?>
+
+
 
 <?php snippet('general/footer') ?>

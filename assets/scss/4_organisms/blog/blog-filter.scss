@@ -59,6 +59,14 @@
                 white-space: nowrap;
                 background-color: $primary-500 !important;
                 color: $neutrals-100 !important;
+                border: none;
+                outline: none;
+                transition: all $transition-time-short ease;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $primary-600 !important;
+                }
             }
         }
 
@@ -70,12 +78,27 @@
             overflow-x: auto;
             white-space: nowrap;
             overflow-y: hidden;
-        }
 
-        .tag {
-            border: none;
-            outline: none;
+            .tag {
+                border: none;
+                outline: none;
+                transition: all $transition-time-short ease;
+
+                &:hover {
+                    background-color: $primary-100;
+                    cursor: pointer;
+                }
+
+                &.active {
+                    background-color: $primary-500 !important;
+                    color: $neutrals-100 !important;
+                }
+            }
         }
+    }
+
+    .search-feedback {
+        margin-top: 16px;
     }
 }
 
