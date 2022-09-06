@@ -23,7 +23,6 @@ const tagFilter = () => {
 
     //onclick of removeTagsButton
     removeTagsButton.addEventListener("click", function() {
-        //console.log("remove");
 
         //reset active tags & amount of results
         activeTags = [];

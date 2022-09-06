@@ -20,7 +20,7 @@ const counterUpAnimation = () => {
                             const c = +counter.innerText;
     
                             const increment = target / 250;
-    
+                            
                             if (c < target) {
                                 counter.innerText = `${Math.ceil(c + increment)}`;
                                 setTimeout(updateCounter, 10);
