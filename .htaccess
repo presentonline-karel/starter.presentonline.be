@@ -55,3 +55,26 @@ AddOutputFilterByType DEFLATE application/json
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
+
+
+# WebP images
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Checking for WebP browser support ..
+  RewriteCond %{HTTP_ACCEPT} image/webp
+
+  # .. and if there's a WebP version for the requested image
+  RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+
+  # Well, then go for it & serve WebP instead
+  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header append Vary Accept env=REDIRECT_accept
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>

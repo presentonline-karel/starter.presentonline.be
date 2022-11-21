@@ -30,7 +30,7 @@
             <!-- Hero image -->
             <?php if ($page->heroImage()->isNotEmpty()) : ?>
                 <div class="header__content__image">
-                    <img src="<?= $page->heroImage()->toFile()->url() ?>" alt="<?= $page->heroImage()->toFile()->alt() ?>">
+                    <img src="<?= $page->heroImage()->toFile()->thumb(['format' => 'webp'])->url() ?>" alt="<?= $page->heroImage()->toFile()->alt() ?>">
                 </div>
             <?php endif; ?>
         </div>
@@ -90,17 +90,17 @@
                         <div class="service__icon-container">
                             <?php switch ($service->icon()) {
                                 case "coffee":
-                            ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
-                                                                                        break;
-                                                                                    case "cake":
-                                                                                        ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
-                                                                                        break;
-                                                                                    case "heart":
-                                                                                        ?><i class="fa fa-heart" aria-hidden="true"></i><?php
-                                                                                        break;
-                                                                                    default:
-                                                                                    ?><i class="fa fa-check" aria-hidden="true"></i><?php
-                                                                                } ?>
+                                    ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
+                                    break;
+                                case "cake":
+                                    ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
+                                    break;
+                                case "heart":
+                                    ?><i class="fa fa-heart" aria-hidden="true"></i><?php
+                                    break;
+                                default:
+                                    ?><i class="fa fa-check" aria-hidden="true"></i><?php
+                            } ?>
                         </div>
 
                         <h3><?= $service->title() ?></h3>
