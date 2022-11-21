@@ -25,43 +25,8 @@ columns:
 
       #buttons
       heroButtons:
+        extends: fields/button
         label: Hero buttons
-        type: structure
-        max: 2
-        columns:
-          typeOfButton:
-            width: 2/8
-          anchor:
-            width: 2/8
-          typeButton:
-            width: 2/8
-        fields:
-          anchor:
-            label: Tekst
-            type: text
-            required: true
-          typeOfButton:
-            label: Type button
-            type: checkboxes
-            max: 1
-            options:
-              button-primary: Primair
-              button-secondary: Secundair
-          typeButton:
-            label: Externe link/ Contact link
-            type: select
-            max: 1
-            required: true
-            options:
-              external: Externe link
-              telephone: Telefoon
-              email: Email
-          externalUrl:
-            label: Externe webpagina URL
-            type: text
-            required: true
-            when:
-              typeButton: external
       line-a:
         type: line
       

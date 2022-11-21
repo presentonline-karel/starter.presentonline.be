@@ -38,7 +38,7 @@
 
                         <!-- button -->
                         <?php foreach($page->heroButtons()->toStructure() as $button): ?>
-                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->typeButton() == "external") { echo($button->externalUrl()); } elseif($button->typeButton() == "telephone") { echo("tel:" . $site->telephone()); } elseif($button->typeButton() == "email") { echo("mailto:" . $site->email()); } ?>"><?php if($button->typeButton() == "telephone") { ?> <i class="icon-first no-hover fa fa-phone" aria-hidden="true"></i> <?php } elseif($button->typeButton() == "email") { ?> <i class="icon-first no-hover fa fa-envelope" aria-hidden="true"></i> <?php } ?> <?= $button->anchor() ?></a>
+                            <?php snippet('components/button', ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>

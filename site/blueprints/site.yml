@@ -56,63 +56,8 @@ tabs:
             type: headline
             numbered: false
           ctaButton:
+            extends: fields/button
             label: Hero buttons
-            type: structure
-            max: 1
-            columns:
-              typeOfButton:
-                width: 2/8
-              anchor:
-                width: 2/8
-              icon:
-                width: 2/8
-            fields:
-              anchor:
-                label: Tekst
-                type: text
-                required: true
-              icon:
-                label: Icoontje
-                type: checkboxes
-                max: 1
-                required: true
-                options:
-                  noIcon: Geen icon
-                  chevronRight: Chevron rechts
-                  chevronBottom: Chevron bodem
-              typeOfButton:
-                label: Type button
-                type: checkboxes
-                max: 1
-                options:
-                  button-primary: Primair
-                  button-secondary: Secundair
-              destination:
-                type: select
-                label: Button verwijst naar
-                max: 1
-                required: true
-                options:
-                  internal: Pagina op website
-                  external: Externe Webpagina
-              internalPage:
-                label: Pagina op website
-                type: pages
-                max: 1
-                required: true
-                when:
-                  destination: internal
-              idPage:
-                label: Id op pagina
-                type: text
-                when:
-                  destination: internal
-              externalUrl:
-                label: Externe webpagina URL
-                type: text
-                required: true
-                when:
-                  destination: external
           line-a:
             type: line
           
