@@ -36,6 +36,9 @@ columns:
       contactInfo:
         label: Contact info
         type: headline
+        width: 1/2
+      contactInfoSwitch:
+        extends: fields/display-switch
       contactInfoTitle:
         label: Contact info titel
         type: text
@@ -52,6 +55,9 @@ columns:
       contactMaps:
         label: Google Maps
         type: headline
+        width: 1/2
+      contactMapsSwitch:
+        extends: fields/display-switch
       mapsUrl:
         label: Google Maps embed URL
         type: text
@@ -68,6 +74,9 @@ columns:
         label: Openingsuren
         type: headline
         numbered: false
+        width: 1/2
+      headerOpeninghoursSwitch:
+        extends: fields/display-switch
       openingHours:
         label: Openingsuren
         type: structure
@@ -86,5 +95,3 @@ columns:
             label: Uren
             type: text
             required: true
-      line-c:
-        type: line

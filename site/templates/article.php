@@ -40,7 +40,7 @@
 
         <!-- Image -->
         <?php if($page->headerImage()->isNotEmpty()): ?>
-            <img class="article-page__img" src="<?= $page->headerImage()->toFile()->url() ?>" alt="<?= $page->headerImage()->toFile()->alt() ?>" />
+            <img class="article-page__img" src="<?= $page->headerImage()->toFile()->url() ?>" alt="<?= $page->headerImage()->toFile()->alt() ?>" loading="lazy" />
         <?php endif; ?>
 
 
@@ -55,7 +55,7 @@
 
         <!-- Image -->
         <?php if($page->sectionImage()->isNotEmpty()): ?>
-            <img class="article-page__img" src="<?= $page->sectionImage()->toFile()->url() ?>" alt="<?= $page->sectionImage()->toFile()->alt() ?>" />
+            <img class="article-page__img" src="<?= $page->sectionImage()->toFile()->url() ?>" alt="<?= $page->sectionImage()->toFile()->alt() ?>" loading="lazy" />
         <?php endif; ?>
 
 
@@ -75,7 +75,7 @@
 
 
     <!-- KEEP READING -->
-    <section class="keep-reading section">
+    <section class="keep-reading section fade-section">
         <h2>Gerelateerde<br> artikels</h2>
 
         <!-- Related articles -->

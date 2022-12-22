@@ -107,7 +107,7 @@
 
                                 <!-- cover image -->
                                 <?php if ($article->headerImage()->isNotEmpty()) : ?>
-                                    <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" />
+                                    <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" loading="lazy" />
                                 <?php endif; ?>
 
                                 <!-- text content -->
@@ -149,7 +149,7 @@
 
 
     <!-- CTA -->
-    <section id="cta-1" class="cta">
+    <section id="cta-1" class="cta fade-section">
         <div class="cta__content">
             <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
 

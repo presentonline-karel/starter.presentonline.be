@@ -1,5 +1,5 @@
         <!-- FOOTER -->
-        <footer id="footer" class="footer">
+        <footer id="footer" class="footer fade-section">
 
             <!-- Back to top -->
             <a class="back-to-top" href="#container" aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
@@ -54,5 +54,6 @@
 
         <!-- MOBILE NAV SCRIPT -->
         <?= js('build/js/general/nav.js', ['defer' => true]) ?>
+        <?= js('build/js/general/section-fade-animation.js', ['defer' => true]) ?>
     </body>
 </html>

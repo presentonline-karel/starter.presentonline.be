@@ -106,7 +106,7 @@
 
 
     <!-- MAPS -->
-    <section class="maps">
+    <section class="maps fade-section">
 
         <!-- Maps widget -->
         <iframe class="maps__iframe" src="<?= $page->mapsUrl() ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

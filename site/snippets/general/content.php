@@ -1,9 +1,9 @@
-<section id="content" class="content">
+<section id="content" class="content fade-section">
 
     <!-- Content image -->
     <?php if($page->contentImage()->isNotEmpty()): ?>
         <div class="content__image">
-            <img src="<?= $page->contentImage()->toFile()->url() ?>" alt="<?= $page->contentImage()->toFile()->alt() ?>">
+            <img src="<?= $page->contentImage()->toFile()->url() ?>" alt="<?= $page->contentImage()->toFile()->alt() ?>" loading="lazy">
         </div>
     <?php endif; ?>
 

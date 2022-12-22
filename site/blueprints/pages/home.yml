@@ -40,6 +40,9 @@ columns:
       clientHeadline:
         label: Klanten
         type: headline
+        width: 1/2
+      clientsSwitch:
+        extends: fields/display-switch
       clientsTitle:
         label: Klanten titel
         type: text
@@ -69,6 +72,9 @@ columns:
       servicesHeadline:
         label: Diensten
         type: headline
+        width: 1/2
+      servicesSwitch:
+        extends: fields/display-switch
       servicesTitle:
         label: Diensten titel
         type: text
@@ -110,6 +116,9 @@ columns:
       firstCtaHeadline:
         label: CTA1
         type: headline
+        width: 1/2
+      firstCtaSwitch:
+        extends: fields/display-switch
       firstCtaTitle:
         label: CTA titel
         type: writer
@@ -130,6 +139,9 @@ columns:
       contentHeadline:
         label: Content
         type: headline
+        width: 1/2
+      contentSwitch:
+        extends: fields/display-switch
       contentTitle:
         label: Content titel
         type: text
@@ -157,6 +169,9 @@ columns:
       testimonialsHeadline:
         label: Getuigenissen
         type: headline
+        width: 1/2
+      testimonialsSwitch:
+        extends: fields/display-switch
       testimonialsTitle:
         label: Getuigenissen titel
         type: text
@@ -203,6 +218,9 @@ columns:
       secondCtaHeadline:
         label: CTA2
         type: headline
+        width: 1/2
+      secondCtaSwitch:
+        extends: fields/display-switch
       secondCtaTitle:
         label: CTA titel
         type: writer

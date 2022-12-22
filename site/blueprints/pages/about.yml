@@ -35,6 +35,9 @@ columns:
       historyHeadline:
         label: Ervaring
         type: headline
+        width: 1/2
+      historySwitch:
+        extends: fields/display-switch
       historyTitle:
         label: Ervaring titel
         type: text
@@ -61,6 +64,9 @@ columns:
       contentHeadline:
         label: Content
         type: headline
+        width: 1/2
+      contentSwitch:
+        extends: fields/display-switch
       contentTitle:
         label: Content titel
         type: text
@@ -88,6 +94,9 @@ columns:
       teamHeadline:
         label: Team
         type: headline
+        width: 1/2
+      teamSwitch:
+        extends: fields/display-switch
       teamTitle:
         label: Team titel
         type: text
@@ -128,6 +137,9 @@ columns:
       firstCtaHeadline:
         label: CTA1
         type: headline
+        width: 1/2
+      firstCtaSwitch:
+        extends: fields/display-switch
       firstCtaTitle:
         label: CTA titel
         type: writer
