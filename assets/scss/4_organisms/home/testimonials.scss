@@ -1,4 +1,4 @@
-.testimonials {
+.testimonials-section {
     background-color: $neutrals-200;
 
     h2 {
@@ -6,7 +6,7 @@
         margin-bottom: 32px;
     }
 
-    &-items {
+    .testimonials-items {
         margin-bottom: 24px;
     }
 
@@ -29,7 +29,7 @@
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .testimonials {
+    .testimonials-section {
         padding: 96px 178px;
 
         h2 {
@@ -40,7 +40,7 @@
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
-    .testimonials {
+    .testimonials-section {
         padding: 128px 308px;
 
         h2 {
@@ -49,37 +49,9 @@
     }
 }
 
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
-    .testimonials {
-        padding: 128px 388px !important;
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .testimonials {
-        padding: 128px 548px !important;
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .testimonials {
-        padding: 128px 868px !important;
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .testimonials {
-        padding: 128px 1308px !important;
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .testimonials {
-        padding: 128px 1508px !important;
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
+    .testimonials-section {
+        padding: 128px 0px;
     }
 }

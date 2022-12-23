@@ -82,6 +82,9 @@ columns:
       relatedArticlesHeadline:
         label: Gerelateerde artikels
         type: headline
+        width: 1/2
+      relatedArticlesSwitch:
+        extends: fields/display-switch
       relatedArticles:
         label: Gerelateerde artikels
         type: pages

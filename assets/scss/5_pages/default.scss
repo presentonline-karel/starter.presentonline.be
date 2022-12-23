@@ -1,22 +1,25 @@
-.container-error {
-    position: relative;
-
-    .error-content {
-        width: 100%;
-        height: auto;
-        padding: 0px 16px;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        text-align: center;
-
-        h1 {
-            margin-bottom: 16px;
-        }
-
-        p {
-            margin-bottom: 24px;
+body:has(.container-error) {
+    .container-error {
+        position: relative;
+        height: 100vh;
+    
+        .error-content {
+            width: 100%;
+            height: auto;
+            padding: 0px 16px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            text-align: center;
+    
+            h1 {
+                margin-bottom: 16px;
+            }
+    
+            p {
+                margin-bottom: 24px;
+            }
         }
     }
 }

@@ -89,64 +89,15 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .header {
+        &__content {
+            &__text {
+                padding: 88px 0 96px;
+            }
+        }
+
         .scroll-down {
             font-size: 24px;
             line-height: 24px;
-        }
-    }
-}
-
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
-    .header {
-        &__content {
-            &__text {
-                padding: 88px 388px 96px 388px;
-            }
-        }
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .header {
-        &__content {
-            &__text {
-                padding: 88px 548px 96px 548px;
-            }
-        }
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .header {
-        &__content {
-            &__text {
-                padding: 88px 868px 96px 868px;
-            }
-        }
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .header {
-        &__content {
-            &__text {
-                padding: 88px 1308px 96px 1308px;
-            }
-        }
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .header {
-        &__content {
-            &__text {
-                padding: 88px 1414px 96px 1414px;
-            }
         }
     }
 }

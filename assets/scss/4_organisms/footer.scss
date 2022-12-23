@@ -3,6 +3,10 @@
     background-color: $primary-500;
     position: relative;
 
+    &-blocks {
+        position: relative;
+    }
+
     //Back to top arrow
     .back-to-top {
         display: block;
@@ -11,8 +15,8 @@
         background-color: $neutrals-100;
         border-radius: $border-radius-medium;
         position: absolute;
-        top: 40px;
-        right: 16px;
+        top: 0;
+        right: 0;
 
         i {
             font-size: 16px;
@@ -105,11 +109,6 @@
 @media only screen and (min-width: $tablet-portrait) {
     .footer {
         padding: 64px 48px 24px 48px;
-
-        .back-to-top {
-            top: 64px;
-            right: 48px;
-        }
     }
 }
 
@@ -159,12 +158,6 @@
             }
         }
 
-        .back-to-top {
-            top: 96px;
-            right: 96px;
-            transition: all $transition-time-short;
-        }
-
         &__block {
             h4 {
                 margin-bottom: 24px;
@@ -181,57 +174,9 @@
     }
 }
 
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
     .footer {
-        padding: 96px 178px 24px 178px;
-
-        .back-to-top {
-            right: 178px;
-        }
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .footer {
-        padding: 96px 336px 24px 336px;
-
-        .back-to-top {
-            right: 336px;
-        }
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .footer {
-        padding: 96px 656px 24px 656px;
-
-        .back-to-top {
-            right: 656px;
-        }
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .footer {
-        padding: 96px 1096px 24px 1096px;
-
-        .back-to-top {
-            right: 1096px;
-        }
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .footer {
-        padding: 96px 1296px 24px 1296px;
-
-        .back-to-top {
-            right: 1296px;
-        }
+        padding: 96px 0 24px;
     }
 }

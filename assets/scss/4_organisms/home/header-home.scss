@@ -81,6 +81,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-height: 1440px;
+            overflow: hidden;
 
             &__text {
                 width: 50%;
@@ -142,7 +144,12 @@
             &__text {
                 width: 50%;
                 padding: 0 16px 0 96px;
+                padding-left: calc((100vw - 1248px) / 2);
             }
+        }
+
+        .scroll-down {
+            left: calc((100vw - 1248px) / 2);
         }
     }
 }
@@ -152,12 +159,12 @@
     .header-home {
         &__content {
             &__text {
-                padding: 0 16px 0 176px;
+                //padding: 0 16px 0 176px;
             }
         }
 
         .scroll-down {
-            left: 176px;
+            //left: 176px;
         }
     }
 }
@@ -167,12 +174,12 @@
     .header-home {
         &__content {
             &__text {
-                padding: 0 16px 0 336px;
+                //padding: 0 16px 0 336px;
             }
         }
 
         .scroll-down {
-            left: 336px;
+            //left: 336px;
         }
     }
 }
@@ -182,12 +189,12 @@
     .header-home {
         &__content {
             &__text {
-                padding: 0 16px 0 656px;
+                //padding: 0 16px 0 656px;
             }
         }
 
         .scroll-down {
-            left: 656px;
+            //left: 656px;
         }
     }
 }
@@ -197,12 +204,12 @@
     .header-home {
         &__content {
             &__text {
-                padding: 0 16px 0 1096px;
+                //padding: 0 16px 0 1096px;
             }
         }
 
         .scroll-down {
-            left: 1096px;
+            //left: 1096px;
         }
     }
 }
@@ -212,12 +219,12 @@
     .header-home {
         &__content {
             &__text {
-                padding: 0 16px 0 1296px;
+                //padding: 0 16px 0 1296px;
             }
         }
 
         .scroll-down {
-            left: 1296px;
+            //left: 1296px;
         }
     }
 }

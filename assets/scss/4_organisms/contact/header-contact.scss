@@ -122,6 +122,10 @@
 @media screen and (min-width: $desktop-3) {
     .header-contact {
         &__content {
+            max-width: 1248px;
+            margin: 0 auto;
+            padding: 88px 0 96px;
+
             &__text {
                 .buttons {
                     .button {
@@ -132,51 +136,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
-    .header-contact {
-        &__content {
-            padding: 88px 178px 96px 178px;
-        }
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .header-contact {
-        &__content {
-            padding: 88px 336px 96px 336px;
-        }
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .header-contact {
-        &__content {
-            padding: 88px 656px 96px 656px;
-        }
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .header-contact {
-        &__content {
-            padding: 88px 1096px 96px 1096px;
-        }
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .header-contact {
-        &__content {
-            padding: 88px 1296px 96px 1296px;
         }
     }
 }

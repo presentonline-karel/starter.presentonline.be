@@ -23,37 +23,69 @@
     }
 }
 
-/* DESKTOP - 1600px */
+/* DESKTOP - 1600px
 @media only screen and (min-width: $desktop-5) {
     .section {
         padding: 128px 176px !important;
     }
 }
 
-/* DESKTOP - HD */
+/* DESKTOP - HD
 @media only screen and (min-width: $desktop-hd) {
     .section {
         padding: 128px 336px !important;
     }
 }
 
-/* DESKTOP - QHD */
+/* DESKTOP - QHD
 @media only screen and (min-width: $desktop-qhd) {
     .section {
         padding: 128px 656px !important;
     }
 }
 
-/* DESKTOP - WQHD */
+/* DESKTOP - WQHD
 @media only screen and (min-width: $desktop-wqhd) {
     .section {
         padding: 128px 1096px !important;
     }
 }
 
-/* DESKTOP - 4K */
+/* DESKTOP - 4K
 @media only screen and (min-width: $desktop-4k) {
     .section {
         padding: 128px 1296px !important;
+    }
+} */
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .section {
+        padding: 128px 0px;
+    }
+
+    .content-container {
+        margin: 0 auto;
+        max-width: 1248px;
+
+        &.r-106 {
+            padding-right: 106px;
+        }
+    }
+
+    .content-container-xs {
+        padding: 0 318px;
+    }
+    
+    .content-container-s {
+        padding: 0 212px;
+    }
+
+    .content-container-m {
+        padding: 0 106px;
+    }
+
+    .content-container-l {
+        padding: 0;
     }
 }

@@ -21,7 +21,7 @@
             <?php endif ?>
         <?php endif; ?>
 
-        
+
 
         <!-- NAV -->
         <?php snippet('general/nav') ?>
@@ -33,11 +33,11 @@
                 <p><?= $page->heroIntro() ?></p>
 
                 <!-- Hero buttons -->
-                <?php if($page->heroButtons()->isNotEmpty()): ?>
+                <?php if ($page->heroButtons()->isNotEmpty()) : ?>
                     <div class="buttons">
 
                         <!-- button -->
-                        <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                        <?php foreach ($page->heroButtons()->toStructure() as $button) : ?>
                             <?php snippet('components/button', ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
@@ -45,12 +45,12 @@
             </div>
 
             <!-- Openinghours -->
-            <?php if($page->openingHours()->isNotEmpty()): ?>
+            <?php if ($page->openingHours()->isNotEmpty()) : ?>
                 <div class="header-contact__content__hours">
                     <h4>Openingsuren</h4>
 
                     <!-- openinghour -->
-                    <?php foreach($page->openingHours()->toStructure() as $openinghour): ?>
+                    <?php foreach ($page->openingHours()->toStructure() as $openinghour) : ?>
                         <div class="header-contact__content__hours__item">
                             <p class="day"><?= $openinghour->day() ?></p>
                             <p class="hour"><?= $openinghour->value() ?></p>
@@ -67,30 +67,34 @@
     <main class="contact">
 
         <!-- INFO -->
-        <div class="contact__info">
-            <h2><?= $page->contactInfoTitle() ?></h2>
-            <p><?= $page->contactInfoText() ?></p>
+        <?php if ($page->contactInfoSwitch()->toBool()) : ?>
+            <div class="contact__info">
+                <div class="contact__info__container">
+                    <h2><?= $page->contactInfoTitle() ?></h2>
+                    <p><?= $page->contactInfoText() ?></p>
 
-            <div class="contact__info__items">
+                    <div class="contact__info__items">
 
-                <!-- Telephone -->
-                <?php if($site->telephone()->isNotEmpty()): ?>
-                    <a class="info-item p" href="tel:<?= $site->telephone() ?>">
-                        <i class="fa fa-phone" aria-hidden="true"></i> <?= $site->telephone() ?>
-                    </a>
-                <?php endif; ?>
+                        <!-- Telephone -->
+                        <?php if ($site->telephone()->isNotEmpty()) : ?>
+                            <a class="info-item p" href="tel:<?= $site->telephone() ?>">
+                                <i class="fa fa-phone" aria-hidden="true"></i> <?= $site->telephone() ?>
+                            </a>
+                        <?php endif; ?>
 
-                <!-- Email -->
-                <?php if($site->email()->isNotEmpty()): ?>
-                    <a class="info-item p" href="mailto:<?= $site->email() ?>">
-                        <i class="fa fa-envelope" aria-hidden="true"></i> <?= $site->email() ?>
-                    </a>
-                <?php endif; ?>
+                        <!-- Email -->
+                        <?php if ($site->email()->isNotEmpty()) : ?>
+                            <a class="info-item p" href="mailto:<?= $site->email() ?>">
+                                <i class="fa fa-envelope" aria-hidden="true"></i> <?= $site->email() ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+
+                    <!-- SNIPPET - SOCIALS -->
+                    <?php snippet('general/socials') ?>
+                </div>
             </div>
-
-            <!-- SNIPPET - SOCIALS -->
-            <?php snippet('general/socials') ?>
-        </div>
+        <?php endif; ?>
 
 
 
@@ -106,11 +110,13 @@
 
 
     <!-- MAPS -->
-    <section class="maps fade-section">
+    <?php if ($page->contactMapsSwitch()->toBool()) : ?>
+        <section class="maps fade-section">
 
-        <!-- Maps widget -->
-        <iframe class="maps__iframe" src="<?= $page->mapsUrl() ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+            <!-- Maps widget -->
+            <iframe class="maps__iframe" src="<?= $page->mapsUrl() ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    <?php endif; ?>
 </div>
 
 

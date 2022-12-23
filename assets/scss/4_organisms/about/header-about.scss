@@ -17,6 +17,7 @@
             gap: 72px;
             height: calc(100vh - 80px);
             padding: 48px 48px 96px 48px;
+            max-height: 894px;
 
             &__text {
                 text-align: left;
@@ -73,52 +74,10 @@
     .header-about {
         .header__content {
             height: calc(100vh - 130px);
-            padding: 88px 202px 128px 96px;
-        }
-    }
-}
-
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
-    .header-about {
-        .header__content {
-            padding: 88px 284px 128px 178px;
-        }
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .header-about {
-        .header__content {
-            padding: 88px 442px 128px 336px;
-        }
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .header-about {
-        .header__content {
-            padding: 88px 762px 128px 656px;
-        }
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .header-about {
-        .header__content {
-            padding: 88px 1202px 128px 1096px;
-        }
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .header-about {
-        .header__content {
-            padding: 88px 1414px 128px 1296px;
+            padding: 88px 0 128px;
+            padding-right: 106px;
+            margin: 0 auto;
+            max-width: 1248px;
         }
     }
 }

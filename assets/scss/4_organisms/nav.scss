@@ -245,7 +245,10 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .nav {
-        padding: 45px 96px;
+        //padding: 45px 96px;
+        padding: 45px 0;
+        max-width: 1248px;
+        margin: 0 auto;
         height: 130px;
 
         .logo {
@@ -277,6 +280,7 @@
         //NAV HOME
         &-home {
             gap: 51px;
+            left: calc((100vw - 1248px) / 2);
         }
     }
 }
@@ -284,34 +288,34 @@
 /* DESKTOP - 1600px */
 @media only screen and (min-width: $desktop-5) {
     .nav {
-        padding: 45px 176px;
+        //padding: 45px 176px;
     }
 }
 
 /* DESKTOP - HD */
 @media only screen and (min-width: $desktop-hd) {
     .nav {
-        padding: 45px 336px;
+        //padding: 45px 336px;
     }
 }
 
 /* DESKTOP - QHD */
 @media only screen and (min-width: $desktop-qhd) {
     .nav {
-        padding: 45px 656px;
+        //padding: 45px 656px;
     }
 }
 
 /* DESKTOP - WQHD */
 @media only screen and (min-width: $desktop-wqhd) {
     .nav {
-        padding: 45px 1096px;
+        //padding: 45px 1096px;
     }
 }
 
 /* DESKTOP - 4K */
 @media only screen and (min-width: $desktop-4k) {
     .nav {
-        padding: 45px 1296px;
+        //padding: 45px 1296px;
     }
 }

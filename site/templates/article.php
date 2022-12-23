@@ -75,45 +75,47 @@
 
 
     <!-- KEEP READING -->
-    <section class="keep-reading section fade-section">
-        <h2>Gerelateerde<br> artikels</h2>
+    <?php if($page->relatedArticlesSwitch()->toBool()): ?>
+        <section class="keep-reading section fade-section">
+            <h2>Gerelateerde<br> artikels</h2>
 
-        <!-- Related articles -->
-        <?php if ($page->relatedArticles()->isNotEmpty()) : ?>
-            <div class="related-articles">
+            <!-- Related articles -->
+            <?php if ($page->relatedArticles()->isNotEmpty()) : ?>
+                <div class="related-articles">
 
-                <!-- get related articles -->
-                <?php $relatedArticles = $page->relatedArticles()->toPages(); ?>
+                    <!-- get related articles -->
+                    <?php $relatedArticles = $page->relatedArticles()->toPages(); ?>
 
-                <!-- article -->
-                <?php foreach ($relatedArticles as $relatedArticle) : ?>
-                    <article>
-                        <a class="related-articles__article" href="<?= $relatedArticle->url() ?>">
+                    <!-- article -->
+                    <?php foreach ($relatedArticles as $relatedArticle) : ?>
+                        <article>
+                            <a class="related-articles__article" href="<?= $relatedArticle->url() ?>">
 
-                            <!-- top -->
-                            <div class="related-articles__article__top">
-                                <h5><?= $relatedArticle->articleTitle() ?></h5>
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </div>
-
-                            <!-- tags -->
-                            <?php if ($relatedArticle->tags()->isNotEmpty()) : ?>
-                                <div class="tags">
-
-                                    <!-- tag -->
-                                    <?php foreach (explode(", ", $relatedArticle->tags()) as $tag) : ?>
-                                        <span class="tag tag-primary"><?= $tag ?></span>
-                                    <?php endforeach; ?>
+                                <!-- top -->
+                                <div class="related-articles__article__top">
+                                    <h5><?= $relatedArticle->articleTitle() ?></h5>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                 </div>
-                            <?php endif; ?>
 
-                            <p class="min-read"><?= $relatedArticle->minRead() ?>min read</p>
-                        </a>
-                    </article>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
-    </section>
+                                <!-- tags -->
+                                <?php if ($relatedArticle->tags()->isNotEmpty()) : ?>
+                                    <div class="tags">
+
+                                        <!-- tag -->
+                                        <?php foreach (explode(", ", $relatedArticle->tags()) as $tag) : ?>
+                                            <span class="tag tag-primary"><?= $tag ?></span>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <p class="min-read"><?= $relatedArticle->minRead() ?>min read</p>
+                            </a>
+                        </article>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+        </section>
+    <?php endif; ?>
 </div>
 
 <?php snippet('general/footer') ?>

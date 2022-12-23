@@ -46,31 +46,33 @@
     <!-- CLIENTS -->
     <?php if($page->clientsSwitch()->toBool()): ?>
         <section id="clients" class="clients-section section fade-section">
-            <h2><?= $page->clientsTitle() ?></h2>
+            <div class="content-container-l content-container">
+                <h2><?= $page->clientsTitle() ?></h2>
 
-            <!-- Clients -->
-            <?php if ($page->clients()->isNotEmpty()) : ?>
-                <div class="clients">
+                <!-- Clients -->
+                <?php if ($page->clients()->isNotEmpty()) : ?>
+                    <div class="clients">
 
-                    <!-- client -->
-                    <?php foreach ($page->clients()->toStructure() as $client) : ?>
+                        <!-- client -->
+                        <?php foreach ($page->clients()->toStructure() as $client) : ?>
 
-                        <?php if ($client->url()->isNotEmpty()) : ?>
-                            <a class="client" href="<?= $client->url() ?>" target="_blank">
-                                <?php if ($client->logo()->isNotEmpty()) : ?>
-                                    <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo" loading="lazy">
-                                <?php endif; ?>
-                            </a>
-                        <?php else : ?>
-                            <div class="client">
-                                <?php if ($client->logo()->isNotEmpty()) : ?>
-                                    <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo" loading="lazy">
-                                <?php endif; ?>
-                            </div>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
+                            <?php if ($client->url()->isNotEmpty()) : ?>
+                                <a class="client" href="<?= $client->url() ?>" target="_blank">
+                                    <?php if ($client->logo()->isNotEmpty()) : ?>
+                                        <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo" loading="lazy">
+                                    <?php endif; ?>
+                                </a>
+                            <?php else : ?>
+                                <div class="client">
+                                    <?php if ($client->logo()->isNotEmpty()) : ?>
+                                        <img src="<?= $client->logo()->toFile()->url() ?>" alt="client logo" loading="lazy">
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </section>
     <?php endif; ?>
 
@@ -79,54 +81,56 @@
     <!-- SERVICES -->
     <?php if($page->servicesSwitch()->toBool()): ?>
         <section id="services" class="services-section section fade-section">
-            <h2><?= $page->servicesTitle() ?></h2>
+            <div class="content-container-l content-container">
+                <h2><?= $page->servicesTitle() ?></h2>
 
-            <!-- Services -->
-            <?php if ($page->services()->isNotEmpty()) : ?>
-                <div class="services">
+                <!-- Services -->
+                <?php if ($page->services()->isNotEmpty()) : ?>
+                    <div class="services">
 
-                    <!-- service -->
-                    <?php foreach ($page->services()->toStructure() as $service) : ?>
-                        <div class="service">
+                        <!-- service -->
+                        <?php foreach ($page->services()->toStructure() as $service) : ?>
+                            <div class="service">
 
-                            <!-- service - icon -->
-                            <div class="service__icon-container">
-                                <?php switch ($service->icon()) {
-                                    case "coffee":
-                                        ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
-                                        break;
-                                    case "cake":
-                                        ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
-                                        break;
-                                    case "heart":
-                                        ?><i class="fa fa-heart" aria-hidden="true"></i><?php
-                                        break;
-                                    default:
-                                        ?><i class="fa fa-check" aria-hidden="true"></i><?php
-                                } ?>
+                                <!-- service - icon -->
+                                <div class="service__icon-container">
+                                    <?php switch ($service->icon()) {
+                                        case "coffee":
+                                            ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
+                                            break;
+                                        case "cake":
+                                            ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
+                                            break;
+                                        case "heart":
+                                            ?><i class="fa fa-heart" aria-hidden="true"></i><?php
+                                            break;
+                                        default:
+                                            ?><i class="fa fa-check" aria-hidden="true"></i><?php
+                                    } ?>
+                                </div>
+
+                                <h3><?= $service->title() ?></h3>
+                                <p><?= $service->paragraph() ?></p>
                             </div>
-
-                            <h3><?= $service->title() ?></h3>
-                            <p><?= $service->paragraph() ?></p>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-
-            <!-- CTA DESKTOP -->
-            <div class="cta__content">
-                <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
-
-                <!-- CTA buttons -->
-                <?php if ($page->firstCtaButtons()->isNotEmpty()) : ?>
-                    <div class="buttons">
-
-                        <!-- button -->
-                        <?php foreach ($page->firstCtaButtons()->toStructure() as $button) : ?>
-                            <?php snippet('components/button', ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
+
+                <!-- CTA DESKTOP -->
+                <div class="cta__content">
+                    <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
+
+                    <!-- CTA buttons -->
+                    <?php if ($page->firstCtaButtons()->isNotEmpty()) : ?>
+                        <div class="buttons">
+
+                            <!-- button -->
+                            <?php foreach ($page->firstCtaButtons()->toStructure() as $button) : ?>
+                                <?php snippet('components/button', ["button" => $button]) ?>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </section>
     <?php endif; ?>
@@ -164,64 +168,66 @@
 
     <!-- TESTIMONIALS -->
     <?php if($page->testimonialsSwitch()->toBool()): ?>
-        <section id="testimonials" class="testimonials section fade-section">
-            <h2><?= $page->testimonialsTitle() ?></h2>
+        <section id="testimonials" class="testimonials-section section fade-section">
+            <div class="testimonials content-container-s content-container">
+                <h2><?= $page->testimonialsTitle() ?></h2>
 
-            <!-- Testimonials items -->
-            <?php if ($page->testimonials()->isNotEmpty()) : ?>
-                <div class="testimonials-items">
-                    <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
-
-                        <!-- testimonial -->
-                        <div class="slide-container testimonial">
-
-                            <!-- testimonial company logo -->
-                            <?php if ($testimonial->logo()->isNotEmpty()) : ?>
-                                <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" loading="lazy" />
-                            <?php endif; ?>
-
-                            <!-- quotes-bg -->
-                            <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
+                <!-- Testimonials items -->
+                <?php if ($page->testimonials()->isNotEmpty()) : ?>
+                    <div class="testimonials-items">
+                        <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
 
                             <!-- testimonial -->
-                            <p class="testimonial__p"><?= $testimonial->testimonial() ?></p>
+                            <div class="slide-container testimonial">
 
-                            <!-- person -->
-                            <div class="testimonial__id flex">
-
-                                <!-- image -->
-                                <?php if ($testimonial->imageTestimonial()->isNotEmpty()) : ?>
-                                    <img class="testimonial__id__picture" src="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" alt="<?= $testimonial->imageTestimonial()->toFile()->alt() ?>" loading="lazy" />
+                                <!-- testimonial company logo -->
+                                <?php if ($testimonial->logo()->isNotEmpty()) : ?>
+                                    <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" loading="lazy" />
                                 <?php endif; ?>
 
-                                <div>
-                                    <h5 class="testimonial__id__name"><?= $testimonial->name() ?></h5>
-                                    <p class="testimonial__id__function"><?= $testimonial->function() ?></p>
+                                <!-- quotes-bg -->
+                                <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
+
+                                <!-- testimonial -->
+                                <p class="testimonial__p"><?= $testimonial->testimonial() ?></p>
+
+                                <!-- person -->
+                                <div class="testimonial__id flex">
+
+                                    <!-- image -->
+                                    <?php if ($testimonial->imageTestimonial()->isNotEmpty()) : ?>
+                                        <img class="testimonial__id__picture" src="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" alt="<?= $testimonial->imageTestimonial()->toFile()->alt() ?>" loading="lazy" />
+                                    <?php endif; ?>
+
+                                    <div>
+                                        <h5 class="testimonial__id__name"><?= $testimonial->name() ?></h5>
+                                        <p class="testimonial__id__function"><?= $testimonial->function() ?></p>
+                                    </div>
+                                </div>
+
+                                <!-- arrows -->
+                                <div class="arrows flex">
+                                    <div class="prev">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="next">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- arrows -->
-                            <div class="arrows flex">
-                                <div class="prev">
-                                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                                </div>
-                                <div class="next">
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+                        <?php endforeach; ?>
+                    </div>
 
 
 
-                <!-- testimonials bullets -->
-                <div class="bullets">
-                    <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
-                        <div class="bullet"></div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
+                    <!-- testimonials bullets -->
+                    <div class="bullets">
+                        <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+                            <div class="bullet"></div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </section>
     <?php endif; ?>
 
@@ -230,19 +236,21 @@
     <!-- CTA -->
     <?php if($page->secondCtaSwitch()->toBool()): ?>
         <section id="cta-2" class="cta fade-section">
-            <div class="cta__content">
-                <h2><?= $page->secondCtaTitle() ?> <span><?= $page->secondCtaTitleSpan() ?></span></h2>
+            <div class="content-container-l content-container">
+                <div class="cta__content">
+                    <h2><?= $page->secondCtaTitle() ?> <span><?= $page->secondCtaTitleSpan() ?></span></h2>
 
-                <!-- CTA buttons -->
-                <?php if ($page->secondCtaButtons()->isNotEmpty()) : ?>
-                    <div class="buttons">
+                    <!-- CTA buttons -->
+                    <?php if ($page->secondCtaButtons()->isNotEmpty()) : ?>
+                        <div class="buttons">
 
-                        <!-- button -->
-                        <?php foreach ($page->secondCtaButtons()->toStructure() as $button) : ?>
-                            <?php snippet('components/button', ["button" => $button]) ?>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+                            <!-- button -->
+                            <?php foreach ($page->secondCtaButtons()->toStructure() as $button) : ?>
+                                <?php snippet('components/button', ["button" => $button]) ?>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </section>
     <?php endif; ?>

@@ -27,37 +27,9 @@
     }
 }
 
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
     .blogposts__articles {
-        padding: 0 178px;
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .blogposts__articles {
-        padding: 0 336px;
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .blogposts__articles {
-        padding: 0 656px;
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .blogposts__articles {
-        padding: 0 1096px;
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .blogposts__articles {
-        padding: 0 1296px;
+        padding: 0;
     }
 }
