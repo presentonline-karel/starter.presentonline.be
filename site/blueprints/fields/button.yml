@@ -11,11 +11,11 @@ columns:
     width: 2/8
 fields:
   anchor:
-    label: Knop tekst
+    label: Knop tekst*
     type: text
     required: true
   icon:
-    label: Icoon
+    label: Icoon*
     type: radio
     required: true
     options:
@@ -26,34 +26,37 @@ fields:
       arrowRightTop: Pijl rechts boven
       arrowDown: Pijl onder
   typeOfButton:
-    label: Type
+    label: Type*
     type: radio
+    required: true
     options:
       button-primary: Primary
       button-secondary: Secondary
       button-tertiary: Tertiary
   destination:
+    label: Link*
     type: select
-    label: Link
     max: 1
     required: true
     options:
       internal: Interne webpagina
       external: Externe webpagina
   internalPage:
-    label: Interne webpagina
+    label: Interne webpagina*
     type: pages
     max: 1
     required: true
+    width: 3/4
     when:
       destination: internal
   idPage:
     label: id op pagina
     type: text
+    width: 1/4
     when:
       destination: internal
   externalUrl:
-    label: Externe webpagina
+    label: Externe webpagina*
     type: url
     required: true
     when:

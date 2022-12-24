@@ -1,10 +1,6 @@
 const {src, dest, series, parallel, watch} = require('gulp');
-const del = require('del');
 
-//const browserSync = require('browser-sync');
 const browserSync = require('browser-sync').create();
-
-/* const sass = require('gulp-sass'); */
 const sass = require('gulp-sass')(require('sass'));
 
 const origin = 'assets';
@@ -15,12 +11,18 @@ sass.compiler = require('node-sass');
 
 
 async function clean(cb) {
-    await del(destination);
     cb();
 }
 
-function css(cb) {
-    src(`${origin}/css/*.css`).pipe(dest(`${destination}/css`));
+// Styling for custom Kirby Panel
+function panelCss(cb) {
+    src(`${origin}/scss/custom-panel.scss`)
+    .pipe(sass({
+        outputStyle: 'compressed'
+    }))
+    
+    .pipe(dest(`${destination}/css`));
+
     cb();
 }
 
@@ -41,21 +43,23 @@ function js(cb) {
 }
 
 function watcher(cb) {
-    watch(`${origin}/**/*.css`).on('change', series(css, browserSync.reload))
+    watch(`${origin}/**/**/custom-panel.scss`).on('change', series(panelCss, browserSync.reload))
     watch(`${origin}/**/**/*.scss`).on('change', series(scss, browserSync.reload))
     watch(`${origin}/**/**/*.js`).on('change', series(js, browserSync.reload))
     cb();
 }
 
+
+
 function server(cb) {
     browserSync.init({
         notify: false,
         open: true,
-        proxy: "http://localhost/starter.presentonline.be",
-        port: 4000
+        proxy: "http://starter.int",
+        port: 80,
+        online: true
     })
     cb();
 }
 
-//exports.default = series(clean, parallel(css, js));
-exports.default = series(clean, parallel(css, scss, js), server, watcher);
+exports.default = series(clean, parallel(panelCss, scss, js), server, watcher);

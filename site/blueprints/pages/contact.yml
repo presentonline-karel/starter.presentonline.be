@@ -4,94 +4,102 @@ icon: email
 options:
   changeSlug: false
 
-columns:
+tabs:
+  content:
+    icon: text
 
-  #CONTACT TEXT CONTENT
-  - width: 1/2
-    sections:
-    fields:
+    columns:
 
-      #Hero
-      heroHeadline:
-        label: Header
-        type: headline
-      heroTitle:
-        label: Header titel
-        type: text
-      heroIntro:
-        label: Header intro tekst
-        type: writer
-        inline: true
-
-      #buttons
-      heroButtons:
-        extends: fields/button
-        label: Hero buttons
-      line-a:
-        type: line
-      
-
-
-      #Contact - Info
-      contactInfo:
-        label: Contact info
-        type: headline
-        width: 1/2
-      contactInfoSwitch:
-        extends: fields/display-switch
-      contactInfoTitle:
-        label: Contact info titel
-        type: text
-      contactInfoText:
-        label: Contact info tekst
-        type: writer
-        inline: true
-      line-b:
-        type: line
-      
-
-
-      #Contact Maps
-      contactMaps:
-        label: Google Maps
-        type: headline
-        width: 1/2
-      contactMapsSwitch:
-        extends: fields/display-switch
-      mapsUrl:
-        label: Google Maps embed URL
-        type: text
-  
-
-
-  #CONTACT OPENING HOURS
-  - width: 1/2
-    sections:
-    fields:
-
-      #Openinghours
-      headerOpeninghours:
-        label: Openingsuren
-        type: headline
-        numbered: false
-        width: 1/2
-      headerOpeninghoursSwitch:
-        extends: fields/display-switch
-      openingHours:
-        label: Openingsuren
-        type: structure
-        max: 8
-        columns:
-          day:
-            width: 3/8
-          value:
-            width: 5/8
+      #CONTACT TEXT CONTENT
+      - width: 1/2
+        sections:
         fields:
-          day:
-            label: Dag
+
+          #Hero
+          heroHeadline:
+            label: Header
+            type: headline
+          heroTitle:
+            label: Titel
             type: text
-            required: true
-          value:
-            label: Uren
+          heroIntro:
+            label: Intro tekst
+            type: writer
+            inline: true
+
+          #buttons
+          heroButtons:
+            extends: fields/button
+            label: Buttons
+          line-a:
+            type: line
+          
+
+
+          #Contact - Info
+          contactInfo:
+            label: Contact gegevens
+            type: headline
+            width: 1/2
+          contactInfoSwitch:
+            extends: fields/display-switch
+          contactInfoTitle:
+            label: Titel
             type: text
-            required: true
+          contactInfoText:
+            label: Tekst
+            type: writer
+            inline: true
+          line-b:
+            type: line
+          
+
+
+          #Contact Maps
+          contactMaps:
+            label: Google Maps
+            type: headline
+            width: 1/2
+          contactMapsSwitch:
+            extends: fields/display-switch
+          mapsUrl:
+            label: Embed URL
+            type: text
+      
+
+
+      #CONTACT OPENING HOURS
+      - width: 1/2
+        sections:
+        fields:
+
+          #Openinghours
+          headerOpeninghours:
+            label: Openingsuren
+            type: headline
+            numbered: false
+            width: 1/2
+          headerOpeninghoursSwitch:
+            extends: fields/display-switch
+          openingHours:
+            label: Openingsuren
+            type: structure
+            max: 8
+            columns:
+              day:
+                width: 3/8
+              value:
+                width: 5/8
+            fields:
+              day:
+                label: Dag
+                type: text
+                required: true
+              value:
+                label: Uren
+                type: text
+                required: true
+
+
+
+  seotab: seo                

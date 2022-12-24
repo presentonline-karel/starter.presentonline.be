@@ -26,7 +26,7 @@ const counterUpAnimation = () => {
                                 setTimeout(updateCounter, 10);
                             }
 
-                            //add + at the end of number
+                            // Add + at the end of number
                             else {
                                 if(counter.classList.contains("plus")) {
                                     counter.innerHTML += "+";

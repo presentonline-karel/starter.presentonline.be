@@ -1,0 +1,37 @@
+@import "./1_fundaments/colors";
+
+// Active tab -> Border top
+.k-tab-button[aria-current]:before {
+    background: $primary-500;
+}
+
+// Numbered headline
+.k-headline-field .k-headline[data-numbered]:before {
+    color: $primary-600;
+}
+
+// Info fields
+[dir="ltr"] .k-box {
+    border-width: 0 0 0 4px;
+    border-style: solid;
+
+    &:not([data-theme="none"]) {
+        border-radius: 0;
+    }
+
+    &[data-theme="info"] {
+        border-color: $info-500;
+    }
+
+    &[data-theme="negative"] {
+        border-color: $error-500;
+    }
+
+    &[data-theme="notice"] {
+        border-color: $alert-500;
+    }
+
+    &[data-theme="positive"] {
+        border-color: $success-500;
+    }
+}

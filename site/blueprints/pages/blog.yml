@@ -4,66 +4,119 @@ icon: book
 options:
   changeSlug: false
 
-columns:
+tabs:
+  content:
+    icon: text
 
-  #BLOG ARTICLES
-  - width: 1/3
-    sections:
-      listed:
-        headline: Listed pages
-        type: pages
-        status: listed
-      unlisted:
-        headline: Unlisted pages
-        type: pages
-        status: unlisted
-      drafts:
-        headline: Pages in draft
-        type: pages
-        status: draft
-        template: article
-  
+    columns:
 
-
-  #BLOG CONTENT
-  - width: 2/3
-    sections:
-    fields:
-
-      #Hero
-      heroHeadline:
-        label: Hero
-        type: headline
-      heroTitle:
-        label: Hero titel
-        type: text
-      heroIntro:
-        label: Hero intro tekst
-        type: writer
-        inline: true
-      heroButtons:
-        extends: fields/button
-        label: Hero buttons
-      line-a:
-        type: line
+      #BLOG ARTICLES
+      - width: 1/2
+        sections:
+        fields:
+          blogHeadline:
+            label: Blogpagina
+            type: headline
+            numbered: false
+          blogInfo:
+            label: Info bij blogs
+            type: info
+            text: |
+              Op deze pagina kan je alle tekst aanpassen van de blog pagina.
+              
+              Wil je artikels aanpassen, toevoegen of verwijderen?
+              Klik dan hierboven op de tab **artikels.**
 
 
 
-      #CTA1
-      firstCtaHeadline:
-        label: CTA1
-        type: headline
-        width: 1/2
-      firstCtaSwitch:
-        extends: fields/display-switch
-      firstCtaTitle:
-        label: CTA titel
-        type: writer
-        inline: true
-      firstCtaTitleSpan:
-        label: CTA titel - gekleurd deel
-        type: text
-      #buttons  
-      firstCtaButtons:
-        extends: fields/button
-        label: Content buttons
+      #BLOG CONTENT
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero
+          heroHeadline:
+            label: Header
+            type: headline
+          heroTitle:
+            label: Titel
+            type: text
+          heroIntro:
+            label: Intro tekst
+            type: writer
+            inline: true
+          heroButtons:
+            extends: fields/button
+            label: Buttons
+          line-a:
+            type: line
+
+
+
+          #CTA1
+          firstCtaHeadline:
+            label: CTA
+            type: headline
+            width: 1/2
+          firstCtaSwitch:
+            extends: fields/display-switch
+          firstCtaTitle:
+            label: Titel
+            type: writer
+            inline: true
+          firstCtaTitleSpan:
+            label: Titel - Gekleurd deel
+            type: text
+          #buttons  
+          firstCtaButtons:
+            extends: fields/button
+            label: Buttons
+
+
+
+  artikels:
+    icon: page
+
+    columns:
+
+      #BLOG EXPLANATION
+      - width: 1/2
+        sections:
+        fields:
+          articlesHeadline:
+            label: Blogartikels
+            type: headline
+            numbered: false
+          articlesInfo:
+            label: Info bij blogartikels
+            type: info
+            text: |
+              Hier kan je blogposts aanpassen, toevoegen of verwijderen.
+
+              Wil je graag een nieuwe blogpost toevoegen? Maak er dan eentje aan door te klikken op + bij Drafts. Voeg hierna al je inhoud van blogpost toe en dan is je blogpost klaar voor het publiek.
+
+              **Let op:** Vergeet de status van je blogpost niet te veranderen naar public wanneer deze af is. Anders zal deze niet op je website getoond worden.
+
+              Hulp nodig? Stuur me een mailtje/whatsappje -> **0476280902 / info@presentonline.be**
+
+      #BLOG ARTICLES
+      - width: 1/2
+        sections:
+          listed:
+            headline: Listed pages
+            type: pages
+            status: listed
+          unlisted:
+            headline: Unlisted pages
+            type: pages
+            status: unlisted
+          drafts:
+            headline: Pages in draft
+            type: pages
+            status: draft
+            template: article
+
+
+
+
+  seotab: seo

@@ -4,14 +4,14 @@ const inViewport = (elem) => {
 
   const elems = () => {
 
-    //loop through the sections
+    // Loop through the sections
     for (let i = 0; i < allElements.length; i++) {
       let viewportOffset = allElements[i].getBoundingClientRect();
       let top = viewportOffset.top;
 
       if (top < windowHeight) {
 
-        //if the top offset is less than the window height
+        // If the top offset is less than the window height
         allElements[i].classList.add("in-viewport");
       } else {
         allElements[i].classList.remove("in-viewport");

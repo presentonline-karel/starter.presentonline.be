@@ -62,3 +62,9 @@ kirby
 kirby/*
 ./kirby
 ./kirby/*
+
+/site/config/*
+site/config/*
+site/config
+./site/config/*
+./site/config

@@ -12,7 +12,7 @@
         <!-- HEADER HOME - CONTENT -->
         <div class="header-home__content">
             <div class="header-home__content__text">
-                <h1><?= $page->heroTitle() ?> <span><?= $page->heroTitleSpan() ?></span></h1>
+                <h1><?= $page->heroTitle() ?><br> <span><?= $page->heroTitleSpan() ?></span></h1>
                 <p><?= $page->heroIntro() ?></p>
 
                 <!-- Hero buttons -->

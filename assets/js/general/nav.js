@@ -8,7 +8,7 @@ const navSlide = () => {
     burger.addEventListener("click", () => {
         nav.classList.toggle("nav-active");
 
-        //animate links
+        // Animate links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = "";
@@ -18,23 +18,23 @@ const navSlide = () => {
             }
         });
 
-        //disable scroll when menu is open
+        // Disable scroll when menu is open
         document.body.classList.toggle("stop-scrolling");
 
-        //burger animation
+        // Burger animation
         burger.classList.toggle("toggle");
     });
 
 
 
-    //Remove animation on links to add them again later
+    // Remove animation on links to add them again later
     for (i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener("click", () => {
 
-            //Mobile/tablet
+            // Mobile/tablet
             if (window.innerWidth < 1280) {
                 
-                //disable scroll when menu is open
+                // Disable scroll when menu is open
                 document.body.classList.toggle("stop-scrolling");
             }
         

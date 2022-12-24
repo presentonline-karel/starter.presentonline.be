@@ -1,4 +1,4 @@
-.keep-reading {
+.keep-reading-section {
     background-color: $neutrals-200;
 
     h2 {
@@ -16,11 +16,13 @@
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
-    .keep-reading {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 64px;
+    .keep-reading-section {
+        .keep-reading {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 64px;
+        }
 
         h2 {
             white-space: nowrap;
@@ -34,22 +36,27 @@
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .keep-reading {
+    .keep-reading-section {
         padding: 96px 178px;
-        gap: 72px;
+
+        .keep-reading {
+            gap: 72px;
+        }
     }
 }
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
-    .keep-reading {
+    .keep-reading-section {
         padding: 96px 308px;
     }
 }
 
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
-    .keep-reading {
+    .keep-reading-section {
+        padding: 128px 0;
+
         h2 {
             font-size: 40px;
             line-height: 44px;
@@ -58,40 +65,5 @@
         .related-articles {
             max-width: 458px;
         }
-    }
-}
-
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
-    .keep-reading {
-        padding: 96px 388px !important;
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .keep-reading {
-        padding: 96px 548px !important;
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .keep-reading {
-        padding: 96px 868px !important;
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .keep-reading {
-        padding: 96px 1308px !important;
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .keep-reading {
-        padding: 96px 1508px !important;
     }
 }

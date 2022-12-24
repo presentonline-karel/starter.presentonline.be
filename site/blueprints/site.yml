@@ -1,12 +1,12 @@
 title: PO - Starter Kit
 
 tabs:
-  content:
+  menu:
     icon: dashboard
 
     columns:
 
-      #pages
+      #Pages
       - width: 1/3
         sections:
           listed:
@@ -43,29 +43,91 @@ tabs:
                 width: 1/3
             fields:
               anchor:
-                label: Anker
+                label: Anker*
                 type: text
+                required: true
+                width: 1/2
+              destination:
+                label: Link naar
+                type: toggle
+                text: 
+                  - "interne pagina"
+                  - "externe url"
               page:
-                label: Pagina
+                label: Pagina*
                 type: pages
+                width: 1/2
+                required: true
+                when:
+                  destination: false
               section:
-                label: id op pagina
+                label: (Sectie op pagina)
                 type: text
+                width: 1/2
+                when:
+                  destination: false
+              externalUrl:
+                label: Externe URL*
+                type: url
+                required: true
+                when:
+                  destination: true
           ctaHeadline:
             label: Navigatie - CTA Button
             type: headline
             numbered: false
           ctaButton:
+            label: Menu CTA
             extends: fields/button
-            label: Hero buttons
+            max: 1
           line-a:
             type: line
-          
 
+
+          #Logos
+          logosHeadline:
+            label: Logos
+            type: headline
+          logoDark:
+            label: Logo - Standaard
+            type: files
+            max: 1
+            layout: cards
+            width: 1/2
+            image:
+              back: white
+          logoLight:
+            label: Logo - light
+            type: files
+            max: 1
+            layout: cards
+            back: black
+            width: 1/2
+            image:
+              back: black
+
+
+
+  contact:
+    icon: email
+
+    columns:
+
+      - width: 1/4
+        sections:
+        fields:
+          contactHeadline:
+            label: Contactgegevens & sociale media
+            type: headline
+            numbered: false
+      
+      - width: 3/4
+        sections:
+        fields:
 
           #Contact
-          contactHeadline:
-            label: Contact/Socials
+          contactInfoHeadline:
+            label: Contactgegevens
             type: headline
           email:
             label: Email
@@ -73,10 +135,13 @@ tabs:
           telephone:
             label: Telefoonnummer
             type: text
+          line-d:
+            type: line
+
+          #Socials
           socialsHeadline:
             label: Sociale media
             type: headline
-            numbered: false
           socials:
             label: Socials
             type: structure
@@ -95,19 +160,45 @@ tabs:
                   twitter: Twitter
               url:
                 type: url
-          line-b:
-            type: line
           
 
 
-          #Footer
+  footer:
+    icon: grid-bottom
+
+    columns:
+
+      - width: 1/4
+        sections:
+        fields:
           footerHeadline:
             label: Footer
             type: headline
+            numbered: false
+
+      - width: 3/4
+        sections:
+        fields:
+          #Footer
+          footerIntroHeadline:
+            label: Info over jouw organisatie
+            type: headline
+          infoIntro:
+            label:
+            type: info
+            text: 2-3 zinnen over wat jouw organisatie doet.
+            width: 1/2
           intro:
-            label: Footer intro
+            label: Bedrijfsinformatie
             type: writer
             inline: true
+          line-c:
+            type: line
+
+          sitemapHeadline:
+            label: Sitemap
+            type: headline
+            numbered: true
           sitemap:
             label: Sitemap
             type: structure
@@ -124,45 +215,7 @@ tabs:
               section:
                 label: Sectie op pagina
                 type: text
-          line-c:
-            type: line
+  
 
 
-
-          metaHeadline:
-            label: Meta info
-            type: headline
-          metaDescription:
-            label: Meta beschrijving (Google)
-            type: text
-          titleWebsite:
-            label: Titel website
-            type: text
-          previewImage:
-            label: Social media preview image
-            type: files
-            max: 1
-            layout: cards
-          
-
-            
-    
-  logos:
-    icon: image
-    columns:
-
-      - width: 1/3
-        sections:
-        fields:
-
-          #logos
-          logoLight:
-            label: Licht logo
-            type: files
-            max: 1
-            layout: cards
-          logoDark:
-            label: Donker logo
-            type: files
-            max: 1
-            layout: cards
+  seotab: seo

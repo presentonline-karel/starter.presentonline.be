@@ -4,121 +4,126 @@ icon: book
 options:
   changeSlug: false
 
-columns:
+tabs:
+  content:
+    columns:
 
-  #ARTICLE TEXT
-  - width: 1/2
-    sections:
-    fields:
+      #ARTICLE TEXT
+      - width: 1/2
+        sections:
+        fields:
 
-      #Article info
-      infoHeadline:
-        label: Artikel info
-        type: headline
-      publicationDate:
-        label: Datum van publicatie
-        type: date
-        display: DD.MM.YYYY
-      tags:
-        label: Tags
-        type: tags
-      minRead:
-        label: Min lezen
-        type: text
-      line-a:
-        type: line
+          #Article info
+          infoHeadline:
+            label: Artikel info
+            type: headline
+          publicationDate:
+            label: Datum van publicatie
+            type: date
+            display: DD.MM.YYYY
+          tags:
+            label: Tags
+            type: tags
+          minRead:
+            label: Min lezen
+            type: text
+          line-a:
+            type: line
+          
+          #Article header
+          headerHeadline:
+            label: Artikel header
+            type: headline
+          articleTitle:
+            label: Artikel titel
+            type: text
+            required: true
+          articleIntro:
+            label: Artikel intro
+            type: writer
+            inline: true
+            required: true
+          line-b:
+            type: line
+
+          
+          
+          #Article section1
+          sectionFirstHeadline:
+            label: Artikel sectie
+            type: headline
+          articleFirstSubtitle:
+            label: Artikel subtitel
+            type: text
+          articleFirstParagraph:
+            label: Artikel paragraaf
+            type: writer
+            inline: true
+          line-c:
+            type: line
+          
+
+
+          #Article section2
+          sectionSecondHeadline:
+            label: Artikel sectie
+            type: headline
+          articleSecondSubtitle:
+            label: Artikel subtitel
+            type: text
+          articleSecondParagraph:
+            label: Artikel paragraaf
+            type: writer
+            inline: true
+          line-d:
+            type: line
+
+
+
+          #Related articles
+          relatedArticlesHeadline:
+            label: Gerelateerde artikels
+            type: headline
+            width: 1/2
+          relatedArticlesSwitch:
+            extends: fields/display-switch
+          relatedArticles:
+            label: Gerelateerde artikels
+            type: pages
+            query: page.siblings(true)
+            max: 2
+                
+
       
-      #Article header
-      headerHeadline:
-        label: Artikel header
-        type: headline
-      articleTitle:
-        label: Artikel titel
-        type: text
-        required: true
-      articleIntro:
-        label: Artikel intro
-        type: writer
-        inline: true
-        required: true
-      line-b:
-        type: line
 
-      
-      
-      #Article section1
-      sectionFirstHeadline:
-        label: Artikel sectie
-        type: headline
-      articleFirstSubtitle:
-        label: Artikel subtitel
-        type: text
-      articleFirstParagraph:
-        label: Artikel paragraaf
-        type: writer
-        inline: true
-      line-c:
-        type: line
-      
+      #ARTICLE IMAGES
+      - width: 1/2
+        sections:
+        fields:
 
-
-      #Article section2
-      sectionSecondHeadline:
-        label: Artikel sectie
-        type: headline
-      articleSecondSubtitle:
-        label: Artikel subtitel
-        type: text
-      articleSecondParagraph:
-        label: Artikel paragraaf
-        type: writer
-        inline: true
-      line-d:
-        type: line
+          #Article images
+          headerImageHeadline:
+            label: Artikel header foto
+            type: headline
+            numbered: false
+          headerImage:
+            label: Artikel header foto
+            type: files
+            layout: cards
+            max: 1
+          line-e:
+            type: line
+          
+          sectionImageHeadline:
+            label: Artikel sectie foto
+            type: headline
+            numbered: false
+          sectionImage:
+            label: Artikel sectie foto
+            type: files
+            layout: cards
+            max: 1
 
 
 
-      #Related articles
-      relatedArticlesHeadline:
-        label: Gerelateerde artikels
-        type: headline
-        width: 1/2
-      relatedArticlesSwitch:
-        extends: fields/display-switch
-      relatedArticles:
-        label: Gerelateerde artikels
-        type: pages
-        query: page.siblings(true)
-        max: 2
-            
-
-  
-
-  #ARTICLE IMAGES
-  - width: 1/2
-    sections:
-    fields:
-
-      #Article images
-      headerImageHeadline:
-        label: Artikel header foto
-        type: headline
-        numbered: false
-      headerImage:
-        label: Artikel header foto
-        type: files
-        layout: cards
-        max: 1
-      line-e:
-        type: line
-      
-      sectionImageHeadline:
-        label: Artikel sectie foto
-        type: headline
-        numbered: false
-      sectionImage:
-        label: Artikel sectie foto
-        type: files
-        layout: cards
-        max: 1
-      
+  seotab: seo

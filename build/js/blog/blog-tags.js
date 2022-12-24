@@ -12,7 +12,7 @@ const tagFilter = () => {
 
 
 
-    //collect all article tags in multidimensional array
+    // Collect all article tags in multidimensional array
     const structuredTags = [];
 
     for(let i = 0; i < articles.length; i++) {
@@ -21,21 +21,21 @@ const tagFilter = () => {
 
 
 
-    //onclick of removeTagsButton
+    // Onclick of removeTagsButton
     removeTagsButton.addEventListener("click", function() {
 
-        //reset active tags & amount of results
+        // Reset active tags & amount of results
         activeTags = [];
         amountOfResults = 0;
 
-        //set display of filterFeedback to none
+        // Set display of filterFeedback to none
         filterFeedback.style.display = "none";
 
         for(let i = 0; i < tags.length; i++) {
             tags[i].classList.remove("active");
         }
 
-        //set all articles display to block
+        // Set all articles display to block
         for(let i = 0; i < articles.length; i++) {
             articles[i].style.display = "block";
         }
@@ -43,23 +43,23 @@ const tagFilter = () => {
 
 
 
-    //onclick of tag -> start filtering articles
+    // Onclick of tag -> start filtering articles
     for(let i = 0; i < tags.length; i++) {
         tags[i].addEventListener("click", function() {
             tags[i].classList.toggle("active");
 
-            //collect all active tags
+            // Collect all active tags
             activeTags = document.querySelectorAll(".filter-tag.active");
 
-            //reset results
+            // Reset results
             amountOfResults = 0;
 
-            //at first set display of all articles to none
+            // At first set display of all articles to none
             for(let j = 0; j < articles.length; j++) {
                 articles[j].style.display = "none";
             }
 
-            //when no active tags -> display normal content
+            // When no active tags -> display normal content
             if(activeTags.length < 1) {
                 for (let j = 0; j < articles.length; j++) {
                     articles[j].style.display = "block";
@@ -67,23 +67,23 @@ const tagFilter = () => {
 
                 filterFeedback.style.display = "none";
             }
-            //when input is not empty -> only show matching content on title
+            // When input is not empty -> only show matching content on title
             else {
 
-                //loop through articles
+                // Loop through articles
                 for (let j = 0; j < articles.length; j++) {
 
-                    //loop through tags of each article
+                    // Loop through tags of each article
                     for(let k = 0; k < structuredTags[j].length; k++) {
                         var filterableTag = structuredTags[j][k].innerHTML.toLowerCase();
                     
-                        //loop through active tags
+                        // Loop through active tags
                         for(let l = 0; l < activeTags.length; l++) {
 
-                            //if tag matches one of the active tags
+                            // If tag matches one of the active tags
                             if(activeTags[l].innerHTML.toLowerCase() == filterableTag) {
 
-                                //if articles display was not yet set to block, set to block
+                                // If articles display was not yet set to block, set to block
                                 if(articles[j].style.display != "block") {
                                     articles[j].style.display = "block";
                                     amountOfResults += 1;

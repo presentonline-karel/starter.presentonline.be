@@ -4,187 +4,195 @@ icon: grid-top
 options:
   changeSlug: false
 
-columns:
+tabs:
+  content:
+    icon: text
 
-  #ABOUT TEXT CONTENT
-  - width: 1/2
-    sections:
-    fields:
+    columns:
 
-      #Hero
-      heroHeadline:
-        label: Hero
-        type: headline
-      heroTitle:
-        label: Hero titel
-        type: text
-      heroIntro:
-        label: Hero intro tekst
-        type: writer
-        inline: true
-      #buttons  
-      heroButtons:
-        extends: fields/button
-        label: Hero buttons
-      line-a:
-        type: line
-    
-
-
-      #History
-      historyHeadline:
-        label: Ervaring
-        type: headline
-        width: 1/2
-      historySwitch:
-        extends: fields/display-switch
-      historyTitle:
-        label: Ervaring titel
-        type: text
-      history:
-        label: Ervaring
-        type: structure
+      #ABOUT TEXT CONTENT
+      - width: 1/2
+        sections:
         fields:
-          title:
-            label: Ervaring titel
+
+          #Hero
+          heroHeadline:
+            label: Header
+            type: headline
+          heroTitle:
+            label: Titel
             type: text
-          number:
-            label: Ervaring nummer
-            type: text
-          withPlus:
-            label: met +
-            type: toggle
-        max: 3
-      line-b:
-        type: line
-    
+          heroIntro:
+            label: Intro tekst
+            type: writer
+            inline: true
+          #buttons  
+          heroButtons:
+            extends: fields/button
+            label: Buttons
+          line-a:
+            type: line
+        
 
 
-      #Content
-      contentHeadline:
-        label: Content
-        type: headline
-        width: 1/2
-      contentSwitch:
-        extends: fields/display-switch
-      contentTitle:
-        label: Content titel
-        type: text
-      contentText:
-        label: Content tekst
-        type: writer
-        inline: true
-      contentBulletpoints:
-        label: Content bullet points
-        type: structure
+          #History
+          historyHeadline:
+            label: Ervaring
+            type: headline
+            width: 1/2
+          historySwitch:
+            extends: fields/display-switch
+          historyTitle:
+            label: Titel
+            type: text
+          history:
+            label: Ervaring
+            type: structure
+            fields:
+              title:
+                label: Ervaring titel
+                type: text
+              number:
+                label: Ervaring nummer
+                type: text
+              withPlus:
+                label: met +
+                type: toggle
+            max: 3
+          line-b:
+            type: line
+        
+
+
+          #Content
+          contentHeadline:
+            label: Content
+            type: headline
+            width: 1/2
+          contentSwitch:
+            extends: fields/display-switch
+          contentTitle:
+            label: Titel
+            type: text
+          contentText:
+            label: Tekst
+            type: writer
+            inline: true
+          contentBulletpoints:
+            label: Bullet points
+            type: structure
+            fields:
+              bulletPoint:
+                type: text
+                required: true
+          #buttons  
+          contentButtons:
+            extends: fields/button
+            label: Buttons
+          line-c:
+            type: line
+
+
+
+          #Team
+          teamHeadline:
+            label: Team
+            type: headline
+            width: 1/2
+          teamSwitch:
+            extends: fields/display-switch
+          teamTitle:
+            label: Titel
+            type: text
+          teamText:
+            label: Tekst
+            type: writer
+            inline: true
+          team:
+            label: Team
+            type: structure
+            columns:
+              image:
+                width: 2/8
+              name:
+                width: 3/8
+              function:
+                width: 3/8
+            fields:
+              image:
+                label: Foto
+                type: files
+                max: 1
+                required: true
+              name:
+                label: Naam
+                type: text
+                required: true
+              function:
+                label: Functie
+                type: text
+                required: true
+          line-d:
+            type: line
+
+
+
+          #CTA1
+          firstCtaHeadline:
+            label: CTA
+            type: headline
+            width: 1/2
+          firstCtaSwitch:
+            extends: fields/display-switch
+          firstCtaTitle:
+            label: Titel
+            type: writer
+            inline: true
+          firstCtaTitleSpan:
+            label: Titel - Gekleurd deel
+            type: text
+          #buttons  
+          firstCtaButtons:
+            extends: fields/button
+            label: Buttons
+      
+
+
+      #ABOUT IMAGE CONTENT
+      - width: 1/2
+        sections:
         fields:
-          bulletPoint:
-            type: text
-            required: true
-      #buttons  
-      contentButtons:
-        extends: fields/button
-        label: Content buttons
-      line-c:
-        type: line
 
-
-
-      #Team
-      teamHeadline:
-        label: Team
-        type: headline
-        width: 1/2
-      teamSwitch:
-        extends: fields/display-switch
-      teamTitle:
-        label: Team titel
-        type: text
-      teamText:
-        label: Team tekst
-        type: writer
-        inline: true
-      team:
-        label: Team
-        type: structure
-        columns:
-          image:
-            width: 2/8
-          name:
-            width: 3/8
-          function:
-            width: 3/8
-        fields:
-          image:
-            label: Foto
+          #Hero image
+          heroImageHeadline:
+            label: Hero foto
+            type: headline
+            numbered: false
+          heroImage:
+            label: Hero foto
             type: files
             max: 1
-            required: true
-          name:
-            label: Naam
-            type: text
-            required: true
-          function:
-            label: Functie
-            type: text
-            required: true
-      line-d:
-        type: line
+            layout: cards
+            cover: true
+            empty: Er is geen hero foto geselecteerd.
+          line-g:
+            type: line
 
 
 
-      #CTA1
-      firstCtaHeadline:
-        label: CTA1
-        type: headline
-        width: 1/2
-      firstCtaSwitch:
-        extends: fields/display-switch
-      firstCtaTitle:
-        label: CTA titel
-        type: writer
-        inline: true
-      firstCtaTitleSpan:
-        label: CTA titel - gekleurd deel
-        type: text
-      #buttons  
-      firstCtaButtons:
-        extends: fields/button
-        label: Content buttons
-  
-
-
-  #ABOUT IMAGE CONTENT
-  - width: 1/2
-    sections:
-    fields:
-
-      #Hero image
-      heroImageHeadline:
-        label: Hero foto
-        type: headline
-        numbered: false
-      heroImage:
-        label: Hero foto
-        type: files
-        max: 1
-        layout: cards
-        cover: true
-        empty: Er is geen hero foto geselecteerd.
-      line-g:
-        type: line
+          #Content image
+          contentImageHeadline:
+            label: Content foto
+            type: headline
+            numbered: false
+          contentImage:
+            label: Content foto
+            type: files
+            max: 1
+            layout: cards
+            cover: true
+            empty: Er is geen content foto geselecteerd.
 
 
 
-      #Content image
-      contentImageHeadline:
-        label: Content foto
-        type: headline
-        numbered: false
-      contentImage:
-        label: Content foto
-        type: files
-        max: 1
-        layout: cards
-        cover: true
-        empty: Er is geen content foto geselecteerd.
+  seotab: seo

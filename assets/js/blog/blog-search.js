@@ -8,12 +8,12 @@ const blogSearch = () => {
 
 
 
-    //on input start displaying matching content
+    // On input start displaying matching content
     searchInput.addEventListener("input", function () {
         var searchInputValue = searchInput.value;
         var amountOfResults = 0;
 
-        //when input is empty -> display normal content
+        // When input is empty -> display normal content
         if (searchInputValue.length < 1) {
             for (let i = 0; i < articles.length; i++) {
                 articles[i].style.display = "block";
@@ -21,7 +21,7 @@ const blogSearch = () => {
 
             filterFeedback.style.display = "none";
         }
-        //when input is not empty -> only show matching content on title
+        // When input is not empty -> only show matching content on title
         else {
             for (let i = 0; i < articles.length; i++) {
                 var searchableTitleArticle = articleTitles[i].innerHTML.toLowerCase();
@@ -34,7 +34,7 @@ const blogSearch = () => {
                     articles[i].style.display = "none";
                 }
 
-                //Show how many results in title
+                // Show how many results in title
                 if (amountOfResults == 0) {
                     filterFeedback.style.display = "block";
                     filterFeedback.innerHTML = 'geen resultaten voor zoekterm "' + searchInputValue + '"';

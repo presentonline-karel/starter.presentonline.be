@@ -4,33 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?= $page->title() ?> - Bakery - Present Online Starter Kit</title>
 
-        <?php //preview image ophalen ?>
-        <?php if($site->previewImage()->isNotEmpty()): ?>
-            <?php $previewImage = $site->previewImage()->toFile()->url(); ?>
-        <?php endif; ?>
-
-        <!-- GOOGLE / SOCIAL MEDIA TAGS -->
-        <!-- FACEBOOK / LINKEDIN / TWITTER -->
-        <meta property="og:image" content="<?= $previewImage ?>">
-        <meta content="1200" property="og:image:width">
-        <meta content="630" property="og:image:height">
-        <meta content="PresentOnline" name="author">
-        <meta content="<?= $site->metaDescription() ?>" name="description">
-        <meta content="index,follow,noodp" name="robots">
-        <meta content="<?= $site->titleWebsite() ?>" property="og:title">
-        <meta content="<?= $site->titleWebsite() ?>" property="og:site_name">
-        <meta content="<?= $site->metaDescription() ?>" property="og:description">
-        <meta content="website" property="og:type">
-        <meta content="<?= $site->url() ?>" property="og:url">
-        <meta content="PresentOnline" property="article:author">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="<?= $site->titleWebsite() ?>" />
-        <meta name="twitter:site" content="starterpresentonlinebe" />
-        <meta name="twitter:creator" content="presentonline">
-        <meta name="twitter:image" content="<?= $previewImage ?>">
-        <link rel="canonical" href="<?= $site->url() ?>">
+        <!-- META INFORMATION -->
+        <?php snippet('meta_information'); ?>
+        <?php snippet('robots'); ?>
 
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="<?= $site->url() ?>/assets/favicon/apple-touch-icon.png">
