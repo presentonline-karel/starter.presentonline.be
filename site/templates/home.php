@@ -90,28 +90,53 @@
 
                         <!-- service -->
                         <?php foreach ($page->services()->toStructure() as $service) : ?>
-                            <div class="service">
+                            <?php if($service->containsLink()->toBool() == true): ?>
+                                <a class="service" href="<?php if ($service->destination() == "internal") { echo ($service->internalPage()->toPage()->url() . $service->idPage()); } else { echo ($service->externalUrl()); } ?>" <?php if ($service->destination() == "external") { ?> target="_blank" <?php } ?>>
+                                
+                                    <!-- service - icon -->
+                                    <div class="service__icon-container">
+                                        <?php switch ($service->icon()) {
+                                            case "coffee":
+                                                ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
+                                                break;
+                                            case "cake":
+                                                ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
+                                                break;
+                                            case "heart":
+                                                ?><i class="fa fa-heart" aria-hidden="true"></i><?php
+                                                break;
+                                            default:
+                                                ?><i class="fa fa-check" aria-hidden="true"></i><?php
+                                        } ?>
+                                    </div>
 
-                                <!-- service - icon -->
-                                <div class="service__icon-container">
-                                    <?php switch ($service->icon()) {
-                                        case "coffee":
-                                            ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
-                                            break;
-                                        case "cake":
-                                            ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
-                                            break;
-                                        case "heart":
-                                            ?><i class="fa fa-heart" aria-hidden="true"></i><?php
-                                            break;
-                                        default:
-                                            ?><i class="fa fa-check" aria-hidden="true"></i><?php
-                                    } ?>
+                                    <h3><?= $service->title() ?></h3>
+                                    <p><?= $service->paragraph() ?></p>
+                                </a>
+                            <?php else: ?>
+                                <div class="service">
+
+                                    <!-- service - icon -->
+                                    <div class="service__icon-container">
+                                        <?php switch ($service->icon()) {
+                                            case "coffee":
+                                                ?><i class="fa fa-coffee" aria-hidden="true"></i><?php
+                                                break;
+                                            case "cake":
+                                                ?><i class="fa fa-pie-chart" aria-hidden="true"></i><?php
+                                                break;
+                                            case "heart":
+                                                ?><i class="fa fa-heart" aria-hidden="true"></i><?php
+                                                break;
+                                            default:
+                                                ?><i class="fa fa-check" aria-hidden="true"></i><?php
+                                        } ?>
+                                    </div>
+
+                                    <h3><?= $service->title() ?></h3>
+                                    <p><?= $service->paragraph() ?></p>
                                 </div>
-
-                                <h3><?= $service->title() ?></h3>
-                                <p><?= $service->paragraph() ?></p>
-                            </div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>

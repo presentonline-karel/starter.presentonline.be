@@ -90,12 +90,14 @@ tabs:
               icon:
                 width: 1/6
               title:
-                width: 2/6
+                width: 1/6
               paragraph:
                 width: 3/6
+              containsLink:
+                width: 1/6
             fields:
               icon:
-                label: Icoontje
+                label: Icoontje*
                 type: select
                 options:
                   coffee: Koffie
@@ -103,14 +105,56 @@ tabs:
                   heart: Hartje
                 required: true
               title:
-                label: Titel
+                label: Titel*
                 type: text
                 required: true
               paragraph:
-                label: Paragraaf
+                label: Paragraaf*
                 type: writer
                 inline: true
                 required: true
+              containsLink:
+                label: Link?
+                type: toggle
+                default: false
+                width: 1/2
+                text:
+                  - "nee"
+                  - "ja"
+              destination:
+                type: select
+                label: Link*
+                max: 1
+                required: true
+                width: 1/2
+                when:
+                  containsLink: true
+                options:
+                  internal: Interne webpagina
+                  external: Externe webpagina
+              internalPage:
+                label: Interne webpagina*
+                type: pages
+                max: 1
+                required: true
+                width: 3/4
+                when:
+                  destination: internal
+                  containsLink: true
+              idPage:
+                label: id op pagina
+                type: text
+                width: 1/4
+                when:
+                  destination: internal
+                  containsLink: true
+              externalUrl:
+                label: Externe webpagina*
+                type: url
+                required: true
+                when:
+                  destination: external
+                  containsLink: true
           line-c:
             type: line
 
