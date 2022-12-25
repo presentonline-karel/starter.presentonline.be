@@ -6,6 +6,8 @@ options:
 
 tabs:
   content:
+    icon: text
+
     columns:
 
       #ARTICLE TEXT
@@ -35,47 +37,38 @@ tabs:
             label: Artikel header
             type: headline
           articleTitle:
-            label: Artikel titel
+            label: Titel
             type: text
             required: true
           articleIntro:
-            label: Artikel intro
+            label: Lead
             type: writer
             inline: true
-            required: true
+          articleContent:
+            label: Content
+            type: blocks
+            fieldsets:
+              text:
+                label: Text
+                type: group
+                fieldsets:
+                  - heading
+                  - text
+                  - list
+              media:
+                label: Media
+                type: group
+                fieldsets:
+                  - image
+                  - video
+              code:
+                label: Code
+                type: group
+                open: false
+                fieldsets:
+                  - code
+                  - markdown
           line-b:
-            type: line
-
-          
-          
-          #Article section1
-          sectionFirstHeadline:
-            label: Artikel sectie
-            type: headline
-          articleFirstSubtitle:
-            label: Artikel subtitel
-            type: text
-          articleFirstParagraph:
-            label: Artikel paragraaf
-            type: writer
-            inline: true
-          line-c:
-            type: line
-          
-
-
-          #Article section2
-          sectionSecondHeadline:
-            label: Artikel sectie
-            type: headline
-          articleSecondSubtitle:
-            label: Artikel subtitel
-            type: text
-          articleSecondParagraph:
-            label: Artikel paragraaf
-            type: writer
-            inline: true
-          line-d:
             type: line
 
 
@@ -103,7 +96,7 @@ tabs:
 
           #Article images
           headerImageHeadline:
-            label: Artikel header foto
+            label: Preview foto
             type: headline
             numbered: false
           headerImage:
@@ -111,18 +104,8 @@ tabs:
             type: files
             layout: cards
             max: 1
-          line-e:
-            type: line
-          
-          sectionImageHeadline:
-            label: Artikel sectie foto
-            type: headline
-            numbered: false
-          sectionImage:
-            label: Artikel sectie foto
-            type: files
-            layout: cards
-            max: 1
+            image:
+              cover: true
 
 
 

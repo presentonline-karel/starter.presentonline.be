@@ -5,6 +5,11 @@
         //First CTA
         &__content {
             background-color: $primary-500;
+
+            .button-primary {
+                background-color: $neutrals-100;
+                color: $primary-500;
+            }
         }
 
         h2 {
@@ -17,6 +22,11 @@
 
             .cta__content {
                 background-color: $primary-100;
+
+                .button-primary {
+                    background-color: $primary-500;
+                    color: $neutrals-100;
+                }
             }
 
             h2 {
@@ -56,6 +66,11 @@
                     span {
                         color: $primary-500;
                     }
+                }
+
+                .button-primary {
+                    background-color: $primary-500;
+                    color: $neutrals-100;
                 }
             }
         }

@@ -1,0 +1,62 @@
+.landingPage-section {
+    padding: 28px 0 64px;
+    background-color: $neutrals-100;
+
+    .landingPage {
+        h1 {
+            padding: 0 16px 16px;
+        }
+
+        &__content {
+            padding: 0 16px;
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .landingPage-section {
+        padding-top: 48px;
+
+        .landingPage {
+            h1 {
+                padding: 0 48px 16px;
+            }
+    
+            &__content {
+                padding: 0 48px;
+            }
+        }
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .landingPage-section {
+        .landingPage {
+            max-width: 612px;
+            margin: 0 auto;
+
+            h1 {
+                padding: 0 0 24px;
+            }
+    
+            &__content {
+                padding: 0;
+            }
+        }
+    }
+}
+
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
+    .landingPage-section {
+        padding-bottom: 96px;
+        
+        .landingPage {
+            h1 {
+                padding: 0 0 40px;
+            }
+        }
+    }
+}

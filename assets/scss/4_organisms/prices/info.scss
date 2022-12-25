@@ -1,0 +1,138 @@
+.info {
+    .box {
+        background-color: $neutrals-200;
+        padding: 48px 16px;
+
+        &__header {
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+
+            .icon-container {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: $info-100;
+                text-align: center;
+                padding: 14px 0px;
+
+                i {
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: $info-500;
+                }
+            }
+        }
+    }
+
+    .info-sections {
+        background-color: $neutrals-100;
+        padding: 48px 16px;
+
+        .blocks {
+            h2 {
+                margin-bottom: 16px;
+                margin-top: 40px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .info {
+        .box, .info-sections {
+            padding: 64px 48px;
+        }
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .info {
+        background-color: $neutrals-200;
+        padding: 96px 48px;
+
+        .content-container {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 64px;
+        }
+
+        .box {
+            box-shadow: 0px 12px 24px rgba(35, 35, 35, 0.04);
+            background-color: $neutrals-100;
+            border-radius: 8px;
+            padding: 32px !important;
+            height: min-content;
+            width: 45%;
+        }
+
+        .info-sections {
+            background-color: transparent;
+            padding: 0;
+            width: 45%;
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .info {
+        padding: 128px 202px;
+    }
+}
+
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
+    .info {
+        .content-container {
+            gap: 130px;
+            max-width: 1036px;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 440px;
+
+            &__header {
+                .icon-container {
+                    width: 56px;
+                    height: 56px;
+                    padding: 16px 0px;
+    
+                    i {
+                        font-size: 24px;
+                        line-height: 24px;
+                    }
+                }
+
+                h3 {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+            }
+        }
+
+        .info-sections {
+            width: 466px;
+
+            .blocks {
+                h2 {
+                    font-size: 40px;
+                    line-height: 44px;
+                    margin-bottom: 16px;
+                    margin-top: 56px;
+
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

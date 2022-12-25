@@ -1,0 +1,50 @@
+title: Thank you
+icon: heart
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+
+      #THANK YOU TEXT CONTENT
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero
+          heroHeadline:
+            label: Hero
+            type: headline
+          heroTitle:
+            label: Hero titel
+            type: text
+          heroIntro:
+            label: Hero intro tekst
+            type: writer
+            inline: true
+          #buttons  
+          heroButtons:
+            extends: fields/button
+            label: Hero buttons
+
+
+      
+      #THANK YOU IMAGE CONTENT
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero image
+          heroImageHeadline:
+            label: Hero foto
+            type: headline
+            numbered: false
+          heroImage:
+            label: Hero foto
+            type: files
+            max: 1
+            layout: cards
+            empty: Er is geen hero foto geselecteerd.
+            image:
+              cover: true

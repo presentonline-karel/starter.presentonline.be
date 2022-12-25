@@ -34,7 +34,7 @@
 
                 <!-- Hero buttons -->
                 <?php if ($page->heroButtons()->isNotEmpty()) : ?>
-                    <div class="buttons">
+                    <div class="buttons <?php if(count($page->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
 
                         <!-- button -->
                         <?php foreach ($page->heroButtons()->toStructure() as $button) : ?>

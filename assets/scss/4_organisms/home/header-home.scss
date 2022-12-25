@@ -21,6 +21,13 @@
                 align-items: center;
                 gap: 8px;
 
+                &.single-button {
+                    .button {
+                        width: auto;
+                        display: inline-block;
+                    }
+                }
+
                 .button {
                     display: block;
                     width: 100%;

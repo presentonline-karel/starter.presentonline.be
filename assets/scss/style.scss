@@ -49,6 +49,9 @@
 //contact
 @import "./3_molecules/contact/form-feedback";
 
+//prices
+@import "./3_molecules/prices/tables";
+
 
 
 /* ORGANISMS */
@@ -58,6 +61,7 @@
 @import "./4_organisms/cta";
 @import "./4_organisms/content";
 @import "./4_organisms/footer";
+@import "./4_organisms/blocks";
 
 //home
 @import "./4_organisms/home/header-home";
@@ -89,8 +93,16 @@
 @import "./4_organisms/contact/contact";
 @import "./4_organisms/contact/maps";
 
+//thank-you
+@import "./4_organisms/thank-you/header-thank-you";
+
+//prices
+@import "./4_organisms/prices/info";
+
 
 
 /* PAGES */
 @import "./5_pages/article";
 @import "./5_pages/default";
+@import "./5_pages/landingPage";
+@import "./5_pages/prices";

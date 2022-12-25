@@ -1,0 +1,195 @@
+.prices {
+    .content-container {
+        .pricing-tables {
+            .table {
+                width: 100%;
+
+                & > * {
+                    font-family: $paragraph-font;
+                    letter-spacing: -0.01em;
+                }
+
+                tr {
+                    &.header-row {
+                        th {
+                            padding-bottom: 16px;
+
+                            &.spacer-column {
+                                padding-right: 32px;
+                            }
+                        }
+                    }
+
+                    &.row {
+                        &:has(.disclaimer) {
+                            height: 35px;
+                        }
+
+                        td, th {
+                            padding-bottom: 8px;
+                        }
+
+                        &:last-of-type {
+                            td, th {
+                                padding-bottom: 0 !important;
+
+                                .disclaimer, &.disclaimer {
+                                    padding-bottom: 8px !important;
+                                }
+                            }
+                        }
+                    }
+
+                    th, td {
+                        font-size: 20px;
+                        line-height: 28px;
+                        text-align: left;
+
+                        .disclaimer, &.disclaimer {
+                            display: inline;
+                            font-weight: 500;
+                            background-color: $info-100;
+                            color: $info-500;
+                            border-radius: $border-radius-medium;
+                            padding: 8px !important;
+                            text-align: center;
+                            font-size: 16px;
+                            line-height: 20px;
+
+                            a {
+                                color: $info-500;
+                            }
+
+                            .anchor-first {
+                                margin-left: 6px;
+                            }
+
+                            .icon-first {
+                                margin-right: 6px;
+                            }
+                        }
+
+                        &.align-right {
+                            text-align: right;
+                        }
+
+                        &.align-left {
+                            text-align: left;
+                        }
+
+                        &.pad-r-32 {
+                            padding-right: 32px;
+                        }
+
+                        &.pad-t-16 {
+                            padding-top: 16px;
+                        }
+                    }
+
+                    th {
+                        font-weight: 600;
+                        color: $neutrals-1100;
+                    }
+
+                    td {
+                        font-weight: 400;
+                        color: $neutrals-900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .prices {
+        .content-container {
+            .pricing-tables {
+                .table {
+                    tr {
+                        &.header-row {
+                            th {
+                                padding: 24px 32px !important;
+                                //background-color: $neutrals-300;
+                                background-color: $primary-100;
+                                //border-top: 1px solid $neutrals-600;
+                                border-top: 1px solid $primary-200;
+                                //border-bottom: 1px solid $neutrals-600;
+                                border-bottom: 1px solid $primary-200;
+                                color: $primary-500;
+    
+                                &:first-of-type {
+                                    border-radius: 8px 0px 0px 8px;
+                                }
+    
+                                &:last-of-type {
+                                    border-radius: 0px 8px 8px 0px;
+                                }
+        
+                                &.spacer-column {
+                                    padding-right: 32px;
+                                }
+                            }
+                        }
+        
+                        &.row {
+                            &.row-last {
+                                td {
+                                    padding-bottom: 40px;
+                                }
+                            }
+    
+                            &.row-1 {
+                                td {
+                                    padding-top: 24px;
+                                }
+                            }
+    
+                            td, th {
+                                padding-bottom: 8px;
+                            }
+    
+                            td {
+                                padding-left: 32px;
+                                padding-right: 32px;
+    
+                                &:first-of-type {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+        
+                        th, td {
+                            .disclaimer, &.disclaimer {
+                                padding: 12px !important;
+                            }
+        
+                            &.align-right {
+                                text-align: right;
+                            }
+        
+                            &.align-left {
+                                text-align: left;
+                            }
+        
+                            &.pad-r-32 {
+                                padding-right: 32px;
+                            }
+                        }
+        
+                        th {
+                            font-weight: 600;
+                            color: $neutrals-1100;
+                        }
+        
+                        td {
+                            font-weight: 400;
+                            color: $neutrals-900;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

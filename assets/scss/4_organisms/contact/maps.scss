@@ -7,3 +7,10 @@
         height: 100%;
     }
 }
+
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
+    .maps {
+        min-height: calc(100vh - 580px - 660px - 390px); //580px header, 660px contact, 390px footer
+    }
+}

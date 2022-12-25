@@ -3,3 +3,31 @@
     overflow-x: initial;
     min-height: initial;
 }
+
+.container-thank-you {
+    height: auto;
+    min-height: initial;
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .container-thank-you {
+        height: auto;
+        min-height: calc(100vh - 340px);
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .container-thank-you {
+        height: auto;
+        min-height: calc(100vh - 390px);
+    }
+}
+
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
+    .container {
+        min-height: calc(100vh - 390px);
+    }
+}
