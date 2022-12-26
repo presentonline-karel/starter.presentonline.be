@@ -1,4 +1,4 @@
-title: Landing Page
+title: Custom Page
 icon: page
 
 options:
@@ -23,21 +23,10 @@ tabs:
 
           #Title
           titleHeadline:
-            label: Landingspagina titel
+            label: Gepersonaliseerde pagina
             type: headline
             numbered: true
-          landingPageTitle:
-            label: Titel
-            type: text
-          line-a:
-            type: line
-
-          #Content
-          contentHeadline:
-            label: Landingspagina content
-            type: headline
-            numbered: true
-          landingPageContent:
+          customPageContent:
             label: Content
             type: blocks
             fieldsets:
@@ -50,8 +39,7 @@ tabs:
                   - list
                   - button
                   - cta
-                    
-
+                  - clients
               media:
                 label: Media
                 type: group

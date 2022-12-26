@@ -43,7 +43,7 @@ function js(cb) {
 }
 
 function watcher(cb) {
-    watch(`${origin}/**/**/custom-panel.scss`).on('change', series(panelCss, browserSync.reload))
+    watch(`${origin}/**/7_kirbyPanel/*.scss`).on('change', series(panelCss, browserSync.reload))
     watch(`${origin}/**/**/*.scss`).on('change', series(scss, browserSync.reload))
     watch(`${origin}/**/**/*.js`).on('change', series(js, browserSync.reload))
     cb();

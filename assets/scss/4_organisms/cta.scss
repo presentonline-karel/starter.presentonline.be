@@ -1,9 +1,15 @@
 .cta {
     &__content {
         padding: 48px 16px;
+        background-color: $primary-100;
 
         h2 {
             margin-bottom: 24px;
+            color: $neutrals-1000;
+
+            span {
+                color: $primary-500;
+            }
         }
 
         .buttons {

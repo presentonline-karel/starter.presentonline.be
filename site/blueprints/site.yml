@@ -50,6 +50,7 @@ tabs:
               destination:
                 label: Link naar
                 type: toggle
+                width: 1/2
                 text: 
                   - "interne pagina"
                   - "externe url"

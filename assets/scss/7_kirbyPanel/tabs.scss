@@ -1,0 +1,4 @@
+// Active tab -> Border top
+.k-tab-button[aria-current]:before {
+    background: $primary-500;
+}

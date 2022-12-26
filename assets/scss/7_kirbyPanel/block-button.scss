@@ -1,0 +1,22 @@
+// Button
+.k-block-type-button input {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    background-color: $neutrals-400;
+    color: $neutrals-1000;
+    border: none;
+    letter-spacing: -0.01em;
+
+    &::placeholder {
+        color: $neutrals-1000;
+    }
+
+    &:focus {
+        outline: 0;
+        border-color: var(--color-focus);
+    }
+}

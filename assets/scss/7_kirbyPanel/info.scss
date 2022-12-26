@@ -1,0 +1,25 @@
+// Info fields
+[dir="ltr"] .k-box {
+    border-width: 0 0 0 4px;
+    border-style: solid;
+
+    &:not([data-theme="none"]) {
+        border-radius: 0;
+    }
+
+    &[data-theme="info"] {
+        border-color: $info-500;
+    }
+
+    &[data-theme="negative"] {
+        border-color: $error-500;
+    }
+
+    &[data-theme="notice"] {
+        border-color: $alert-500;
+    }
+
+    &[data-theme="positive"] {
+        border-color: $success-500;
+    }
+}
