@@ -49,6 +49,7 @@ fields:
     width: 3/4
     when:
       destination: internal
+    image: icon
   idPage:
     label: id op pagina
     type: text

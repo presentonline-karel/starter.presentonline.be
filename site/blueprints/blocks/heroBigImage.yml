@@ -1,0 +1,37 @@
+name: heroBigImage
+icon: grid-top
+label: "Change this label"
+fields:
+  heroHeadline:
+    label: Header
+    type: headline
+    numbered: false
+  heroTitle:
+    label: Titel
+    type: writer
+    inline: true
+  heroTitleSpan:
+    label: Titel - Gekleurd deel
+    type: text
+  heroIntro:
+    label: Intro tekst
+    type: writer
+    inline: true
+  heroButtons:
+    label: Buttons
+    extends: fields/button
+  line-a:
+    type: line
+  heroImageHeadline:
+    label: Hero foto
+    type: headline
+    numbered: false
+  heroImage:
+    label: Hero foto
+    type: files
+    max: 1
+    layout: cards
+    cover: true
+    empty: Er is geen hero foto geselecteerd.
+    image:
+      cover: true

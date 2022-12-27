@@ -1,0 +1,25 @@
+name: History
+icon: chart
+label: "Change this label"
+fields:
+  historyHeadline:
+    label: Ervaring
+    type: headline
+    numbered: false
+  historyTitle:
+    label: Titel
+    type: text
+  history:
+    label: Ervaring
+    type: structure
+    max: 3
+    fields:
+      title:
+        label: Ervaring titel
+        type: text
+      number:
+        label: Ervaring nummer
+        type: text
+      withPlus:
+        label: met +
+        type: toggle

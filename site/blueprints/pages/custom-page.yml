@@ -25,11 +25,42 @@ tabs:
           titleHeadline:
             label: Gepersonaliseerde pagina
             type: headline
+            numbered: false
+          customPageHeaderHeadline:
+            label: Hero
+            type: headline
+            numbered: true
+          customPageHeader:
+            label: Hero block
+            type: blocks
+            max: 1
+            fieldsets:
+              - heroBigImage
+              - heroDefault
+              - heroNoImage
+          line-a:
+            type: line
+          customPageContentHeadline:
+            label: Custom blokken
+            type: headline
             numbered: true
           customPageContent:
             label: Content
             type: blocks
             fieldsets:
+              blocks:
+                label: Custom Blocks
+                type: group
+                fieldsets:
+                  - cta
+                  - clients
+                  - services
+                  - textWithImage
+                  - testimonials
+                  - history
+                  - team
+                  - faqs
+                  - maps
               text:
                 label: Text
                 type: group
@@ -38,8 +69,6 @@ tabs:
                   - text
                   - list
                   - button
-                  - cta
-                  - clients
               media:
                 label: Media
                 type: group

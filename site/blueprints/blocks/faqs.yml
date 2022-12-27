@@ -1,0 +1,21 @@
+name: Faqs
+icon: question
+label: "Change this label"
+fields:
+  faqsHeadline:
+    label: FAQs
+    type: headline
+    numbered: false
+  faqs:
+    label: Veelgestelde vragen
+    type: structure
+    fields:
+      question:
+        label: Vraag
+        type: text
+        required: true
+      answer:
+        label: Antwoord
+        type: writer
+        inline: true
+        required: true

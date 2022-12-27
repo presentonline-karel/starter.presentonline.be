@@ -173,8 +173,9 @@ tabs:
             type: files
             max: 1
             layout: cards
-            cover: true
             empty: Er is geen hero foto geselecteerd.
+            image:
+              cover: true
           line-g:
             type: line
 
@@ -190,8 +191,9 @@ tabs:
             type: files
             max: 1
             layout: cards
-            cover: true
             empty: Er is geen content foto geselecteerd.
+            image:
+              cover: true
 
 
 

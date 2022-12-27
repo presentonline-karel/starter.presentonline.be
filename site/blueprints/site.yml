@@ -13,14 +13,17 @@ tabs:
             headline: Listed pages
             type: pages
             status: listed
+            image: icon
           unlisted:
             headline: Unlisted pages
             type: pages
             status: unlisted
+            image: icon
           drafts:
             headline: Pages in draft
             type: pages
             status: draft
+            image: icon
       
       #text content
       - width: 2/3
@@ -43,7 +46,7 @@ tabs:
                 width: 1/3
             fields:
               anchor:
-                label: Anker*
+                label: Anker
                 type: text
                 required: true
                 width: 1/2
@@ -55,10 +58,11 @@ tabs:
                   - "interne pagina"
                   - "externe url"
               page:
-                label: Pagina*
+                label: Pagina
                 type: pages
                 width: 1/2
                 required: true
+                image: icon
                 when:
                   destination: false
               section:
@@ -68,7 +72,7 @@ tabs:
                 when:
                   destination: false
               externalUrl:
-                label: Externe URL*
+                label: Externe URL
                 type: url
                 required: true
                 when:
@@ -213,6 +217,7 @@ tabs:
                 type: pages
                 required: true
                 max: 1
+                image: icon
               section:
                 label: Sectie op pagina
                 type: text

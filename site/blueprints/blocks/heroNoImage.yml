@@ -1,0 +1,19 @@
+name: Hero no image
+icon: text-center
+label: "Change this label to title"
+fields:
+  heroHeadline:
+    label: Header
+    type: headline
+  heroTitle:
+    label: Titel
+    type: text
+  heroIntro:
+    label: Intro tekst
+    type: writer
+    inline: true
+  heroButtons:
+    extends: fields/button
+    label: Buttons
+
+

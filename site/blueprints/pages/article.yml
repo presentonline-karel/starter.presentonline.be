@@ -34,7 +34,7 @@ tabs:
           
           #Article header
           headerHeadline:
-            label: Artikel header
+            label: Artikel inhoud
             type: headline
           articleTitle:
             label: Titel
@@ -85,6 +85,9 @@ tabs:
             type: pages
             query: page.siblings(true)
             max: 2
+            layout: cardlets
+            image:
+              cover: true
                 
 
       

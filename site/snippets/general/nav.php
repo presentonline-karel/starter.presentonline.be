@@ -1,5 +1,5 @@
 <!-- NAV DARK -->
-<nav class="nav <?php if($page->title() == "Home") { echo("nav-home"); } ?> flex">
+<nav class="nav <?php if($page->title() == "Home") { echo("nav-home"); } ?> flex <?php if(isset($extraClass)) { echo($extraClass); } ?>">
 
     <!-- Nav logo -->
     <a class="logo" href="<?= $site->url() ?>" aria-label="Home">

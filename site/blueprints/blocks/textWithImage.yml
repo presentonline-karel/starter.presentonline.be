@@ -1,0 +1,42 @@
+name: Text with image
+icon: text
+label: "Title of the block here"
+fields:
+  contentHeadline:
+    label: Content
+    type: headline
+    numbered: false
+  contentTitle:
+    label: Titel
+    type: text
+    required: true
+  contentText:
+    label: Tekst
+    type: writer
+    inline: true
+    required: true
+  contentBulletpoints:
+    label: Bullet points
+    type: structure
+    fields:
+      bulletPoint:
+        type: text
+        required: true
+  contentButtons:
+    extends: fields/button
+    label: Buttons
+  line-a:
+    type: line
+  contentImageHeadline:
+    label: Content foto
+    type: headline
+    numbered: false
+  contentImage:
+    label: Content foto
+    type: files
+    max: 1
+    layout: cards
+    empty: Er is geen content foto geselecteerd.
+    required: true
+    image:
+      cover: true

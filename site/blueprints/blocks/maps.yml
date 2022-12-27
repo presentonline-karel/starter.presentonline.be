@@ -1,0 +1,11 @@
+name: Google Maps
+icon: map
+label: "Change this label"
+fields:
+  contactMaps:
+    label: Google Maps
+    type: headline
+    numbered: false
+  mapsUrl:
+    label: Embed URL
+    type: text

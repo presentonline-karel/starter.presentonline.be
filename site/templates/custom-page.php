@@ -3,8 +3,9 @@
 <!-- CONTAINER CUSTOMPAGE -->
 <div id="container" class="container container-customPage">
 
-    <!-- NAV -->
-    <?php snippet('general/nav') ?>
+    <?php foreach ($page->customPageHeader()->toBlocks() as $block) : ?>
+        <?= $block ?>
+    <?php endforeach; ?>
 
 
 
@@ -13,7 +14,7 @@
         <div class="customPage">
             <h1><?= $page->landingPageTitle() ?></h1>
 
-            <section class="customPage__content blocks">
+            <section class="customPage__content">
                 <?php foreach ($page->customPageContent()->toBlocks() as $block) : ?>
                     <?= $block ?>
                 <?php endforeach; ?>

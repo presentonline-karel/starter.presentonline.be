@@ -5,15 +5,15 @@
         }
     }
 
-    h2, h3 {
+    > h2, h3 {
         margin-bottom: 12px;
     }
 
-    h4, h5, h6 {
+    > h4, h5, h6 {
         margin-bottom: 8px;
     }
 
-    p {
+    > p {
         margin-bottom: 24px;
 
         & + ul {
@@ -21,7 +21,7 @@
         }
     }
 
-    ul {
+    > ul {
         display: inline-block;
         text-align: left;
         list-style-position: inside;
@@ -42,17 +42,19 @@
         }
     }
 
-    img {
-        margin-bottom: 32px;
-        width: 100vw;
-        max-width: initial;
-        margin-left: -16px;
-        aspect-ratio: 3/2;
-        height: auto;
-        object-fit: cover;
+    > figure {
+        img {
+            margin-bottom: 32px;
+            width: 100vw;
+            max-width: initial;
+            margin-left: -16px;
+            aspect-ratio: 3/2;
+            height: auto;
+            object-fit: cover;
+        }
     }
 
-    figure:has(iframe) {
+    > figure:has(iframe) {
         margin-bottom: 32px;
         width: 100vw;
         max-width: initial;
@@ -77,11 +79,13 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .blocks {
-        img {
-            margin-left: -48px;
+        > figure {
+            img {
+                margin-left: -48px;
+            }
         }
 
-        figure:has(iframe) {
+        > figure:has(iframe) {
             margin-left: -48px;
 
             iframe {
@@ -98,23 +102,25 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .blocks {
-        h2, h3 {
+        > h2, h3 {
             margin-bottom: 24px;
         }
 
-        h4, h5, h6 {
+        > h4, h5, h6 {
             margin-bottom: 16px;
         }
 
-        img {
-            margin-left: 0;
-            max-width: 100%;
-            width: 100%;
-            min-height: initial;
-            border-radius: $border-radius-medium;
+        > figure {
+            img {
+                margin-left: 0;
+                max-width: 100%;
+                width: 100%;
+                min-height: initial;
+                border-radius: $border-radius-medium;
+            }
         }
 
-        figure:has(iframe) {
+        > figure:has(iframe) {
             margin-left: 0;
             width: inherit;
             max-width: 100%;
@@ -136,7 +142,7 @@
 /* DESKTOP - 1440px */
 @media only screen and (min-width: $desktop-3) {
     .blocks {
-        p {
+        > p {
             margin-bottom: 40px;
         }
     }
