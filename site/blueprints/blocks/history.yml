@@ -1,6 +1,6 @@
 name: History
 icon: chart
-label: "Change this label"
+label: "| {{ historytitle }}"
 fields:
   historyHeadline:
     label: Ervaring

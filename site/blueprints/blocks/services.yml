@@ -1,6 +1,6 @@
 name: Services
 icon: store
-label: "Onze diensten"
+label: "| {{ servicestitle }}"
 fields:
   servicesHeadline:
     label: Diensten

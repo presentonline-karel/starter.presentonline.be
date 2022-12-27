@@ -1,6 +1,6 @@
 name: Text with image
 icon: text
-label: "Title of the block here"
+label: "| {{ contenttitle }}"
 fields:
   contentHeadline:
     label: Content

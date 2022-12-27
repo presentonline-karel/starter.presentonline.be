@@ -1,6 +1,6 @@
 name: CTA
 icon: flag
-label: "Change this label"
+label: "| {{ titledefault }}"
 fields:
   titleDefault:
     label: Titel

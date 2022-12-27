@@ -1,6 +1,6 @@
 name: Testimonials
 icon: quote
-label: "Testimonials title here"
+label: "| {{ testimonialstitle }}"
 fields:
   testimonialsHeadline:
     label: Getuigenissen

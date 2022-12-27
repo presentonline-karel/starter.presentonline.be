@@ -1,6 +1,6 @@
 name: Team
 icon: users
-label: "Change this label"
+label: "| {{ teamtitle }}"
 fields:
   teamHeadline:
     label: Team

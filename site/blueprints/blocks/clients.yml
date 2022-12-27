@@ -1,6 +1,6 @@
 name: Clients
 icon: grid
-label: "| {{ clientsTitle }}"
+label: "| {{ clientstitle }}"
 fields:
   clientsTitle:
     label: Titel

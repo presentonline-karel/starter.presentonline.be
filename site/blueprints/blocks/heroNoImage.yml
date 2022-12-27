@@ -1,6 +1,6 @@
 name: Hero no image
 icon: text-center
-label: "Change this label to title"
+label: "| {{ herotitle }}"
 fields:
   heroHeadline:
     label: Header

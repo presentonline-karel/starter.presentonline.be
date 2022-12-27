@@ -1,6 +1,6 @@
 name: Google Maps
 icon: map
-label: "Change this label"
+label: "| Google Maps widget"
 fields:
   contactMaps:
     label: Google Maps

@@ -303,7 +303,19 @@ tabs:
 
 
           #Content image
-          s
+          contentImageHeadline:
+            label: Content foto
+            type: headline
+            numbered: false
+          contentImage:
+            label: Content foto
+            type: files
+            max: 1
+            layout: cards
+            empty: Er is geen content foto geselecteerd.
+            required: true
+            image:
+              cover: true
 
 
 

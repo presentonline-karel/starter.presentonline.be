@@ -61,6 +61,7 @@ tabs:
                   - team
                   - faqs
                   - maps
+                  - centeredContent
               text:
                 label: Text
                 type: group

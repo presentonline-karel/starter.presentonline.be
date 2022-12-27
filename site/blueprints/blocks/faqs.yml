@@ -1,6 +1,6 @@
 name: Faqs
 icon: question
-label: "Change this label"
+label: "| Veelgestelde vragen"
 fields:
   faqsHeadline:
     label: FAQs

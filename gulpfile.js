@@ -55,7 +55,7 @@ function server(cb) {
     browserSync.init({
         notify: false,
         open: true,
-        proxy: "http://starter.presentonline.test",
+        proxy: "http://starter.int",
         port: 81,
         online: true
     })

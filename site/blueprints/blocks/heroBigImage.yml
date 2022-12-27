@@ -1,6 +1,6 @@
 name: heroBigImage
 icon: grid-top
-label: "Change this label"
+label: "| {{ herotitle }}"
 fields:
   heroHeadline:
     label: Header

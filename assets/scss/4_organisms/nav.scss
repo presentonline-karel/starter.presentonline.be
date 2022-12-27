@@ -235,10 +235,16 @@
         }
     }
 
-    //NAV HOME
-    .nav-home {
-        gap: 48px;
-        justify-content: flex-start;
+    //NAV HEADER BIG IMAGE
+    .header-home {
+        .nav {
+            gap: 48px;
+            justify-content: flex-start;
+
+            .primary-cta {
+                display: none;
+            }
+        }
     }
 }
 

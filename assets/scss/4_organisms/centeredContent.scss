@@ -1,0 +1,30 @@
+.centeredContent-section {
+    background-color: $neutrals-200;
+    padding: 64px 16px;
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .centeredContent-section {
+        padding: 64px 48px;
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .centeredContent-section {
+        padding: 96px 0;
+
+        .centeredContent {
+            max-width: 612px;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .centeredContent-section {
+        padding: 128px 0;
+    }
+}
