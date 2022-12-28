@@ -6,6 +6,13 @@ tabs:
     icon: text
 
     columns:
+      - width: 1/4
+        sections:
+        fields:
+          gap-a:
+            type: gap
+
+
 
       #THANK YOU TEXT CONTENT
       - width: 1/2
@@ -13,38 +20,12 @@ tabs:
         fields:
 
           #Hero
-          heroHeadline:
-            label: Hero
-            type: headline
-          heroTitle:
-            label: Hero titel
-            type: text
-          heroIntro:
-            label: Hero intro tekst
-            type: writer
-            inline: true
-          #buttons  
-          heroButtons:
-            extends: fields/button
-            label: Hero buttons
+          heroDefault: fields/heroDefault
 
 
-      
-      #THANK YOU IMAGE CONTENT
-      - width: 1/2
+
+      - width: 1/4
         sections:
         fields:
-
-          #Hero image
-          heroImageHeadline:
-            label: Hero foto
-            type: headline
-            numbered: false
-          heroImage:
-            label: Hero foto
-            type: files
-            max: 1
-            layout: cards
-            empty: Er is geen hero foto geselecteerd.
-            image:
-              cover: true
+          gap-b:
+            type: gap

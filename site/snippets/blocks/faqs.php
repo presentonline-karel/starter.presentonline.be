@@ -1,13 +1,22 @@
+<?php
+    if(isset($block)) {
+        $faqsContent = $block;
+    }
+    else {
+        $faqsContent = $page;
+    }
+?>
+
 <section class="faqs">
     <div class="content-container-xs content-container">
-        <?php foreach ($block->faqs()->toStructure() as $faq) : ?>
-            <div class="faq">
-                <div class="faq__question">
-                    <h4 class="faq__question__title"><?= $faq->question() ?></h4>
+        <?php foreach ($faqsContent->faqs()->toStructure() as $faq) : ?>
+            <div class="faq accordion">
+                <div class="faq__question accordion__header">
+                    <h4 class="faq__question__title title"><?= $faq->question() ?></h4>
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                 </div>
 
-                <div class="faq__answer">
+                <div class="faq__answer accordion__content">
                     <p class="faq__answer__p">
                         <?= $faq->answer() ?>
                     </p>

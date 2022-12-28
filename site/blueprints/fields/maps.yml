@@ -1,0 +1,11 @@
+type: group
+fields:
+  contactMapsHeadline:
+    label: Google Maps
+    type: headline
+    width: 1/2
+  contactMapsSwitch:
+    extends: fields/display-switch
+  mapsUrl:
+    label: Embed URL
+    type: text

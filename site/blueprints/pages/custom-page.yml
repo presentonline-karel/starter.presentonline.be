@@ -62,6 +62,7 @@ tabs:
                   - faqs
                   - maps
                   - centeredContent
+                  - contact
               text:
                 label: Text
                 type: group

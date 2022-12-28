@@ -64,65 +64,15 @@
 
 
     <!-- CONTACT -->
-    <main class="contact">
-
-        <!-- INFO -->
-        <?php if ($page->contactInfoSwitch()->toBool()) : ?>
-            <div class="contact__info">
-                <div class="contact__info__container">
-                    <h2><?= $page->contactInfoTitle() ?></h2>
-                    <p><?= $page->contactInfoText() ?></p>
-
-                    <div class="contact__info__items">
-
-                        <!-- Telephone -->
-                        <?php if ($site->telephone()->isNotEmpty()) : ?>
-                            <a class="info-item p" href="tel:<?= $site->telephone() ?>">
-                                <i class="fa fa-phone" aria-hidden="true"></i> <?= $site->telephone() ?>
-                            </a>
-                        <?php endif; ?>
-
-                        <!-- Email -->
-                        <?php if ($site->email()->isNotEmpty()) : ?>
-                            <a class="info-item p" href="mailto:<?= $site->email() ?>">
-                                <i class="fa fa-envelope" aria-hidden="true"></i> <?= $site->email() ?>
-                            </a>
-                        <?php endif; ?>
-                    </div>
-
-                    <!-- SNIPPET - SOCIALS -->
-                    <?php snippet('general/socials') ?>
-                </div>
-            </div>
-        <?php endif; ?>
-
-
-
-        <!-- FORMSECTION -->
-        <div class="contact__form-section">
-            <h2>Of vul ons formulier in</h2>
-
-            <!-- Contactform -->
-            <?php snippet('contact/form') ?>
-        </div>
-    </main>
+    <?php snippet("blocks/contact") ?>
 
 
 
     <!-- MAPS -->
     <?php if ($page->contactMapsSwitch()->toBool()) : ?>
-        <section class="maps fade-section">
-
-            <!-- Maps widget -->
-            <iframe class="maps__iframe" src="<?= $page->mapsUrl() ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+        <?php snippet("blocks/maps") ?>
     <?php endif; ?>
 </div>
-
-
-
-<!-- JS SCRIPTS -->
-<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
 
 
 

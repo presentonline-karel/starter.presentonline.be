@@ -54,7 +54,7 @@
             </div>
         </footer>
 
-        <!-- MOBILE NAV SCRIPT -->
+        <!-- SCRIPTS-->
         <?= js('build/js/general/nav.js', ['defer' => true]) ?>
         <?= js('build/js/general/section-fade-animation.js', ['defer' => true]) ?>
     </body>

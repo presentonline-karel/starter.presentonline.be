@@ -2,20 +2,8 @@ name: Faqs
 icon: question
 label: "| Veelgestelde vragen"
 fields:
-  faqsHeadline:
-    label: FAQs
-    type: headline
-    numbered: false
   faqs:
-    label: Veelgestelde vragen
-    type: structure
+    extends: fields/faqs
     fields:
-      question:
-        label: Vraag
-        type: text
-        required: true
-      answer:
-        label: Antwoord
-        type: writer
-        inline: true
-        required: true
+      faqsHeadline:
+        numbered: false

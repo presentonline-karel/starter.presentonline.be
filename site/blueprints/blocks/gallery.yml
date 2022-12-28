@@ -1,0 +1,10 @@
+# name: Gallery
+# icon: dashboard
+# label: "| Image gallery"
+# fields:
+#   gallery:
+#     extends: fields/gallery
+#     fields:
+#       galleryHeadline:
+#         numbered: false
+#       gallerySwitch: false

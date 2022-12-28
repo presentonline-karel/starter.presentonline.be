@@ -12,10 +12,10 @@
                 }
 
                 .pricing-tables {
-                    .faqs {
+                    .accordions {
                         padding: 0;
         
-                        .faq {
+                        .accordion {
                             padding: 0;
                             border-bottom: none;
                             margin-bottom: 32px;
@@ -25,12 +25,12 @@
                             }
         
                             &.active {
-                                .faq__answer {
+                                .accordion__content {
                                     padding-top: 20px;
                                 }
                             }
         
-                            &__question {
+                            &__header{
                                 margin-bottom: 0;
                                 background-color: $primary-100;
                                 border-top: 1px solid $primary-200;
@@ -38,7 +38,7 @@
                                 border-radius: 8px;
                                 padding: 24px 16px;
         
-                                &__title {
+                                .title {
                                     font-size: 24px;
                                     line-height: 32px;
                                     color: $primary-500;
@@ -61,16 +61,12 @@
                     padding: 48px 48px 64px 48px;
 
                     .pricing-tables {
-                        .faqs {
-                            .faq {
+                        .accordions {
+                            .accordion {
                                 &.active {
-                                    .faq__answer {
-                                        padding: 24px 24px 0px 24px;
+                                    .accordion__content {
+                                        padding: 24px;
                                     }
-                                }
-                
-                                &__question {
-                                    padding: 24px !important;
                                 }
                             }
                         }

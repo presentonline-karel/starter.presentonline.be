@@ -8,3 +8,10 @@ fields:
       servicesHeadline:
         numbered: false
       servicesSwitch: false
+  line-z:
+    type: line
+  firstCta:
+    extends: fields/firstCta
+    fields:
+      firstCtaHeadline:
+        numbered: false

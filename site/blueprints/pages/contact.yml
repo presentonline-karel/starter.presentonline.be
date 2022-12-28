@@ -16,55 +16,21 @@ tabs:
         fields:
 
           #Hero
-          heroHeadline:
-            label: Header
-            type: headline
-          heroTitle:
-            label: Titel
-            type: text
-          heroIntro:
-            label: Intro tekst
-            type: writer
-            inline: true
-
-          #buttons
-          heroButtons:
-            extends: fields/button
-            label: Buttons
+          heroNoImage: fields/heroNoImage
           line-a:
             type: line
           
 
 
           #Contact - Info
-          contactInfo:
-            label: Contact gegevens
-            type: headline
-            width: 1/2
-          contactInfoSwitch:
-            extends: fields/display-switch
-          contactInfoTitle:
-            label: Titel
-            type: text
-          contactInfoText:
-            label: Tekst
-            type: writer
-            inline: true
+          contact: fields/contact
           line-b:
             type: line
           
 
 
           #Contact Maps
-          contactMaps:
-            label: Google Maps
-            type: headline
-            width: 1/2
-          contactMapsSwitch:
-            extends: fields/display-switch
-          mapsUrl:
-            label: Embed URL
-            type: text
+          maps: fields/maps
       
 
 

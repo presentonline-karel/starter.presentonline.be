@@ -20,14 +20,14 @@
 
                 <!-- PRICES MOBILE -->
                 <div class="pricing-tables mobile">
-                    <div class="faqs">
-                        <div class="faq">
-                            <div class="faq__question">
-                                <h4 class="faq__question__title">Broden</h4>
+                    <div class="accordions">
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h4 class="title">Broden</h4>
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </div>
 
-                            <div class="faq__answer">
+                            <div class="accordion__content">
                                 <table class="table">
                                     <tr class="header-row row">
                                         <th></th>
@@ -63,13 +63,13 @@
                             </div>
                         </div>
 
-                        <div class="faq">
-                            <div class="faq__question">
-                                <h4 class="faq__question__title">Pistolets</h4>
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h4 class="title">Pistolets</h4>
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </div>
 
-                            <div class="faq__answer">
+                            <div class="accordion__content">
                                 <table class="table">
                                     <tr class="header-row row">
                                         <th></th>
@@ -100,13 +100,13 @@
                             </div>
                         </div>
 
-                        <div class="faq">
-                            <div class="faq__question">
-                                <h4 class="faq__question__title">Koffiekoeken</h4>
+                        <div class="accordion">
+                            <div class="accordion__header">
+                                <h4 class="title">Koffiekoeken</h4>
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </div>
 
-                            <div class="faq__answer">
+                            <div class="accordion__content">
                                 <table class="table">
                                     <tr class="header-row row">
                                         <th></th>

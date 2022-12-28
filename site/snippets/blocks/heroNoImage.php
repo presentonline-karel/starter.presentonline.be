@@ -1,15 +1,24 @@
+<?php
+    if(isset($block)) {
+        $heroNoImageContent = $block;
+    }
+    else {
+        $heroNoImageContent = $page;
+    }
+?>
+
 <header class="header header-blog">
     <?php snippet('general/nav') ?>
 
     <div class="header__content">
         <div class="header__content__text">
             <div class="content-container-s content-container">
-                <h1><?= $block->heroTitle() ?></h1>
-                <p><?= $block->heroIntro() ?></p>
+                <h1><?= $heroNoImageContent->heroTitle() ?></h1>
+                <p><?= $heroNoImageContent->heroIntro() ?></p>
 
-                <?php if ($block->heroButtons()->isNotEmpty()) : ?>
-                    <div class="buttons <?php if(count($block->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
-                        <?php foreach ($block->heroButtons()->toStructure() as $button) : ?>
+                <?php if ($heroNoImageContent->heroButtons()->isNotEmpty()) : ?>
+                    <div class="buttons <?php if(count($heroNoImageContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                        <?php foreach ($heroNoImageContent->heroButtons()->toStructure() as $button) : ?>
                             <?php snippet('components/button', ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>

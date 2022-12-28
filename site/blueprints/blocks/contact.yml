@@ -1,0 +1,10 @@
+name: Contact info
+icon: email
+label: "| {{ contactinfotitle }}"
+fields:
+  contact:
+    extends: fields/contact
+    fields:
+      contactInfoHeadline:
+        numbered: false
+      contactInfoSwitch: false

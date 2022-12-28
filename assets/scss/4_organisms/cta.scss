@@ -75,6 +75,11 @@
         background-color: $neutrals-100 !important;
         border-radius: $border-radius-medium;
 
+        //CTA services custom page
+        &.customBlock {
+            display: none;
+        }
+
         &__content {
             padding: 48px;
             width: 100%;

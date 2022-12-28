@@ -1,9 +1,9 @@
 const accordion = () => {
-    const faqs = document.querySelectorAll(".faq");
+    const accordionItems = document.querySelectorAll(".accordion");
 
-    faqs.forEach((faq) => {
-        faq.addEventListener("click", () => {
-            faq.classList.toggle("active");
+    accordionItems.forEach((accordion) => {
+        accordion.addEventListener("click", () => {
+            accordion.classList.toggle("active");
         });
     });
 }

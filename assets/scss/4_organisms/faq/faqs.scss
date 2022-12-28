@@ -1,6 +1,6 @@
 .faqs {
     text-align: center;
-    padding: 0 16px 64px 16px;
+    padding: 48px 16px 64px;
 
     .button-primary {
         text-align: center;
@@ -12,27 +12,27 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .faqs {
-        padding: 0 48px 64px 48px;
+        padding: 64px 48px;
     }
 }
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .faqs {
-        padding: 0 178px 64px 178px;
+        padding: 80px 178px 64px 178px;
     }
 }
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .faqs {
-        padding: 0 414px 96px 414px;
+        padding: 80px 414px 96px 414px;
     }
 }
 
 /* DESKTOP - 1440px */
 @media only screen and (min-width: $desktop-3) {
     .faqs {
-        padding: 0 0 96px;
+        padding: 96px 0;
     }
 }

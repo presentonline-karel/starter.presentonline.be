@@ -7,7 +7,7 @@
         margin-bottom: 32px;
     }
 
-    .cta {
+    .cta__content {
         display: none;
     }
 }
@@ -50,8 +50,8 @@
             margin-bottom: 72px;
         }
 
-        .cta {
-            display: block;
+        .cta__content {
+            display: flex;
         }
     }
 }

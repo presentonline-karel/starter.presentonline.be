@@ -4,32 +4,7 @@
 <div id="container" class="container container-blog">
 
     <!-- HEADER BLOG -->
-    <header class="header header-blog">
-
-        <!-- NAV -->
-        <?php snippet('general/nav') ?>
-
-        <!-- HEADER BLOG - CONTENT -->
-        <div class="header__content">
-            <div class="header__content__text">
-                <div class="content-container-s content-container">
-                    <h1><?= $page->heroTitle() ?></h1>
-                    <p><?= $page->heroIntro() ?></p>
-
-                    <!-- Hero buttons -->
-                    <?php if ($page->heroButtons()->isNotEmpty()) : ?>
-                        <div class="buttons <?php if(count($page->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
-
-                            <!-- button -->
-                            <?php foreach ($page->heroButtons()->toStructure() as $button) : ?>
-                                <?php snippet('components/button', ["button" => $button]) ?>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php snippet("blocks/heroNoImage") ?>
 
 
 
@@ -154,24 +129,7 @@
 
     <!-- CTA -->
     <?php if($page->firstCtaSwitch()->toBool()): ?>
-        <section id="cta-1" class="cta fade-section">
-            <div class="content-container-l content-container">
-                <div class="cta__content">
-                    <h2><?= $page->firstCtaTitle() ?> <span><?= $page->firstCtaTitleSpan() ?></span></h2>
-
-                    <!-- CTA buttons -->
-                    <?php if ($page->firstCtaButtons()->isNotEmpty()) : ?>
-                        <div class="buttons <?php if(count($page->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
-
-                            <!-- button -->
-                            <?php foreach ($page->firstCtaButtons()->toStructure() as $button) : ?>
-                                <?php snippet('components/button', ["button" => $button]) ?>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </section>
+        <?php snippet("blocks/firstCta") ?>
     <?php endif; ?>
 </div>
 

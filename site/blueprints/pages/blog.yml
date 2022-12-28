@@ -35,42 +35,14 @@ tabs:
         fields:
 
           #Hero
-          heroHeadline:
-            label: Header
-            type: headline
-          heroTitle:
-            label: Titel
-            type: text
-          heroIntro:
-            label: Intro tekst
-            type: writer
-            inline: true
-          heroButtons:
-            extends: fields/button
-            label: Buttons
+          heroNoImage: fields/heroNoImage
           line-a:
             type: line
 
 
 
           #CTA1
-          firstCtaHeadline:
-            label: CTA
-            type: headline
-            width: 1/2
-          firstCtaSwitch:
-            extends: fields/display-switch
-          firstCtaTitle:
-            label: Titel
-            type: writer
-            inline: true
-          firstCtaTitleSpan:
-            label: Titel - Gekleurd deel
-            type: text
-          #buttons  
-          firstCtaButtons:
-            extends: fields/button
-            label: Buttons
+          firstCta: fields/firstCta
 
 
 

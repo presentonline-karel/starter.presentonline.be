@@ -2,10 +2,9 @@ name: Google Maps
 icon: map
 label: "| Google Maps widget"
 fields:
-  contactMaps:
-    label: Google Maps
-    type: headline
-    numbered: false
-  mapsUrl:
-    label: Embed URL
-    type: text
+  maps:
+    extends: fields/maps
+    fields:
+      contactMapsHeadline:
+        numbered: false
+      contactMapsSwitch: false

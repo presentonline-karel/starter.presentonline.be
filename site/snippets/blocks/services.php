@@ -1,10 +1,19 @@
+<?php
+    if(isset($block)) {
+        $servicesContent = $block;
+    }
+    else {
+        $servicesContent = $page;
+    }
+?>
+
 <section id="services" class="services-section section fade-section">
     <div class="content-container-l content-container">
-        <h2><?= $block->servicesTitle() ?></h2>
+        <h2><?= $servicesContent->servicesTitle() ?></h2>
 
-        <?php if ($block->services()->isNotEmpty()) : ?>
+        <?php if ($servicesContent->services()->isNotEmpty()) : ?>
             <div class="services">
-                <?php foreach ($block->services()->toStructure() as $service) : ?>
+                <?php foreach ($servicesContent->services()->toStructure() as $service) : ?>
                     <?php if($service->containsLink()->toBool() == true): ?>
                         <a class="service" href="<?php if ($service->destination() == "internal") { echo ($service->internalPage()->toPage()->url() . $service->idPage()); } else { echo ($service->externalUrl()); } ?>" <?php if ($service->destination() == "external") { ?> target="_blank" <?php } ?>>
                             <div class="service__icon-container">
@@ -52,16 +61,23 @@
             </div>
         <?php endif; ?>
 
-        <div class="cta__content">
-            <h2><?= $block->firstCtaTitle() ?><br> <span><?= $block->firstCtaTitleSpan() ?></span></h2>
+        <?php if($servicesContent->firstCtaSwitch()->toBool()): ?>
+            <div class="cta__content">
+                <h2><?= $servicesContent->firstCtaTitle() ?><br> <span><?= $servicesContent->firstCtaTitleSpan() ?></span></h2>
 
-            <?php if ($block->firstCtaButtons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($block->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
-                    <?php foreach ($block->firstCtaButtons()->toStructure() as $button) : ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-        </div>
+                <?php if ($servicesContent->firstCtaButtons()->isNotEmpty()) : ?>
+                    <div class="buttons <?php if(count($servicesContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                        <?php foreach ($servicesContent->firstCtaButtons()->toStructure() as $button) : ?>
+                            <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
+
+<!-- CTA MOBILE -->
+<?php if($servicesContent->firstCtaSwitch()->toBool()): ?>
+    <?php snippet("blocks/firstCta", ["block" => $servicesContent, "customClass" => "customBlock"]) ?>
+<?php endif; ?>

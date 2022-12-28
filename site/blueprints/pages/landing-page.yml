@@ -49,9 +49,6 @@ tabs:
                   - text
                   - list
                   - button
-                  - cta
-                    
-
               media:
                 label: Media
                 type: group

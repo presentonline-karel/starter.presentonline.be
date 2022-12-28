@@ -1,10 +1,19 @@
+<?php
+    if(isset($block)) {
+        $testimonialsContent = $block;
+    }
+    else {
+        $testimonialsContent = $page;
+    }
+?>
+
 <section id="testimonials" class="testimonials-section section fade-section">
     <div class="testimonials content-container-s content-container">
-        <h2><?= $block->testimonialsTitle() ?></h2>
+        <h2><?= $testimonialsContent->testimonialsTitle() ?></h2>
 
-        <?php if ($block->testimonials()->isNotEmpty()) : ?>
+        <?php if ($testimonialsContent->testimonials()->isNotEmpty()) : ?>
             <div class="testimonials-items">
-                <?php foreach ($block->testimonials()->toStructure() as $testimonial) : ?>
+                <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
                     <div class="slide-container testimonial">
                         <?php if ($testimonial->logo()->isNotEmpty()) : ?>
                             <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" loading="lazy" />
@@ -37,7 +46,7 @@
             </div>
 
             <div class="bullets">
-                <?php foreach ($block->testimonials()->toStructure() as $testimonial) : ?>
+                <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
                     <div class="bullet"></div>
                 <?php endforeach; ?>
             </div>

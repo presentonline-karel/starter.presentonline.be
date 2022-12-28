@@ -14,36 +14,12 @@ tabs:
         fields:
 
           #Hero
-          heroHeadline:
-            label: Hero
-            type: headline
-          heroTitle:
-            label: Hero titel
-            type: text
-          heroIntro:
-            label: Hero intro tekst
-            type: writer
-            inline: true
+          heroNoImage: fields/heroNoImage
           line-a:
             type: line
           
           #FAQs
-          faqsHeadline:
-            label: FAQs
-            type: headline
-          faqs:
-            label: Veelgestelde vragen
-            type: structure
-            fields:
-              question:
-                label: Vraag
-                type: text
-                required: true
-              answer:
-                label: Antwoord
-                type: writer
-                inline: true
-                required: true
+          faqs: fields/faqs
 
 
 

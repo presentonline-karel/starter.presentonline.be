@@ -1,28 +1,37 @@
+<?php
+    if(isset($block)) {
+        $heroDefaultContent = $block;
+    }
+    else {
+        $heroDefaultContent = $page;
+    }
+?>
+
 <header class="header header-about">
     <?php snippet('general/nav') ?>
 
     <div class="header__content">
         <div class="header__content__text">
-            <h1><?= $block->heroTitle() ?></h1>
-            <p><?= $block->heroIntro() ?></p>
+            <h1><?= $heroDefaultContent->heroTitle() ?></h1>
+            <p><?= $heroDefaultContent->heroIntro() ?></p>
 
-            <?php if ($block->heroButtons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($block->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
-                    <?php foreach ($block->heroButtons()->toStructure() as $button) : ?>
+            <?php if ($heroDefaultContent->heroButtons()->isNotEmpty()) : ?>
+                <div class="buttons <?php if(count($heroDefaultContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                    <?php foreach ($heroDefaultContent->heroButtons()->toStructure() as $button) : ?>
                         <?php snippet('components/button', ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
 
-        <?php if ($block->heroImage()->isNotEmpty()) : ?>
-            <img class="header-about__content__image" src="<?= $block->heroImage()->toFile()->url() ?>" alt="<?= $block->heroImage()->toFile()->alt() ?>">
+        <?php if ($heroDefaultContent->heroImage()->isNotEmpty()) : ?>
+            <img class="header-about__content__image" src="<?= $heroDefaultContent->heroImage()->toFile()->url() ?>" alt="<?= $heroDefaultContent->heroImage()->toFile()->alt() ?>">
         <?php endif; ?>
     </div>
 
-    <?php if ($block->heroImage()->isNotEmpty()) : ?>
+    <?php if ($heroDefaultContent->heroImage()->isNotEmpty()) : ?>
         <div class="header__content__image">
-            <img src="<?= $block->heroImage()->toFile()->url() ?>" alt="<?= $block->heroImage()->toFile()->alt() ?>">
+            <img src="<?= $heroDefaultContent->heroImage()->toFile()->url() ?>" alt="<?= $heroDefaultContent->heroImage()->toFile()->alt() ?>">
         </div>
     <?php endif; ?>
 

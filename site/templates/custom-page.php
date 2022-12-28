@@ -10,10 +10,8 @@
 
 
     <!-- CONTENT -->
-    <main class="customPage-section">
+    <main id="page-sections" class="customPage-section">
         <div class="customPage">
-            <h1><?= $page->landingPageTitle() ?></h1>
-
             <section class="customPage__content">
                 <?php foreach ($page->customPageContent()->toBlocks() as $block) : ?>
                     <?= $block ?>
@@ -22,5 +20,7 @@
         </div>
     </main>
 </div>
+
+<?= js('build/js/custom-page/backgrounds.js', ['defer' => true]) ?>
 
 <?php snippet('general/footer') ?>

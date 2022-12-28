@@ -2,18 +2,8 @@ name: Hero no image
 icon: text-center
 label: "| {{ herotitle }}"
 fields:
-  heroHeadline:
-    label: Header
-    type: headline
-  heroTitle:
-    label: Titel
-    type: text
-  heroIntro:
-    label: Intro tekst
-    type: writer
-    inline: true
-  heroButtons:
-    extends: fields/button
-    label: Buttons
-
-
+  heroNoImage:
+    extends: fields/heroNoImage
+    fields:
+      heroHeadline:
+        numbered: false

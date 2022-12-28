@@ -1,13 +1,22 @@
+<?php
+    if(isset($block)) {
+        $clientsContent = $block;
+    }
+    else {
+        $clientsContent = $page;
+    }
+?>
+
 <section class="clients-section section fade-section">
     <div class="content-container-l content-container">
-        <h2><?= $block->clientsTitle() ?></h2>
+        <h2><?= $clientsContent->clientsTitle() ?></h2>
 
         <!-- Clients -->
-        <?php if ($block->clients()->isNotEmpty()) : ?>
+        <?php if ($clientsContent->clients()->isNotEmpty()) : ?>
             <div class="clients">
 
                 <!-- client -->
-                <?php foreach ($block->clients()->toStructure() as $client) : ?>
+                <?php foreach ($clientsContent->clients()->toStructure() as $client) : ?>
 
                     <?php if ($client->url()->isNotEmpty()) : ?>
                         <a class="client" href="<?= $client->url() ?>" target="_blank">

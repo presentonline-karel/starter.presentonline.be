@@ -1,19 +1,24 @@
+<?php
+    if(isset($block)) {
+        $teamContent = $block;
+    }
+    else {
+        $teamContent = $page;
+    }
+?>
+
 <section class="team-section fade-section">
     <div class="team content-container-l content-container">
         <div class="team__text">
-            <h2><?= $block->teamTitle() ?></h2>
-            <p><?= $block->teamText() ?></p>
+            <h2><?= $teamContent->teamTitle() ?></h2>
+            <p><?= $teamContent->teamText() ?></p>
         </div>
 
-        <!-- Employees -->
-        <?php if ($block->team()->isNotEmpty()) : ?>
+        <?php if ($teamContent->team()->isNotEmpty()) : ?>
             <div class="employees">
 
-                <!-- employee -->
-                <?php foreach ($block->team()->toStructure() as $employee) : ?>
+                <?php foreach ($teamContent->team()->toStructure() as $employee) : ?>
                     <div class="employee">
-
-                        <!-- image -->
                         <?php if ($employee->image()->isNotEmpty()) : ?>
                             <img class="employee__img" src="<?= $employee->image()->toFile()->url() ?>" alt="<?= $employee->image()->toFile()->alt() ?>" loading="lazy">
                         <?php endif; ?>
