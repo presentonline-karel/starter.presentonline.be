@@ -1,0 +1,39 @@
+type: group
+fields:
+  teamHeadline:
+    label: Team
+    type: headline
+    width: 1/2
+  teamSwitch:
+    extends: fields/display-switch
+  teamTitle:
+    label: Titel
+    type: text
+  teamText:
+    label: Tekst
+    type: writer
+    inline: true
+  team:
+    label: Team
+    type: structure
+    columns:
+      image:
+        width: 2/8
+      name:
+        width: 3/8
+      function:
+        width: 3/8
+    fields:
+      image:
+        label: Foto
+        type: files
+        max: 1
+        required: true
+      name:
+        label: Naam
+        type: text
+        required: true
+      function:
+        label: Functie
+        type: text
+        required: true

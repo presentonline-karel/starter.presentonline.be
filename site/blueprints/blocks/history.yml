@@ -2,24 +2,9 @@ name: History
 icon: chart
 label: "| {{ historytitle }}"
 fields:
-  historyHeadline:
-    label: Ervaring
-    type: headline
-    numbered: false
-  historyTitle:
-    label: Titel
-    type: text
   history:
-    label: Ervaring
-    type: structure
-    max: 3
+    extends: fields/history
     fields:
-      title:
-        label: Ervaring titel
-        type: text
-      number:
-        label: Ervaring nummer
-        type: text
-      withPlus:
-        label: met +
-        type: toggle
+      historyHeadline:
+        numbered: false
+      historySwitch: false

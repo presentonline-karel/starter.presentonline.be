@@ -2,41 +2,9 @@ name: Testimonials
 icon: quote
 label: "| {{ testimonialstitle }}"
 fields:
-  testimonialsHeadline:
-    label: Getuigenissen
-    type: headline
-  testimonialsTitle:
-    label: Titel
-    type: text
   testimonials:
-    label: Getuigenissen
-    type: structure
-    columns:
-      name:
-        width: 2/8
-      function:
-        width: 2/8
-      testimonial:
-        width: 4/8
+    extends: fields/testimonials
     fields:
-      logo:
-        label: Logo klant
-        type: files
-        max: 1
-        required: true
-      imageTestimonial:
-        label: Foto klant
-        type: files
-        max: 1
-        image:
-          cover: true
-      name:
-        label: Naam
-        type: text
-      function:
-        label: Functie
-        type: text
-      testimonial:
-        label: Getuigenis
-        type: writer
-        inline: true
+      testimonialsHeadline:
+        numbered: false
+      testimonialsSwitch: false

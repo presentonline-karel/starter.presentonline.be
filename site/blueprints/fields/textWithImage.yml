@@ -1,0 +1,43 @@
+type: group
+fields:
+  contentHeadline:
+    label: Content
+    type: headline
+    width: 1/2
+  contentSwitch:
+    extends: fields/display-switch
+  contentTitle:
+    label: Titel
+    type: text
+  contentText:
+    label: Tekst
+    type: writer
+    inline: true
+  contentBulletpoints:
+    label: Bullet points
+    type: structure
+    fields:
+      bulletPoint:
+        type: text
+        required: true
+  contentButtons:
+    extends: fields/button
+    label: Buttons
+  line-y:
+    type: line
+  contentImageInfo:
+    label: Info bij content foto
+    type: info
+    width: 1/2
+    text: |
+      Best een foto nemen met aspect ratio 2/3 voor de beste weergave.
+  contentImage:
+    label: Content foto
+    type: files
+    max: 1
+    layout: cards
+    empty: Er is geen content foto geselecteerd.
+    required: true
+    width: 1/2
+    image:
+      cover: true

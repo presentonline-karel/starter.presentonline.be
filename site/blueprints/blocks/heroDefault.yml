@@ -2,31 +2,8 @@ name: heroDefault
 icon: grid-top
 label: "| {{ herotitle }}"
 fields:
-  heroHeadline:
-    label: Header
-    type: headline
-    numbered: false
-  heroTitle:
-    label: Titel
-    type: text
-  heroIntro:
-    label: Intro tekst
-    type: writer
-    inline: true
-  heroButtons:
-    extends: fields/button
-    label: Buttons
-  line-a:
-    type: line
-  heroImageHeadline:
-    label: Hero foto
-    type: headline
-    numbered: false
-  heroImage:
-    label: Hero foto
-    type: files
-    max: 1
-    layout: cards
-    empty: Er is geen hero foto geselecteerd.
-    image:
-      cover: true
+  heroDefault:
+    extends: fields/heroDefault
+    fields:
+      heroHeadline:
+        numbered: false

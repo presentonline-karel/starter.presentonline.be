@@ -2,25 +2,9 @@ name: Clients
 icon: grid
 label: "| {{ clientstitle }}"
 fields:
-  clientsTitle:
-    label: Titel
-    type: text
-  line-a:
-    type: line
   clients:
-    label: Klanten
-    type: structure
-    columns:
-      logo:
-        width: 1/3
-      url:
-        width: 2/3
+    extends: fields/clients
     fields:
-      logo:
-        label: Logo klant
-        type: files
-        max: 1
-        required: true
-      url:
-        label: Link website klant
-        type: url
+      clientsHeadline:
+        numbered: false
+      clientsSwitch: false

@@ -2,40 +2,9 @@ name: Team
 icon: users
 label: "| {{ teamtitle }}"
 fields:
-  teamHeadline:
-    label: Team
-    type: headline
-  teamTitle:
-    label: Titel
-    type: text
-  teamText:
-    label: Tekst
-    type: writer
-    inline: true
   team:
-    label: Team
-    type: structure
-    columns:
-      image:
-        width: 2/8
-      name:
-        width: 3/8
-      function:
-        width: 3/8
+    extends: fields/team
     fields:
-      image:
-        label: Foto
-        type: files
-        max: 1
-        required: true
-        layout: cardlets
-        image:
-          cover: true
-      name:
-        label: Naam
-        type: text
-        required: true
-      function:
-        label: Functie
-        type: text
-        required: true
+      teamHeadline:
+        numbered: false
+      teamSwitch: false
