@@ -1,0 +1,51 @@
+.photoGallery-section {
+    background-color: $neutrals-100;
+
+    .photoGallery {
+        &__title {
+            margin-bottom: 32px;
+        }
+
+        &__images {
+            .photo {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 3/2;
+                object-fit: cover;
+                border-radius: $border-radius-medium;
+                margin-bottom: 16px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .photoGallery-section {
+        .photoGallery {
+            &__images {
+                /*display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+
+                .photo {
+                    &:nth-child(1) {
+                        aspect-ratio: 3/2;
+                    }
+
+                    &:nth-child(2) {
+                        aspect-ratio: 1/1;
+                    }
+
+                    &:nth-child(3) {
+                        aspect-ratio: 4/3;
+                    }
+                }*/
+            }
+        }
+    }
+}

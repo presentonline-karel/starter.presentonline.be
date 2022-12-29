@@ -1,0 +1,10 @@
+name: Photo gallery
+icon: dashboard
+label: "| Photo gallery"
+fields:
+  photoGallery:
+    extends: fields/photoGallery
+    fields:
+      photoGalleryHeadline:
+        numbered: false
+      photoGallerySwitch: false

@@ -30,7 +30,6 @@ fields:
     type: files
     max: 1
     layout: cards
-    cover: true
     empty: Er is geen hero foto geselecteerd.
     width: 1/2
     required: true

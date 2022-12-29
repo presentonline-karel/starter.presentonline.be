@@ -63,6 +63,7 @@ tabs:
                   - maps
                   - centeredContent
                   - contact
+                  - photoGallery
               text:
                 label: Text
                 type: group

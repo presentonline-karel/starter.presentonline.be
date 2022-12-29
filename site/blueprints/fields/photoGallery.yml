@@ -1,0 +1,20 @@
+type: group
+fields:
+  photoGalleryHeadline:
+    label: Galerij
+    type: headline
+    width: 1/2
+  photoGallerySwitch:
+    extends: fields/display-switch
+  photoGalleryTitle:
+    label: Titel
+    type: text
+    required: true
+  photoGallery:
+    label: Gallerij
+    type: files
+    layout: cards
+    max: 9
+    empty: Er zijn nog geen foto's geselecteerd
+    image:
+      cover: true

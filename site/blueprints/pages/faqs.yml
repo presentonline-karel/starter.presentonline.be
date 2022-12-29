@@ -8,17 +8,20 @@ tabs:
   content:
     columns:
 
-      #FAQ
+      #HEADER
       - width: 1/2
         sections:
         fields:
 
           #Hero
           heroNoImage: fields/heroNoImage
-          line-a:
-            type: line
-          
-          #FAQs
+      
+
+
+      #FAQS
+      - width: 1/2
+        sections:
+        fields:
           faqs: fields/faqs
 
 

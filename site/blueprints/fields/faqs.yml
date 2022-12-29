@@ -6,6 +6,10 @@ fields:
   faqs:
     label: Veelgestelde vragen
     type: structure
+    help: Klik op een vraag om de inhoud aan te passen
+    columns:
+      question:
+        width: 4/4
     fields:
       question:
         label: Vraag

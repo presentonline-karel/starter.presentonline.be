@@ -2,6 +2,10 @@ name: CTA
 icon: flag
 label: "| {{ titledefault }}"
 fields:
+  ctaHeadline:
+    label: CTA
+    type: headline
+    numbered: false
   titleDefault:
     label: Titel
     type: text
