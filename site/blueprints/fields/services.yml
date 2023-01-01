@@ -24,7 +24,7 @@ fields:
         width: 1/6
     fields:
       icon:
-        label: Icoontje*
+        label: Icoontje
         type: select
         options:
           coffee: Koffie
@@ -32,11 +32,11 @@ fields:
           heart: Hartje
         required: true
       title:
-        label: Titel*
+        label: Titel
         type: text
         required: true
       paragraph:
-        label: Paragraaf*
+        label: Paragraaf
         type: writer
         inline: true
         required: true
@@ -50,7 +50,7 @@ fields:
           - "ja"
       destination:
         type: select
-        label: Link*
+        label: Link
         max: 1
         required: true
         width: 1/2
@@ -60,7 +60,7 @@ fields:
           internal: Interne webpagina
           external: Externe webpagina
       internalPage:
-        label: Interne webpagina*
+        label: Interne webpagina
         type: pages
         max: 1
         required: true
@@ -76,7 +76,7 @@ fields:
           destination: internal
           containsLink: true
       externalUrl:
-        label: Externe webpagina*
+        label: Externe webpagina
         type: url
         required: true
         when:

@@ -9,3 +9,8 @@ fields:
   mapsUrl:
     label: Embed URL
     type: text
+  mapsInfo:
+    label: Info bij het Google Maps widget
+    type: info
+    text: |
+      Here comes info on how to add Google Maps link. Also add a link to a url tutorial.

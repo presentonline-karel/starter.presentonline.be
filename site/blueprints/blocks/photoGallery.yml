@@ -1,6 +1,6 @@
 name: Photo gallery
 icon: dashboard
-label: "| Photo gallery"
+label: "| {{ photogallerytitle }}"
 fields:
   photoGallery:
     extends: fields/photoGallery

@@ -24,7 +24,6 @@ fields:
         label: Logo klant
         type: files
         max: 1
-        required: true
       imageTestimonial:
         label: Foto klant
         type: files

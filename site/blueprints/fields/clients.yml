@@ -25,4 +25,4 @@ fields:
         required: true
       url:
         label: Link website klant
-        type: text
+        type: url

@@ -13,3 +13,8 @@ fields:
     label: Tekst
     type: writer
     inline: true
+  contactFormInfo:
+    label: Info bij contact block
+    type: info
+    text: |
+      Your contactform is included automatically

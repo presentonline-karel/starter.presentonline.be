@@ -2,10 +2,15 @@ name: Gecentreerde blokken
 icon: box
 label: "| Gecentreerde blokken"
 fields:
-  textContent:
+  textContentHeadline:
     label: Gecentreerde blokken
     type: headline
-    numbered: true
+    numbered: false
+  textContentInfo:
+    label: Info bij gecentreerde blokken
+    type: info
+    text: |
+      Here comes an explanation what type of content you should place here. Also a link to a page + id where this block is used.
   textContent:
     label: Gecentreerde blokken
     type: blocks

@@ -19,7 +19,9 @@ fields:
       number:
         label: Ervaring nummer
         type: text
+        help: Zet geen "+" achter je nummer
       withPlus:
         label: met +
         type: toggle
+        help: Inschakelen om "+" achter je nummer te zetten
     max: 3
