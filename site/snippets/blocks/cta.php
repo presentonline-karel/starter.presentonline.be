@@ -9,7 +9,7 @@
 
                     <!-- button -->
                     <?php foreach ($block->buttons()->toBlocks() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>

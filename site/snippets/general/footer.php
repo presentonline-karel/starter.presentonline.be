@@ -17,7 +17,7 @@
                         <p><?= $site->intro() ?></p>
 
                         <!-- SNIPPET - SOCIALS -->
-                        <?php snippet('general/socials') ?>
+                        <?php snippet("general/socials") ?>
                     </div>
 
                     <div class="footer__block contact">
@@ -55,7 +55,7 @@
         </footer>
 
         <!-- SCRIPTS-->
-        <?= js('build/js/general/nav.js', ['defer' => true]) ?>
-        <?= js('build/js/general/section-fade-animation.js', ['defer' => true]) ?>
+        <?= js("build/js/general/nav.js", ["defer" => true]) ?>
+        <?= js("build/js/general/section-fade-animation.js", ["defer" => true]) ?>
     </body>
 </html>

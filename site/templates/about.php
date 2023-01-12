@@ -1,4 +1,4 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER ABOUT -->
 <div id="container" class="container container-about">
@@ -17,14 +17,14 @@
 
     <!-- CONTENT -->
     <?php if ($page->contentSwitch()->toBool()) : ?>
-        <?php snippet('blocks/textWithImage') ?>
+        <?php snippet("blocks/textWithImage") ?>
     <?php endif; ?>
 
 
 
     <!-- TEAM -->
     <?php if ($page->teamSwitch()->toBool()) : ?>
-        <?php snippet('blocks/team') ?>
+        <?php snippet("blocks/team") ?>
     <?php endif; ?>
 
 
@@ -37,4 +37,4 @@
 
 
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

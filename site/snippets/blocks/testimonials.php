@@ -1,26 +1,31 @@
 <?php
-    if(isset($block)) {
-        $testimonialsContent = $block;
-    }
-    else {
-        $testimonialsContent = $page;
-    }
+
+if (isset($block))
+{
+    $testimonialsContent = $block;
+}
+else {
+    $testimonialsContent = $page;
+}
+
 ?>
 
 <section id="testimonials" class="testimonials-section section fade-section">
-    <div class="testimonials content-container-s content-container">
+    <div class="testimonials content-container-s content-container swiper">
         <h2><?= $testimonialsContent->testimonialsTitle() ?></h2>
 
         <?php if ($testimonialsContent->testimonials()->isNotEmpty()) : ?>
-            <div class="testimonials-items">
+            <div class="testimonials-items swiper-wrapper">
                 <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
-                    <div class="slide-container testimonial">
+                    <div class="slide-container testimonial swiper-slide">
                         <?php if ($testimonial->logo()->isNotEmpty()) : ?>
                             <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" loading="lazy" />
                         <?php endif; ?>
 
-                        <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
-                        <p class="testimonial__p"><?= $testimonial->testimonial() ?></p>
+                        <div class="testimonial__p">
+                            <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
+                            <p><?= $testimonial->testimonial() ?></p>
+                        </div>
 
                         <div class="testimonial__id flex">
                             <?php if ($testimonial->imageTestimonial()->isNotEmpty()) : ?>
@@ -34,10 +39,10 @@
                         </div>
 
                         <div class="arrows flex">
-                            <div class="prev">
+                            <div class="prev swiper-button-prev">
                                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
                             </div>
-                            <div class="next">
+                            <div class="next swiper-button-next">
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                             </div>
                         </div>
@@ -45,13 +50,18 @@
                 <?php endforeach; ?>
             </div>
 
+            <?php /*
             <div class="bullets">
                 <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
                     <div class="bullet"></div>
                 <?php endforeach; ?>
             </div>
+            */ ?>
         <?php endif; ?>
+
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 
-<?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
+<?php //js("build/js/home/testimonials-slider.js", ["defer" => true]) ?>
+<?= js("build/js/swiper/index.js", ["defer" => true]) ?>

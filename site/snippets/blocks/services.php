@@ -68,7 +68,7 @@
                 <?php if ($servicesContent->firstCtaButtons()->isNotEmpty()) : ?>
                     <div class="buttons <?php if(count($servicesContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                         <?php foreach ($servicesContent->firstCtaButtons()->toStructure() as $button) : ?>
-                            <?php snippet('components/button', ["button" => $button]) ?>
+                            <?php snippet("components/button", ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>

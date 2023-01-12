@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- META INFORMATION -->
-        <?php snippet('meta_information'); ?>
-        <?php snippet('robots'); ?>
+        <?php snippet("meta_information"); ?>
+        <?php snippet("robots"); ?>
 
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="<?= $site->url() ?>/assets/favicon/apple-touch-icon.png">
@@ -27,7 +27,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="screen">
 
         <!-- STYLESHEET -->
-        <?= css('build/css/style.css') ?>
+        <?= css("build/css/style.css") ?>
 
         <!-- GOOGLE ANALYTICS -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4S49SPXNK"></script>
@@ -37,9 +37,9 @@
             function gtag() {
                 dataLayer.push(arguments);
             }
-            gtag('js', new Date());
+            gtag("js", new Date());
 
-            gtag('config', 'G-Y4S49SPXNK');
+            gtag("config", "G-Y4S49SPXNK");
         </script>
     </head>
     <body>

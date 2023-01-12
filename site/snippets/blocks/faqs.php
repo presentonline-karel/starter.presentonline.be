@@ -28,4 +28,4 @@
     </div>
 </section>
 
-<?= js('build/js/faq/accordion.js', ['defer' => true]) ?>
+<?= js("build/js/faq/accordion.js", ["defer" => true]) ?>

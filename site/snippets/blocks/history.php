@@ -24,4 +24,4 @@
     </div>
 </section>
 
-<?= js('build/js/about/counter-animation.js', ['defer' => true]) ?>
+<?= js("build/js/about/counter-animation.js", ["defer" => true]) ?>

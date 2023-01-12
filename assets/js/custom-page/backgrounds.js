@@ -12,5 +12,3 @@ const backgrounds = () => {
 }
 
 backgrounds();
-
-//window.getComputedStyle( sections[i] ).getPropertyValue('background-color')

@@ -1,4 +1,4 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER HOME -->
 <div id="container" class="container container-home">
@@ -26,14 +26,14 @@
 
         <!-- CONTENT -->
         <?php if($page->contentSwitch()->toBool()): ?>
-            <?php snippet('blocks/textWithImage') ?>
+            <?php snippet("blocks/textWithImage") ?>
         <?php endif; ?>
 
 
 
         <!-- TESTIMONIALS -->
         <?php if($page->testimonialsSwitch()->toBool()): ?>
-            <?php snippet('blocks/testimonials') ?>
+            <?php snippet("blocks/testimonials") ?>
         <?php endif; ?>
 
 
@@ -48,7 +48,7 @@
                         <?php if ($page->secondCtaButtons()->isNotEmpty()) : ?>
                             <div class="buttons <?php if(count($page->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                                 <?php foreach ($page->secondCtaButtons()->toStructure() as $button) : ?>
-                                    <?php snippet('components/button', ["button" => $button]) ?>
+                                    <?php snippet("components/button", ["button" => $button]) ?>
                                 <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
@@ -61,4 +61,4 @@
 
 
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

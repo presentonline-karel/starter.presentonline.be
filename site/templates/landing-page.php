@@ -1,10 +1,10 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER LANDINGPAGE -->
 <div id="container" class="container container-landingPage">
 
     <!-- NAV -->
-    <?php snippet('general/nav') ?>
+    <?php snippet("general/nav") ?>
 
 
 
@@ -22,4 +22,4 @@
     </main>
 </div>
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

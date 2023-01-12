@@ -33,7 +33,7 @@
             </div>
 
             <!-- SNIPPET - SOCIALS -->
-            <?php snippet('general/socials') ?>
+            <?php snippet("general/socials") ?>
         </div>
     </div>
 
@@ -44,8 +44,8 @@
         <h2>Of vul ons formulier in</h2>
 
         <!-- Contactform -->
-        <?php snippet('contact/form') ?>
+        <?php snippet("contact/form") ?>
     </div>
 </section>
 
-<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
+<?= js("build/js/contact/form-feedback.js", ["defer" => true]) ?>

@@ -36,7 +36,7 @@
     &__content {
         max-height: 0;
         overflow: hidden;
-        transition: all $transition-time-short ease;
+        transition: all $transition-time-short ease-in-out;
     }
 
     // Open accordion 
@@ -48,7 +48,7 @@
         }
 
         .accordion__content {
-            max-height: initial;
+            max-height: 600px;
         }
     }
 }

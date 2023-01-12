@@ -1,10 +1,10 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER PRICES -->
 <div id="container" class="container container-prices">
 
     <!-- NAV -->
-    <?php snippet('general/nav') ?>
+    <?php snippet("general/nav") ?>
 
 
 
@@ -273,6 +273,6 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/faq/accordion.js', ['defer' => true]) ?>
+<?= js("build/js/faq/accordion.js", ["defer" => true]) ?>
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

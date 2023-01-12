@@ -15,7 +15,7 @@
             <?php if ($ctaContent->firstCtaButtons()->isNotEmpty()) : ?>
                 <div class="buttons <?php if(count($ctaContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                     <?php foreach ($ctaContent->firstCtaButtons()->toStructure() as $button) : ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>

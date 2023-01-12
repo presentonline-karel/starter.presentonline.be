@@ -1,10 +1,10 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER ERROR -->
 <div id="container" class="container container-error">
 
     <!-- NAV -->
-    <?php snippet('general/nav') ?>
+    <?php snippet("general/nav") ?>
 
 
 
@@ -19,4 +19,4 @@
 
 
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

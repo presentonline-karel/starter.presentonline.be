@@ -1,4 +1,4 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER FAQ -->
 <div id="container" class="container container-faq">
@@ -16,4 +16,4 @@
 
 
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

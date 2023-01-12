@@ -1,4 +1,4 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER BLOG -->
 <div id="container" class="container container-blog">
@@ -136,9 +136,9 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/blog/blog-search.js', ['defer' => true]) ?>
-<?= js('build/js/blog/blog-tags.js', ['defer' => true]) ?>
+<?= js("build/js/blog/blog-search.js", ["defer" => true]) ?>
+<?= js("build/js/blog/blog-tags.js", ["defer" => true]) ?>
 
 
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

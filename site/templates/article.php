@@ -1,10 +1,10 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER ARTICLE -->
 <div id="container" class="container container-article">
 
     <!-- NAV -->
-    <?php snippet('general/nav') ?>
+    <?php snippet("general/nav") ?>
 
     <!-- ARTICLE -->
     <main class="article-section article-page">
@@ -95,4 +95,4 @@
     <?php endif; ?>
 </div>
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

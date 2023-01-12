@@ -8,7 +8,7 @@
 ?>
 
 <header id="header" class="header header-home">
-    <?php snippet('general/nav', ['extraClass' => 'nav-home']) ?>
+    <?php snippet("general/nav", ["extraClass" => "nav-home"]) ?>
 
     <div class="header-home__content">
         <div class="header-home__content__text">
@@ -18,7 +18,7 @@
             <?php if ($heroBigImageContent->heroButtons()->isNotEmpty()) : ?>
                 <div class="buttons <?php if(count($heroBigImageContent->heroButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                     <?php foreach ($heroBigImageContent->heroButtons()->toStructure() as $button) : ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
@@ -26,7 +26,7 @@
 
         <?php if ($heroBigImageContent->heroImage()->isNotEmpty()) : ?>
             <div class="header__content__image">
-                <img src="<?= $heroBigImageContent->heroImage()->toFile()->thumb(['format' => 'webp'])->url() ?>" alt="<?= $heroBigImageContent->heroImage()->toFile()->alt() ?>">
+                <img src="<?= $heroBigImageContent->heroImage()->toFile()->thumb(["format" => "webp"])->url() ?>" alt="<?= $heroBigImageContent->heroImage()->toFile()->alt() ?>">
             </div>
         <?php endif; ?>
     </div>

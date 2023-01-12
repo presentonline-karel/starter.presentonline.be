@@ -1,4 +1,4 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER CONTACT -->
 <div id="container" class="container container-contact">
@@ -13,10 +13,10 @@
                 <p><?= $success ?></p>
             </div>
         <?php else : ?>
-            <?php if (isset($alert['error'])) : ?>
+            <?php if (isset($alert["error"])) : ?>
                 <div class="alert error">
                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                    <p><?= $alert['error'] ?></p>
+                    <p><?= $alert["error"] ?></p>
                 </div>
             <?php endif ?>
         <?php endif; ?>
@@ -24,7 +24,7 @@
 
 
         <!-- NAV -->
-        <?php snippet('general/nav') ?>
+        <?php snippet("general/nav") ?>
 
         <!-- HEADER CONTACT - CONTENT -->
         <div class="header-contact__content">
@@ -38,7 +38,7 @@
 
                         <!-- button -->
                         <?php foreach ($page->heroButtons()->toStructure() as $button) : ?>
-                            <?php snippet('components/button', ["button" => $button]) ?>
+                            <?php snippet("components/button", ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -76,4 +76,4 @@
 
 
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>

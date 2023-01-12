@@ -8,7 +8,7 @@
 ?>
 
 <header class="header header-about">
-    <?php snippet('general/nav') ?>
+    <?php snippet("general/nav") ?>
 
     <div class="header__content">
         <div class="header__content__text">
@@ -18,7 +18,7 @@
             <?php if ($heroDefaultContent->heroButtons()->isNotEmpty()) : ?>
                 <div class="buttons <?php if(count($heroDefaultContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                     <?php foreach ($heroDefaultContent->heroButtons()->toStructure() as $button) : ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>

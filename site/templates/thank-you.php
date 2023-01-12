@@ -1,4 +1,4 @@
-<?php snippet('general/header') ?>
+<?php snippet("general/header") ?>
 
 <!-- CONTAINER ABOUT -->
 <div id="container" class="container container-thank-you">
@@ -7,4 +7,4 @@
     <?php snippet("blocks/heroDefault") ?>
 </div>
 
-<?php snippet('general/footer') ?>
+<?php snippet("general/footer") ?>
