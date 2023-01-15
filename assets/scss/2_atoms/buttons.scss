@@ -47,6 +47,19 @@
         }
     }
 
+    &-tertiary {
+        color: $neutrals-1000;
+        font-family: $title-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        letter-spacing: -1%;
+        transition: all $transition-time-short;
+        display: inline-block;
+    }
+
     // WHITE BUTTON
     &-white {
         background-color: $neutrals-100;

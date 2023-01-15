@@ -17,6 +17,21 @@
             </div>
         <?php endif ?>
     <?php endif; ?>
+
+
+
+    <!-- USP-BAR -->
+    <?php //snippet("blocks/usp-bar") ?>
+
+
+
+    <!-- STEPS -->
+    <?php //snippet("blocks/steps") ?>
+
+
+
+    <!-- OFFICES -->
+    <?php snippet("blocks/offices") ?>
     
 
 

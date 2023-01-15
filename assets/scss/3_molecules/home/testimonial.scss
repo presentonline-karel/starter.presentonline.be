@@ -117,7 +117,7 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .testimonial {
-        padding: 72px 212px 72px 212px;
+        padding: 72px 212px 72px 212px !important;
 
         .arrows {
             position: absolute;
@@ -126,7 +126,7 @@
             left: 0;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between !important;
             align-items: center;
             padding: 0 72px;
         }

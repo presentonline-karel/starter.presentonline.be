@@ -1,0 +1,171 @@
+.offices-section {
+    background-color: $neutrals-200;
+
+    &__header {
+        &__title {
+            margin-bottom: 16px;
+        }
+
+        &__intro {
+            margin-bottom: 24px;
+        }
+    }
+
+    .offices {
+        .swiper-wrapper {
+            overflow-y: visible;
+            height: auto !important;
+            margin-bottom: 24px;
+        }
+
+        .office {
+            border-radius: $border-radius-medium;
+            border: 0.5px solid $neutrals-400;
+            box-shadow: $card-shadow;
+            padding: 24px;
+            background-color: $neutrals-100;
+            position: relative;
+
+            &.headOffice {
+                border: 2px solid $primary-500;
+
+                .headOffice__label {
+                    position: absolute;
+                    top: 31px;
+                    right: 24px;
+                    font-family: $title-font;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $primary-500;
+                    font-weight: 500;
+                }
+            }
+
+            &__title {
+                margin-bottom: 16px;
+            }
+
+            &__info {
+                margin-bottom: 24px;
+
+                &__item {
+                    display: flex;
+                    gap: 12px;
+                    margin-bottom: 8px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    i {
+                        font-size: 16px;
+                        color: $primary-500;
+                        width: 16px;
+                        height: 16px;
+                        line-height: 22px;
+                    }
+
+                    &__text {
+                        display: block;
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-family: $paragraph-font;
+                        color: $neutrals-900;
+                    }
+                }
+            }
+
+            &__directions {
+                i {
+                    color: $primary-500;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            margin: 0 auto;
+            position: relative !important;
+            left: 0 !important;
+            transform: initial !important;
+            bottom: 0px;
+
+            &-bullet {
+                background: $neutrals-900 !important;
+
+                &-active {
+                    background: $primary-500 !important;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .offices-section {
+        &__header {
+            &__title {
+                text-align: center;
+            }
+    
+            &__intro {
+                text-align: center;
+                margin-bottom: 48px;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media screen and (min-width: $desktop-1) {
+    .offices-section {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 72px;
+
+            &__title, &__intro {
+                text-align: left;
+                margin-bottom: 0;
+                flex: 1 0;
+            }
+        }
+
+        .offices {
+            .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+
+                .office {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .offices-section {
+        .offices {
+            .swiper-wrapper {
+                .office {
+                    width: 100% !important;
+
+                    &__title {
+                        font-size: 32px;
+                        line-height: 36px;
+                        margin-bottom: 32px;
+                    }
+
+                    &__info {
+                        margin-bottom: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

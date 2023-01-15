@@ -43,5 +43,10 @@
 @media only screen and (min-width: $desktop-3) {
     .testimonials-section {
         padding: 128px 0px;
+
+        .testimonials {
+            max-width: 824px !important;
+            margin: 0 auto !important;
+        }
     }
 }

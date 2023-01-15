@@ -1,6 +1,6 @@
 <?php isset($block) ? $historyContent = $block : $historyContent = $page; ?>
 
-<section class="history section fade-section">
+<section id="history" class="history section fade-section">
     <div class="content-container-m content-container">
         <h2><?= $historyContent->historyTitle() ?></h2>
 

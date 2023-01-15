@@ -1,4 +1,4 @@
-const testimonialsSlider = () => {
+/*const testimonialsSlider = () => {
   let slides = document.querySelectorAll(".slide-container");
   let bullets = document.querySelectorAll(".bullet");
   let index = 0;
@@ -41,4 +41,4 @@ const testimonialsSlider = () => {
   });
 };
 
-testimonialsSlider();
+testimonialsSlider();*/

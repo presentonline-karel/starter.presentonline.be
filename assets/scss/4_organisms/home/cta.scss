@@ -75,6 +75,10 @@
                 .button-primary {
                     background-color: $primary-500;
                     color: $neutrals-100;
+
+                    &:hover {
+                        background-color: $primary-600;
+                    }
                 }
             }
         }

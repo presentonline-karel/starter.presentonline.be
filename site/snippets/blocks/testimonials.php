@@ -45,4 +45,4 @@
     </div>
 </section>
 
-<?= js("/build/js/swiper/index.js", ["defer" => true]) ?>
+<?= js("/build/js/swiper/testimonials.js", ["defer" => true]) ?>
