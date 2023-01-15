@@ -10,16 +10,6 @@
         margin-bottom: 24px;
     }
 
-    .bullets {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        position: relative;
-        transform: translate(-50%, 0%);
-        left: 50%;
-    }
-
     //NOT SELECTABLE TEXT WHEN DOUBLE CLICKING
     -webkit-user-select: none;
     -moz-user-select: none;

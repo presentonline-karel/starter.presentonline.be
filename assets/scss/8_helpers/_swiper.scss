@@ -1,0 +1,19 @@
+.swiper {
+    &-pagination {
+        position: initial !important;
+
+        &-bullet {
+            width: 7px !important;
+            height: 7px !important;
+            background: $neutrals-700 !important;
+            border-radius: $border-radius-small !important;
+            transition: all $transition-time-short !important;
+            margin: 0 2px !important;
+
+            &-active {
+                width: 21px !important;
+                background: $primary-500 !important;
+            }
+        }
+    }
+}

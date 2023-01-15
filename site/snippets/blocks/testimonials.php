@@ -1,14 +1,4 @@
-<?php
-
-if (isset($block))
-{
-    $testimonialsContent = $block;
-}
-else {
-    $testimonialsContent = $page;
-}
-
-?>
+<?php isset($block) ? $testimonialsContent = $block : $testimonialsContent = $page; ?>
 
 <section id="testimonials" class="testimonials-section section fade-section">
     <div class="testimonials content-container-s content-container swiper">
@@ -17,7 +7,7 @@ else {
         <?php if ($testimonialsContent->testimonials()->isNotEmpty()) : ?>
             <div class="testimonials-items swiper-wrapper">
                 <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
-                    <div class="slide-container testimonial swiper-slide">
+                    <div class="testimonial swiper-slide">
                         <?php if ($testimonial->logo()->isNotEmpty()) : ?>
                             <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" loading="lazy" />
                         <?php endif; ?>
@@ -49,19 +39,10 @@ else {
                     </div>
                 <?php endforeach; ?>
             </div>
-
-            <?php /*
-            <div class="bullets">
-                <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
-                    <div class="bullet"></div>
-                <?php endforeach; ?>
-            </div>
-            */ ?>
         <?php endif; ?>
 
         <div class="swiper-pagination"></div>
     </div>
 </section>
 
-<?php //js("build/js/home/testimonials-slider.js", ["defer" => true]) ?>
-<?= js("build/js/swiper/index.js", ["defer" => true]) ?>
+<?= js("/build/js/swiper/index.js", ["defer" => true]) ?>

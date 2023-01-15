@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $historyContent = $block;
-    }
-    else {
-        $historyContent = $page;
-    }
-?>
+<?php isset($block) ? $historyContent = $block : $historyContent = $page; ?>
 
 <section class="history section fade-section">
     <div class="content-container-m content-container">

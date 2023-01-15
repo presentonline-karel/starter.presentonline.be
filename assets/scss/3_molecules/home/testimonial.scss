@@ -1,15 +1,3 @@
-//to make testimonial slider work
-.slide-container {
-    //display: none;
-    //opacity: 0;
-    transition: all $transition-time-short;
-
-    &.active {
-        //display: block;
-        //opacity: 1;
-    }
-}
-
 .testimonial {
     width: 100%;
     background-color: $neutrals-100;
@@ -71,9 +59,10 @@
     }
 
     .arrows {
-        justify-content: flex-start;
-        align-items: center;
-        gap: 7px;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 7px !important;
+        height: 40px;
         
         .prev, .next {
             width: 40px;
@@ -82,9 +71,17 @@
             background-color: $primary-500;
             text-align: center;
             transition: all $transition-time-short;
+            opacity: 1 !important;
+            position: initial !important;
+            cursor: pointer !important;
+            pointer-events: all;
+            margin-top: 0;
+
+            &:after {
+                content: none;
+            }
 
             &:hover {
-                cursor: pointer;
                 background-color: $primary-600;
             }
 
@@ -94,7 +91,6 @@
                 width: 14px;
                 height: 16px;
                 color: $neutrals-100;
-                margin-top: 12px;
             }
         }
     }

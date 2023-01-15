@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $heroNoImageContent = $block;
-    }
-    else {
-        $heroNoImageContent = $page;
-    }
-?>
+<?php isset($block) ? $heroNoImageContent = $block : $heroNoImageContent = $page; ?>
 
 <header class="header header-blog">
     <?php snippet("general/nav") ?>

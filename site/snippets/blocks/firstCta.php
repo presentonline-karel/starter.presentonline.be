@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $ctaContent = $block;
-    }
-    else {
-        $ctaContent = $page;
-    }
-?>
+<?php isset($block) ? $ctaContent = $block : $ctaContent = $page; ?>
 
 <section id="cta-1" class="cta fade-section <?php if(isset($customClass)) { echo($customClass); } ?>">
     <div class="content-container-l content-container">

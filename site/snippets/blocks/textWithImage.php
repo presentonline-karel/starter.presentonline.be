@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $textWithImageContent = $block;
-    }
-    else {
-        $textWithImageContent = $page;
-    }
-?>
+<?php isset($block) ? $textWithImageContent = $block : $textWithImageContent = $page; ?>
 
 <section class="content-section fade-section">
     <div class="content content-container-l content-container r-106">

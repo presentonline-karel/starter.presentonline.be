@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $heroDefaultContent = $block;
-    }
-    else {
-        $heroDefaultContent = $page;
-    }
-?>
+<?php isset($block) ? $heroDefaultContent = $block : $heroDefaultContent = $page; ?>
 
 <header class="header header-about">
     <?php snippet("general/nav") ?>

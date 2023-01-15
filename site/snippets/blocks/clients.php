@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $clientsContent = $block;
-    }
-    else {
-        $clientsContent = $page;
-    }
-?>
+<?php isset($block) ? $clientsContent = $block : $clientsContent = $page; ?>
 
 <section class="clients-section section fade-section">
     <div class="content-container-l content-container">

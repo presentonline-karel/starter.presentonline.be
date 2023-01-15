@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $contactContent = $block;
-    }
-    else {
-        $contactContent = $page;
-    }
-?>
+<?php isset($block) ? $contactContent = $block : $contactContent = $page; ?>
 
 <section class="contact">
 

@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $heroBigImageContent = $block;
-    }
-    else {
-        $heroBigImageContent = $page;
-    }
-?>
+<?php isset($block) ? $heroBigImageContent = $block : $heroBigImageContent = $page; ?>
 
 <header id="header" class="header header-home">
     <?php snippet("general/nav", ["extraClass" => "nav-home"]) ?>

@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $teamContent = $block;
-    }
-    else {
-        $teamContent = $page;
-    }
-?>
+<?php isset($block) ? $teamContent = $block : $teamContent = $page; ?>
 
 <section class="team-section fade-section">
     <div class="team content-container-l content-container">

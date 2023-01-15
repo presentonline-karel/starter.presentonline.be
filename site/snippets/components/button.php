@@ -1,4 +1,4 @@
-<a class="button <?= $button->typeOfButton() ?>"
+<a class="button <?php echo ($button->typeOfButton()); if(isset($extraClass)) { echo $extraClass; } ?>"
 
     href="<?php if ($button->destination() == "internal") {
         echo ($button->internalPage()->toPage()->url() . $button->idPage());

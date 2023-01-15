@@ -30,7 +30,6 @@
 
 //home
 @import "./3_molecules/home/testimonial";
-@import "./3_molecules/home/bullet";
 @import "./3_molecules/home/client";
 @import "./3_molecules/home/service";
 
@@ -107,3 +106,8 @@
 @import "./5_pages/landingPage";
 @import "./5_pages/prices";
 @import "./5_pages/customPage";
+
+
+
+/* HELPERS */
+@import "./8_helpers/swiper";

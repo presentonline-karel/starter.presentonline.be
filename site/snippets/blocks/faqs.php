@@ -1,11 +1,4 @@
-<?php
-    if(isset($block)) {
-        $faqsContent = $block;
-    }
-    else {
-        $faqsContent = $page;
-    }
-?>
+<?php isset($block) ? $faqsContent = $block : $faqsContent = $page; ?>
 
 <section class="faqs">
     <div class="content-container-xs content-container">
