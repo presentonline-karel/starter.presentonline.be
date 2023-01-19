@@ -31,7 +31,22 @@
 
 
     <!-- OFFICES -->
-    <?php snippet("blocks/offices") ?>
+    <?php //snippet("blocks/offices") ?>
+
+
+
+    <!-- CTA DOUBLE -->
+    <?php //snippet("blocks/cta-double") ?>
+
+
+
+    <!-- CTA WITH IMAGE -->
+    <?php //snippet("blocks/cta-with-image") ?>
+
+
+
+    <!-- TABS -->
+    <?php snippet("blocks/tabs") ?>
     
 
 
