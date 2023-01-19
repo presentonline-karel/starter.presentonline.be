@@ -23,18 +23,18 @@
 
     > ul {
         display: inline-block;
-        text-align: left;
         list-style-position: inside;
         margin-bottom: 32px;
+        text-align: left;
 
         li {
-            width: auto;
+            color: $neutrals-900;
             font-family: $paragraph-font;
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
-            color: $neutrals-900;
             letter-spacing: -0.01em;
+            width: auto;
 
             a {
                 text-decoration: underline;
@@ -44,34 +44,34 @@
 
     > figure {
         img {
-            margin-bottom: 32px;
-            width: 100vw;
-            max-width: initial;
-            margin-left: -16px;
             aspect-ratio: 3/2;
             height: auto;
+            margin-bottom: 32px;
+            max-width: initial;
+            margin-left: -16px;
             object-fit: cover;
+            width: 100vw;
         }
     }
 
     > figure:has(iframe) {
         margin-bottom: 32px;
-        width: 100vw;
         max-width: initial;
         margin-left: -16px;
+        width: 100vw;
 
         iframe {
-            width: 100vw;
-            min-height: 200px;
             aspect-ratio: 16/9;
+            min-height: 200px;
+            width: 100vw;
         }
 
         figcaption {
+            color: $neutrals-800;
             font-family: $paragraph-font;
             font-size: 14px;
             line-height: 14px;
             padding: 8px 0 0 16px;
-            color: $neutrals-800;
         }
     }
 }
@@ -112,24 +112,23 @@
 
         > figure {
             img {
+                border-radius: $border-radius-medium;
                 margin-left: 0;
                 max-width: 100%;
-                width: 100%;
                 min-height: initial;
-                border-radius: $border-radius-medium;
+                width: 100%;
             }
         }
 
         > figure:has(iframe) {
             margin-left: 0;
-            width: inherit;
             max-width: 100%;
             width: inherit;
 
             iframe {
-                width: 100%;
-                min-height: initial;
                 border-radius: $border-radius-medium;
+                min-height: initial;
+                width: 100%;
             }
 
             figcaption {

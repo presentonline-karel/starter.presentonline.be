@@ -1,6 +1,6 @@
 .footer {
-    padding: 40px 16px 24px 16px;
     background-color: $primary-500;
+    padding: 40px 16px 24px 16px;
     position: relative;
 
     &-blocks {
@@ -9,24 +9,24 @@
 
     //Back to top arrow
     .back-to-top {
-        display: block;
-        width: 40px;
-        height: 40px;
         background-color: $neutrals-100;
         border-radius: $border-radius-medium;
+        display: block;
+        height: 40px;
         position: absolute;
-        top: 0;
         right: 0;
+        top: 0;
+        width: 40px;
 
         i {
-            font-size: 16px;
-            line-height: 16px;
-            width: 16px;
-            height: 16px;
-            top: 12px;
-            left: 12px;
             color: $primary-500;
+            font-size: 16px;
+            height: 16px;
+            line-height: 16px;
+            left: 12px;
             position: relative;
+            top: 12px;
+            width: 16px;
         }
 
         &:hover {
@@ -39,10 +39,10 @@
         margin-bottom: 40px;
 
         .footer-logo {
-            width: 100px;
             height: 40px;
-            object-fit: contain;
             margin-bottom: 16px;
+            object-fit: contain;
+            width: 100px;
         }
 
         p {
@@ -67,11 +67,11 @@
     &__a {
         color: $neutrals-100;
         display: block;
-        margin-bottom: 7px;
         font-family: $paragraph-font;
         font-size: 16px;
-        line-height: 16px;
         font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 7px;
         transition: all $transition-time-short;
 
         &:hover {
@@ -95,12 +95,12 @@
     }
 
     &__copyright {
-        text-align: center;
         color: $neutrals-100;
+        text-align: center;
 
         a {
-            text-decoration: underline;
             color: $neutrals-100;
+            text-decoration: underline;
         }
     }
 }
@@ -127,8 +127,8 @@
             }
 
             .contact {
-                grid-area: contact;
                 display: block;
+                grid-area: contact;
             }
 
             .sitemap {
@@ -152,9 +152,9 @@
         //Intro
         .intro {
             .footer-logo {
-                width: 125px;
                 height: 50px;
                 margin-bottom: 24px;
+                width: 125px;
             }
         }
 
@@ -166,9 +166,9 @@
 
         &__copyright {
             span {
-                padding-right: 8px;
-                margin-right: 8px;
                 border-right: 2px solid $neutrals-100;
+                margin-right: 8px;
+                padding-right: 8px;
             }
         }
     }

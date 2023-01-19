@@ -25,9 +25,9 @@
         width: 100%;
 
         &__top {
+            align-items: flex-start;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
             margin-bottom: 8px;
             
             h5 {
@@ -35,9 +35,9 @@
             }
 
             i {
+                color: $primary-500;
                 font-size: 14px;
                 line-height: 14px;
-                color: $primary-500;
                 margin-top: 8px;
                 transition: all $transition-time-short;
             }

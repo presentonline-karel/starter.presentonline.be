@@ -1,7 +1,7 @@
 .accordion {
+    border-bottom: 1px solid $neutrals-800;
     padding: 24px 0px;
     text-align: left;
-    border-bottom: 1px solid $neutrals-800;
 
     &:first-of-type {
         padding-top: 0;
@@ -16,9 +16,9 @@
     }
 
     &__header {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
+        display: flex;
+        justify-content: space-between; 
         margin-bottom: 8px;
 
         .title {
@@ -26,9 +26,9 @@
         }
 
         i {
+            color: $primary-500;
             font-size: 20px;
             line-height: 20px;
-            color: $primary-500;
             transition: all $transition-time-short ease;
         }
     }

@@ -5,10 +5,10 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .blogposts__articles {
-        padding: 0 48px 64px 48px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px 8px;
+        padding: 0 48px 64px 48px;
     }
 }
 
@@ -22,8 +22,8 @@
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .blogposts__articles {
-        padding: 0 96px;
         grid-template-columns: repeat(3, 1fr);
+        padding: 0 96px;
     }
 }
 

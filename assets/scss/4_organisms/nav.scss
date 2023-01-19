@@ -1,63 +1,61 @@
 .nav {
-    justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 24px 16px;
+    justify-content: space-between;
     overflow-x: hidden;
     overflow-y: hidden;
+    padding: 24px 16px;
 
     .logo {
-        width: 100px;
         height: 40px;
         object-fit: contain;
         position: relative;
         top: 4px;
+        width: 100px;
 
         img {
-            /*width: 100%;
-            height: 100%;*/
-            width: 100px;
             height: 40px;
+            width: 100px;
         }
     }
 
     //MOBILE MENU
     .nav-links {
-        position: fixed;
+        background-color: $primary-500;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        transform: translateX(100%);
-        right: 0;
         height: 100%;
-        top: 0;
-        z-index: 3;
-        transition: transform $transition-time-medium ease-in-out;
-        background-color: $primary-500;
+        justify-content: space-between;
         overflow-y: hidden;
         overflow: hidden;
+        position: fixed;
+        right: 0;
+        transform: translateX(100%);
+        top: 0;
+        transition: transform $transition-time-medium ease-in-out;
+        width: 100%;
+        z-index: 3;
 
         .link-items {
+            list-style-type: none;
             position: absolute;
             transform: translate(0%, -50%);
             top: 47%;
-            list-style-type: none;
         }
 
         .button {
-            display: inline;
-            position: absolute;
             bottom: 40px;
-            transform: translate(-50%, 0%);
+            display: inline;
             left: 50%;
+            position: absolute;
+            transform: translate(-50%, 0%);
             z-index: 100;
         }
 
         .logo {
-            width: 100px;
             height: 40px;
             object-fit: contain;
+            width: 100px;
         }
 
         .logo,
@@ -67,10 +65,10 @@
 
         //ACTIVE MENU
         &.nav-active {
-            transform: translateX(0%);
-            z-index: 99;
             height: 100%;
             overflow: hidden;
+            transform: translateX(0%);
+            z-index: 99;
 
             .logo,
             .button {
@@ -78,8 +76,8 @@
             }
 
             .nav__link__item {
-                display: inline-block;
                 color: $neutrals-100;
+                display: inline-block;
 
                 &.active {
                     border-bottom: 4px solid $neutrals-100;
@@ -88,25 +86,25 @@
         }
 
         .logo {
+            left: 16px;
             position: relative;
             top: 24px;
-            left: 16px;
         }
     }
 
     //MENU LINKS
     .nav-links {
         .nav__link {
+            color: $neutrals-100;
             display: block;
+            font-weight: 600;
             font-family: $title-font;
             font-size: 56px;
             line-height: 60px;
-            font-weight: 600;
             margin-bottom: 24px;
-            color: $neutrals-100;
-            text-align: left;
-            padding: 0 16px;
             opacity: 0;
+            padding: 0 16px;
+            text-align: left;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -155,62 +153,61 @@
 /* DESKTOP 1280PX */
 @media screen and (min-width: $desktop-1) {
     .nav {
+        align-items: center;
         height: 110px;
         padding: 32px 96px 32px 96px;
-        align-items: center;
 
         .nav-links {
-            justify-content: center;
+            align-items: center;
+            background: transparent;
             height: 100%;
+            justify-content: center;
+            position: initial;
+            padding: 0;
             top: 0;
             transform: translateX(0%);
-            width: auto;
             transition: none;
-            position: initial;
-            align-items: center;
-            padding: 0;
-            background: transparent;
+            width: auto;
 
             .socials {
                 display: none;
             }
 
             .link-items {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                justify-content: space-between;
                 position: initial;
                 transform: translate(0%, 0%);
                 top: 0;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                gap: 40px;
             }
 
             ul {
+                align-items: center;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
                 gap: 40px;
+                justify-content: space-between;
 
                 .nav {
                     &__link {
                         display: inline;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 20px;
                         margin-bottom: 0;
                         opacity: 1;
-                        font-size: 16px;
-                        line-height: 20px;
-                        font-weight: 600;
                         padding: 0;
-                        opacity: 1;
 
                         &__item {
+                            border-bottom: 3px solid transparent;
+                            color: $neutrals-1100;
                             opacity: 1;
+                            transition: all $transition-time-short ease-in-out;
                             white-space: nowrap;
                             width: 100%;
-                            color: $neutrals-1100;
-                            border-bottom: 3px solid transparent;
-                            transition: all $transition-time-short ease-in-out;
 
                             &:hover {
                                 border-bottom: 3px solid $primary-500;
@@ -251,19 +248,18 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .nav {
-        //padding: 45px 96px;
-        padding: 45px 0;
+        height: 130px;
         max-width: 1248px;
         margin: 0 auto;
-        height: 130px;
+        padding: 45px 0;
 
         .logo {
-            width: 125px;
             height: 50px;
+            width: 125px;
 
             img {
-                width: 125px;
                 height: 50px;
+                width: 125px;
             }
         }
 

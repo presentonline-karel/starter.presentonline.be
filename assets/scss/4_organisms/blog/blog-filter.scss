@@ -2,30 +2,27 @@
     padding: 0px 16px 32px 16px;
 
     .form-filter {
-        display: block;
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
         align-items: center;
+        display: block;
+        display: flex;
         height: 40px;
+        justify-content: flex-start;
         margin-bottom: 16px;
+        width: 100%;
 
         .input {
-            width: calc(100% - 118px);
-            height: 100%;
-            padding: 8px 16px;
-
+            background-color: $neutrals-400;
             border-radius: $border-radius-medium 0 0 $border-radius-medium;
             border: none !important;
-
             color: $neutrals-1100;
-            background-color: $neutrals-400;
-
             font-family: $paragraph-font;
             font-weight: 400;
             font-size: 16px;
+            height: 100%;
             line-height: 24px;
             letter-spacing: -0.01em;
+            padding: 8px 16px;
+            width: calc(100% - 118px);
 
             &:focus {
                 outline: none;
@@ -39,45 +36,45 @@
         }
 
         .button-primary {
-            width: 118px;
             border-radius: 0 $border-radius-medium $border-radius-medium 0;
+            width: 118px;
         }
     }
 
     .filter-tags {
+        align-items: center;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
 
         &__remove {
-            padding: 0 8px 0 0;
             border-right: 1px solid $neutrals-1100;
             display: block;
             margin-right: 8px;
+            padding: 0 8px 0 0;
 
             &__tag {
-                white-space: nowrap;
                 background-color: $primary-500 !important;
-                color: $neutrals-100 !important;
                 border: none;
+                color: $neutrals-100 !important;
                 outline: none;
                 transition: all $transition-time-short ease;
+                white-space: nowrap;
 
                 &:hover {
-                    cursor: pointer;
                     background-color: $primary-600 !important;
+                    cursor: pointer;
                 }
             }
         }
 
         &__tags {
-            //padding: 0 0 0 8px;
             display: inline-block;
-            width: auto;
             height: 24px;
             overflow-x: auto;
-            white-space: nowrap;
             overflow-y: hidden;
+            //padding: 0 0 0 8px;
+            white-space: nowrap;
+            width: auto;
 
             .tag {
                 border: none;
@@ -158,22 +155,22 @@
             height: 44px;
 
             .input {
-                width: calc(100% - 134px);
                 font-size: 20px;
                 line-height: 20px;
+                width: calc(100% - 134px);
             }
 
             .button-primary {
-                width: 134px;
                 border-radius: 0 $border-radius-medium $border-radius-medium 0;
+                width: 134px;
             }
         }
 
         .filter-tags {
             &__remove {
-                padding: 0 16px 0 0;
                 border-right: 1px solid $neutrals-500;
                 margin-right: 16px;
+                padding: 0 16px 0 0;
             }
 
             &__tags {
@@ -182,9 +179,9 @@
 
             .tag {
                 font-size: 16px;
+                font-weight: 500;
                 line-height: 16px;
                 padding: 12px 24px;
-                font-weight: 500;
             }
         }
     }

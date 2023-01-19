@@ -2,10 +2,10 @@
     text-align: center;
 
     &__img {
-        width: 80px;
-        height: 80px;
         border-radius: $border-radius-medium;
+        height: 80px;
         object-fit: cover;
+        width: 80px;
     }
 
     p {
@@ -17,8 +17,8 @@
 @media screen and (min-width: $desktop-3) {
     .employee {
         &__img {
-            width: 120px;
             height: 120px;
+            width: 120px;
         }
 
         h5 {

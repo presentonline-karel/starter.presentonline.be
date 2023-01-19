@@ -1,31 +1,31 @@
 .service {
-    padding: 24px;
+    background-color: $neutrals-200;
     border-radius: $border-radius-medium;
     border: 0.5px solid $neutrals-400;
     box-shadow: $card-shadow;
     margin-bottom: 16px;
-    background-color: $neutrals-200;
+    padding: 24px;
 
     &:last-child {
         margin-bottom: 0;
     }
 
     &__icon-container {
-        width: 50px;
-        height: 50px;
         background-color: $primary-500;
         border-radius: $border-radius-medium;
+        height: 50px;
         margin-bottom: 16px;
+        width: 50px;
 
         i {
+            color: $neutrals-100;
             font-size: 20px;
-            line-height: 20px;
-            width: 20px;
             height: 20px;
+            line-height: 20px;
+            left: 15px;
             position: relative;
             top: 15px;
-            left: 15px;
-            color: $neutrals-100;
+            width: 20px;
         }
     }
 

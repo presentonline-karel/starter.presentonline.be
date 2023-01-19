@@ -40,12 +40,12 @@
         }
 
         .scroll-down {
-            display: block;
+            animation: bounce 2s ease infinite;
             color: $primary-500;
+            display: block;
             font-size: 20px;
             line-height: 20px;
             position: absolute;
-            animation: bounce 2s ease infinite;
         }
 
         //SCROLL DOWN ICON - BOUNCE ANIMATION

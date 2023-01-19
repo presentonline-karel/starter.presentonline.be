@@ -14,15 +14,15 @@
             }
 
             .buttons {
-                display: flex;
-                justify-content: space-between;
                 align-items: center;
+                display: flex;
                 gap: 8px;
+                justify-content: space-between;
 
                 .button {
                     display: block;
-                    width: 100%;
                     text-align: center;
+                    width: 100%;
 
                     i {
                         font-size: 14px;
@@ -38,16 +38,16 @@
             }
 
             &__item {
-                display: flex;
-                justify-content: flex-start;
                 align-items: center;
+                display: flex;
                 gap: 32px;
+                justify-content: flex-start;
                 margin-bottom: 2px;
 
                 .day {
+                    color: $neutrals-1100;
                     font-weight: 600;
                     line-height: 20px;
-                    color: $neutrals-1100;
                     width: 78px;
                 }
 
@@ -71,8 +71,8 @@
                     
                     .button {
                         display: inline-block;
-                        width: initial;
                         text-align: initial;
+                        width: initial;
                     }
                 }
             }
@@ -84,14 +84,14 @@
 @media only screen and (min-width: $tablet-landscape) {
     .header-contact {
         &__content {
-            display: flex;
-            justify-content: flex-start;
             align-items: flex-start;
+            display: flex;
             gap: 236px;
+            justify-content: flex-start;
 
             &__text {
-                width: 40%;
                 max-width: 506px;
+                width: 40%;
             }
         }
     }

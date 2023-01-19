@@ -46,15 +46,15 @@
                         text-align: left;
 
                         .disclaimer, &.disclaimer {
+                            background-color: $info-100;
+                            border-radius: $border-radius-medium;
+                            color: $info-500;
                             display: inline;
                             font-weight: 500;
-                            background-color: $info-100;
-                            color: $info-500;
-                            border-radius: $border-radius-medium;
-                            padding: 8px !important;
-                            text-align: center;
                             font-size: 16px;
                             line-height: 20px;
+                            padding: 8px !important;
+                            text-align: center;
 
                             a {
                                 color: $info-500;
@@ -87,13 +87,13 @@
                     }
 
                     th {
-                        font-weight: 600;
                         color: $neutrals-1100;
+                        font-weight: 600;
                     }
 
                     td {
-                        font-weight: 400;
                         color: $neutrals-900;
+                        font-weight: 400;
                     }
                 }
             }
@@ -110,14 +110,11 @@
                     tr {
                         &.header-row {
                             th {
-                                padding: 24px 32px !important;
-                                //background-color: $neutrals-300;
-                                background-color: $primary-100;
-                                //border-top: 1px solid $neutrals-600;
-                                border-top: 1px solid $primary-200;
-                                //border-bottom: 1px solid $neutrals-600;
-                                border-bottom: 1px solid $primary-200;
                                 color: $primary-500;
+                                background-color: $primary-100;
+                                border-top: 1px solid $primary-200;
+                                border-bottom: 1px solid $primary-200;
+                                padding: 24px 32px !important;
     
                                 &:first-of-type {
                                     border-radius: 8px 0px 0px 8px;
@@ -179,13 +176,13 @@
                         }
         
                         th {
-                            font-weight: 600;
                             color: $neutrals-1100;
+                            font-weight: 600;
                         }
         
                         td {
-                            font-weight: 400;
                             color: $neutrals-900;
+                            font-weight: 400;
                         }
                     }
                 }

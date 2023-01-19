@@ -1,11 +1,11 @@
 /* ICONS IN BUTTONS */
 .button-primary, .button-secondary, .button-tertiary, .button-white {
     i {
+        //bottom: 1px;
         font-size: 12px;
         line-height: 12px;
-        transition: $transition-time-short;
         position: relative;
-        //bottom: 1px;
+        transition: $transition-time-short;
     }
 
     .anchor-first {

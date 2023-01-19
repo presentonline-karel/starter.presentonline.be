@@ -3,9 +3,9 @@ body {
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     scroll-behavior: smooth;
 
     &::selection {
@@ -21,9 +21,9 @@ html {
 
 html,
 body {
-    position: relative;
     max-width: 100%;
     overflow-x: hidden;
+    position: relative;
 }
 
 html {
@@ -32,9 +32,9 @@ html {
 
 body {
     background-color: $neutrals-100;
+    max-width: 100% !important;
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
-    max-width: 100% !important;
 }
 
 .stop-scrolling {
@@ -49,9 +49,9 @@ img {
 }
 
 a {
-    text-decoration: none;
     color: $neutrals-1000;
     display: inline-block;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer !important;
@@ -60,6 +60,6 @@ a {
 
 // Contactform
 .honeypot {
-    position: absolute;
     left: -9999px;
+    position: absolute;
 }

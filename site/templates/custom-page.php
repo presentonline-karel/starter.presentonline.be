@@ -46,7 +46,17 @@
 
 
     <!-- TABS -->
-    <?php snippet("blocks/tabs") ?>
+    <?php //snippet("blocks/tabs") ?>
+
+
+
+    <!-- IMAGE CAROUSEL -->
+    <?php //snippet("blocks/image-carousel") ?>
+
+
+
+    <!-- HERO OPENING HOURS -->
+    <?php snippet("blocks/heroOpeningHours") ?>
     
 
 

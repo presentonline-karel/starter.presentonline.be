@@ -1,11 +1,11 @@
 .cta {
     &__content {
-        padding: 48px 16px;
         background-color: $primary-100;
+        padding: 48px 16px;
 
         h2 {
-            margin-bottom: 24px;
             color: $neutrals-1000;
+            margin-bottom: 24px;
 
             span {
                 color: $primary-500;
@@ -13,22 +13,22 @@
         }
 
         .buttons {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
+            display: flex;
             gap: 8px;
+            justify-content: space-between;
 
             &.single-button {
                 .button {
-                    width: auto;
                     display: inline-block;
+                    width: auto;
                 }
             }
 
             .button {
                 display: block;
-                width: 100%;
                 text-align: center;
+                width: 100%;
             }
         }
     }
@@ -45,8 +45,8 @@
 
                 .button {
                     display: inline-block;
-                    width: initial;
                     text-align: initial;
+                    width: initial;
                 }
             }
         }
@@ -57,9 +57,9 @@
 @media only screen and (min-width: $tablet-landscape) {
     .cta {
         &__content {
+            align-items: center;
             display: flex;
             justify-content: space-between;
-            align-items: center;
 
             h2 {
                 margin-bottom: 0;
@@ -71,9 +71,9 @@
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .cta {
-        padding: 128px 96px;
         background-color: $neutrals-100 !important;
         border-radius: $border-radius-medium;
+        padding: 128px 96px;
 
         //CTA services custom page
         &.customBlock {
@@ -81,12 +81,12 @@
         }
 
         &__content {
-            padding: 48px;
-            width: 100%;
             border-radius: $border-radius-medium;
             box-shadow: $card-shadow;
             border: 0.5px solid $neutrals-400;
             background-color: $primary-100;
+            padding: 48px;
+            width: 100%;
 
             h2 {
                 margin-bottom: 0 !important;

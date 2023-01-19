@@ -45,12 +45,12 @@
             </div>
 
             <!-- Openinghours -->
-            <?php if ($page->openingHours()->isNotEmpty()) : ?>
+            <?php if ($site->openingHours()->isNotEmpty()) : ?>
                 <div class="header-contact__content__hours">
                     <h4>Openingsuren</h4>
 
                     <!-- openinghour -->
-                    <?php foreach ($page->openingHours()->toStructure() as $openinghour) : ?>
+                    <?php foreach ($site->openingHours()->toStructure() as $openinghour) : ?>
                         <div class="header-contact__content__hours__item">
                             <p class="day"><?= $openinghour->day() ?></p>
                             <p class="hour"><?= $openinghour->value() ?></p>

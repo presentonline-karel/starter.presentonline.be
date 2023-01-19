@@ -12,8 +12,8 @@
 
     .employees {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 24px 8px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -30,18 +30,18 @@
         padding: 96px 48px;
 
         .team {
-            display: flex;
-            justify-content: space-between;
             align-items: flex-start;
+            display: flex;
             gap: 72px;
+            justify-content: space-between;
 
             &__text {
                 width: 33%;
             }
 
             .employees {
-                width: 66%;
                 gap: 48px 8px;
+                width: 66%;
             }
         }
     }

@@ -165,6 +165,34 @@ tabs:
                   twitter: Twitter
               url:
                 type: url
+          line-e:
+            type: line
+
+          headerOpeninghours:
+            label: Openingsuren
+            type: headline
+            width: 3/4
+          headerOpeninghoursSwitch:
+            extends: fields/display-switch
+            width: 1/4
+          openingHours:
+            label: Openingsuren
+            type: structure
+            max: 8
+            columns:
+              day:
+                width: 3/8
+              value:
+                width: 5/8
+            fields:
+              day:
+                label: Dag
+                type: text
+                required: true
+              value:
+                label: Uren
+                type: text
+                required: true
           
 
 

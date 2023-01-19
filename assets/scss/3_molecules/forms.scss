@@ -3,26 +3,25 @@
         margin-bottom: 16px;
 
         &__label {
+            color: $neutrals-900;
+            display: block;
             font-family: $title-font;
             font-size: 14px;
-            line-height: 14px;
             font-weight: 400;
-            color: $neutrals-900;
+            line-height: 14px;
             letter-spacing: -0.01em;
             margin-bottom: 8px;
-            display: block;
         }
 
         .input {
-            font-family: $paragraph-font;
-            font-size: 16px;
-            line-height: 16px;
-            font-weight: 400;
-            letter-spacing: -0.01em;
-
-            padding: 16px;
             border-radius: $border-radius-medium;
             border: 1px solid $neutrals-600;
+            font-family: $paragraph-font;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            line-height: 16px;
+            padding: 16px;
             width: 100%;
 
             &::placeholder {

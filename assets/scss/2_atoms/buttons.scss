@@ -3,26 +3,22 @@
     &-primary,
     &-secondary,
     &-white {
-        display: inline-block;
-        margin: 0;
-        padding: 12px 24px;
-
+        appearance: none;
         border-radius: $border-radius-medium;
         border: none;
-
+        display: inline-block;
         font-family: $title-font;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
-        text-decoration: none;
         letter-spacing: -1%;
-
+        margin: 0;
+        padding: 12px 24px;
+        text-decoration: none;
         transition: all $transition-time-short;
-
         -webkit-appearance: none;
         -moz-appearance: none;
-        appearance: none;
     }
 
     // PRIMARY BUTTON
@@ -31,8 +27,8 @@
         color: $neutrals-100;
 
         &:hover {
-            cursor: pointer;
             background-color: $primary-600;
+            cursor: pointer;
         }
     }
 
@@ -42,22 +38,22 @@
         color: $primary-500;
 
         &:hover {
-            cursor: pointer;
             background-color: $primary-200;
+            cursor: pointer;
         }
     }
 
     &-tertiary {
         color: $neutrals-1000;
+        display: inline-block;
         font-family: $title-font;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
-        text-decoration: none;
         letter-spacing: -1%;
+        text-decoration: none;
         transition: all $transition-time-short;
-        display: inline-block;
     }
 
     // WHITE BUTTON
@@ -66,8 +62,8 @@
         color: $primary-500;
 
         &:hover {
-            cursor: pointer;
             background-color: $primary-100;
+            cursor: pointer;
         }
     }
 }
@@ -77,8 +73,8 @@
     .button {
         &-primary, &-secondary, &-white {
             font-size: 20px;
-            line-height: 20px;
             font-weight: 500;
+            line-height: 20px;
         }
 
         //PRIMARY BUTTON PRIMARY-500

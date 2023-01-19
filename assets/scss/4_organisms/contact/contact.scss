@@ -1,7 +1,7 @@
 .contact {
     &__info {
-        padding: 48px 16px;
         background-color: $neutrals-200;
+        padding: 48px 16px;
 
         h2 {
             margin-bottom: 16px;
@@ -15,8 +15,8 @@
             margin-bottom: 32px;
 
             .info-item {
-                display: block;
                 color: $neutrals-1100;
+                display: block;
                 line-height: 16px;
                 margin-bottom: 8px;
 
@@ -67,20 +67,20 @@
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .contact {
-        display: flex;
-        justify-content: center;
         align-items: flex-start;
         background-color: $primary-500;
+        display: flex;
+        justify-content: center;
 
         &__info,
         &__form-section {
-            padding: 96px 48px;
             height: 100%;
+            padding: 96px 48px;
         }
 
         &__info {
-            width: 43%;
             background-color: $primary-500;
+            width: 43%;
 
             h2, p {
                 color: $neutrals-100;
@@ -108,8 +108,8 @@
         }
 
         &__form-section {
-            width: 57%;
             background-color: $neutrals-200;
+            width: 57%;
 
             h2 {
                 display: none;
@@ -117,10 +117,10 @@
 
             .contact-form {
                 .flex-desktop {
-                    display: flex;
-                    justify-content: space-between;
                     align-items: flex-start;
+                    display: flex;
                     gap: 24px;
+                    justify-content: space-between;
 
                     .input-group {
                         width: 100%;

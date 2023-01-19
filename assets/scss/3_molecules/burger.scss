@@ -2,10 +2,9 @@
 
     //GENERAL STYLES
     .burger {
-        z-index: 100;
         position: absolute;
         right: 16px;
-        //top: 28px;
+        z-index: 100;
 
         &:hover {
             cursor: pointer;
@@ -13,12 +12,12 @@
 
         //BURGER LAYOUT
         .burger-line {
-            width: 10px;
-            height: 3px;
             background-color: $neutrals-1100;
+            height: 3px;
             margin-top: 3px;
-            transition: all $transition-time-short ease;
             position: relative;
+            transition: all $transition-time-short ease;
+            width: 10px;
             z-index: 101;
         }
 
@@ -40,9 +39,9 @@
             z-index: 100;
 
             .line1 {
-                transform: rotate(-45deg) translate(-5px, 6px);
                 bottom: 3px;
                 right: 1px;
+                transform: rotate(-45deg) translate(-5px, 6px);
             }
 
             .line2 {
@@ -50,16 +49,16 @@
             }
 
             .line3 {
+                right: 1px;
                 transform: rotate(45deg) translate(-5px, -6px);
                 top: 7px;
-                right: 1px;
             }
 
             .burger-line {
                 background-color: $neutrals-100;
-                width: 25px;
                 height: 3px;
                 position: relative;
+                width: 25px;
             }
         }
     }
@@ -78,9 +77,9 @@
 @media only screen and (min-width: $tablet-landscape) {
     .nav {
         .burger {
-            padding: 11px 8px;
             background-color: $neutrals-100;
             border-radius: $border-radius-medium;
+            padding: 11px 8px;
             top: 24px;
 
             &.toggle {

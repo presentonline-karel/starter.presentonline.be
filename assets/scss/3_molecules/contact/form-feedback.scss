@@ -4,12 +4,12 @@
 
     i {
         font-size: 16px;
-        width: 16px;
         height: 16px;
-        visibility: hidden;
         position: absolute;
-        top: 40px;
         right: 16px;
+        top: 40px;
+        visibility: hidden;
+        width: 16px;
 
         &.fa-check-circle {
             font-size: 18px;
@@ -22,8 +22,8 @@
         }
 
         i.fa-check-circle {
-            visibility: visible;
             color: $success-500;
+            visibility: visible;
         }
     }
 
@@ -36,8 +36,8 @@
         }
 
         i.fa-exclamation-triangle {
-            visibility: visible;
             color: $error-500;
+            visibility: visible;
         }
 
         small {
@@ -52,34 +52,34 @@
     }
 
     small {
-        font-family: $paragraph-font;
-        visibility: hidden;
-        position: absolute;
         bottom: 8px;
+        font-family: $paragraph-font;
         left: 0px;
+        position: absolute;
+        visibility: hidden;
     }
 }
 
 //FORM FEEDBACK AFTER SUBMIT
 .alert {
-    position: fixed;
-    z-index: 1;
-    left: 16px;
-    bottom: 24px;
-    width: calc(100vw - 32px);
-    padding: 12px 24px;
-    border-radius: $border-radius-small;
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
+    bottom: 24px;
+    border-radius: $border-radius-small;
+    display: flex;
     gap: 8px;
+    justify-content: flex-start;
+    left: 16px;
+    margin-bottom: 16px;
+    padding: 12px 24px;
+    position: fixed;
+    width: calc(100vw - 32px);
+    z-index: 1;
 
     i {
         display: block;
-        width: 18px;
-        line-height: 26px;
         height: 26px;
+        line-height: 26px;
+        width: 18px;
     }
 
     p {
@@ -108,17 +108,17 @@
 /* TABLET PORTRAIT - 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .alert {
-        width: calc(100vw - 96px);
         left: 48px;
+        width: calc(100vw - 96px);
     }
 }
 
 /* DESKTOP - 1280PX */
 @media screen and (min-width: $desktop-1) {
     .alert {
-        width: 1248px;
+        left: calc((100vw - 1248px) / 2);
         max-width: 1248px;
         margin-bottom: 24px;
-        left: calc((100vw - 1248px) / 2);
+        width: 1248px;
     }
 }

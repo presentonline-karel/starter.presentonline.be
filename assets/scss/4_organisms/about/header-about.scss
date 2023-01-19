@@ -10,29 +10,29 @@
 @media only screen and (min-width: $tablet-landscape) {
     .header-about {
         .header__content {
+            align-items: center;
             display: flex;
             flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: center;
             gap: 72px;
             height: calc(100vh - 80px);
-            padding: 48px 48px 96px 48px;
+            justify-content: space-between;
             max-height: 894px;
+            padding: 48px 48px 96px 48px;
 
             &__text {
-                text-align: left;
                 padding: 0;
+                text-align: left;
                 width: calc(100% - 40%);
             }
 
             .header-about__content__image {
+                border-radius: $border-radius-medium;
                 display: block;
-                max-width: 505px;
-                width: 40%;
                 height: 100%;
+                max-width: 505px;
                 max-height: 678px;
                 object-fit: cover;
-                border-radius: $border-radius-medium;
+                width: 40%;
             }
         }
 
@@ -41,10 +41,10 @@
         }
 
         .scroll-down {
+            bottom: 48px;
+            left: 50%;
             position: absolute;
             transform: translate(-50%, 0%);
-            left: 50%;
-            bottom: 48px;
         }
     }
 }
@@ -74,10 +74,10 @@
     .header-about {
         .header__content {
             height: calc(100vh - 130px);
-            padding: 88px 0 128px;
-            padding-right: 106px;
             margin: 0 auto;
             max-width: 1248px;
+            padding: 88px 0 128px;
+            padding-right: 106px;
         }
     }
 }
