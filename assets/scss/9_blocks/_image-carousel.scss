@@ -14,16 +14,16 @@
 
     .image-carousel {
         &__big-image {
-            position: relative;
             margin-bottom: 12px;
+            position: relative;
 
             &__img {
                 aspect-ratio: 3/2;
                 border-radius: $border-radius-medium;
                 height: auto;
                 object-fit: cover;
-                width: 100%;
                 transition: all $transition-time-short ease-in-out;
+                width: 100%;
             }
 
             .arrow-aria {

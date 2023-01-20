@@ -2,17 +2,23 @@
     &-pagination {
         position: initial !important;
 
+        bottom: 0 !important;
+        left: 0 !important;
+        margin: 0 auto;
+        position: relative !important;
+        transform: initial !important;
+
         &-bullet {
-            width: 7px !important;
-            height: 7px !important;
             background: $neutrals-700 !important;
             border-radius: $border-radius-small !important;
-            transition: all $transition-time-short !important;
+            height: 7px !important;
             margin: 0 2px !important;
+            transition: all $transition-time-short !important;
+            width: 7px !important;
 
             &-active {
-                width: 21px !important;
                 background: $primary-500 !important;
+                width: 21px !important;
             }
         }
     }

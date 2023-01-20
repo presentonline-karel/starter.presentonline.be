@@ -13,31 +13,31 @@
 
     .offices {
         .swiper-wrapper {
-            overflow-y: visible;
             height: auto !important;
             margin-bottom: 24px;
+            overflow-y: visible;
         }
 
         .office {
+            background-color: $neutrals-100;
             border-radius: $border-radius-medium;
             border: $border-card-thin;
             box-shadow: $card-shadow;
             padding: 24px;
-            background-color: $neutrals-100;
             position: relative;
 
             &.headOffice {
                 border: 2px solid $primary-500;
 
                 .headOffice__label {
-                    position: absolute;
-                    top: 31px;
-                    right: 24px;
+                    color: $primary-500;
                     font-family: $title-font;
                     font-size: 16px;
-                    line-height: 24px;
-                    color: $primary-500;
                     font-weight: 500;
+                    line-height: 24px;
+                    position: absolute;
+                    right: 24px;
+                    top: 31px;
                 }
             }
 
@@ -58,19 +58,19 @@
                     }
 
                     i {
-                        font-size: 16px;
                         color: $primary-500;
-                        width: 16px;
+                        font-size: 16px;
                         height: 16px;
                         line-height: 22px;
+                        width: 16px;
                     }
 
                     &__text {
+                        color: $neutrals-900;
                         display: block;
+                        font-family: $paragraph-font;
                         font-size: 16px;
                         line-height: 22px;
-                        font-family: $paragraph-font;
-                        color: $neutrals-900;
                     }
                 }
             }
@@ -83,11 +83,11 @@
         }
 
         .swiper-pagination {
+            bottom: 0px;
+            left: 0 !important;
             margin: 0 auto;
             position: relative !important;
-            left: 0 !important;
             transform: initial !important;
-            bottom: 0px;
 
             &-bullet {
                 background: $neutrals-900 !important;
@@ -109,8 +109,8 @@
             }
     
             &__intro {
-                text-align: center;
                 margin-bottom: 48px;
+                text-align: center;
             }
         }
     }
@@ -120,16 +120,16 @@
 @media screen and (min-width: $desktop-1) {
     .offices-section {
         &__header {
-            display: flex;
-            justify-content: space-between;
             align-items: flex-start;
+            display: flex;
             gap: 24px;
+            justify-content: space-between;
             margin-bottom: 72px;
 
             &__title, &__intro {
-                text-align: left;
-                margin-bottom: 0;
                 flex: 1 0;
+                margin-bottom: 0;
+                text-align: left;
             }
         }
 

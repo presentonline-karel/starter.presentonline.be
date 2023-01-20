@@ -7,8 +7,8 @@
                 padding: 28px 16px 48px 16px;
 
                 h1 {
-                    text-align: center;
                     margin-bottom: 48px;
+                    text-align: center;
                 }
 
                 .pricing-tables {
@@ -16,9 +16,9 @@
                         padding: 0;
         
                         .accordion {
-                            padding: 0;
                             border-bottom: none;
                             margin-bottom: 32px;
+                            padding: 0;
         
                             &:last-of-type {
                                 margin-bottom: 0;
@@ -31,17 +31,17 @@
                             }
         
                             &__header{
-                                margin-bottom: 0;
                                 background-color: $primary-100;
                                 border-top: 1px solid $primary-200;
                                 border-bottom: 1px solid $primary-200;
                                 border-radius: 8px;
+                                margin-bottom: 0;
                                 padding: 24px 16px;
         
                                 .title {
+                                    color: $primary-500;
                                     font-size: 24px;
                                     line-height: 32px;
-                                    color: $primary-500;
                                 }
                             }
                         }
@@ -114,8 +114,8 @@
             .prices {
                 .content-container {
                     max-width: 824px;
-                    padding: 88px 0px 128px 0px;
                     margin: 0 auto;
+                    padding: 88px 0px 128px 0px;
                 }
             }
         }

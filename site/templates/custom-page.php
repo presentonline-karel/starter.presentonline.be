@@ -26,7 +26,7 @@
 
 
     <!-- STEPS -->
-    <?php //snippet("blocks/steps") ?>
+    <?php snippet("blocks/steps") ?>
 
 
 
@@ -61,7 +61,7 @@
 
 
     <!-- HERO OPENING HOURS -->
-    <?php //snippet("blocks/blog-articles") ?>
+    <?php snippet("blocks/blog-articles") ?>
 
 
 
@@ -71,7 +71,7 @@
 
 
     <!-- TEXT TWO COLUMNS -->
-    <?php snippet("blocks/textTwoColumns") ?>
+    <?php //snippet("blocks/textTwoColumns") ?>
     
 
 

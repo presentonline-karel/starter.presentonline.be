@@ -6,8 +6,8 @@
         border: $border-card-thin;
         border-radius: $border-radius-medium;
         box-shadow: $card-shadow;
-        padding: 40px 16px;
         margin-bottom: 16px;
+        padding: 40px 16px;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -21,22 +21,22 @@
         }
 
         .buttons {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
+            display: flex;
             gap: 8px;
+            justify-content: space-between;
 
             &.single-button {
                 .button {
-                    width: auto;
                     display: inline-block;
+                    width: auto;
                 }
             }
 
             .button {
                 display: block;
-                width: 100%;
                 text-align: center;
+                width: 100%;
             }
         }
     }
@@ -53,8 +53,8 @@
 
                 .button {
                     display: inline-block;
-                    width: initial;
                     text-align: initial;
+                    width: initial;
                 }
             }
         }
@@ -66,8 +66,8 @@
     .cta-double {
         &__container {
             display: flex;
-            justify-content: space-between;
             gap: 24px;
+            justify-content: space-between;
         }
 
         &__cta {
