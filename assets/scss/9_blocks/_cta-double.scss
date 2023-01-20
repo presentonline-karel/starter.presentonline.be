@@ -3,7 +3,7 @@
 
     &__cta {
         background-color: $primary-100;
-        border: 0.5px solid $neutrals-400;
+        border: $border-card-thin;
         border-radius: $border-radius-medium;
         box-shadow: $card-shadow;
         padding: 40px 16px;

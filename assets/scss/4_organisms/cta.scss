@@ -83,7 +83,7 @@
         &__content {
             border-radius: $border-radius-medium;
             box-shadow: $card-shadow;
-            border: 0.5px solid $neutrals-400;
+            border: $border-card-thin;
             background-color: $primary-100;
             padding: 48px;
             width: 100%;

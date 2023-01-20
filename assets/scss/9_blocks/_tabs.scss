@@ -43,7 +43,7 @@
 
             .tab-content {
                 background-color: $neutrals-200;
-                border: 0.5px solid $neutrals-400;
+                border: $border-card-thin;
                 border-radius: $border-radius-medium;
                 box-shadow: $card-shadow; // Not visible because overflow: hidden on parent.
                 display: block;

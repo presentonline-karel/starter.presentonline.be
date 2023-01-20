@@ -20,7 +20,7 @@
 
         .office {
             border-radius: $border-radius-medium;
-            border: 0.5px solid $neutrals-400;
+            border: $border-card-thin;
             box-shadow: $card-shadow;
             padding: 24px;
             background-color: $neutrals-100;

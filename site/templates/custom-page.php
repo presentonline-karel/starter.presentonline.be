@@ -56,7 +56,22 @@
 
 
     <!-- HERO OPENING HOURS -->
-    <?php snippet("blocks/heroOpeningHours") ?>
+    <?php //snippet("blocks/heroOpeningHours") ?>
+
+
+
+    <!-- HERO OPENING HOURS -->
+    <?php //snippet("blocks/blog-articles") ?>
+
+
+
+    <!-- HERO OPENING HOURS -->
+    <?php //snippet("blocks/pricing-plans") ?>
+
+
+
+    <!-- TEXT TWO COLUMNS -->
+    <?php snippet("blocks/textTwoColumns") ?>
     
 
 

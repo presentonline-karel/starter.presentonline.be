@@ -1,7 +1,7 @@
 .service {
     background-color: $neutrals-200;
     border-radius: $border-radius-medium;
-    border: 0.5px solid $neutrals-400;
+    border: $border-card-thin;
     box-shadow: $card-shadow;
     margin-bottom: 16px;
     padding: 24px;

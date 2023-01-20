@@ -1,0 +1,193 @@
+.pricing-plan {
+    align-items: flex-start;
+    background-color: $neutrals-200;
+    border-radius: $border-radius-medium;
+    border: 2px solid $neutrals-200;
+    display: flex;
+    flex-direction: column;
+    height: inherit !important;
+    justify-content: space-between;
+    padding-bottom: 24px;
+
+    &.discount {
+        border: 2px solid $success-500;
+    }
+
+    &.most-popular {
+        border: 2px solid $info-500;
+    }
+
+    &-header {
+        background-color: $neutrals-100;
+        border-radius: $border-radius-medium $border-radius-medium 0 0;
+        border-bottom: $border-card-thin;
+        display: block;
+        padding: 32px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        .tag {
+            font-family: $title-font;
+            font-size: 14px;
+            line-height: 14px;
+
+            &.discount,
+            &.most-popular {
+                color: $neutrals-100;
+                font-weight: 600;
+                left: 50%;
+                position: absolute;
+                top: -12px;
+                transform: translate(-50%, 0);
+            }
+
+            &.discount {
+                background-color: $success-500;
+            }
+
+            &.most-popular {
+                background-color: $info-500;
+            }
+
+            &.comparison-price {
+                background-color: $neutrals-400;
+                color: $neutrals-1100;
+                font-weight: 400;
+            }
+        }
+
+        .pricing-plan {
+            &__title {
+                font-weight: 500;
+                margin-bottom: 24px;
+            }
+
+            &__pricing {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 16px;
+
+                span,
+                .contact-cta {
+                    display: block;
+                    font-family: $title-font;
+                }
+
+                .euro-sign {
+                    color: $neutrals-1100;
+                    font-size: 32px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    margin-right: 8px;
+                }
+
+                .price {
+                    color: $neutrals-1100;
+                    font-size: 48px;
+                    font-weight: 500;
+                    line-height: 48px;
+                    margin-right: 12px;
+                }
+
+                .period {
+                    color: $neutrals-800;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 32px;
+                }
+
+                .contact-cta {
+                    font-size: 32px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &-body {
+        background-color: $neutrals-200;
+        margin-bottom: 0px;
+        padding: 24px 24px 32px;
+
+        .pricing-plan {
+            &__description {
+                margin-bottom: 24px;
+            }
+
+            &__included-title {
+                font-weight: 500;
+                margin-bottom: 16px;
+            }
+
+            &__features {
+                list-style-type: none;
+
+                .feature {
+                    color: $neutrals-900;
+                    display: flex;
+                    font-family: $paragraph-font;
+                    font-size: 16px;
+                    gap: 8px;
+                    line-height: 24px;
+                    margin-bottom: 8px;
+
+                    i {
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .button {
+        display: block;
+        left: 24px;
+        position: relative;
+        text-align: center;
+        width: calc(100% - 48px);
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .pricing-plan {
+        &-header {
+            min-height: 209px; // !!! Actually only when there's at least one plan with a discount -> Check with PHP and inline styling
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .pricing-plan {
+        flex: 1 1 0px;
+        width: 100% !important;
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .pricing-plan {
+        &-header {
+            .pricing-plan {
+                &__title {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+        &-body {
+            .pricing-plan {
+                &__included-title {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}

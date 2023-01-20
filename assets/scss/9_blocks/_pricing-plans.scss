@@ -1,0 +1,51 @@
+.pricing-plans-section {
+    background-color: $neutrals-900;
+
+    .pricing-plans-header {
+        margin-bottom: 40px;
+
+        h2 {
+            color: $neutrals-100;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $neutrals-400;
+        }
+    }
+
+    .pricing-plans {
+        padding-top: 12px;
+
+        .swiper-wrapper {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .pricing-plans-section {
+        .pricing-plans-header {
+            padding: 0 130px;
+            text-align: center;
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .pricing-plans-section {
+        .pricing-plans-header {
+            margin: 0 auto 72px;
+            max-width: 612px;
+            padding: 0;
+        }
+
+        .pricing-plans .swiper-wrapper {
+            display: flex;
+            gap: 24px;
+            justify-content: space-between;
+        }
+    }
+}

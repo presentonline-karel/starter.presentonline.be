@@ -10,7 +10,7 @@ article {
     border-radius: $border-radius-medium;
     background-color: $neutrals-200;
     box-shadow: $card-shadow;
-    border: 0.5px solid $neutrals-400;
+    border: $border-card-thin;
     display: flex;
     flex-direction: column;
     height: 100%;
