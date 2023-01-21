@@ -1,0 +1,146 @@
+.team-grouped-section {
+    background-color: $neutrals-100;
+
+    .team-grouped__header {
+        margin-bottom: 32px;
+
+        h2 {
+            margin-bottom: 16px;
+        }
+    }
+
+    .team-group {
+        margin-bottom: 32px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            margin-bottom: 16px;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px 8px;
+
+            .member__img {
+                aspect-ratio: 3/2;
+                border-radius: $border-radius-medium;
+                height: auto;
+                margin-bottom: 8px;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* TABLET PORTRAIT - 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .team-grouped-section {
+        .team-group {
+            .team-members {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .team-grouped-section {
+        .team-grouped {
+            &-container {
+                display: flex;
+                gap: 72px;
+                height: auto;
+                justify-content: space-between;
+                overflow: visible;
+            }
+
+            &__header {
+                align-self: flex-start;
+                left: 0;
+                margin-bottom: 0;
+                position: sticky;
+                top: 96px;
+                width: 328px;
+            }
+
+            &__teams {
+                width: calc(100% - 328px - 72px); // 328px is header width, 72px gap
+            }
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .team-grouped-section {
+        .team-grouped {
+            &-container {
+                gap: 130px;
+            }
+
+            &__header {
+                top: 128px;
+                width: 400px;
+            }
+
+            &__teams {
+                width: calc(100% - 400px - 130px); // 400px is header width, 130px gap
+
+                .team-group {
+                    margin-bottom: 40px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+            
+                    h4 {
+                        margin-bottom: 32px;
+                    }
+            
+                    .team-members {
+                        gap: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .team-grouped-section {
+        .team-grouped {
+            &-container {
+                padding-right: 106px;
+            }
+
+            &__header {
+                h2 {
+                    font-size: 40px;
+                    line-height: 44px;
+                }
+            }
+
+            &__teams {
+                .team-group {
+                    h4 {
+                        font-size: 32px;
+                        line-height: 36px;
+                    }
+
+                    .member__info h5 {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
