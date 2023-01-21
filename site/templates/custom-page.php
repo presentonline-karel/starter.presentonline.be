@@ -81,7 +81,7 @@
 
 
     <!-- ZIGZAG -->
-    <?php snippet("blocks/zig-zag") ?>
+    <?php //snippet("blocks/zig-zag") ?>
     
 
 

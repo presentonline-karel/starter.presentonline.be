@@ -55,7 +55,6 @@
             }
 
             .burger-line {
-                background-color: $neutrals-100;
                 height: 3px;
                 position: relative;
                 width: 25px;
@@ -84,6 +83,7 @@
 
             &.toggle {
                 background-color: $primary-500;
+                padding: 11px 8px 16px;
 
                 .burger-line {
                     background-color: $neutrals-100;
