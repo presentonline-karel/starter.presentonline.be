@@ -10,7 +10,7 @@
                 <p><?= $heroNoImageContent->heroIntro() ?></p>
 
                 <?php if ($heroNoImageContent->heroButtons()->isNotEmpty()) : ?>
-                    <div class="buttons <?php if(count($heroNoImageContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                    <div class="buttons <?php if(count($heroNoImageContent->heroButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                         <?php foreach ($heroNoImageContent->heroButtons()->toStructure() as $button) : ?>
                             <?php snippet("components/button", ["button" => $button]) ?>
                         <?php endforeach; ?>

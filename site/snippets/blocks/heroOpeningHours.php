@@ -1,4 +1,5 @@
-<!-- HEADER CONTACT -->
+<?php isset($block) ? $heroOpeningHoursContent = $block : $heroOpeningHoursContent = $page; ?>
+
 <header class="header header-contact">
 
     <!-- ERROR/SUCCESS MESSAGE - CONTACT FORM -->
@@ -18,25 +19,25 @@
 
 
 
-    <!-- NAV -->
+    <!-- Nav -->
     <?php snippet("general/nav") ?>
 
-    <!-- HEADER CONTACT - CONTENT -->
+
+
     <div class="header-contact__content">
+
+        <!-- Text + cta -->
         <div class="header-contact__content__text">
-            <h1>Get in touch</h1>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de.</p>
+            <h1><?= $heroOpeningHoursContent->heroTitle() ?></h1>
+            <p><?= $heroOpeningHoursContent->heroIntro() ?></p>
 
-            <!-- Hero buttons -->
-            <?php /*if ($page->heroButtons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($page->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
-
-                    <!-- button -->
-                    <?php foreach ($page->heroButtons()->toStructure() as $button) : ?>
+            <?php if ($heroOpeningHoursContent->heroButtons()->isNotEmpty()) : ?>
+                <div class="buttons <?php if (count($heroOpeningHoursContent->heroButtons()->toStructure()) == 1) { echo ("single-button"); } ?>">
+                    <?php foreach ($heroOpeningHoursContent->heroButtons()->toStructure() as $button) : ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
-            <?php endif;*/ ?>
+            <?php endif; ?>
         </div>
 
         <!-- Openinghours -->
@@ -44,7 +45,6 @@
             <div class="header-contact__content__hours">
                 <h4>Openingsuren</h4>
 
-                <!-- openinghour -->
                 <?php foreach ($site->openingHours()->toStructure() as $openinghour) : ?>
                     <div class="header-contact__content__hours__item">
                         <p class="day"><?= $openinghour->day() ?></p>

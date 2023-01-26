@@ -28,6 +28,26 @@
     }
 }
 
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .blog-articles-section {
+        .blog-articles {
+            .swiper-wrapper {
+                .article-searchable {
+                    height: inherit !important;
+
+                    .article {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .blog-articles-section {
@@ -53,7 +73,6 @@
             .swiper-wrapper {
                 display: flex;
                 gap: 16px;
-                height: auto !important;
                 justify-content: space-between;
                 margin-bottom: 0px;
                 overflow: visible;

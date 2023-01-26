@@ -20,11 +20,6 @@
 
 
 
-    <!-- USP-BAR -->
-    <?php //snippet("blocks/usp-bar") ?>
-
-
-
     <!-- STEPS -->
     <?php //snippet("blocks/steps") ?>
 
@@ -57,11 +52,6 @@
 
     <!-- HERO OPENING HOURS -->
     <?php //snippet("blocks/heroOpeningHours") ?>
-
-
-
-    <!-- HERO OPENING HOURS -->
-    <?php //snippet("blocks/blog-articles") ?>
 
 
 

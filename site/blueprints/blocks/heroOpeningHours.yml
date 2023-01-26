@@ -1,0 +1,9 @@
+name: Hero opening hours
+icon: clock
+label: "| {{ herotitle }}"
+fields:
+  heroOpeningHours:
+    extends: fields/heroNoImage
+    fields:
+      heroHeadline:
+        numbered: false

@@ -1,0 +1,22 @@
+type: group
+fields:
+  carouselHeadline:
+    label: Image carousel
+    type: headline
+  carouselTitle:
+    label: Titel
+    type: text
+    required: true
+  carouselImages:
+    label: Afbeeldingen
+    type: files
+    required: true
+    layout: cards
+    image:
+      cover: true
+      ratio: 3/2
+  carouselCta:
+    label: CTA button
+    extends: fields/button
+    fields:
+      max: 1

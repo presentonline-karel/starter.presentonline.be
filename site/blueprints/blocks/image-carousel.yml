@@ -1,0 +1,6 @@
+name: Image carousel
+icon: file-image
+label: "| Carousel with images"
+fields:
+  imageCarousel:
+    extends: fields/image-carousel

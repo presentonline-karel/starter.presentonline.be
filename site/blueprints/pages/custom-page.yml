@@ -38,6 +38,7 @@ tabs:
               - heroBigImage
               - heroDefault
               - heroNoImage
+              - heroOpeningHours
           line-a:
             type: line
           customPageContentHeadline:
@@ -63,7 +64,9 @@ tabs:
                   - maps
                   - centeredContent
                   - contact
-                  - photoGallery
+                  - usp-bar
+                  - image-carousel
+                  - blog-articles
               text:
                 label: Text
                 type: group

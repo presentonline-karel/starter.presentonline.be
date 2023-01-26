@@ -9,7 +9,6 @@ const imageCarousel = () => {
         for (let j = 0; j < thumbnails.length; j++) {
             if(thumbnails[j].src == bigImage.src) {
                 thumbnails[j].classList.add("active");
-                console.log(j);
             } else {
                 thumbnails[j].classList.remove("active");
             }

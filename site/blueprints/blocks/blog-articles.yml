@@ -1,0 +1,6 @@
+name: Blog artikelen
+icon: page
+label: "| Blog artikelen"
+fields:
+  blogArticles:
+    extends: fields/blog-articles
