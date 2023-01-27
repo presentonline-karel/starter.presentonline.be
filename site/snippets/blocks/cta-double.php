@@ -1,29 +1,32 @@
+<?php isset($block) ? $ctaDoubleContent = $block : $ctaDoubleContent = $page; ?>
+
 <section class="cta-double section fade-section">
     <div class="cta-double__container content-container-l content-container">
-        <div class="cta-double__cta">
-            <h2>Get to know our company and reach out?</h2>
-            <h2 class="colored">Use the buttons below.</h2>
 
-            <?php /*if ($block->buttons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($block->buttons()->toBlocks()) == 1) { echo("single-button"); } ?>">
-                    <?php foreach ($block->buttons()->toBlocks() as $button): ?>
+        <!-- CTA1 -->
+        <div class="cta-double__cta">
+            <h2><?= $ctaDoubleContent->firstCtaTitle() ?><br> <span><?= $ctaDoubleContent->firstCtaTitleSpan() ?></span></h2>
+
+            <?php if ($ctaDoubleContent->firstCtaButtons()->isNotEmpty()) : ?>
+                <div class="buttons <?php if(count($ctaDoubleContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                    <?php foreach ($ctaDoubleContent->firstCtaButtons()->toStructure() as $button) : ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
-            <?php endif;*/ ?>
+            <?php endif; ?>
         </div>
 
+        <!-- CTA2 -->
         <div class="cta-double__cta">
-            <h2>Get to know our company and reach out?</h2>
-            <h2 class="colored">Use the buttons below.</h2>
+            <h2><?= $ctaDoubleContent->secondCtaTitle() ?><br> <span><?= $ctaDoubleContent->secondCtaTitleSpan() ?></span></h2>
 
-            <?php /*if ($block->buttons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($block->buttons()->toBlocks()) == 1) { echo("single-button"); } ?>">
-                    <?php foreach ($block->buttons()->toBlocks() as $button): ?>
+            <?php if ($ctaDoubleContent->secondCtaButtons()->isNotEmpty()) : ?>
+                <div class="buttons <?php if(count($ctaDoubleContent->secondCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                    <?php foreach ($ctaDoubleContent->secondCtaButtons()->toStructure() as $button) : ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
-            <?php endif;*/ ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>

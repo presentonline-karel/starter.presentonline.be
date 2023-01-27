@@ -14,9 +14,10 @@
         }
 
         h2 {
-            &.colored {
+            margin-bottom: 24px;
+
+            span {
                 color: $primary-500;
-                margin-bottom: 24px;
             }
         }
 
@@ -71,11 +72,12 @@
         }
 
         &__cta {
+            display: flex;
+            flex: 0 0 1;
+            flex-direction: column;
+            justify-content: space-between;
             margin-bottom: 0;
-
-            h2.colored {
-                margin-top: 8px;
-            }
+            width: 100%;
         }
     }
 }

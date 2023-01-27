@@ -1,62 +1,42 @@
+<?php isset($block) ? $teamGroupedContent = $block : $teamGroupedContent = $page; ?>
+
 <section class="team-grouped-section section fade-section">
     <div class="team-grouped-container content-container-l content-container">
         <div class="team-grouped__header">
-            <h2>Grouped team section</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
+            <h2><?= $teamGroupedContent->teamGroupedTitle() ?></h2>
+            <p><?= $teamGroupedContent->teamGroupedParagraph() ?></p>
         </div>
 
-        <div class="team-grouped__teams">
-            <div class="team-group">
-                <h4>The leadership</h4>
+        <?php if($teamGroupedContent->teams()->isNotEmpty()): ?>
+            <div class="team-grouped__teams">
 
-                <div class="team-members">
-                    <div class="member">
-                        <img class="member__img" src="../../../assets/img/test-image.jpg" alt="member__img" />
-                        <div class="member__info">
-                            <h5>Karel Decoene</h5>
-                            <p>Founder</p>
-                        </div>
-                    </div>
+                <?php foreach($teamGroupedContent->teams()->toStructure() as $team): ?>
+                    <div class="team-group">
+                        <h4><?= $team->name() ?></h4>
 
-                    <div class="member">
-                        <img class="member__img" src="../../../assets/img/test-image.jpg" alt="member__img" />
-                        <div class="member__info">
-                            <h5>Karel Decoene</h5>
-                            <p>Founder</p>
-                        </div>
-                    </div>
+                        <?php if($team->employees()->isNotEmpty()): ?>
+                            <div class="team-members">
 
-                    <div class="member">
-                        <img class="member__img" src="../../../assets/img/test-image.jpg" alt="member__img" />
-                        <div class="member__info">
-                            <h5>Karel Decoene</h5>
-                            <p>Founder</p>
-                        </div>
+                                <?php foreach($team->employees()->toStructure() as $member): ?>
+                                    <div class="member">
+                                        
+                                        <?php if($memberImage = $member->memberPicture()->toFile()): ?>
+                                            <img class="member__img" src="<?= $memberImage->url() ?>" alt="<?= $memberImage->alt() ?>" loading="lazy" />
+                                        <?php else: ?>
+                                            <img class="member__img" src="../../../assets/img/employee-placeholder.jpg" loading="lazy" />
+                                        <?php endif; ?>
+
+                                        <div class="member__info">
+                                            <h5><?= $member->memberName() ?></h5>
+                                            <p><?= $member->memberFunction() ?></p>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-
-            <div class="team-group">
-                <h4>UX/UI designers</h4>
-
-                <div class="team-members">
-                    <div class="member">
-                        <img class="member__img" src="../../../assets/img/test-image.jpg" alt="member__img" />
-                        <div class="member__info">
-                            <h5>Karel Decoene</h5>
-                            <p>Founder</p>
-                        </div>
-                    </div>
-
-                    <div class="member">
-                        <img class="member__img" src="../../../assets/img/test-image.jpg" alt="member__img" />
-                        <div class="member__info">
-                            <h5>Karel Decoene</h5>
-                            <p>Founder</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </section>

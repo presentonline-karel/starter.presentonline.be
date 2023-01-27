@@ -1,0 +1,48 @@
+type: group
+fields:
+  contentColumnOneHeadline:
+    label: Content kolom 1
+    type: headline
+    numbered: false
+  contentColumnOne:
+    label: Content
+    type: blocks
+    fieldsets:
+      text:
+        label: Text
+        type: group
+        fieldsets:
+          - heading
+          - text
+          - list
+          - button
+      media:
+        label: Media
+        type: group
+        fieldsets:
+          - image
+          - video
+  line-a:
+    type: line
+  contentColumnTwoHeadline:
+    label: Content kolom 2
+    type: headline
+    numbered: false
+  contentColumnTwo:
+    label: Content
+    type: blocks
+    fieldsets:
+      text:
+        label: Text
+        type: group
+        fieldsets:
+          - heading
+          - text
+          - list
+          - button
+      media:
+        label: Media
+        type: group
+        fieldsets:
+          - image
+          - video

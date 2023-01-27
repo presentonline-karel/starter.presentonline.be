@@ -59,6 +59,8 @@
             </div>
         <?php endif; ?>
 
+        
+
         <?php if ($blogArticlesContent->bArticlesCta()->isNotEmpty()) : ?>
             <?php foreach ($blogArticlesContent->bArticlesCta()->toStructure() as $button) : ?>
                 <?php snippet("components/button", ["button" => $button]) ?>

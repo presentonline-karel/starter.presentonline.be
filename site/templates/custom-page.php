@@ -25,43 +25,8 @@
 
 
 
-    <!-- OFFICES -->
-    <?php //snippet("blocks/offices") ?>
-
-
-
-    <!-- CTA DOUBLE -->
-    <?php //snippet("blocks/cta-double") ?>
-
-
-
-    <!-- CTA WITH IMAGE -->
-    <?php //snippet("blocks/cta-with-image") ?>
-
-
-
-    <!-- TABS -->
-    <?php //snippet("blocks/tabs") ?>
-
-
-
-    <!-- IMAGE CAROUSEL -->
-    <?php //snippet("blocks/image-carousel") ?>
-
-
-
-    <!-- HERO OPENING HOURS -->
-    <?php //snippet("blocks/heroOpeningHours") ?>
-
-
-
     <!-- HERO OPENING HOURS -->
     <?php //snippet("blocks/pricing-plans") ?>
-
-
-
-    <!-- TEXT TWO COLUMNS -->
-    <?php //snippet("blocks/textTwoColumns") ?>
 
 
 

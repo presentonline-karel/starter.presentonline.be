@@ -1,18 +1,22 @@
+<?php isset($block) ? $ctaWithImageContent = $block : $ctaWithImageContent = $page; ?>
+
 <section class="cta-with-image fade-section">
     <div class="cta-with-image__container content-container-l content-container">
-        <img src="../../../assets/img/test-image.jpg" alt="test image" />
+        <?php if($ctaImage = $ctaWithImageContent->ctaImage()->toFile()): ?>
+            <img src="<?= $ctaImage->url() ?>" alt="<?= $ctaImage->alt() ?>" loading="lazy" />
+        <?php endif; ?>
 
         <div class="cta-with-image__content">
-            <h3>Why you should buy our amazing product</h3>
-            <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
+            <h3><?= $ctaWithImageContent->ctaTitle() ?></h3>
+            <p><?= $ctaWithImageContent->ctaParagraph() ?></p>
 
-            <?php /*if ($block->buttons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($block->buttons()->toBlocks()) == 1) { echo("single-button"); } ?>">
-                    <?php foreach ($block->buttons()->toBlocks() as $button): ?>
+            <?php if ($ctaWithImageContent->ctaButtons()->isNotEmpty()) : ?>
+                <div class="buttons <?php if(count($ctaWithImageContent->ctaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                    <?php foreach ($ctaWithImageContent->ctaButtons()->toStructure() as $button) : ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
-            <?php endif;*/ ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>

@@ -1,6 +1,6 @@
 name: Image carousel
 icon: file-image
-label: "| Carousel with images"
+label: "| {{ carouseltitle }}"
 fields:
   imageCarousel:
     extends: fields/image-carousel

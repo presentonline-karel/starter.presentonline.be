@@ -67,6 +67,13 @@ tabs:
                   - usp-bar
                   - image-carousel
                   - blog-articles
+                  - textTwoColumns
+                  - cta-double
+                  - cta-with-image
+                  - offices
+                  - tabs
+                  - steps
+                  - team-grouped
               text:
                 label: Text
                 type: group

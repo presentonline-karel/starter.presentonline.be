@@ -1,0 +1,25 @@
+type: group
+fields:
+  stepsHeadline:
+    label: Stappen
+    type: headline
+    numbered: false
+  stepsTitle:
+    label: Titel
+    type: text
+  stepsParagraph:
+    label: Paragraaf
+    type: writer
+    inline: true
+  steps:
+    label: Stappen
+    type: structure
+    max: 6
+    fields:
+      title:
+        label: Titel
+        type: text
+      paragraph:
+        label: Paragraaf
+        type: writer
+        inline: true

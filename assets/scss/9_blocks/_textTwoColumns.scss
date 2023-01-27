@@ -40,7 +40,9 @@
             justify-content: space-between;
 
             .blocks {
+                flex: 0 0 1;
                 margin-bottom: 0;
+                width: 100%;
             }
         }
     }

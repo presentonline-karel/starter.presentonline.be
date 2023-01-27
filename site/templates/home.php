@@ -46,7 +46,7 @@
                         <h2><?= $page->secondCtaTitle() ?><br> <span><?= $page->secondCtaTitleSpan() ?></span></h2>
 
                         <?php if ($page->secondCtaButtons()->isNotEmpty()) : ?>
-                            <div class="buttons <?php if(count($page->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                            <div class="buttons <?php if(count($page->secondCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                                 <?php foreach ($page->secondCtaButtons()->toStructure() as $button) : ?>
                                     <?php snippet("components/button", ["button" => $button]) ?>
                                 <?php endforeach; ?>
