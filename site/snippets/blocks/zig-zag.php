@@ -1,34 +1,27 @@
+<?php isset($block) ? $zigzagContent = $block : $zigzagContent = $page; ?>
+
 <section class="zig-zag-section section fade-section">
     <div class="content-container-m content-container">
-        <h2>Zig-zag block</h2>
+        <h2><?= $zigzagContent->zigzagTitle() ?></h2>
 
-        <div class="zig-zag-container">
-            <div class="zig-zag">
-                <img class="zig-zag__img" src="../../../assets/img/test-image.jpg" alt="zig-zag__img" />
+        <?php if($zigzagContent->zigzags()->isNotEmpty()): ?>
+            <div class="zig-zag-container">
 
-                <div class="zig-zag__content">
-                    <h3>This is a placeholder title to showcase a block</h3>
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
-                </div>
+                <?php foreach($zigzagContent->zigzags()->toStructure() as $zigzag): ?>
+                    <div class="zig-zag">
+                        
+                        <?php if($zigzagImage = $zigzag->zigzagImage()->toFile()): ?>
+                            <img class="zig-zag__img" src="<?= $zigzagImage->url() ?>" alt="<?= $zigzagImage->alt() ?>" loading="lazy" />
+                        <?php endif; ?>
+
+                        <div class="zig-zag__content blocks">
+                            <?php foreach ($zigzag->zigzagContent()->toBlocks() as $block) : ?>
+                                <?= $block ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-
-            <div class="zig-zag">
-                <img class="zig-zag__img" src="../../../assets/img/test-image.jpg" alt="zig-zag__img" />
-
-                <div class="zig-zag__content">
-                    <h3>This is a placeholder title to showcase a block</h3>
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
-                </div>
-            </div>
-
-            <div class="zig-zag">
-                <img class="zig-zag__img" src="../../../assets/img/test-image.jpg" alt="zig-zag__img" />
-
-                <div class="zig-zag__content">
-                    <h3>This is a placeholder title to showcase a block</h3>
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina.</p>
-                </div>
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </section>

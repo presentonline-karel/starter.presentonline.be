@@ -74,6 +74,8 @@ tabs:
                   - tabs
                   - steps
                   - team-grouped
+                  - zig-zag
+                  - pricing-plans
               text:
                 label: Text
                 type: group
