@@ -22,9 +22,4 @@ fields:
           ratio: 3/2
       zigzagContent:
         label: Content
-        type: blocks
-        fieldsets:
-          - heading
-          - text
-          - list
-          - button
+        extends: fields/blocks-text

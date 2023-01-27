@@ -18,5 +18,4 @@ fields:
   carouselCta:
     label: CTA button
     extends: fields/button
-    fields:
-      max: 1
+    max: 1

@@ -1,0 +1,7 @@
+type: blocks
+max: 1
+fieldsets:
+  - heroBigImage
+  - heroDefault
+  - heroNoImage
+  - heroOpeningHours

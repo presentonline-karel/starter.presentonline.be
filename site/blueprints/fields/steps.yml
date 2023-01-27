@@ -15,6 +15,11 @@ fields:
     label: Stappen
     type: structure
     max: 6
+    columns:
+      title:
+        width: 1/4
+      paragraph:
+        width: 3/4
     fields:
       title:
         label: Titel

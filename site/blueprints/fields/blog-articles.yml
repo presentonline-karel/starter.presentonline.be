@@ -16,3 +16,6 @@ fields:
     type: pages
     query: site.find('Blog')
     max: 3
+    layout: cardlets
+    image:
+      cover: true

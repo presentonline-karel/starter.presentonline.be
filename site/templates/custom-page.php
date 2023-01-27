@@ -17,29 +17,10 @@
             </div>
         <?php endif ?>
     <?php endif; ?>
-
-
-
-    <!-- STEPS -->
-    <?php //snippet("blocks/steps") ?>
-
-
-
-    <!-- HERO OPENING HOURS -->
-    <?php //snippet("blocks/pricing-plans") ?>
-
-
-
-    <!-- TEAM GROUPED -->
-    <?php //snippet("blocks/team-grouped") ?>
-
-
-
-    <!-- ZIGZAG -->
-    <?php //snippet("blocks/zig-zag") ?>
     
 
 
+    <!-- HERO -->
     <?php foreach ($page->customPageHeader()->toBlocks() as $block) : ?>
         <?= $block ?>
     <?php endforeach; ?>

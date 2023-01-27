@@ -38,6 +38,7 @@ fields:
     max: 1
     required: true
     width: 3/4
+    image: icon
     when:
       destination: internal
   idPage:

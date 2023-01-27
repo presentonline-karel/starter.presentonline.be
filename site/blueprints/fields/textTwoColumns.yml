@@ -6,22 +6,7 @@ fields:
     numbered: false
   contentColumnOne:
     label: Content
-    type: blocks
-    fieldsets:
-      text:
-        label: Text
-        type: group
-        fieldsets:
-          - heading
-          - text
-          - list
-          - button
-      media:
-        label: Media
-        type: group
-        fieldsets:
-          - image
-          - video
+    extends: fields/blocks-default
   line-a:
     type: line
   contentColumnTwoHeadline:
@@ -30,19 +15,4 @@ fields:
     numbered: false
   contentColumnTwo:
     label: Content
-    type: blocks
-    fieldsets:
-      text:
-        label: Text
-        type: group
-        fieldsets:
-          - heading
-          - text
-          - list
-          - button
-      media:
-        label: Media
-        type: group
-        fieldsets:
-          - image
-          - video
+    extends: fields/blocks-default

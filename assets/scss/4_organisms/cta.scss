@@ -11,26 +11,6 @@
                 color: $primary-500;
             }
         }
-
-        .buttons {
-            align-items: center;
-            display: flex;
-            gap: 8px;
-            justify-content: space-between;
-
-            &.single-button {
-                .button {
-                    display: inline-block;
-                    width: auto;
-                }
-            }
-
-            .button {
-                display: block;
-                text-align: center;
-                width: 100%;
-            }
-        }
     }
 }
 
@@ -39,16 +19,6 @@
     .cta {
         &__content {
             padding: 64px 48px;
-
-            .buttons {
-                justify-content: flex-start;
-
-                .button {
-                    display: inline-block;
-                    text-align: initial;
-                    width: initial;
-                }
-            }
         }
     }
 }

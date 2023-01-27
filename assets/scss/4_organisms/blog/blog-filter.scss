@@ -109,14 +109,14 @@
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .blog-filter {
-        padding: 0px 178px 96px 178px;
+        padding: 0px 178px 64px 178px;
     }
 }
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .blog-filter {
-        padding: 0px 414px 96px 414px;
+        padding: 0px 414px 72px;
 
         .filter-tags {
             &__tags {
@@ -149,7 +149,7 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .blog-filter {
-        padding: 0 318px 96px;
+        padding: 0 318px 72px;
 
         .form-filter {
             height: 44px;

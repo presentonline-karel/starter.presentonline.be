@@ -51,15 +51,7 @@ tabs:
             type: text
           infoPricesBlocks:
             label: Paragraaf
-            type: blocks
-            fieldsets:
-              text:
-                label: Text
-                type: group
-                fieldsets:
-                  - heading
-                  - text
-                  - list
+            extends: fields/blocks-text
           line-c:
             type: line
           
@@ -71,21 +63,7 @@ tabs:
             numbered: true
           extraInfo:
             label: Nog extra info
-            type: blocks
-            fieldsets:
-              text:
-                label: Text
-                type: group
-                fieldsets:
-                  - heading
-                  - text
-                  - list
-              media:
-                label: Media
-                type: group
-                fieldsets:
-                  - image
-                  - video
+            extends: fields/blocks-default
 
 
 

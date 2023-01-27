@@ -14,26 +14,6 @@
             p {
                 margin-bottom: 24px;
             }
-
-            .buttons {
-                align-items: center;
-                display: flex;
-                gap: 8px;
-                justify-content: space-between;
-
-                &.single-button {
-                    .button {
-                        display: inline-block;
-                        width: auto;
-                    }
-                }
-
-                .button {
-                    display: block;
-                    text-align: center;
-                    width: 100%;
-                }
-            }
         }
 
         &__image {
@@ -56,16 +36,6 @@
         &__content {
             &__text {
                 padding: 48px;
-
-                .buttons {
-                    justify-content: flex-start;
-                    
-                    .button {
-                        display: inline-block;
-                        text-align: initial;
-                        width: initial;
-                    }
-                }
             }
         }
     }

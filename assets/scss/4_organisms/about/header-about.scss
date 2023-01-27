@@ -1,5 +1,11 @@
 .header-about {
     .header__content {
+        &__text {
+            .buttons {
+                justify-content: center;
+            }
+        }
+
         .header-about__content__image {
             display: none;
         }
@@ -23,6 +29,10 @@
                 padding: 0;
                 text-align: left;
                 width: calc(100% - 40%);
+
+                .buttons {
+                    justify-content: flex-start;
+                }
             }
 
             .header-about__content__image {

@@ -9,7 +9,7 @@
             <p><?= $heroDefaultContent->heroIntro() ?></p>
 
             <?php if ($heroDefaultContent->heroButtons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($heroDefaultContent->firstCtaButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
+                <div class="buttons <?php if(count($heroDefaultContent->heroButtons()->toStructure()) == 1) { echo("single-button"); } ?>">
                     <?php foreach ($heroDefaultContent->heroButtons()->toStructure() as $button) : ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>

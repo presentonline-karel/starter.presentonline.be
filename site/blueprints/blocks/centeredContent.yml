@@ -13,26 +13,4 @@ fields:
       Here comes an explanation what type of content you should place here. Also a link to a page + id where this block is used.
   textContent:
     label: Gecentreerde blokken
-    type: blocks
-    fieldsets:
-      text:
-        label: Text
-        type: group
-        fieldsets:
-          - heading
-          - text
-          - list
-          - button
-      media:
-        label: Media
-        type: group
-        fieldsets:
-          - image
-          - video
-      code:
-        label: Code
-        type: group
-        open: false
-        fieldsets:
-          - code
-          - markdown
+    extends: fields/blocks-default

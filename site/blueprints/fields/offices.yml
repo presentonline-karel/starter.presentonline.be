@@ -16,6 +16,15 @@ fields:
   offices:
     label: Kantoren
     type: structure
+    columns:
+      place:
+        width: 1/4
+      address:
+        width: 1/4
+      phoneNumber:
+        width: 1/4
+      email:
+        width: 1/4
     fields:
       place:
         label: Plaats

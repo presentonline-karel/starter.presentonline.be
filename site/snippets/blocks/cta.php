@@ -5,7 +5,7 @@
 
             <!-- CTA buttons -->
             <?php if ($block->buttons()->isNotEmpty()) : ?>
-                <div class="buttons <?php if(count($block->buttons()->toBlocks()) == 1) { echo("single-button"); } ?>">
+                <div class="buttons <?php if(count($block->buttons()->toStructure()) == 1) { echo("single-button"); } ?>">
 
                     <!-- button -->
                     <?php foreach ($block->buttons()->toBlocks() as $button): ?>

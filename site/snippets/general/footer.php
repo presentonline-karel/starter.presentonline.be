@@ -5,7 +5,7 @@
 
                     <div class="footer__block intro">
                         <?php if ($site->logoLight()->isNotEmpty()) : ?>
-                            <img class="footer-logo" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
+                            <img class="footer-logo" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" loading="lazy" />
                         <?php endif; ?>
 
                         <p><?= $site->intro() ?></p>

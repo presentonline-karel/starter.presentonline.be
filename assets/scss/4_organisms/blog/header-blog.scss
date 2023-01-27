@@ -1,0 +1,25 @@
+.header-blog {
+    .header__content__text {
+        .buttons {
+            justify-content: center;
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header-blog {
+        .header__content__text {
+            padding: 48px 178px 64px 178px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .header-blog {
+        .header__content__text {
+            padding: 88px 0 64px;
+        }
+    }
+}

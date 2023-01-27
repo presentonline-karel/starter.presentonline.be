@@ -1,0 +1,25 @@
+type: blocks
+fieldsets:
+  - cta
+  - clients
+  - services
+  - textWithImage
+  - testimonials
+  - history
+  - team
+  - faqs
+  - maps
+  - centeredContent
+  - contact
+  - usp-bar
+  - image-carousel
+  - blog-articles
+  - textTwoColumns
+  - cta-double
+  - cta-with-image
+  - offices
+  - tabs
+  - steps
+  - team-grouped
+  - zig-zag
+  - pricing-plans

@@ -1,4 +1,6 @@
 .header-contact {
+    background-color: $neutrals-100;
+
     &__content {
         padding: 24px 16px 48px 16px;
 
@@ -11,24 +13,6 @@
 
             p {
                 margin-bottom: 16px;
-            }
-
-            .buttons {
-                align-items: center;
-                display: flex;
-                gap: 8px;
-                justify-content: space-between;
-
-                .button {
-                    display: block;
-                    text-align: center;
-                    width: 100%;
-
-                    i {
-                        font-size: 14px;
-                        line-height: 14px;
-                    }
-                }
             }
         }
 
@@ -64,18 +48,6 @@
     .header-contact {
         &__content {
             padding: 48px 48px 64px 48px;
-
-            &__text {
-                .buttons {
-                    justify-content: flex-start;
-                    
-                    .button {
-                        display: inline-block;
-                        text-align: initial;
-                        width: initial;
-                    }
-                }
-            }
         }
     }
 }

@@ -16,9 +16,4 @@ fields:
         type: text
       tabContent:
         label: Content
-        type: blocks
-        fieldsets:
-          - heading
-          - text
-          - list
-          - button
+        extends: fields/blocks-text
