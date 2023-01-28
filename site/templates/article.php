@@ -3,6 +3,9 @@
 <!-- CONTAINER ARTICLE -->
 <div id="container" class="container container-article">
 
+    <!-- USP-BAR -->
+    <?php snippet("general/usp-bar-impl") ?>
+
     <!-- NAV -->
     <?php snippet("general/nav") ?>
 

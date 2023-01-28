@@ -3,6 +3,9 @@
 <!-- CONTAINER CONTACT -->
 <div id="container" class="container container-contact">
 
+    <!-- USP-BAR -->
+    <?php snippet("general/usp-bar-impl") ?>
+
     <!-- HEADER CONTACT -->
     <header class="header header-contact">
 

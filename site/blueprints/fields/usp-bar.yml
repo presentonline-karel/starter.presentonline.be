@@ -3,10 +3,16 @@ fields:
   uspBarHeadline:
     label: USP bar
     type: headline
+    width: 3/4
+  uspSwitch:
+    extends: fields/display-switch
+    width: 1/4
   uspItems:
     label: USPs
     type: structure
     max: 4
+    when:
+      uspSwitch: true
     fields:
       usp:
         label: USP

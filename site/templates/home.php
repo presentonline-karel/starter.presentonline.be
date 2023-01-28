@@ -3,6 +3,9 @@
 <!-- CONTAINER HOME -->
 <div id="container" class="container container-home">
 
+    <!-- USP-BAR -->
+    <?php snippet("general/usp-bar-impl") ?>
+
     <!-- HEADER HOME -->
     <?php snippet("blocks/heroBigImage") ?>
 

@@ -9,16 +9,11 @@
         <?php endif; ?>
 
         <div class="content__text">
-            <h2><?= $textWithImageContent->contentTitle() ?></h2>
-            <p><?= $textWithImageContent->contentText() ?></p>
-
-            <?php if ($textWithImageContent->contentBulletpoints()->isNotEmpty()) : ?>
-                <ul class="list">
-                    <?php foreach ($textWithImageContent->contentBulletpoints()->toStructure() as $bulletPoint) : ?>
-                        <li class="list__item"><i class="icon-first fa fa-chevron-right" aria-hidden="true"></i> <?= $bulletPoint->bulletPoint() ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+            <div class="blocks">
+                <?php foreach ($textWithImageContent->contentBlocks()->toBlocks() as $block) : ?>
+                    <?= $block ?>
+                <?php endforeach; ?>
+            </div>
 
             <?php if ($textWithImageContent->contentButtons()->isNotEmpty()) : ?>
                 <div class="buttons <?php if(count($textWithImageContent->contentButtons()->toStructure()) == 1) { echo("single-button"); } ?>">

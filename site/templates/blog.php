@@ -3,6 +3,9 @@
 <!-- CONTAINER BLOG -->
 <div id="container" class="container container-blog">
 
+    <!-- USP-BAR -->
+    <?php snippet("general/usp-bar-impl") ?>
+
     <!-- HEADER BLOG -->
     <?php snippet("blocks/heroNoImage") ?>
 

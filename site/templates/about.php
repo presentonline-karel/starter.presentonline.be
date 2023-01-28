@@ -3,6 +3,9 @@
 <!-- CONTAINER ABOUT -->
 <div id="container" class="container container-about">
 
+    <!-- USP-BAR -->
+    <?php snippet("general/usp-bar-impl") ?>
+
     <!-- HEADER ABOUT -->
     <?php snippet("blocks/heroDefault") ?>
 

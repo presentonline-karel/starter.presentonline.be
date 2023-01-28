@@ -1,9 +1,6 @@
 title: Custom Page
 icon: page
 
-options:
-  changeSlug: false
-
 tabs:
   content:
     icon: text

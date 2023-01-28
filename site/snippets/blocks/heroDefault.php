@@ -28,7 +28,9 @@
         </div>
     <?php endif; ?>
 
-    <a class="scroll-down" href="<?= $site->url() ?>/about#history">
+    <a class="scroll-down" href="<?= $page->url() ?>/#scroll-to-here">
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
     </a>
 </header>
+
+<div id="scroll-to-here"></div>

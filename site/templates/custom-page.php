@@ -17,8 +17,11 @@
             </div>
         <?php endif ?>
     <?php endif; ?>
-    
 
+
+
+    <!-- USP-BAR -->
+    <?php snippet("general/usp-bar-impl") ?>
 
     <!-- HERO -->
     <?php foreach ($page->customPageHeader()->toBlocks() as $block) : ?>

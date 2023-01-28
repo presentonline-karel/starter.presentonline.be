@@ -6,20 +6,23 @@ fields:
     width: 1/2
   contentSwitch:
     extends: fields/display-switch
-  contentTitle:
-    label: Titel
-    type: text
-  contentText:
+  contentBlocks:
     label: Tekst
-    type: writer
-    inline: true
-  contentBulletpoints:
-    label: Bullet points
-    type: structure
-    fields:
-      bulletPoint:
-        type: text
-        required: true
+    extends: fields/blocks-text
+  # contentTitle:
+  #   label: Titel
+  #   type: text
+  # contentText:
+  #   label: Tekst
+  #   type: writer
+  #   inline: true
+  # contentBulletpoints:
+  #   label: Bullet points
+  #   type: structure
+  #   fields:
+  #     bulletPoint:
+  #       type: text
+  #       required: true
   contentButtons:
     extends: fields/button
     label: Buttons

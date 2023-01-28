@@ -88,18 +88,9 @@ tabs:
           line-a:
             type: line
           
-          #uspBar
-          uspHeadline:
-            label: USP bar
-            type: headline
-            width: 3/4
-          uspSwitch:
-            extends: fields/display-switch
-            width: 1/4
-          usps:
+          #USP-Bar
+          uspbar:
             extends: fields/usp-bar
-            when:
-              uspSwitch: true
           line-b:
             type: line
 
