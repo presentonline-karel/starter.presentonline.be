@@ -14,7 +14,6 @@ const blogArticles = () => {
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 16,
         allowTouchMove: false,
         spaceBetween: 0
       }

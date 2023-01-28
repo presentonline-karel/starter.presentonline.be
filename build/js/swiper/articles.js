@@ -1,5 +1,5 @@
-const blogArticles = () => {
-  const swiperTestimonials = new Swiper(".swiper.blog-articles", {
+const articles = () => {
+  const swiperTestimonials = new Swiper(".swiper.articles-swiper", {
     autoHeight: true,
     spaceBetween: 16,
 
@@ -14,11 +14,14 @@ const blogArticles = () => {
       },
       1024: {
         slidesPerView: 3,
-        allowTouchMove: false,
-        spaceBetween: 0
+        spaceBetween: 16,
+      },
+      1280: {
+        spaceBetween: 0,
+        allowTouchMove: false
       }
     },
   });
 };
 
-blogArticles();
+articles();

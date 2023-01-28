@@ -55,23 +55,17 @@ article {
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     article {
-        margin-bottom: 0;
         height: 100% !important;
-    }
-}
-
-/* TABLET LANDSCAPE - 1024PX */
-@media only screen and (min-width: $tablet-landscape) {
-    .article-searchable {
-        width: 100% !important;
-        flex: 0 0 1;
+        margin-bottom: 0;
     }
 }
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
-    .article {
-        transition: all $transition-time-short ease-in-out;
+    article {
+        border-radius: $border-radius-medium;
+        transition: all $transition-time-short ease-in-out !important;
+        width: 100% !important;
 
         &:hover {
             box-shadow: $card-shadow-hover;

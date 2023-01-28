@@ -72,7 +72,7 @@
 
 
             <!-- BLOGPOSTS - ARTICLES -->
-            <main class="blogposts__articles blog-articles swiper">
+            <main class="blogposts__articles articles-swiper swiper">
 
                 <!-- ARTICLES -->
                 <?php if ($articles->isNotEmpty()) : ?>
@@ -142,7 +142,7 @@
 <!-- JS SCRIPTS -->
 <?= js("build/js/blog/blog-search.js", ["defer" => true]) ?>
 <?= js("build/js/blog/blog-tags.js", ["defer" => true]) ?>
-<?= js("/build/js/swiper/blog-articles.js", ["defer" => true]) ?>
+<?= js("/build/js/swiper/articles.js", ["defer" => true]) ?>
 
 
 
