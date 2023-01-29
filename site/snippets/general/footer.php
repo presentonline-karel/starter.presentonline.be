@@ -50,5 +50,6 @@
 
         <?= js("build/js/general/nav.js", ["defer" => true]) ?>
         <?= js("build/js/general/section-fade-animation.js", ["defer" => true]) ?>
+        <?= js('build/js/general/cookies.js', ['defer' => true]) ?>
     </body>
 </html>

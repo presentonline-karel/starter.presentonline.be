@@ -1,6 +1,0 @@
-name: USP bar
-icon: check
-label: "| Unique selling points banner"
-fields:
-  usps:
-    extends: fields/usp-bar

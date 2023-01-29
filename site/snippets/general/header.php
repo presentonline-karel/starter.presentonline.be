@@ -33,6 +33,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+        <?php /*
         <!-- GOOGLE ANALYTICS -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4S49SPXNK"></script>
         <script defer>
@@ -45,5 +46,24 @@
 
             gtag("config", "G-Y4S49SPXNK");
         </script>
+        */ ?>
     </head>
     <body>
+
+        <!-- COOKIES -->
+        <div class="cookie-consent-modal">
+            <div class="content-container">
+                <div class="content">
+                    <h3>
+                        Wij gebruiken cookies
+                    </h3>
+
+                    <p>Door gebruik te maken van onze website ga je akkoord met ons <span>privacybeleid</span>.</p>
+
+                    <div class="buttons flex">
+                        <button class="button button-primary cancel">Geen cookies</button>
+                        <button class="button button-primary accept">Accepteren</button>
+                    </div>
+                </div>
+            </div>
+        </div>

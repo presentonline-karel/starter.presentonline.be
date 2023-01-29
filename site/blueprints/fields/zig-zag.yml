@@ -3,7 +3,7 @@ fields:
   zigzagHeadline:
     label: Zig zag blok
     type: headline
-    numbered: true
+    numbered: false
   zigzagTitle:
     label: Titel
     type: text

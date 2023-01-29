@@ -3,6 +3,7 @@ fields:
   carouselHeadline:
     label: Image carousel
     type: headline
+    numbered: false
   carouselTitle:
     label: Titel
     type: text
