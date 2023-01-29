@@ -32,8 +32,8 @@
     }
 }
 
-/* DESKTOP - 1440px */
-@media only screen and (min-width: $desktop-3) {
+/* DESKTOP - 1920px */
+@media only screen and (min-width: $desktop-hd) {
     .container-error {
         height: calc(100vh - 390px);
     }

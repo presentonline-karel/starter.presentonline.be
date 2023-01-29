@@ -32,21 +32,6 @@
         <!-- SWIPERJS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
-        <?php /*
-        <!-- GOOGLE ANALYTICS -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4S49SPXNK"></script>
-        <script defer>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-
-            gtag("config", "G-Y4S49SPXNK");
-        </script>
-        */ ?>
     </head>
     <body>
 
