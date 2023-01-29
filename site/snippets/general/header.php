@@ -51,19 +51,18 @@
     <body>
 
         <!-- COOKIES -->
-        <div class="cookie-consent-modal">
-            <div class="content-container">
-                <div class="content">
-                    <h3>
-                        Wij gebruiken cookies
-                    </h3>
+        <?php if($site->cookiesSwitch()->toBool()): ?>
+            <div class="cookie-consent-modal">
+                <div class="content-container">
+                    <div class="content">
+                        <h3><?= $site->cookiesTitle() ?></h3>
+                        <p><?= $site->cookiesParagraph() ?></p>
 
-                    <p>Door gebruik te maken van onze website ga je akkoord met ons <span>privacybeleid</span>.</p>
-
-                    <div class="buttons flex">
-                        <button class="button button-primary cancel">Geen cookies</button>
-                        <button class="button button-primary accept">Accepteren</button>
+                        <div class="buttons flex">
+                            <button class="button button-secondary cancel">Geen cookies</button>
+                            <button class="button button-primary accept">Accepteren</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>

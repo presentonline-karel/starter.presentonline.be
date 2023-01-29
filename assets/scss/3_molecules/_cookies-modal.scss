@@ -7,10 +7,10 @@
     left: 0;
     z-index: 999;
     align-items: flex-end;
-    display: flex; //none
+    display: none;
 
     &.active {
-        display: none; //flex
+        display: flex;
     }
 
     .content-container {
@@ -33,7 +33,7 @@
             p {
                 margin-bottom: 24px;
 
-                span {
+                a {
                     text-decoration: underline;
                 }
             }
@@ -46,6 +46,7 @@
 
                 .button {
                     white-space: nowrap;
+                    text-align: center;
                 }
             }
         }

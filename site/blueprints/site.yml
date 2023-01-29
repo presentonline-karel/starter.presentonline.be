@@ -202,6 +202,7 @@ tabs:
 
 
   footer:
+    label: Footer & cookies
     icon: grid-bottom
 
     columns:
@@ -210,7 +211,7 @@ tabs:
         sections:
         fields:
           footerHeadline:
-            label: Footer
+            label: Footer & cookies
             type: headline
             numbered: false
 
@@ -254,6 +255,46 @@ tabs:
               section:
                 label: Sectie op pagina
                 type: text
+          line-g:
+            type: line
+          
+          cookiesHeadline:
+            label: Cookies
+            type: headline
+            width: 3/4
+          cookiesSwitch:
+            label:
+            type: toggle
+            width: 1/4
+            default: true
+            text:
+              - "verbergen"
+              - "weergeven"
+          cookiesInfoEnabled:
+            label:
+            type: info
+            text: "Cookies voor Google Analytics staan aan. Er worden nu **wel** anonieme gegevens verzameld van gebruikers die surfen op je website."
+            theme: positive
+            when:
+              cookiesSwitch: true
+          cookiesInfoDisabled:
+            label:
+            type: info
+            text: "Cookies voor Google Analytics staan uit. Er worden nu **geen** gegevens verzameld van gebruikers die surfen op je website."
+            theme: negative
+            when:
+              cookiesSwitch: false
+          cookiesTitle:
+            label: Titel pop-up
+            type: text
+            when:
+              cookiesSwitch: true
+          cookiesParagraph:
+            label: Text pop-up
+            type: writer
+            inline: true
+            when:
+              cookiesSwitch: true
   
 
 
