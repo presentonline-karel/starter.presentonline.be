@@ -13,13 +13,17 @@
 
                     <?php if ($client->url()->isNotEmpty()) : ?>
                         <a class="client" href="<?= $client->url() ?>" target="_blank">
-                            <?php snippet("helpers/client-image", ["client" => $client]); ?>
+
+                            <?php if ($clientLogo = $client->logo()->toFile()) : ?>
+                                <?php snippet("helpers/image-converter", ["imageFile" => $clientLogo]) ?>
+                            <?php endif; ?>
                         </a>
 
                     <?php else : ?>
                         <div class="client">
-                            <?php if ($client->logo()->isNotEmpty()) : ?>
-                                <?php snippet("helpers/client-image", ["client" => $client]); ?>
+                            
+                            <?php if ($clientLogo = $client->logo()->toFile()) : ?>
+                                <?php snippet("helpers/image-converter", ["imageFile" => $clientLogo]) ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
