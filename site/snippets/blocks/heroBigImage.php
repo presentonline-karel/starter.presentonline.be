@@ -19,7 +19,16 @@
 
         <?php if ($heroBigImageContent->heroImage()->isNotEmpty()) : ?>
             <div class="header__content__image">
-                <img src="<?= $heroBigImageContent->heroImage()->toFile()->thumb(["format" => "webp"])->url() ?>" alt="<?= $heroBigImageContent->heroImage()->toFile()->alt() ?>">
+                <?php
+                    $imageFullName = $heroBigImageContent->heroImage()->toFile()->filename();
+                    $imageWebpExtension = substr($imageFullName, 0, strrpos($imageFullName, ".")) . ".webp";
+                ?>
+
+                <picture>
+                    <source srcSet="<?= $page->image($imageWebpExtension)->url() ?>" type="image/webp" />
+                    <source srcSet="<?= $heroBigImageContent->heroImage()->toFile()->url() ?>" type="image/jpg" />
+                    <img src="<?= $heroBigImageContent->heroImage()->toFile()->url() ?>" alt="<?= $heroBigImageContent->heroImage()->toFile()->alt() ?>" loading="lazy" />
+                </picture>
             </div>
         <?php endif; ?>
     </div>

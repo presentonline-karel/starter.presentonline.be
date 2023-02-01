@@ -4,7 +4,16 @@
     <div class="content content-container-l content-container r-106">
         <?php if($textWithImageContent->contentImage()->isNotEmpty()): ?>
             <div class="content__image">
-                <img src="<?= $textWithImageContent->contentImage()->toFile()->url() ?>" alt="<?= $textWithImageContent->contentImage()->toFile()->alt() ?>" loading="lazy">
+                <?php
+                    $imageFullName = $textWithImageContent->contentImage()->toFile()->filename();
+                    $imageWebpExtension = substr($imageFullName, 0, strrpos($imageFullName, ".")) . ".webp";
+                ?>
+
+                <picture>
+                    <source srcSet="<?= $page->image($imageWebpExtension)->url() ?>" type="image/webp" />
+                    <source srcSet="<?= $textWithImageContent->contentImage()->toFile()->url() ?>" type="image/jpg" />
+                    <img src="<?= $textWithImageContent->contentImage()->toFile()->url() ?>" alt="<?= $textWithImageContent->contentImage()->toFile()->alt() ?>" loading="lazy" />
+                </picture>
             </div>
         <?php endif; ?>
 

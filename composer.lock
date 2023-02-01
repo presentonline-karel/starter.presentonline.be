@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5a97d59607313c463ec067f9ff81272",
+    "content-hash": "f8c46dca0d89e6bdf28da11b184b063b",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -436,6 +436,42 @@
                 }
             ],
             "time": "2020-12-28T12:54:39+00:00"
+        },
+        {
+            "name": "hashandsalt/kirby3-webp",
+            "version": "v0.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HashandSalt/kirby3-webp.git",
+                "reference": "772b3fd50f0dc5bf8f958dd5b701024198198f6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HashandSalt/kirby3-webp/zipball/772b3fd50f0dc5bf8f958dd5b701024198198f6c",
+                "reference": "772b3fd50f0dc5bf8f958dd5b701024198198f6c",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "rosell-dk/webp-convert": "^2.3"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Steel",
+                    "email": "hello@hashandsalt.com"
+                }
+            ],
+            "description": "Kirby 3 WebP plugin",
+            "support": {
+                "issues": "https://github.com/HashandSalt/kirby3-webp/issues",
+                "source": "https://github.com/HashandSalt/kirby3-webp/tree/v0.0.6"
+            },
+            "time": "2020-09-14T21:30:15+00:00"
         },
         {
             "name": "laminas/laminas-escaper",

@@ -6,11 +6,11 @@
 
         <?php if ($testimonialsContent->testimonials()->isNotEmpty()) : ?>
             <div class="testimonials-items swiper-wrapper">
+
                 <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
                     <div class="testimonial swiper-slide">
-                        <?php if ($testimonial->logo()->isNotEmpty()) : ?>
-                            <img class="testimonial__logo" src="<?= $testimonial->logo()->toFile()->url() ?>" alt="<?= $testimonial->logo()->toFile()->alt() ?>" loading="lazy" />
-                        <?php endif; ?>
+
+                        <?php snippet("helpers/testimonial-logo", ["testimonial" => $testimonial]); ?>
 
                         <div class="testimonial__p">
                             <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
@@ -19,7 +19,16 @@
 
                         <div class="testimonial__id flex">
                             <?php if ($testimonial->imageTestimonial()->isNotEmpty()) : ?>
-                                <img class="testimonial__id__picture" src="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" alt="<?= $testimonial->imageTestimonial()->toFile()->alt() ?>" loading="lazy" />
+                                <?php
+                                $imageFullName = $testimonial->imageTestimonial()->toFile()->filename();
+                                $imageWebpExtension = substr($imageFullName, 0, strrpos($imageFullName, ".")) . ".webp";
+                                ?>
+
+                                <picture>
+                                    <source srcSet="<?= $page->image($imageWebpExtension)->url() ?>" type="image/webp" />
+                                    <source srcSet="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" type="image/jpg" />
+                                    <img class="testimonial__id__picture" src="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" alt="<?= $testimonial->imageTestimonial()->toFile()->alt() ?>" loading="lazy" />
+                                </picture>
                             <?php endif; ?>
 
                             <div>

@@ -17,9 +17,9 @@ class Convert
 
     public function __construct()
     {
-        $this->quality = kirby()->option('kirby3-webp.quality', 90);
-        $this->maxQuality = kirby()->option('kirby3-webp.maxQuality', 85);
-        $this->defaultQuality = kirby()->option('kirby3-webp.defaultQuality', 85);
+        $this->quality = kirby()->option('kirby3-webp.quality', 50);
+        $this->maxQuality = kirby()->option('kirby3-webp.maxQuality', 50);
+        $this->defaultQuality = kirby()->option('kirby3-webp.defaultQuality', 50);
         $this->metadata = kirby()->option('kirby3-webp.metadata', "none");
         $this->encoding = kirby()->option('kirby3-webp.encoding', "auto");
         $this->skip = kirby()->option('kirby3-webp.skip', false);
