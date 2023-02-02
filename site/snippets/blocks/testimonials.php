@@ -10,7 +10,9 @@
                 <?php foreach ($testimonialsContent->testimonials()->toStructure() as $testimonial) : ?>
                     <div class="testimonial swiper-slide">
 
-                        <?php snippet("helpers/testimonial-logo", ["testimonial" => $testimonial]); ?>
+                        <?php if($testimonialLogo = $testimonial->logo()->toFile()): ?>
+                            <?php snippet("helpers/image-builder", ["imageFile" => $testimonialLogo, "class" => "testimonial__logo"]) ?>
+                        <?php endif; ?>
 
                         <div class="testimonial__p">
                             <i class="quotes fa fa-quote-left" aria-hidden="true"></i>
@@ -18,17 +20,9 @@
                         </div>
 
                         <div class="testimonial__id flex">
-                            <?php if ($testimonial->imageTestimonial()->isNotEmpty()) : ?>
-                                <?php
-                                $imageFullName = $testimonial->imageTestimonial()->toFile()->filename();
-                                $imageWebpExtension = substr($imageFullName, 0, strrpos($imageFullName, ".")) . ".webp";
-                                ?>
-
-                                <picture>
-                                    <source srcSet="<?= $page->image($imageWebpExtension)->url() ?>" type="image/webp" />
-                                    <source srcSet="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" type="image/jpg" />
-                                    <img class="testimonial__id__picture" src="<?= $testimonial->imageTestimonial()->toFile()->url() ?>" alt="<?= $testimonial->imageTestimonial()->toFile()->alt() ?>" loading="lazy" />
-                                </picture>
+                            
+                            <?php if($testimonialImage = $testimonial->imageTestimonial()->toFile()): ?>
+                                <?php snippet("helpers/image-builder", ["imageFile" => $testimonialImage, "class" => "testimonial__id__picture"]) ?>
                             <?php endif; ?>
 
                             <div>

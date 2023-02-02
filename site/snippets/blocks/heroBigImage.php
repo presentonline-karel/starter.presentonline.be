@@ -33,9 +33,5 @@
         <?php endif; ?>
     </div>
 
-    <a class="scroll-down" href="<?= $page->url() ?>/#scroll-to-here">
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-    </a>
+    <?php snippet("helpers/scroll-to-here") ?>
 </header>
-
-<div id="scroll-to-here"></div>

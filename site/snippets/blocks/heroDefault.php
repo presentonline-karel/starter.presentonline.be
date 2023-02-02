@@ -17,20 +17,16 @@
             <?php endif; ?>
         </div>
 
-        <?php if ($heroDefaultContent->heroImage()->isNotEmpty()) : ?>
-            <img class="header-about__content__image" src="<?= $heroDefaultContent->heroImage()->toFile()->url() ?>" alt="<?= $heroDefaultContent->heroImage()->toFile()->alt() ?>">
+        <?php if($heroImage = $heroDefaultContent->heroImage()->toFile()): ?>
+            <?php snippet("helpers/image-builder", ["imageFile" => $heroImage, "pictureClass" => "header-about__content__image"]) ?>
         <?php endif; ?>
     </div>
 
-    <?php if ($heroDefaultContent->heroImage()->isNotEmpty()) : ?>
+    <?php if($heroImage = $heroDefaultContent->heroImage()->toFile()): ?>
         <div class="header__content__image">
-            <img src="<?= $heroDefaultContent->heroImage()->toFile()->url() ?>" alt="<?= $heroDefaultContent->heroImage()->toFile()->alt() ?>">
+            <?php snippet("helpers/image-builder", ["imageFile" => $heroImage]) ?>
         </div>
     <?php endif; ?>
 
-    <a class="scroll-down" href="<?= $page->url() ?>/#scroll-to-here">
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-    </a>
+    <?php snippet("helpers/scroll-to-here") ?>
 </header>
-
-<div id="scroll-to-here"></div>

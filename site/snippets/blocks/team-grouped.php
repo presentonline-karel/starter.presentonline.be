@@ -21,7 +21,7 @@
                                     <div class="member">
                                         
                                         <?php if($memberImage = $member->memberPicture()->toFile()): ?>
-                                            <img class="member__img" src="<?= $memberImage->url() ?>" alt="<?= $memberImage->alt() ?>" loading="lazy" />
+                                            <?php snippet("helpers/image-builder", ["imageFile" => $memberImage, "class" => "member__img"]) ?>
                                         <?php else: ?>
                                             <img class="member__img" src="../../../assets/img/employee-placeholder.jpg" loading="lazy" />
                                         <?php endif; ?>

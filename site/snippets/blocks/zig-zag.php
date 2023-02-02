@@ -11,7 +11,7 @@
                     <div class="zig-zag">
                         
                         <?php if($zigzagImage = $zigzag->zigzagImage()->toFile()): ?>
-                            <img class="zig-zag__img" src="<?= $zigzagImage->url() ?>" alt="<?= $zigzagImage->alt() ?>" loading="lazy" />
+                            <?php snippet("helpers/image-builder", ["imageFile" => $zigzagImage, "pictureClass" => "zig-zag__img"]) ?>
                         <?php endif; ?>
 
                         <div class="zig-zag__content blocks">

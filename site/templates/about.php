@@ -4,7 +4,7 @@
 <div id="container" class="container container-about">
 
     <!-- USP-BAR -->
-    <?php snippet("general/usp-bar-impl") ?>
+    <?php snippet("helpers/usp-bar-impl") ?>
 
     <!-- HEADER ABOUT -->
     <?php snippet("blocks/heroDefault") ?>

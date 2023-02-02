@@ -25,9 +25,8 @@
                             <a class="article" href="<?= $article->url() ?>">
                                 <div>
 
-                                    <!-- cover image -->
-                                    <?php if ($article->headerImage()->isNotEmpty()) : ?>
-                                        <img class="article__img" src="<?= $article->headerImage()->toFile()->url() ?>" alt="<?= $article->headerImage()->toFile()->alt() ?>" loading="lazy" />
+                                    <?php if($articleImage = $article->headerImage()->toFile()): ?>
+                                        <?php snippet("helpers/image-builder", ["imageFile" => $articleImage, "class" => "article__img", "article" => $article]) ?>
                                     <?php endif; ?>
 
                                     <!-- text content -->

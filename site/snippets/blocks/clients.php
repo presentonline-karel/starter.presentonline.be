@@ -15,15 +15,15 @@
                         <a class="client" href="<?= $client->url() ?>" target="_blank">
 
                             <?php if ($clientLogo = $client->logo()->toFile()) : ?>
-                                <?php snippet("helpers/image-converter", ["imageFile" => $clientLogo]) ?>
+                                <?php snippet("helpers/image-builder", ["imageFile" => $clientLogo]) ?>
                             <?php endif; ?>
                         </a>
 
                     <?php else : ?>
                         <div class="client">
-                            
+
                             <?php if ($clientLogo = $client->logo()->toFile()) : ?>
-                                <?php snippet("helpers/image-converter", ["imageFile" => $clientLogo]) ?>
+                                <?php snippet("helpers/image-builder", ["imageFile" => $clientLogo]) ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>

@@ -19,7 +19,10 @@
             <div class="image-carousel__container">
                 <?php if ($firstImage = $imageCarouselContent->carouselImages()->toFiles()->first()) : ?>
                     <div class="image-carousel__big-image">
-                        <img class="image-carousel__big-image__img" src="<?= $firstImage->url() ?>" alt="<?= $firstImage->alt() ?>" loading="lazy" />
+
+                        <?php snippet("helpers/image-builder", ["imageFile" => $firstImage, "class" => "image-carousel__big-image__img"]) ?>
+
+                        <?php /* <img class="image-carousel__big-image__img" src="<?= $firstImage->url() ?>" alt="<?= $firstImage->alt() ?>" loading="lazy" /> */ ?>
                         <div class="arrow-aria next"><i class="fa fa-chevron-right arrow" aria-hidden="true"></i></div>
                         <div class="arrow-aria prev"><i class="fa fa-chevron-left arrow" aria-hidden="true"></i></div>
                     </div>
@@ -27,7 +30,10 @@
 
                 <div class="image-carousel__thumbnails">
                     <?php foreach ($imageCarouselContent->carouselImages()->toFiles() as $carouselImage) : ?>
-                        <img class="thumbnail" src="<?= $carouselImage->url() ?>" alt="<?= $carouselImage->alt() ?>" loading="lazy" />
+
+                        <?php snippet("helpers/image-builder", ["imageFile" => $carouselImage, "class" => "thumbnail"]) ?>
+
+                        <?php /* <img class="thumbnail" src="<?= $carouselImage->url() ?>" alt="<?= $carouselImage->alt() ?>" loading="lazy" /> */?>
                     <?php endforeach; ?>
                 </div>
             </div>

@@ -12,8 +12,9 @@
 
                 <?php foreach ($teamContent->team()->toStructure() as $employee) : ?>
                     <div class="employee">
-                        <?php if ($employee->image()->isNotEmpty()) : ?>
-                            <img class="employee__img" src="<?= $employee->image()->toFile()->url() ?>" alt="<?= $employee->image()->toFile()->alt() ?>" loading="lazy">
+                        
+                        <?php if($employeeImage = $employee->image()->toFile()): ?>
+                            <?php snippet("helpers/image-builder", ["imageFile" => $employeeImage, "class" => "employee__img"]) ?>
                         <?php endif; ?>
 
                         <h5><?= $employee->name() ?></h5>

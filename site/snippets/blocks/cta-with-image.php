@@ -3,7 +3,7 @@
 <section class="cta-with-image fade-section">
     <div class="cta-with-image__container content-container-l content-container">
         <?php if($ctaImage = $ctaWithImageContent->ctaImage()->toFile()): ?>
-            <img src="<?= $ctaImage->url() ?>" alt="<?= $ctaImage->alt() ?>" loading="lazy" />
+            <?php snippet("helpers/image-builder", ["imageFile" => $ctaImage]) ?>
         <?php endif; ?>
 
         <div class="cta-with-image__content">

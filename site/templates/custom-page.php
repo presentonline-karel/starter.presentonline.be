@@ -21,7 +21,7 @@
 
 
     <!-- USP-BAR -->
-    <?php snippet("general/usp-bar-impl") ?>
+    <?php snippet("helpers/usp-bar-impl") ?>
 
     <!-- HERO -->
     <?php foreach ($page->customPageHeader()->toBlocks() as $block) : ?>
