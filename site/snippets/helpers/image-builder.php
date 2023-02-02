@@ -12,8 +12,8 @@
     ?>
 
     <picture <?php if(isset($pictureClass)) { ?> class="<?= $pictureClass ?>" <?php } ?>>
-        <source srcSet="<?= $imageWebpFile->url() ?>" type="image/webp" />
-        <source srcSet="<?= $imageFile->url() ?>" type="image/jpg" />
+        <source <?php if(isset($classSourceWebp)) { ?> class="<?= $classSourceWebp ?>" <?php } ?> srcSet="<?= $imageWebpFile->url() ?>" type="image/webp" />
+        <source <?php if(isset($classSourceJpg)) { ?> class="<?= $classSourceJpg ?>" <?php } ?> srcSet="<?= $imageFile->url() ?>" type="image/jpg" />
         <img <?php if(isset($class)) { ?> class="<?= $class ?>" <?php } ?> src="<?= $imageFile->url() ?>" alt="<?= $imageFile->alt() ?>" loading="lazy" />
     </picture>
 <?php endif; ?>

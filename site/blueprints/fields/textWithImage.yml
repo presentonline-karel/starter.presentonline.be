@@ -9,20 +9,6 @@ fields:
   contentBlocks:
     label: Tekst
     extends: fields/blocks-text
-  # contentTitle:
-  #   label: Titel
-  #   type: text
-  # contentText:
-  #   label: Tekst
-  #   type: writer
-  #   inline: true
-  # contentBulletpoints:
-  #   label: Bullet points
-  #   type: structure
-  #   fields:
-  #     bulletPoint:
-  #       type: text
-  #       required: true
   contentButtons:
     extends: fields/button
     label: Buttons

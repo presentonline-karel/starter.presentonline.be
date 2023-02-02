@@ -20,9 +20,15 @@
                 <?php if ($firstImage = $imageCarouselContent->carouselImages()->toFiles()->first()) : ?>
                     <div class="image-carousel__big-image">
 
-                        <?php snippet("helpers/image-builder", ["imageFile" => $firstImage, "class" => "image-carousel__big-image__img"]) ?>
+                        <?php snippet("helpers/image-builder",
+                        [
+                            "imageFile" => $firstImage,
+                            "class" => "image-carousel__big-image__img",
+                            "classSourceWebp" => "big-image__source__webp",
+                            "classSourceJpg" => "big-image__source__jpg"
+                        ]
+                        )?>
 
-                        <?php /* <img class="image-carousel__big-image__img" src="<?= $firstImage->url() ?>" alt="<?= $firstImage->alt() ?>" loading="lazy" /> */ ?>
                         <div class="arrow-aria next"><i class="fa fa-chevron-right arrow" aria-hidden="true"></i></div>
                         <div class="arrow-aria prev"><i class="fa fa-chevron-left arrow" aria-hidden="true"></i></div>
                     </div>
@@ -31,9 +37,15 @@
                 <div class="image-carousel__thumbnails">
                     <?php foreach ($imageCarouselContent->carouselImages()->toFiles() as $carouselImage) : ?>
 
-                        <?php snippet("helpers/image-builder", ["imageFile" => $carouselImage, "class" => "thumbnail"]) ?>
+                        <?php snippet("helpers/image-builder",
+                        [
+                            "imageFile" => $carouselImage,
+                            "class" => "thumbnail",
+                            "classSourceWebp" => "thumbnail__source__webp",
+                            "classSourceJpg" => "thumbnail__source__jpg"
+                        ]
+                        )?>
 
-                        <?php /* <img class="thumbnail" src="<?= $carouselImage->url() ?>" alt="<?= $carouselImage->alt() ?>" loading="lazy" /> */?>
                     <?php endforeach; ?>
                 </div>
             </div>
