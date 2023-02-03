@@ -27,7 +27,8 @@
     "felixhaeberle/kirby3-webp": "^1.0",
     "composer/semver": "^3.3",
     "diesdasdigital/kirby-meta-knight": "^1.2",
-    "hashandsalt/kirby3-webp": "^0.0.6"
+    "hashandsalt/kirby3-webp": "^0.0.6",
+    "omz13/kirby3-xmlsitemap": "^1.2"
   },
   "scripts": {
     "start": [
