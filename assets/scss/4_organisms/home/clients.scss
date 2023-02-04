@@ -1,6 +1,21 @@
+// Light mode
+.light-mode {
+    .clients-section {
+        background-color: $neutrals-100;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .clients-section {
+        background-color: $dark-mode-grey-bg;
+    }
+}
+
+// Mobile styling
 .clients-section {
-    background-color: $neutrals-200;
-    
+    transition: background-color $transition-time-short ease-in-out;
+
     h2 {
         margin-bottom: 32px;
         text-align: center;
@@ -34,8 +49,6 @@
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .clients-section {
-        background-color: $neutrals-100;
-
         h2 {
             margin-bottom: 72px;
         }

@@ -1,6 +1,21 @@
+// Light mode
+.light-mode {
+    .services-section {
+        background-color: $neutrals-200;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .services-section {
+        background-color: $neutrals-1000;
+    }
+}
+
+// Mobile styling
 .services-section {
-    background-color: $neutrals-100;
     padding: 64px 16px 48px 16px;
+    transition: background-color $transition-time-short ease-in-out;
 
     h2 {
         margin-bottom: 32px;
@@ -38,8 +53,25 @@
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
+    .light-mode {
+        .services-section .cta__content {
+            background-color: $primary-100;
+            border: $border-card-thin;
+        }
+    }
+
+    .dark-mode {
+        .services-section .cta__content {
+            background-color: $dark-mode-grey-bg;
+            border: $border-card-thin-dark-mode;
+
+            h2, h2 span {
+                color: $neutrals-200 !important;
+            }
+        }
+    }
+
     .services-section {
-        background-color: $neutrals-200;
         padding: 128px 96px;
 
         h2 {

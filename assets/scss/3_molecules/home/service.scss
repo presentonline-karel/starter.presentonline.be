@@ -1,10 +1,25 @@
+// Light mode
+.light-mode {
+    .service {
+        background-color: $neutrals-100;
+        border: $border-card-thin;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .service {
+        background-color: $dark-mode-grey-bg;
+        border: $border-card-thin-dark-mode;
+    }
+}
+
 .service {
-    background-color: $neutrals-200;
     border-radius: $border-radius-medium;
-    border: $border-card-thin;
     box-shadow: $card-shadow;
     margin-bottom: 16px;
     padding: 24px;
+    transition: all $transition-time-short ease-in-out;
 
     &:last-child {
         margin-bottom: 0;

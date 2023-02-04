@@ -1,6 +1,22 @@
-.nav {
+// Light mode
+.light-mode {
+    .burger {
+        .burger-line {
+            background-color: $neutrals-1100;
+        }
+    }
+}
 
-    //GENERAL STYLES
+// Dark mode
+.dark-mode {
+    .burger {
+        .burger-line {
+            background-color: $neutrals-400;
+        }
+    }
+}
+
+.nav {
     .burger {
         position: absolute;
         right: 16px;
@@ -10,9 +26,7 @@
             cursor: pointer;
         }
 
-        //BURGER LAYOUT
         .burger-line {
-            background-color: $neutrals-1100;
             height: 3px;
             margin-top: 3px;
             position: relative;
@@ -33,7 +47,7 @@
             width: 15px;
         }
 
-        //CROSS LAYOUT
+        // Cross layout
         &.toggle {
             z-index: 100;
 
@@ -73,20 +87,37 @@
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
+
+    // Light mode
+    .light-mode {
+        .nav .burger {
+            background-color: $neutrals-100;
+
+            &.toggle .burger-line {
+                background-color: $neutrals-100;
+            }
+        }
+    }
+
+    // Dark mode
+    .dark-mode {
+        .nav .burger {
+            background-color: $neutrals-1000;
+
+            &.toggle .burger-line {
+                background-color: $neutrals-400;
+            }
+        }
+    }
+
     .nav {
         .burger {
-            background-color: $neutrals-100;
             border-radius: $border-radius-medium;
             padding: 11px 8px;
-            //top: 24px;
 
             &.toggle {
                 background-color: $primary-500;
                 padding: 11px 8px 16px;
-
-                .burger-line {
-                    background-color: $neutrals-100;
-                }
             }
         }
     }

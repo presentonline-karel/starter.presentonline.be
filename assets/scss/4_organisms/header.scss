@@ -1,3 +1,22 @@
+// Light mode
+.light-mode {
+    .header {
+        .scroll-down {
+            color: $primary-500;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .header {
+        .scroll-down {
+            color: $neutrals-200;
+        }
+    }
+}
+
+// Mobile styling
 .header {
     &__content {
         &__text {

@@ -27,10 +27,19 @@ html {
 }
 
 body {
-    background-color: $neutrals-100;
     max-width: 100% !important;
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
+
+    // Light mode
+    &.light-mode {
+        background-color: $neutrals-100;
+    }
+
+    // Dark mode
+    &.dark-mode {
+        background-color: $neutrals-1000;
+    }
 }
 
 .stop-scrolling {

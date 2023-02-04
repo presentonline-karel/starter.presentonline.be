@@ -1,3 +1,29 @@
+// Light mode
+.light-mode {
+    .nav .logo img {
+        &.logoDark {
+            opacity: 1;
+        }
+
+        &.logoLight {
+            opacity: 0;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .nav .logo img {
+        &.logoDark {
+            opacity: 0;
+        }
+
+        &.logoLight {
+            opacity: 1;
+        }
+    }
+}
+
 .nav {
     align-items: center;
     height: 80px;
@@ -9,11 +35,12 @@
         height: 40px;
         object-fit: contain;
         position: relative;
-        top: 4px;
         width: 100px;
 
         img {
             height: inherit;
+            position: absolute;
+            transition: all $transition-time-short ease-in-out;
             width: inherit;
         }
     }
@@ -161,10 +188,34 @@
 
 /* DESKTOP 1280PX */
 @media screen and (min-width: $desktop-1) {
+
+    // Light mode
+    .light-mode {
+        .nav .nav-links .link-items .nav__link__item {
+            color: $neutrals-1000;
+
+            &.active {
+                color: $neutrals-1000;
+            }
+        }
+    }
+
+    // Dark mode
+    .dark-mode {
+        .nav .nav-links .link-items .nav__link__item {
+            color: $neutrals-200;
+
+            &.active {
+                color: $neutrals-200;
+            }
+        }
+    }
+
     .nav {
         align-items: center;
         height: 110px;
         padding: 32px 96px 32px 96px;
+        position: relative;
 
         .nav-links {
             align-items: center;
@@ -209,7 +260,6 @@
 
                         &__item {
                             border-bottom: 3px solid transparent;
-                            color: $neutrals-1100;
                             opacity: 1;
                             padding-bottom: 4px;
                             transition: all $transition-time-short ease-in-out;
@@ -222,7 +272,6 @@
 
                             &.active {
                                 border-bottom: 3px solid $primary-500;
-                                color: $neutrals-1100;
                             }
                         }
                     }
@@ -238,17 +287,30 @@
         .primary-cta {
             display: block;
         }
-    }
 
-    //NAV HEADER BIG IMAGE
-    .header-home {
-        .nav {
-            gap: 48px;
+        // Nav home
+        &-home {
+            gap: 32px;
             justify-content: flex-start;
+
+            .nav-links .link-items {
+                gap: 24px;
+            }
 
             .primary-cta {
                 display: none;
             }
+        }
+    }
+}
+
+/* DESKTOP 1366PX */
+@media screen and (min-width: $desktop-2) {
+    .nav-home {
+        gap: 40px;
+
+        .nav-links .link-items {
+            gap: 32px;
         }
     }
 }
@@ -268,7 +330,7 @@
 
         //NAV HOME
         &-home {
-            gap: 51px;
+            gap: 48px;
             left: calc((100vw - 1248px) / 2);
         }
     }

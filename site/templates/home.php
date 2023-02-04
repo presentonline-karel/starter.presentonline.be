@@ -11,7 +11,7 @@
 
 
 
-    <main id="page-sections">
+    <main>
 
         <!-- CLIENTS -->
         <?php if($page->clientsSwitch()->toBool()): ?>

@@ -1,4 +1,43 @@
+// Light mode
+.light-mode {
+    .header-home {
+        background-color: $neutrals-200;
+
+        &__content {
+            &__text h1 span {
+                color: $primary-500;
+            }
+
+            .header__content__image picture img {
+                filter: brightness(100%);
+                position: relative;
+                transition: filter $transition-time-short ease-in-out;
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .header-home {
+        background-color: $neutrals-1000;
+
+        &__content {
+            &__text h1 span {
+                color: $neutrals-200;
+            }
+
+            .header__content__image picture img {
+                filter: brightness(92%);
+            }
+        }
+    }
+}
+
+// Mobile styling
 .header-home {
+    transition: background-color $transition-time-short ease-in-out;
+
     &__content {
         &__text {
             padding: 24px 16px 48px 16px;
@@ -7,7 +46,7 @@
                 margin-bottom: 16px;
 
                 span {
-                    color: $primary-500;
+                    transition: color $transition-time-short ease-in-out;
                 }
             }
 
@@ -16,7 +55,7 @@
             }
         }
 
-        &__image {
+        .header__content__image {
             aspect-ratio: 3/2;
             height: auto;
             width: 100%;
@@ -25,6 +64,7 @@
                 height: 100%;
                 object-fit: cover;
                 width: 100%;
+                border-radius: 0;
             }
         }
     }
@@ -108,8 +148,6 @@
     }
 
     .header-home {
-        background-color: $neutrals-200;
-        
         &__content {
             &__text {
                 padding: 0px 96px 0px 96px;

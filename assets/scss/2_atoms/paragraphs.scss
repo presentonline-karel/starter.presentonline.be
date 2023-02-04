@@ -1,6 +1,18 @@
+.light-mode {
+    p, .p {
+        color: $neutrals-900;
+    }
+}
+
+.dark-mode {
+    p, .p {
+        color: $neutrals-400;
+    }
+}
+
 /* STANDARD LAYOUT FOR PARAGRAPHS */
 p, .p {
-    color: $neutrals-900;
+    transition: color $transition-time-short ease-in-out;
     font-family: $paragraph-font;
     font-weight: 400;
     font-size: 16px;

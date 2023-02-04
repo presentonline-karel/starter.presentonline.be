@@ -1,7 +1,8 @@
 <nav class="nav <?php if($page->title() == "Home") { echo("nav-home"); } ?> flex <?php if(isset($extraClass)) { echo($extraClass); } ?>">
     <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
-        <?php if ($site->logoLight()->isNotEmpty()) : ?>
-            <img class="nav-links__top__logo" src="<?= $site->logoDark()->toFile()->url() ?>" alt="<?= $site->logoDark()->toFile()->alt() ?>" />
+        <?php if ($site->logoDark()->isNotEmpty() && $site->logoLight()->isNotEmpty()) : ?>
+            <img class="nav-links__top__logo logoDark" src="<?= $site->logoDark()->toFile()->url() ?>" alt="<?= $site->logoDark()->toFile()->alt() ?>" />
+            <img class="nav-links__top__logo logoLight" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
         <?php endif; ?>
     </a>
 
@@ -42,6 +43,19 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
+
+
+    <!-- Light/dark mode switch -->
+    <div class="theme-switch">
+        <div class="theme-switch__icon-container">
+            <i class="sun fa fa-sun-o" aria-hidden="true"></i>
+            <i class="moon fa fa-moon-o" aria-hidden="true"></i>
+        </div>
+    </div>
+
+
+
+    <!-- Burger -->
     <div class="burger">
         <div class="burger-line line1"></div>
         <div class="burger-line line2"></div>

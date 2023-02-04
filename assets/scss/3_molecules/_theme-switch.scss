@@ -1,0 +1,113 @@
+// Light mode
+.light-mode {
+    .theme-switch {
+        background-color: $neutrals-400;
+        outline: 0.4px solid $neutrals-600;
+
+        &__icon-container {
+            background-color: $neutrals-100;
+            left: 2px;
+
+            .sun {
+                color: $neutrals-1000;
+                opacity: 1;
+            }
+
+            .moon {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .theme-switch {
+        background-color: $neutrals-900;
+        outline: 0.4px solid $neutrals-800;
+
+        &__icon-container {
+            background-color: $neutrals-1100;
+            right: 2px;
+
+            .sun {
+                opacity: 0;
+            }
+
+            .moon {
+                color: $neutrals-400;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Mobile styling
+.theme-switch {
+    border-radius: 16px;
+    box-shadow: 0px 2px 4px rgba(35, 35, 35, 0.08);
+    height: 24px;
+    position: relative;
+    right: 40px;
+    top: 3px;
+    width: 48px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__icon-container {
+        border-radius: 50%;
+        height: 20px;
+        position: absolute;
+        top: 2px;
+        text-align: center;
+        transition: all $transition-time-short ease-in-out;
+        width: 20px;
+
+        i {
+            font-size: 12px;
+            height: 12px;
+            line-height: 12px;
+            left: 50%;
+            position: absolute;
+            transition: all $transition-time-short ease-in-out;
+            transform: translate(-50%, -50%);
+            top: 50%;
+        }
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .theme-switch {
+        z-index: 1;
+        right: 52px;
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .nav-home {
+        .theme-switch {
+            position: relative;
+            right: 0;
+            top: 4px;
+            transform: initial;
+        }
+    }
+
+    .theme-switch {
+        position: absolute;
+        transform: translate(0%, -50%);
+        right: 235px;
+        top: 50%;
+    }
+}
+
+/* DESKTOP - 1440px */
+@media only screen and (min-width: $desktop-3) {
+    .theme-switch {
+        right: 155px;
+    }
+}
