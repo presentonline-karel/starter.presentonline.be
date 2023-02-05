@@ -1,5 +1,20 @@
+// Light mode
+.light-mode {
+    .history {
+        background-color: $neutrals-200;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .history {
+        background-color: $dark-mode-grey-bg;
+    }
+}
+
+// Mobile styling
 .history {
-    background-color: $neutrals-200;
+    transition: all $transition-time-short ease-in-out;
     text-align: center;
 
     h2 {

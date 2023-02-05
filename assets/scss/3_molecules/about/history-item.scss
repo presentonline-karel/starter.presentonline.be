@@ -1,3 +1,30 @@
+// Light mode
+.light-mode {
+    .history-item {
+        h5 {
+            color: $neutrals-900;
+        }
+    
+        h1 {
+            color: $primary-500;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .history-item {
+        h5 {
+            color: $neutrals-400;
+        }
+    
+        h1 {
+            color: $neutrals-200;
+        }
+    }
+}
+
+// Mobile styling
 .history-item {
     margin-bottom: 48px;
 
@@ -6,12 +33,10 @@
     }
 
     h5 {
-        color: $neutrals-900;
         margin-bottom: 8px;
     }
 
     h1 {
-        color: $primary-500;
         font-size: 72px;
         letter-spacing: -0.02em;
         line-height: 72px;

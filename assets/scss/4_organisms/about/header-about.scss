@@ -1,9 +1,38 @@
+// Light mode
+.light-mode {
+    .header-about {
+        background-color: $neutrals-100;
+    }
+
+    .header-about__content__image img, .header__content__image img {
+        filter: brightness(100%);
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .header-about {
+        background-color: $neutrals-1000;
+    }
+
+    .header-about__content__image img, .header__content__image img {
+        filter: brightness(92%);
+    }
+}
+
+// Mobile styling
 .header-about {
+    transition: background-color $transition-time-short ease-in-out;
+
     .header__content {
         &__text {
             .buttons {
                 justify-content: center;
             }
+        }
+
+        .header-about__content__image img, .header__content__image img {
+            transition: all $transition-time-short ease-in-out;
         }
 
         .header-about__content__image {

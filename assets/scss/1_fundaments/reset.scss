@@ -30,6 +30,7 @@ body {
     max-width: 100% !important;
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
+    transition: background-color $transition-time-short ease-in-out;
 
     // Light mode
     &.light-mode {

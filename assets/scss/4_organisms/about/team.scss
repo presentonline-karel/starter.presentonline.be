@@ -1,6 +1,21 @@
+// Light mode
+.light-mode {
+    .team-section {
+        background-color: $neutrals-200;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .team-section {
+        background-color: $dark-mode-grey-bg;
+    }
+}
+
+// Mobile styling
 .team-section {
-    background-color: $neutrals-200;
     padding: 64px 16px;
+    transition: all $transition-time-short ease-in-out;
 
     h2 {
         margin-bottom: 16px;
