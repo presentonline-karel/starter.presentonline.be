@@ -10,8 +10,6 @@
 
             .header__content__image picture img {
                 filter: brightness(100%);
-                position: relative;
-                transition: filter $transition-time-short ease-in-out;
             }
         }
     }
@@ -61,6 +59,8 @@
             width: 100%;
 
             img {
+                position: relative;
+                transition: filter $transition-time-short ease-in-out;
                 height: 100%;
                 object-fit: cover;
                 width: 100%;

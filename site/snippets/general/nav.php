@@ -46,12 +46,14 @@
 
 
     <!-- Light/dark mode switch -->
-    <div class="theme-switch">
-        <div class="theme-switch__icon-container">
-            <i class="sun fa fa-sun-o" aria-hidden="true"></i>
-            <i class="moon fa fa-moon-o" aria-hidden="true"></i>
+    <?php if($site->lightDarkModeSwitch() == "lightDarkMode"): ?>
+        <div class="theme-switch">
+            <div class="theme-switch__icon-container">
+                <i class="sun fa fa-sun-o" aria-hidden="true"></i>
+                <i class="moon fa fa-moon-o" aria-hidden="true"></i>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 
 
 

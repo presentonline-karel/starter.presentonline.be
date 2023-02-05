@@ -202,7 +202,7 @@ tabs:
 
 
   footer:
-    label: Footer & cookies
+    label: Footer & settings
     icon: grid-bottom
 
     columns:
@@ -211,7 +211,7 @@ tabs:
         sections:
         fields:
           footerHeadline:
-            label: Footer & cookies
+            label: Footer & settings
             type: headline
             numbered: false
 
@@ -295,6 +295,55 @@ tabs:
             inline: true
             when:
               cookiesSwitch: true
+          line-h:
+            type: line
+          
+          lightDarkModeHeadline:
+            label: Light/dark mode
+            type: headline
+            width: 3/4
+          lightDarkModeSwitch:
+            label: Website color mode
+            type: select
+            width: 1/4
+            default: lightMode
+            options:
+              lightMode: Light mode
+              darkMode: Dark mode
+              lightDarkMode: Light/dark mode
+          InfoLightMode:
+            label: Lichte modus
+            type: info
+            text: "Website staat vast ingesteld op lichte kleuren modus."
+            when:
+              lightDarkModeSwitch: lightMode
+          InfoDarkMode:
+            label: Donkere modus
+            type: info
+            text: "Website staat vast ingesteld op donkere kleuren modus."
+            when:
+              lightDarkModeSwitch: darkMode
+          InfoLightDarkMode:
+            label: Lichte/donkere modus
+            type: info
+            text: |
+              Website ingesteld op lichte & donkere kleuren modus. De gebruiker kan zelf een modus instellen.
+              **Gelieve wel een standaard/start modus in te stellen.**
+            width: 3/4
+            when:
+              lightDarkModeSwitch: lightDarkMode
+          lightDarkModeStandard:
+            label: Standaard/start modus
+            type: select
+            width: 1/4
+            required: true
+            options:
+              lightMode: Light mode
+              darkMode: Dark mode
+              machineDefault: Instelling pc gebruiker
+            when:
+              lightDarkModeSwitch: lightDarkMode
+
   
 
 

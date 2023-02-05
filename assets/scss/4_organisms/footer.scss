@@ -1,5 +1,92 @@
+// Light mode
+.light-mode {
+    .footer {
+        background-color: $primary-500;
+
+        .back-to-top {
+            background-color: $neutrals-100;
+
+            i {
+                color: $primary-500;
+            }
+
+            &:hover {
+                background-color: $primary-100;
+            }
+        }
+
+        .intro p {
+            color: $neutrals-100;
+        }
+
+        &__block h4 {
+            color: $neutrals-100;
+        }
+
+        &__a {
+            color: $neutrals-100;
+
+            &:hover {
+                color: $primary-100;
+            }
+        }
+
+        &-line {
+            background-color: $primary-300;
+        }
+    
+        &__copyright, &__copyright a {
+            color: $neutrals-100;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .footer {
+        background-color: $neutrals-1000;
+        box-shadow: $footer-shadow-dark-mode;
+
+        .back-to-top {
+            background-color: $primary-500;
+
+            i {
+                color: $neutrals-100;
+            }
+
+            &:hover {
+                background-color: $primary-600;
+            }
+        }
+
+        .intro p {
+            color: $neutrals-200;
+        }
+
+        &__block h4 {
+            color: $neutrals-200;
+        }
+
+        &__a {
+            color: $neutrals-200;
+
+            &:hover {
+                color: $neutrals-400;
+            }
+        }
+
+        &-line {
+            background-color: $neutrals-800;
+        }
+    
+        &__copyright, &__copyright a {
+            color: $neutrals-400;
+        }
+    }
+}
+
+// Mobile styling
 .footer {
-    background-color: $primary-500;
     padding: 40px 16px 24px 16px;
     position: relative;
 
@@ -9,17 +96,16 @@
 
     //Back to top arrow
     .back-to-top {
-        background-color: $neutrals-100;
         border-radius: $border-radius-medium;
         display: block;
         height: 40px;
         position: absolute;
         right: 0;
         top: 0;
+        transition: all $transition-time-short ease-in-out;
         width: 40px;
 
         i {
-            color: $primary-500;
             font-size: 16px;
             height: 16px;
             line-height: 16px;
@@ -28,13 +114,8 @@
             top: 12px;
             width: 16px;
         }
-
-        &:hover {
-            background-color: $primary-100;
-        }
     }
 
-    //Intro
     .intro {
         margin-bottom: 40px;
 
@@ -46,7 +127,6 @@
         }
 
         p {
-            color: $neutrals-100;
             margin-bottom: 16px;
         }
     }
@@ -58,14 +138,11 @@
 
     &__block {
         h4 {
-            color: $neutrals-100;
             margin-bottom: 16px;
         }
     }
 
-    //Footer links
     &__a {
-        color: $neutrals-100;
         display: block;
         font-family: $paragraph-font;
         font-size: 16px;
@@ -73,10 +150,6 @@
         line-height: 16px;
         margin-bottom: 7px;
         transition: all $transition-time-short;
-
-        &:hover {
-            color: $primary-100;
-        }
 
         &:last-of-type {
             margin-bottom: 0;
@@ -89,23 +162,21 @@
 
     //Footer bottom
     &-line {
-        background-color: $primary-300;
         height: 0.5px;
         margin-bottom: 16px;
+        border: none;
     }
 
     &__copyright {
-        color: $neutrals-100;
         text-align: center;
 
         a {
-            color: $neutrals-100;
             text-decoration: underline;
         }
     }
 }
 
-/* TABLET 768PX */
+/* TABLET PORTRAIT - 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .footer {
         padding: 64px 48px 24px 48px;
@@ -114,6 +185,12 @@
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
+    .dark-mode {
+        .footer .contact {
+            background-color: $neutrals-1000;
+        }
+    }
+
     .footer {
         &-blocks {
             display: grid;
@@ -149,7 +226,6 @@
     .footer {
         padding: 96px 96px 24px 96px;
 
-        //Intro
         .intro {
             .footer-logo {
                 height: 50px;

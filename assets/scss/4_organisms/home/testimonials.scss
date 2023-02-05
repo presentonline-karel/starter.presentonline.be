@@ -1,5 +1,20 @@
+// Light mode
+.light-mode {
+    .testimonials-section {
+        background-color: $neutrals-200;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .testimonials-section {
+        background-color: $neutrals-1000;
+    }
+}
+
+// Mobile styling
 .testimonials-section {
-    background-color: $neutrals-200;
+    transition: all $transition-time-short ease-in-out;
 
     h2 {
         margin-bottom: 32px;

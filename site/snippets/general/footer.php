@@ -48,12 +48,19 @@
             </div>
         </footer>
 
+        
+
         <?= js("build/js/general/nav.js", ["defer" => true]) ?>
         <?= js("build/js/general/section-fade-animation.js", ["defer" => true]) ?>
-        <?= js("build/js/general/light-dark-switch.js", ["defer" => true]) ?>
 
+        <!-- Cookies -->
         <?php if($site->cookiesSwitch()->toBool() && $page->id() != "privacybeleid"): ?>
             <?= js('build/js/general/cookies.js', ['defer' => true]) ?>
+        <?php endif; ?>
+
+        <!-- Light/dark mode -->
+        <?php if($site->lightDarkModeSwitch() == "lightDarkMode"): ?>
+            <?= js("build/js/general/light-dark-switch.js", ["defer" => true]) ?>
         <?php endif; ?>
     </body>
 </html>

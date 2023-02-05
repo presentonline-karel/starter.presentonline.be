@@ -1,31 +1,61 @@
-//HOME CTAs
-.container-home {
-    .cta {
+// Light mode
+.light-mode {
+    .container-home {
+        .cta {
+            // first CTA
+            &__content {
+                background-color: $primary-500;
 
-        //First CTA
-        &__content {
-            background-color: $primary-500;
+                h2,
+                h2 span {
+                    color: $neutrals-100;
+                }
 
-            .button-primary {
-                background-color: $neutrals-100;
-                color: $primary-500;
+                .button-primary {
+                    background-color: $neutrals-100;
+                    color: $primary-500;
+                }
             }
-        }
 
-        h2 {
-            color: $neutrals-100;
-
-            span {
-                color: $neutrals-100;
-            }
-        }
-
-        //Second CTA
-        &:last-of-type {
-            background-color: $primary-100;
-
-            .cta__content {
+            // second CTA
+            &:last-of-type {
                 background-color: $primary-100;
+
+                .cta__content {
+                    background-color: $primary-100;
+
+                    h2 {
+                        color: $neutrals-1100;
+
+                        span {
+                            color: $primary-500;
+                        }
+                    }
+
+                    .button-primary {
+                        background-color: $primary-500;
+                        color: $neutrals-100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .container-home {
+        .cta {
+            background-color: $dark-mode-grey-bg;
+
+            // first CTA
+            &__content {
+                background-color: inherit;
+
+                h2,
+                h2 span {
+                    color: $neutrals-200;
+                }
 
                 .button-primary {
                     background-color: $primary-500;
@@ -33,53 +63,107 @@
                 }
             }
 
-            h2 {
-                color: $neutrals-1100;
+            // second CTA
+            &:last-of-type .cta__content {
+                h2,
+                h2 span {
+                    color: $neutrals-200;
+                }
 
-                span {
-                    color: $primary-500;
+                .button-primary {
+                    background-color: $primary-500;
+                    color: $neutrals-100;
                 }
             }
         }
     }
+}
 
-    //Desktop CTA services
-    .services-section {
-        .cta__content {
-            display: none;
+// Mobile styling
+.container-home {
+    .cta * {
+        transition: all $transition-time-short ease-in-out;
+    }
+
+    // desktop CTA services
+    .services-section .cta__content {
+        display: none;
+    }
+}
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .dark-mode {
+        .container-home #cta-1 {
+            border-bottom: 1px solid $neutrals-1000;
         }
     }
 }
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
-    .container-home {
+    .light-mode {
+        .container-home {
+            .cta:last-of-type .cta__content {
+                border: $border-card-thin;
+            }
 
-        //First CTA
-        #cta-1 {
-            display: none;
-        }
-
-        //Desktop CTA services
-        .services-section {
-            .cta__content {
-                //background-color: $primary-100;
-                display: flex;
+            .services-section .cta__content {
+                background-color: $primary-100;
 
                 h2 {
+                    color: $neutrals-1100;
+
                     span {
                         color: $primary-500;
                     }
                 }
+            }
+        }
+    }
 
-                .button-primary {
-                    background-color: $primary-500;
-                    color: $neutrals-100;
+    .dark-mode {
+        .container-home {
+            .cta:last-of-type {
+                background-color: $dark-mode-grey-bg !important;
 
-                    &:hover {
-                        background-color: $primary-600;
+                .cta__content {
+                    background-color: $neutrals-900;
+                    border: $border-card-thin-dark-mode;
+
+                    h2,
+                    h2 span {
+                        color: $neutrals-200;
                     }
                 }
+            }
+
+            .services-section .cta__content {
+                background-color: $dark-mode-grey-bg;
+
+                h2,
+                h2 span {
+                    color: $neutrals-200;
+                }
+            }
+        }
+    }
+
+    .container-home {
+        #cta-1 {
+            display: none;
+        }
+
+        .cta__content .button-primary:hover {
+            background-color: $primary-600 !important;
+        }
+
+        .services-section .cta__content {
+            display: flex;
+
+            .button-primary {
+                background-color: $primary-500;
+                color: $neutrals-100;
             }
         }
     }

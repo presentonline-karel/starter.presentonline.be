@@ -1,18 +1,14 @@
 // Light mode
 .light-mode {
-    .header {
-        .scroll-down {
-            color: $primary-500;
-        }
+    .header .scroll-down {
+        color: $primary-500;
     }
 }
 
 // Dark mode
 .dark-mode {
-    .header {
-        .scroll-down {
-            color: $neutrals-200;
-        }
+    .header .scroll-down {
+        color: $neutrals-200;
     }
 }
 

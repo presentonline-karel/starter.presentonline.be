@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- META INFORMATION -->
-        <?php snippet("meta_information"); ?>
-        <?php snippet("robots"); ?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- FAVICON -->
-        <link rel="apple-touch-icon" sizes="180x180" href="<?= $site->url() ?>/assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?= $site->url() ?>/assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?= $site->url() ?>/assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="<?= $site->url() ?>/assets/favicon/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+    <!-- META INFORMATION -->
+    <?php snippet("meta_information"); ?>
+    <?php snippet("robots"); ?>
 
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= $site->url() ?>/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= $site->url() ?>/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= $site->url() ?>/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?= $site->url() ?>/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-        <!-- GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="screen">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
 
-        <!-- STYLESHEET -->
-        <?= css("build/css/style.css") ?>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="screen">
 
-        <!-- SWIPERJS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    </head>
-    <body class="light-mode">
+    <!-- STYLESHEET -->
+    <?= css("build/css/style.css") ?>
 
-        <!-- COOKIES -->
-        <?php if($site->cookiesSwitch()->toBool()): ?>
-            <div class="cookie-consent-modal">
-                <div class="content-container">
-                    <div class="content">
-                        <h3><?= $site->cookiesTitle() ?></h3>
-                        <p><?= $site->cookiesParagraph() ?></p>
+    <!-- SWIPERJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
 
-                        <div class="buttons flex">
-                            <button class="button button-secondary cancel">Geen cookies</button>
-                            <button class="button button-primary accept">Accepteren</button>
-                        </div>
+<body>
+
+    <!-- LIGHT/DARK MODE -->
+    <div class="theme-switch__info lightDarkModeSwitch">
+        <?php switch ($site->lightDarkModeSwitch()) {
+            case "lightMode":
+                echo ("light-mode");
+                break;
+            case "darkMode":
+                echo ("dark-mode");
+                break;
+            case "lightDarkMode":
+                echo ("light-dark-mode");
+                break;
+            default:
+                echo ("light-mode");
+                break;
+        } ?>
+    </div>
+
+    <div class="theme-switch__info lightDarkModeStandard">
+        <?php switch ($site->lightDarkModeStandard()) {
+            case "lightMode":
+                echo ("light-mode");
+                break;
+            case "darkMode":
+                echo ("dark-mode");
+                break;
+            case "machineDefault":
+                echo ("machine-default");
+                break;
+            default:
+                echo ("light-mode");
+                break;
+        } ?>
+    </div>
+
+    <?= js("build/js/general/themeInit.js") ?>
+
+
+
+    <!-- COOKIES -->
+    <?php if ($site->cookiesSwitch()->toBool()) : ?>
+        <div class="cookie-consent-modal">
+            <div class="content-container">
+                <div class="content">
+                    <h3><?= $site->cookiesTitle() ?></h3>
+                    <p><?= $site->cookiesParagraph() ?></p>
+
+                    <div class="buttons flex">
+                        <button class="button button-secondary cancel">Geen cookies</button>
+                        <button class="button button-primary accept">Accepteren</button>
                     </div>
                 </div>
             </div>
-        <?php endif; ?>
+        </div>
+    <?php endif; ?>

@@ -1,3 +1,30 @@
+// Light mode
+.light-mode {
+    .blocks {
+        > ul li {
+            color: $neutrals-900;
+        }
+
+        > figure img {
+            filter: brightness(100%);
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .blocks {
+        > ul li {
+            color: $neutrals-400;
+        }
+
+        > figure img {
+            filter: brightness(92%);
+        }
+    }
+}
+
+// Mobile styling
 .blocks {
     & > * {
         &:last-child {
@@ -5,11 +32,14 @@
         }
     }
 
-    > h2, h3 {
+    > h2,
+    h3 {
         margin-bottom: 12px;
     }
 
-    > h4, h5, h6 {
+    > h4,
+    h5,
+    h6 {
         margin-bottom: 8px;
     }
 
@@ -28,12 +58,12 @@
         text-align: left;
 
         li {
-            color: $neutrals-900;
             font-family: $paragraph-font;
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
             letter-spacing: -0.01em;
+            transition: color $transition-time-short ease-in-out;
             width: auto;
 
             a {
@@ -50,6 +80,8 @@
             max-width: initial;
             margin-left: -16px;
             object-fit: cover;
+            position: relative;
+            transition: filter $transition-time-short ease-in-out;
             width: 100vw;
         }
     }
@@ -102,11 +134,14 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .blocks {
-        > h2, h3 {
+        > h2,
+        h3 {
             margin-bottom: 24px;
         }
 
-        > h4, h5, h6 {
+        > h4,
+        h5,
+        h6 {
             margin-bottom: 16px;
         }
 

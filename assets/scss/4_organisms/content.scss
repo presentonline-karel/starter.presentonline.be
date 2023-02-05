@@ -1,39 +1,65 @@
-.content {
-    background-color: $neutrals-100;
-    
-    &__image {
-        aspect-ratio: 3/2;
-        height: auto;
-        width: 100%;
+// Light mode
+.light-mode {
+    .content-section {
+        background-color: $neutrals-100;
 
-        img {
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
+        .content__image img {
+            filter: brightness(100%);
         }
     }
+}
 
-    &__text {
-        padding: 48px 16px 64px 16px;
+// Dark mode
+.dark-mode {
+    .content-section {
+        background-color: $dark-mode-grey-bg;
 
-        .blocks {
-            margin-bottom: 24px;
+        .content__image img {
+            filter: brightness(92%);
+        }
+    }
+}
+
+// Mobile styling
+.content-section {
+    transition: all $transition-time-short ease-in-out;
+
+    .content {
+        &__image {
+            aspect-ratio: 3/2;
+            height: auto;
+            width: 100%;
+
+            img {
+                border-radius: 0;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+                transition: filter $transition-time-short ease-in-out;
+                width: 100%;
+            }
+        }
+
+        &__text {
+            padding: 48px 16px 64px 16px;
+
+            .blocks {
+                margin-bottom: 24px;
+            }
         }
     }
 }
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
-    .content {
-        &__text {
-            padding: 64px 48px;
-        }
+    .content-section .content__text {
+        padding: 64px 48px;
     }
 }
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .content {
+    .content-section .content {
         align-items: center;
         display: flex;
         gap: 72px;
@@ -60,7 +86,7 @@
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
-    .content {
+    .content-section .content {
         padding: 128px 96px;
 
         &__image {
@@ -71,7 +97,7 @@
 
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
-    .content {
+    .content-section .content {
         padding: 128px 0;
     }
 }
