@@ -1,3 +1,40 @@
+// Light mode
+.light-mode {
+    .blog-filter {
+        .form-filter {
+            .input {
+                background-color: $neutrals-400;
+                color: $neutrals-1100;
+
+                &::-webkit-input-placeholder,
+                &:-ms-input-placeholder,
+                &::placeholder {
+                    color: $neutrals-900;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .blog-filter {
+        .form-filter {
+            .input {
+                background-color: $neutrals-800;
+                color: $neutrals-200;
+
+                &::-webkit-input-placeholder,
+                &:-ms-input-placeholder,
+                &::placeholder {
+                    color: $neutrals-400;
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .blog-filter {
     padding: 0px 16px 32px 16px;
 
@@ -11,10 +48,8 @@
         width: 100%;
 
         .input {
-            background-color: $neutrals-400;
             border-radius: $border-radius-medium 0 0 $border-radius-medium;
             border: none !important;
-            color: $neutrals-1100;
             font-family: $paragraph-font;
             font-weight: 400;
             font-size: 16px;
@@ -22,6 +57,7 @@
             line-height: 24px;
             letter-spacing: -0.01em;
             padding: 8px 16px;
+            transition: all $transition-time-short ease-in-out;
             width: calc(100% - 118px);
 
             &:focus {
@@ -31,12 +67,13 @@
             &::-webkit-input-placeholder,
             &:-ms-input-placeholder,
             &::placeholder {
-                color: $neutrals-900;
+                color: $neutrals-400;
             }
         }
 
         .button-primary {
             border-radius: 0 $border-radius-medium $border-radius-medium 0;
+            max-height: 40px;
             width: 118px;
         }
     }
@@ -72,7 +109,6 @@
             height: 24px;
             overflow-x: auto;
             overflow-y: hidden;
-            //padding: 0 0 0 8px;
             white-space: nowrap;
             width: auto;
 
@@ -82,7 +118,6 @@
                 transition: all $transition-time-short ease;
 
                 &:hover {
-                    background-color: $primary-100;
                     cursor: pointer;
                 }
 

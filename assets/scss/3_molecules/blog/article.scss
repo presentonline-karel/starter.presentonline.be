@@ -1,3 +1,28 @@
+// Light mode
+.light-mode {
+    .article {
+        background-color: $neutrals-200;
+        border: $border-card-thin;
+
+        &__img {
+            filter: $image-brightness-light-mode;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .article {
+        background-color: $dark-mode-grey-bg;
+        border: $border-card-thin-dark-mode;
+
+        &__img {
+            filter: $image-brightness-dark-mode;
+        }
+    }
+}
+
+// Mobile styling
 article {
     margin-bottom: 24px;
 
@@ -8,13 +33,15 @@ article {
 
 .article {
     border-radius: $border-radius-medium;
-    background-color: $neutrals-200;
     box-shadow: $card-shadow;
-    border: $border-card-thin;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+
+    & * {
+        transition: all $transition-time-short ease-in-out;
+    }
 
     &__img {
         aspect-ratio: 3/2;

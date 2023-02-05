@@ -1,8 +1,23 @@
+// Light mode
+.light-mode {
+    .min-read {
+        color: $neutrals-900;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .min-read {
+        color: $neutrals-400;
+    }
+}
+
+// Mobile styling
 .min-read {
-    color: $neutrals-1100;
     font-family: $title-font;
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: -0.01em;
+    transition: color $transition-time-short ease-in-out;
 }

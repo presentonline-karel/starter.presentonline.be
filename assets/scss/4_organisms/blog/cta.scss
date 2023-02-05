@@ -1,13 +1,55 @@
-//ABOUT CTAs
-.container-blog {
-    .cta {
-        background-color: $primary-100;
-        
-        h2 {
-            color: $neutrals-1100;
+// Light mode
+.light-mode {
+    .container-blog {
+        .cta,
+        .cta__content {
+            background-color: $primary-100;
 
-            span {
-                color: $primary-500;
+            h2 {
+                color: $neutrals-1100;
+
+                span {
+                    color: $primary-500;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .container-blog {
+        .cta,
+        .cta__content {
+            background-color: $dark-mode-grey-bg;
+
+            h2,
+            h2 span {
+                color: $neutrals-200;
+            }
+        }
+    }
+}
+
+/* DESKTOP - 1280px */
+@media only screen and (min-width: $desktop-1) {
+    .light-mode {
+        .container-blog {
+            .cta__content {
+                border: $border-card-thin;
+            }
+        }
+    }
+
+    .dark-mode {
+        .container-blog {
+            .cta {
+                background-color: $neutrals-1000 !important;
+
+                &__content {
+                    background-color: $dark-mode-grey-bg;
+                    border: $border-card-thin-dark-mode;
+                }
             }
         }
     }

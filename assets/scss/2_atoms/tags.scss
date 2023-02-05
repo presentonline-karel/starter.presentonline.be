@@ -1,3 +1,34 @@
+// Light mode
+.light-mode {
+    .tag {
+        &-grey {
+            background-color: $neutrals-400;
+            color: $neutrals-1100;
+        }
+
+        &-primary {
+            background-color: $primary-100;
+            border: 0.4px solid $primary-200;
+            color: $primary-500;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .tag {
+        &-grey, &-primary {
+            background-color: $neutrals-800;
+            color: $neutrals-100;
+        }
+
+        &-primary {
+            border: 0.4px solid $neutrals-800;
+        }
+    }
+}
+
+// Mobile styling
 .tag {
     border-radius: $border-radius-medium;
     display: inline-block;
@@ -9,13 +40,13 @@
     padding: 5px 8px;
 
     &-grey {
-        background-color: $neutrals-400;
-        color: $neutrals-1100;
+        //background-color: $neutrals-400;
+        //color: $neutrals-1100;
     }
 
-    &-primary {
+    /*&-primary {
         background-color: $primary-100;
         border: 0.5px solid $primary-200;
         color: $primary-500;
-    }
+    }*/
 }
