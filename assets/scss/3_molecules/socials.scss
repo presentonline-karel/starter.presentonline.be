@@ -34,24 +34,22 @@
     justify-content: flex-start;
 
     .social {
-        //background-color: $neutrals-100;
         border-radius: $border-radius-medium;
         height: 40px;
         text-align: center;
-        transition: all $transition-time-short;
+        transition: all $transition-time-short ease-in-out;
         width: 40px;
 
         &:hover {
-            //background-color: $primary-100;
             cursor: pointer;
         }
 
         i {
-            //color: $primary-500;
             font-size: 20px;
             height: 20px;
             line-height: 20px;
             padding-top: 10px;
+            transition: color $transition-time-short ease-in-out;
             width: 20px;
         }
     }

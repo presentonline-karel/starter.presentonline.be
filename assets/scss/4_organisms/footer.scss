@@ -89,6 +89,7 @@
 .footer {
     padding: 40px 16px 24px 16px;
     position: relative;
+    transition: all $transition-time-short ease-in-out;
 
     &-blocks {
         position: relative;
@@ -112,6 +113,7 @@
             left: 12px;
             position: relative;
             top: 12px;
+            transition: color $transition-time-short ease-in-out;
             width: 16px;
         }
     }
@@ -134,6 +136,8 @@
     .contact,
     .sitemap {
         margin-bottom: 32px;
+        border-top: none !important;
+        background-color: transparent !important;
     }
 
     &__block {
@@ -162,9 +166,10 @@
 
     //Footer bottom
     &-line {
+        border: none;
         height: 0.5px;
         margin-bottom: 16px;
-        border: none;
+        transition: background-color $transition-time-short ease-in-out;
     }
 
     &__copyright {

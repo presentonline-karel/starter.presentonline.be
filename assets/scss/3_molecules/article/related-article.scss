@@ -1,3 +1,30 @@
+// Light mode
+.light-mode {
+    .related-articles {
+        &__article {
+            &__top {
+                i {
+                    color: $primary-500;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .related-articles {
+        &__article {
+            &__top {
+                i {
+                    color: $neutrals-200;
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .related-articles {
     article {
         border-bottom: 1px solid $neutrals-800;
@@ -10,7 +37,7 @@
 
         &:last-of-type {
             border-bottom: none;
-            padding-bottom: 0;
+            padding: 0;
         }
 
         &:hover {
@@ -38,16 +65,26 @@
             }
 
             i {
-                color: $primary-500;
                 font-size: 14px;
                 line-height: 14px;
                 margin-top: 8px;
-                transition: all $transition-time-short;
+                transition: all $transition-time-short ease-in-out;
             }
         }
 
         .tags {
             margin-bottom: 16px;
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .related-articles {
+        article {
+            &:last-of-type {
+                padding-top: 24px;
+            }
         }
     }
 }

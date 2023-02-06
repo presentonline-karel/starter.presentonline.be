@@ -1,9 +1,45 @@
+// Light mode
+.light-mode {
+    .input-group {
+        &__label {
+            color: $neutrals-900;
+        }
+
+        .input {
+            background-color: $neutrals-100;
+            border: 1px solid $neutrals-600;
+
+            &::placeholder {
+                color: $neutrals-800;
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .input-group {
+        &__label {
+            color: $neutrals-400;
+        }
+
+        .input {
+            background-color: $neutrals-900;
+            border: $border-card-thin-dark-mode;
+
+            &::placeholder {
+                color: $neutrals-400;
+            }
+        }
+    }
+}
+
+// Mobile styling
 .form {
     .input-group {
         margin-bottom: 16px;
 
         &__label {
-            color: $neutrals-900;
             display: block;
             font-family: $title-font;
             font-size: 14px;
@@ -11,21 +47,22 @@
             line-height: 14px;
             letter-spacing: -0.01em;
             margin-bottom: 8px;
+            transition: color $transition-time-short ease-in-out;
         }
 
         .input {
             border-radius: $border-radius-medium;
-            border: 1px solid $neutrals-600;
             font-family: $paragraph-font;
             font-size: 16px;
             font-weight: 400;
             letter-spacing: -0.01em;
             line-height: 16px;
             padding: 16px;
+            transition: all $transition-time-short ease-in-out;
             width: 100%;
 
             &::placeholder {
-                color: $neutrals-800;
+                transition: all $transition-time-short ease-in-out;
             }
 
             &.textarea {

@@ -1,5 +1,40 @@
+// Light mode
+.light-mode {
+    .header-contact {
+        background-color: $neutrals-100;
+
+        &__content {
+            &__hours {
+                &__item {
+                    .day {
+                        color: $neutrals-1100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .header-contact {
+        background-color: $neutrals-1000;
+
+        &__content {
+            &__hours {
+                &__item {
+                    .day {
+                        color: $neutrals-200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .header-contact {
-    background-color: $neutrals-100;
+    transition: all $transition-time-short ease-in-out;
 
     &__content {
         padding: 24px 16px 48px 16px;
@@ -30,7 +65,7 @@
 
                 .day {
                     color: $neutrals-1100;
-                    font-weight: 600;
+                    font-weight: 500;
                     line-height: 20px;
                     width: 78px;
                 }

@@ -1,3 +1,46 @@
+// Light mode
+.light-mode {
+    .prices {
+        .content-container {
+            .pricing-tables {
+                .table {
+                    tr {
+                        th {
+                            color: $neutrals-1100;
+                        }
+
+                        td {
+                            color: $neutrals-900;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .prices {
+        .content-container {
+            .pricing-tables {
+                .table {
+                    tr {
+                        th {
+                            color: $neutrals-200;
+                        }
+
+                        td {
+                            color: $neutrals-400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .prices {
     .content-container {
         .pricing-tables {
@@ -25,27 +68,32 @@
                             height: 35px;
                         }
 
-                        td, th {
+                        td,
+                        th {
                             padding-bottom: 8px;
                         }
 
                         &:last-of-type {
-                            td, th {
+                            td,
+                            th {
                                 padding-bottom: 0 !important;
 
-                                .disclaimer, &.disclaimer {
+                                .disclaimer,
+                                &.disclaimer {
                                     padding-bottom: 8px !important;
                                 }
                             }
                         }
                     }
 
-                    th, td {
+                    th,
+                    td {
                         font-size: 20px;
                         line-height: 28px;
                         text-align: left;
 
-                        .disclaimer, &.disclaimer {
+                        .disclaimer,
+                        &.disclaimer {
                             background-color: $info-100;
                             border-radius: $border-radius-medium;
                             color: $info-500;
@@ -87,13 +135,13 @@
                     }
 
                     th {
-                        color: $neutrals-1100;
-                        font-weight: 600;
+                        font-weight: 500;
+                        transition: all $transition-time-short ease-in-out;
                     }
 
                     td {
-                        color: $neutrals-900;
                         font-weight: 400;
+                        transition: all $transition-time-short ease-in-out;
                     }
                 }
             }
@@ -103,6 +151,48 @@
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
+    .light-mode {
+        .prices {
+            .content-container {
+                .pricing-tables {
+                    .table {
+                        tr {
+                            &.header-row {
+                                th {
+                                    color: $primary-500;
+                                    background-color: $primary-100;
+                                    border-top: 1px solid $primary-200;
+                                    border-bottom: 1px solid $primary-200;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dark-mode {
+        .prices {
+            .content-container {
+                .pricing-tables {
+                    .table {
+                        tr {
+                            &.header-row {
+                                th {
+                                    color: $neutrals-200;
+                                    background-color: $dark-mode-grey-bg;
+                                    border-top: 1px solid $neutrals-800;
+                                    border-bottom: 1px solid $neutrals-800;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .prices {
         .content-container {
             .pricing-tables {
@@ -110,76 +200,75 @@
                     tr {
                         &.header-row {
                             th {
-                                color: $primary-500;
-                                background-color: $primary-100;
-                                border-top: 1px solid $primary-200;
-                                border-bottom: 1px solid $primary-200;
                                 padding: 24px 32px !important;
-    
+
                                 &:first-of-type {
                                     border-radius: 8px 0px 0px 8px;
                                 }
-    
+
                                 &:last-of-type {
                                     border-radius: 0px 8px 8px 0px;
                                 }
-        
+
                                 &.spacer-column {
                                     padding-right: 32px;
                                 }
                             }
                         }
-        
+
                         &.row {
                             &.row-last {
                                 td {
                                     padding-bottom: 40px;
                                 }
                             }
-    
+
                             &.row-1 {
                                 td {
                                     padding-top: 24px;
                                 }
                             }
-    
-                            td, th {
+
+                            td,
+                            th {
                                 padding-bottom: 8px;
                             }
-    
+
                             td {
                                 padding-left: 32px;
                                 padding-right: 32px;
-    
+
                                 &:first-of-type {
                                     font-weight: 600;
                                 }
                             }
                         }
-        
-                        th, td {
-                            .disclaimer, &.disclaimer {
+
+                        th,
+                        td {
+                            .disclaimer,
+                            &.disclaimer {
                                 padding: 12px !important;
                             }
-        
+
                             &.align-right {
                                 text-align: right;
                             }
-        
+
                             &.align-left {
                                 text-align: left;
                             }
-        
+
                             &.pad-r-32 {
                                 padding-right: 32px;
                             }
                         }
-        
+
                         th {
                             color: $neutrals-1100;
                             font-weight: 600;
                         }
-        
+
                         td {
                             color: $neutrals-900;
                             font-weight: 400;

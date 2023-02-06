@@ -1,3 +1,26 @@
+// Light mode
+.light-mode {
+    .accordion {
+        &__header {
+            i {
+                color: $primary-500;
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .accordion {
+        &__header {
+            i {
+                color: $neutrals-200;
+            }
+        }
+    }
+}
+
+// Mobile styling
 .accordion {
     border-bottom: 1px solid $neutrals-800;
     padding: 24px 0px;
@@ -20,13 +43,13 @@
         display: flex;
         justify-content: space-between; 
         margin-bottom: 8px;
+        transition: all $transition-time-short ease-in-out;
 
         .title {
             max-width: 265px;
         }
 
         i {
-            color: $primary-500;
             font-size: 20px;
             line-height: 20px;
             transition: all $transition-time-short ease;
