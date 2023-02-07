@@ -1,29 +1,121 @@
+// Light mode
+.light-mode {
+    .pricing-plan {
+        background-color: $neutrals-200;
+        border: 2px solid $neutrals-600;
+    
+        &.discount {
+            border: 2px solid $success-500;
+        }
+    
+        &.most-popular {
+            border: 2px solid $info-500;
+        }
+    
+        &-header {
+            background-color: $neutrals-100;
+    
+            .tag {
+                &.comparison-price {
+                    color: $neutrals-1100;
+                }
+            }
+    
+            .pricing-plan {
+                &__pricing {
+                    .euro-sign {
+                        color: $neutrals-1100;
+                    }
+    
+                    .price {
+                        color: $neutrals-1100;
+                    }
+    
+                    .period {
+                        color: $neutrals-800;
+                    }
+                }
+            }
+        }
+    
+        &-body {
+            background-color: $neutrals-200;
+    
+            .pricing-plan {
+                &__features {
+                    .feature {
+                        color: $neutrals-900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .pricing-plan {
+        background-color: $dark-mode-grey-bg;
+        border: 0.4px solid $neutrals-800 !important;
+    
+        &-header {
+            background-color: $neutrals-800;
+            border-bottom: 0.4px solid $neutrals-800;
+    
+            .tag {
+                &.comparison-price {
+                    color: $neutrals-900;
+                }
+            }
+    
+            .pricing-plan {
+                &__pricing {
+                    .euro-sign {
+                        color: $neutrals-200;
+                    }
+    
+                    .price {
+                        color: $neutrals-200;
+                    }
+    
+                    .period {
+                        color: $neutrals-400;
+                    }
+                }
+            }
+        }
+    
+        &-body {
+            background-color: $dark-mode-grey-bg;
+    
+            .pricing-plan {
+                &__features {
+                    .feature {
+                        color: $neutrals-200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .pricing-plan {
     align-items: flex-start;
-    background-color: $neutrals-200;
     border-radius: $border-radius-medium;
-    border: 2px solid $neutrals-200;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 24px;
-
-    &.discount {
-        border: 2px solid $success-500;
-    }
-
-    &.most-popular {
-        border: 2px solid $info-500;
-    }
+    transition: all $transition-time-short ease-in-out;
 
     &-header {
-        background-color: $neutrals-100;
         border-radius: $border-radius-medium $border-radius-medium 0 0;
-        border-bottom: $border-card-thin;
         display: block;
         padding: 32px;
         position: relative;
         text-align: center;
+        transition: all $transition-time-short ease-in-out;
         width: 100%;
 
         .tags {
@@ -41,6 +133,7 @@
             font-size: 14px;
             line-height: 14px;
             white-space: nowrap;
+            transition: all $transition-time-short ease-in-out;
 
             &.discount,
             &.most-popular {
@@ -58,7 +151,6 @@
 
             &.comparison-price {
                 background-color: $neutrals-400;
-                color: $neutrals-1100;
                 font-weight: 400;
             }
         }
@@ -82,26 +174,26 @@
                 }
 
                 .euro-sign {
-                    color: $neutrals-1100;
                     font-size: 32px;
                     font-weight: 500;
                     line-height: 36px;
                     margin-right: 8px;
+                    transition: color $transition-time-short ease-in-out;
                 }
 
                 .price {
-                    color: $neutrals-1100;
                     font-size: 48px;
                     font-weight: 500;
                     line-height: 48px;
                     margin-right: 12px;
+                    transition: color $transition-time-short ease-in-out;
                 }
 
                 .period {
-                    color: $neutrals-800;
                     font-size: 24px;
                     font-weight: 500;
                     line-height: 32px;
+                    transition: color $transition-time-short ease-in-out;
                 }
 
                 .contact-cta {
@@ -115,9 +207,9 @@
     }
 
     &-body {
-        background-color: $neutrals-200;
         margin-bottom: 0px;
         padding: 24px 24px 32px;
+        transition: background-color $transition-time-short ease-in-out;
 
         .pricing-plan {
             &__description {
@@ -133,13 +225,13 @@
                 list-style-type: none;
 
                 .feature {
-                    color: $neutrals-900;
                     display: flex;
                     font-family: $paragraph-font;
                     font-size: 16px;
                     gap: 8px;
                     line-height: 24px;
                     margin-bottom: 4px;
+                    transition: color $transition-time-short ease-in-out;
 
                     i {
                         line-height: 22px;

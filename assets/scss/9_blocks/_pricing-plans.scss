@@ -1,16 +1,26 @@
+// Light mode
+.light-mode {
+    .pricing-plans-section {
+        background-color: $neutrals-600;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .pricing-plans-section {
+        background-color: $neutrals-1000;
+    }
+}
+
+// Mobile styling
 .pricing-plans-section {
-    background-color: $neutrals-900;
+    transition: all $transition-time-short ease-in-out;
 
     .pricing-plans-header {
         margin-bottom: 40px;
 
         h2 {
-            color: $neutrals-100;
             margin-bottom: 16px;
-        }
-
-        p {
-            color: $neutrals-400;
         }
     }
 

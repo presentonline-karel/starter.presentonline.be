@@ -1,6 +1,21 @@
+// Light mode
+.light-mode {
+    .centeredContent-section {
+        background-color: $neutrals-200;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .centeredContent-section {
+        background-color: $dark-mode-grey-bg;
+    }
+}
+
+// Mobile styling
 .centeredContent-section {
-    background-color: $neutrals-200;
     padding: 64px 16px;
+    transition: all $transition-time-short ease-in-out;
 }
 
 /* TABLET 768PX */

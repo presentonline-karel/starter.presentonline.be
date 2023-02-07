@@ -1,13 +1,53 @@
+// Light mode
+.light-mode {
+    .cta-double {
+        background-color: $neutrals-100;
+    
+        &__cta {
+            background-color: $primary-100;
+            border: $border-card-thin;
+    
+            h2 {
+                color: $neutrals-1000;
+    
+                span {
+                    color: $primary-500;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .cta-double {
+        background-color: $neutrals-1000;
+    
+        &__cta {
+            background-color: $dark-mode-grey-bg;
+            border: $border-card-thin-dark-mode;
+    
+            h2 {
+                color: $neutrals-400;
+    
+                span {
+                    color: $neutrals-200;
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .cta-double {
-    background-color: $neutrals-100;
+    transition: all $transition-time-short ease-in-out;
 
     &__cta {
-        background-color: $primary-100;
-        border: $border-card-thin;
         border-radius: $border-radius-medium;
         box-shadow: $card-shadow;
         margin-bottom: 16px;
         padding: 40px 16px;
+        transition: all $transition-time-short ease-in-out;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -15,9 +55,10 @@
 
         h2 {
             margin-bottom: 24px;
+            transition: color $transition-time-short ease-in-out;
 
             span {
-                color: $primary-500;
+                transition: color $transition-time-short ease-in-out;
             }
         }
     }

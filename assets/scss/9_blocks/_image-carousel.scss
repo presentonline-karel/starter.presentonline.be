@@ -1,5 +1,48 @@
+// Light mode
+.light-mode {
+    .image-carousel-section {
+        background-color: $neutrals-100;
+    
+        .image-carousel {
+            &__big-image {
+                &__img {
+                    filter: brightness(100%);
+                }
+            }
+    
+            &__thumbnails {
+                .thumbnail {
+                    filter: brightness(100%);
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .image-carousel-section {
+        background-color: $dark-mode-grey-bg;
+    
+        .image-carousel {
+            &__big-image {
+                &__img {
+                    filter: brightness(92%);
+                }
+            }
+    
+            &__thumbnails {
+                .thumbnail {
+                    filter: brightness(92%);
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .image-carousel-section {
-    background-color: $neutrals-100;
+    transition: all $transition-time-short ease-in-out;
 
     .flex-desktop {
         .button {
@@ -64,12 +107,14 @@
             display: flex;
             gap: 8px;
             margin-bottom: 32px;
-            overflow: scroll;
+            overflow: auto;
 
             .thumbnail {
                 aspect-ratio: 3/2;
                 border-radius: $border-radius-medium;
                 height: auto;
+                min-height: 56px;
+                min-width: 80px;
                 object-fit: cover;
                 opacity: 0.4;
                 transition: all $transition-time-short ease-in-out;
@@ -107,6 +152,8 @@
                 .thumbnail {
                     aspect-ratio: initial;
                     height: 106px;
+                    min-height: 106px;
+                    min-width: 156px;
                     width: 156px;
                 }
             }
@@ -139,7 +186,7 @@
                 &__img {
                     aspect-ratio: 3/2;
                     height: inherit;
-                    width: inherit;
+                    width: 100%;
                 }
             }
 
@@ -149,8 +196,9 @@
                 gap: 16px;
                 height: auto;
                 margin-bottom: 0;
+                max-height: 357px;
                 overflow: hidden;
-                overflow-y: scroll;
+                overflow-y: auto;
                 width: calc(100% - 535px - 48px); // 535px is big-image, 48px is flex-gap
 
                 .thumbnail {
@@ -193,6 +241,7 @@
             }
 
             &__thumbnails {
+                max-height: 417px;
                 width: calc(100% - 625px - 72px); // 625px is big-image, 72px is flex-gap
             }
         }
@@ -212,6 +261,7 @@
             }
 
             &__thumbnails {
+                max-height: 479px;
                 overflow-y: auto;
                 width: calc(100% - 718px - 72px); // 625px is big-image, 72px is flex-gap
             }

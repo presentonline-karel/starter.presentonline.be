@@ -31,13 +31,14 @@
             }
         }
 
-        .header-about__content__image img, .header__content__image img {
-            transition: all $transition-time-short ease-in-out;
-        }
-
         .header-about__content__image {
             display: none;
         }
+    }
+
+    .header-about__content__image img, .header__content__image img {
+        transition: all $transition-time-short ease-in-out;
+        border-radius: 0;
     }
 }
 
@@ -73,7 +74,6 @@
             }
 
             .header-about__content__image {
-                border-radius: $border-radius-medium;
                 display: block;
                 height: 100%;
                 max-width: 505px;
@@ -81,6 +81,10 @@
                 object-fit: cover;
                 width: 40%;
             }
+        }
+
+        .header-about__content__image img, .header__content__image img {
+            border-radius: $border-radius-medium;
         }
 
         .header__content__image {

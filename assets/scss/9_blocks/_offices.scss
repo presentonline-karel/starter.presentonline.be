@@ -1,5 +1,100 @@
+// Light mode
+.light-mode {
+    .offices-section {
+        background-color: $neutrals-200;
+    
+        .offices {
+            .office {
+                background-color: $neutrals-100;
+                border: $border-card-thin;
+    
+                &.headOffice {
+                    border: 2px solid $primary-500;
+    
+                    .headOffice__label {
+                        color: $primary-500;
+                    }
+                }
+                &__info {
+                    &__item {
+                        i {
+                            color: $primary-500;
+                        }
+    
+                        &__text {
+                            color: $neutrals-900;
+                        }
+                    }
+                }
+    
+                &__directions {
+                    color: $neutrals-1000;
+
+                    i {
+                        color: $primary-500;
+                    }
+                }
+            }
+    
+            .swiper-pagination {
+                &-bullet {
+                    background: $neutrals-900;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .offices-section {
+        background-color: $neutrals-1000;
+    
+        .offices {
+            .office {
+                background-color: $dark-mode-grey-bg;
+                border: $border-card-thin-dark-mode;
+    
+                &.headOffice {
+                    border: 2px solid $primary-300;
+    
+                    .headOffice__label {
+                        color: $primary-300;
+                    }
+                }
+                &__info {
+                    &__item {
+                        i {
+                            color: $neutrals-200;
+                        }
+    
+                        &__text {
+                            color: $neutrals-400;
+                        }
+                    }
+                }
+    
+                &__directions {
+                    color: $neutrals-200;
+
+                    i {
+                        color: $neutrals-200;
+                    }
+                }
+            }
+    
+            .swiper-pagination {
+                &-bullet {
+                    background: $neutrals-700;
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .offices-section {
-    background-color: $neutrals-200;
+    transition: all $transition-time-short ease-in-out;
 
     &__header {
         &__title {
@@ -19,19 +114,17 @@
         }
 
         .office {
-            background-color: $neutrals-100;
             border-radius: $border-radius-medium;
-            border: $border-card-thin;
             box-shadow: $card-shadow;
             padding: 24px;
             position: relative;
+            transition: all $transition-time-short ease-in-out;
 
             &.headOffice {
-                border: 2px solid $primary-500;
+                transition: all $transition-time-short ease-in-out;
 
                 .headOffice__label {
                     display: block;
-                    color: $primary-500;
                     font-family: $title-font;
                     font-size: 16px;
                     font-weight: 500;
@@ -39,6 +132,7 @@
                     position: absolute;
                     right: 24px;
                     top: 31px;
+                    transition: color $transition-time-short ease-in-out;
                 }
             }
 
@@ -63,26 +157,28 @@
                     }
 
                     i {
-                        color: $primary-500;
                         font-size: 16px;
                         height: 16px;
                         line-height: 22px;
+                        transition: color $transition-time-short ease-in-out;
                         width: 16px;
                     }
 
                     &__text {
-                        color: $neutrals-900;
                         display: block;
                         font-family: $paragraph-font;
                         font-size: 16px;
                         line-height: 22px;
+                        transition: color $transition-time-short ease-in-out;
                     }
                 }
             }
 
             &__directions {
+                transition: all $transition-time-short ease-in-out;
+
                 i {
-                    color: $primary-500;
+                    transition: all $transition-time-short ease-in-out;
                 }
             }
         }
@@ -95,7 +191,7 @@
             transform: initial !important;
 
             &-bullet {
-                background: $neutrals-900 !important;
+                transition: all $transition-time-short ease-in-out;
 
                 &-active {
                     background: $primary-500 !important;
@@ -160,6 +256,13 @@
                 .office {
                     padding: 40px;
                     width: 100% !important;
+
+                    &.headOffice {
+                        .headOffice__label {
+                            top: 47px;
+                            right: 40px;
+                        }
+                    }
 
                     &__title {
                         font-size: 32px;

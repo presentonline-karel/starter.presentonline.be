@@ -1,5 +1,36 @@
+// Light mode
+.light-mode {
+    .team-grouped-section {
+        background-color: $neutrals-100;
+
+        .team-group {
+            .team-members {
+                .member__img {
+                    filter: brightness(100%);
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .team-grouped-section {
+        background-color: $dark-mode-grey-bg;
+
+        .team-group {
+            .team-members {
+                .member__img {
+                    filter: brightness(92%);
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .team-grouped-section {
-    background-color: $neutrals-100;
+    transition: all $transition-time-short ease-in-out;
 
     .team-grouped__header {
         margin-bottom: 32px;
@@ -28,6 +59,7 @@
             .member__img {
                 aspect-ratio: 3/2;
                 border-radius: $border-radius-medium;
+                transition: filter $transition-time-short ease-in-out;
                 height: auto;
                 margin-bottom: 8px;
                 object-fit: cover;

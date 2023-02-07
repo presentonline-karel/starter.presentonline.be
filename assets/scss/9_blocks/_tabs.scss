@@ -1,5 +1,55 @@
+// Light mode
+.light-mode {
+    .tabs-section {
+        background-color: $neutrals-100;
+    
+        .tabs-container {
+            .tabs {
+                .tab {
+                    background-color: $neutrals-200;
+                    border: 1px solid $neutrals-400;
+                    color: $neutrals-1100;
+                }
+            }
+    
+            .tab-content-container {
+                .tab-content {
+                    background-color: $neutrals-200;
+                    border: $border-card-thin;
+                    border-radius: $border-radius-medium;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .tabs-section {
+        background-color: $dark-mode-grey-bg;
+    
+        .tabs-container {
+            .tabs {
+                .tab {
+                    background-color: $neutrals-900;
+                    border: $border-card-thin-dark-mode;
+                    color: $neutrals-400;
+                }
+            }
+    
+            .tab-content-container {
+                .tab-content {
+                    background-color: $neutrals-900;
+                    border: $border-card-thin-dark-mode;
+                }
+            }
+        }
+    }
+}
+
+// Mobile styling
 .tabs-section {
-    background-color: $neutrals-100;
+    transition: all $transition-time-short ease-in-out;
 
     h2 {
         margin-bottom: 24px;
@@ -24,14 +74,18 @@
                 line-height: 20px;
                 letter-spacing: -0.01em;
                 padding: 12px 16px;
+                transition: all $transition-time-short ease-in-out;
 
-                &.active {
+                &.active, &.active:hover {
                     background-color: $primary-500;
                     border: 1px solid $primary-500;
                     color: $neutrals-100;
+                    transition: all $transition-time-short ease-in-out;
                 }
 
                 &:hover {
+                    background-color: $primary-100;
+                    color: $primary-500;
                     cursor: pointer;
                 }
             }

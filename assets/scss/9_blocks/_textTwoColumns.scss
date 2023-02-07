@@ -1,5 +1,20 @@
+// Light mode
+.light-mode {
+    .textTwoColumns-section {
+        background-color: $neutrals-100;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .textTwoColumns-section {
+        background-color: $dark-mode-grey-bg;
+    }
+}
+
+// Mobile styling
 .textTwoColumns-section {
-    background-color: $neutrals-100;
+    transition: all $transition-time-short ease-in-out;
     
     .blocks {
         margin-bottom: 40px;

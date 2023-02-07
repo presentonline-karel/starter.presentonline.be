@@ -1,5 +1,20 @@
+// Light mode
+.light-mode {
+    .landingPage-section {
+        background-color: $neutrals-100;
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .landingPage-section {
+        background-color: $neutrals-1000;
+    }
+}
+
+// Mobile styling
 .landingPage-section {
-    background-color: $neutrals-100;
+    transition: background-color $transition-time-short ease-in-out;
     padding: 28px 0 64px;
 
     .landingPage {

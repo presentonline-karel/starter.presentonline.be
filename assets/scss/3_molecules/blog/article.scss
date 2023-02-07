@@ -38,6 +38,7 @@ article {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    transition: all $transition-time-short ease-in-out;
 
     & * {
         transition: all $transition-time-short ease-in-out;
