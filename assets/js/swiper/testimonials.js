@@ -12,6 +12,12 @@ const testimonialSwiper = () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    breakpoints: {
+      1280: {
+        allowTouchMove: false
+      },
+    },
   });
 };
 

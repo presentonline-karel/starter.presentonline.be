@@ -6,13 +6,13 @@
         .image-carousel {
             &__big-image {
                 &__img {
-                    filter: brightness(100%);
+                    filter: $image-brightness-light-mode;
                 }
             }
     
             &__thumbnails {
                 .thumbnail {
-                    filter: brightness(100%);
+                    filter: $image-brightness-light-mode;
                 }
             }
         }
@@ -27,13 +27,13 @@
         .image-carousel {
             &__big-image {
                 &__img {
-                    filter: brightness(92%);
+                    filter: $image-brightness-dark-mode;
                 }
             }
     
             &__thumbnails {
                 .thumbnail {
-                    filter: brightness(92%);
+                    filter: $image-brightness-dark-mode;
                 }
             }
         }

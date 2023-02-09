@@ -8,6 +8,7 @@
         .input {
             background-color: $neutrals-100;
             border: 1px solid $neutrals-600;
+            color: $neutrals-1100;
 
             &::placeholder {
                 color: $neutrals-800;
@@ -26,6 +27,7 @@
         .input {
             background-color: $neutrals-900;
             border: $border-card-thin-dark-mode;
+            color: $neutrals-200;
 
             &::placeholder {
                 color: $neutrals-400;
@@ -60,6 +62,10 @@
             padding: 16px;
             transition: all $transition-time-short ease-in-out;
             width: 100%;
+
+            &:focus {
+                outline: 0;
+            }
 
             &::placeholder {
                 transition: all $transition-time-short ease-in-out;

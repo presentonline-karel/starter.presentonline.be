@@ -6,7 +6,7 @@
         }
 
         > figure img {
-            filter: brightness(100%);
+            filter: $image-brightness-light-mode;
         }
 
         > figure:has(iframe) {
@@ -25,7 +25,7 @@
         }
 
         > figure img {
-            filter: brightness(92%);
+            filter: $image-brightness-dark-mode;
         }
 
         > figure:has(iframe) {

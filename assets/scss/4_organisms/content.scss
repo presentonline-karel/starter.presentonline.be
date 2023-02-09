@@ -4,7 +4,7 @@
         background-color: $neutrals-100;
 
         .content__image img {
-            filter: brightness(100%);
+            filter: $image-brightness-light-mode;
         }
     }
 }
@@ -15,7 +15,7 @@
         background-color: $dark-mode-grey-bg;
 
         .content__image img {
-            filter: brightness(92%);
+            filter: $image-brightness-dark-mode;
         }
     }
 }
@@ -30,13 +30,19 @@
             height: auto;
             width: 100%;
 
-            img {
-                border-radius: 0;
-                height: 100%;
-                object-fit: cover;
-                position: relative;
-                transition: filter $transition-time-short ease-in-out;
+            picture {
                 width: 100%;
+                height: 100%;
+
+                img {
+                    aspect-ratio: 3/2;
+                    border-radius: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    transition: filter $transition-time-short ease-in-out;
+                    width: 100%;
+                }
             }
         }
 
@@ -70,16 +76,22 @@
             border-radius: $border-radius-medium;
             height: 508px;
             max-width: 505px;
+            overflow: hidden;
             width: 40%;
 
-            img {
-                border-radius: $border-radius-medium;
+            picture {
+                img {
+                    aspect-ratio: initial;
+                    border-radius: $border-radius-medium;
+                    height: inherit;
+                    width: inherit;
+                }
             }
         }
 
         &__text {
             padding: 0;
-            width: calc(100% - 40%);
+            width: calc(100% - 40% - 70px); // 40% image, 70px gap
         }
     }
 }
@@ -92,6 +104,10 @@
         &__image {
             width: 505px;
         }
+
+        &__text {
+            width: calc(100% - 505px - 70px); // 505px image, 70px gap
+        }
     }
 }
 
@@ -99,5 +115,9 @@
 @media screen and (min-width: $desktop-3) {
     .content-section .content {
         padding: 128px 0;
+
+        &__image {
+            height: 602px;
+        }
     }
 }

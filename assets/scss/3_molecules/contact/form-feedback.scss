@@ -1,3 +1,62 @@
+// Light mode
+.light-mode {
+    .input-group {
+        &.success {
+            .input {
+                border: 1px solid $success-500;
+            }
+    
+            i.fa-check-circle {
+                color: $success-500;
+            }
+        }
+    
+        &.error {
+            .input {
+                border: 1px solid $error-500;
+            }
+    
+            i.fa-exclamation-triangle {
+                color: $error-500;
+            }
+    
+            small {
+                color: $error-500;
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .input-group {
+        &.success {
+            .input {
+                border: 1px solid $success-300;
+            }
+    
+            i.fa-check-circle {
+                color: $success-300;
+            }
+        }
+    
+        &.error {
+            .input {
+                border: 1px solid $error-300;
+            }
+    
+            i.fa-exclamation-triangle {
+                color: $error-300;
+            }
+    
+            small {
+                color: $error-300;
+            }
+        }
+    }
+}
+
+// Mobile styling
 .input-group {
     position: relative;
     width: 100%;
@@ -22,7 +81,6 @@
         }
 
         i.fa-check-circle {
-            color: $success-500;
             visibility: visible;
         }
     }
@@ -31,17 +89,14 @@
         padding-bottom: 24px;
 
         .input {
-            border: 1px solid $error-500;
             margin-bottom: 8px;
         }
 
         i.fa-exclamation-triangle {
-            color: $error-500;
             visibility: visible;
         }
 
         small {
-            color: $error-500;
             visibility: visible;
         }
     }

@@ -9,7 +9,7 @@
             }
 
             .header__content__image picture img {
-                filter: brightness(100%);
+                filter: $image-brightness-light-mode;
             }
         }
     }
@@ -26,7 +26,7 @@
             }
 
             .header__content__image picture img {
-                filter: brightness(92%);
+                filter: $image-brightness-dark-mode;
             }
         }
     }

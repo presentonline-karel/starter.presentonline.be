@@ -6,7 +6,11 @@ const backgrounds = () => {
         let nextBgColor = window.getComputedStyle(sections[i + 1]).backgroundColor;
 
         if(currentBgColor == nextBgColor) {
-            sections[i].style.borderBottom = "1px solid #DEE2E6";
+            if(sessionStorage.getItem("theme") == "light-mode") {
+                sections[i].style.borderBottom = "1px solid #DEE2E6";
+            } else if(sessionStorage.getItem("theme") == "dark-mode") {
+                sections[i].style.borderBottom = "1px solid #495057";
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
         .team-group {
             .team-members {
                 .member__img {
-                    filter: brightness(100%);
+                    filter: $image-brightness-light-mode;
                 }
             }
         }
@@ -21,7 +21,7 @@
         .team-group {
             .team-members {
                 .member__img {
-                    filter: brightness(92%);
+                    filter: $image-brightness-dark-mode;
                 }
             }
         }

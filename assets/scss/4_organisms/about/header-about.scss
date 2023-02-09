@@ -5,7 +5,7 @@
     }
 
     .header-about__content__image img, .header__content__image img {
-        filter: brightness(100%);
+        filter: $image-brightness-light-mode;
     }
 }
 
@@ -16,7 +16,7 @@
     }
 
     .header-about__content__image img, .header__content__image img {
-        filter: brightness(92%);
+        filter: $image-brightness-dark-mode;
     }
 }
 
@@ -28,6 +28,23 @@
         &__text {
             .buttons {
                 justify-content: center;
+            }
+        }
+
+        &__image {
+            aspect-ratio: 3/2;
+            height: auto;
+            overflow: hidden;
+
+            picture {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                }
             }
         }
 
@@ -66,7 +83,7 @@
             &__text {
                 padding: 0;
                 text-align: left;
-                width: calc(100% - 40%);
+                width: calc(100% - 40% - 72px); // 40% is image, 72px is gap
 
                 .buttons {
                     justify-content: flex-start;
@@ -75,7 +92,8 @@
 
             .header-about__content__image {
                 display: block;
-                height: 100%;
+                //height: 100%;
+                height: 508px;
                 max-width: 505px;
                 max-height: 678px;
                 object-fit: cover;
@@ -114,6 +132,8 @@
             padding: 88px 96px 128px 96px;
 
             &__text {
+                width: calc(100% - 505px - 72px); // 505px is image, 72px is gap
+
                 h1 {
                     margin-bottom: 24px;
                 }
@@ -121,6 +141,10 @@
                 p {
                     margin-bottom: 32px;
                 }
+            }
+
+            .header-about__content__image {
+                width: 505px;
             }
         }
     }
@@ -141,6 +165,10 @@
             max-width: 1248px;
             padding: 88px 0 128px;
             padding-right: 106px;
+
+            .header-about__content__image {
+                height: 678px;
+            }
         }
     }
 }
