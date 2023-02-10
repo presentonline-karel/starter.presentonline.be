@@ -3,12 +3,8 @@
     .team-grouped-section {
         background-color: $neutrals-100;
 
-        .team-group {
-            .team-members {
-                .member__img {
-                    filter: $image-brightness-light-mode;
-                }
-            }
+        .team-group .team-members .member__img {
+            filter: $image-brightness-light-mode;
         }
     }
 }
@@ -18,12 +14,8 @@
     .team-grouped-section {
         background-color: $dark-mode-grey-bg;
 
-        .team-group {
-            .team-members {
-                .member__img {
-                    filter: $image-brightness-dark-mode;
-                }
-            }
+        .team-group .team-members .member__img {
+            filter: $image-brightness-dark-mode;
         }
     }
 }
@@ -131,11 +123,11 @@
                     &:last-of-type {
                         margin-bottom: 0;
                     }
-            
+
                     h4 {
                         margin-bottom: 32px;
                     }
-            
+
                     .team-members {
                         gap: 24px;
                     }

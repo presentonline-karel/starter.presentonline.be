@@ -5,18 +5,16 @@
 
         .box {
             background-color: $neutrals-200;
-    
-            &__header {
-                .icon-container {
-                    background-color: $info-100;
-    
-                    i {
-                        color: $info-500;
-                    }
+
+            &__header .icon-container {
+                background-color: $info-100;
+
+                i {
+                    color: $info-500;
                 }
             }
         }
-    
+
         .info-sections {
             background-color: $neutrals-100;
         }
@@ -31,9 +29,9 @@
         .box {
             background-color: $dark-mode-grey-bg;
         }
-    
+
         .info-sections {
-            background-color: $neutrals-1000
+            background-color: $neutrals-1000;
         }
     }
 }
@@ -88,7 +86,8 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .info {
-        .box, .info-sections {
+        .box,
+        .info-sections {
             padding: 64px 48px;
         }
     }
@@ -163,7 +162,7 @@
                     height: 56px;
                     padding: 16px 0px;
                     width: 56px;
-    
+
                     i {
                         font-size: 24px;
                         line-height: 24px;

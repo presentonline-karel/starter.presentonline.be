@@ -1,27 +1,15 @@
 // Light mode
 .light-mode {
-    .container-prices {
-        main {
-            .prices {
-                background-color: $neutrals-100;
-    
-                .content-container {
-                    .pricing-tables {
-                        .accordions {
-                            .accordion {
-                                &__header{
-                                    background-color: $primary-100;
-                                    border-top: 1px solid $primary-200;
-                                    border-bottom: 1px solid $primary-200;
-            
-                                    .title {
-                                        color: $primary-500;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+    .container-prices main .prices {
+        background-color: $neutrals-100;
+
+        .content-container .pricing-tables .accordions .accordion__header {
+            background-color: $primary-100;
+            border-top: 1px solid $primary-200;
+            border-bottom: 1px solid $primary-200;
+
+            .title {
+                color: $primary-500;
             }
         }
     }
@@ -29,28 +17,16 @@
 
 // Dark mode
 .dark-mode {
-    .container-prices {
-        main {
-            .prices {
-                background-color: $neutrals-1000;
-    
-                .content-container {
-                    .pricing-tables {
-                        .accordions {
-                            .accordion {
-                                &__header{
-                                    background-color: $dark-mode-grey-bg;
-                                    border-top: 1px solid $neutrals-800;
-                                    border-bottom: 1px solid $neutrals-800;
-            
-                                    .title {
-                                        color: $neutrals-200;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+    .container-prices main .prices {
+        background-color: $neutrals-1000;
+
+        .content-container .pricing-tables .accordions .accordion__header {
+            background-color: $dark-mode-grey-bg;
+            border-top: 1px solid $neutrals-800;
+            border-bottom: 1px solid $neutrals-800;
+
+            .title {
+                color: $neutrals-200;
             }
         }
     }
@@ -61,7 +37,7 @@
     main {
         .prices {
             transition: all $transition-time-short ease-in-out;
-            
+
             .content-container {
                 padding: 28px 16px 48px 16px;
 
@@ -73,27 +49,27 @@
                 .pricing-tables {
                     .accordions {
                         padding: 0;
-        
+
                         .accordion {
                             border-bottom: none;
                             margin-bottom: 32px;
                             padding: 0;
-        
+
                             &:last-of-type {
                                 margin-bottom: 0;
                             }
-        
+
                             &.active {
                                 .accordion__content {
                                     padding-top: 20px;
                                 }
                             }
-        
-                            &__header{
+
+                            &__header {
                                 border-radius: 8px;
                                 margin-bottom: 0;
                                 padding: 24px 16px;
-        
+
                                 .title {
                                     font-size: 24px;
                                     line-height: 32px;

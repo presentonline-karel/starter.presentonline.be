@@ -2,18 +2,14 @@
 .light-mode {
     .image-carousel-section {
         background-color: $neutrals-100;
-    
+
         .image-carousel {
-            &__big-image {
-                &__img {
-                    filter: $image-brightness-light-mode;
-                }
+            &__big-image__img {
+                filter: $image-brightness-light-mode;
             }
-    
-            &__thumbnails {
-                .thumbnail {
-                    filter: $image-brightness-light-mode;
-                }
+
+            &__thumbnails .thumbnail {
+                filter: $image-brightness-light-mode;
             }
         }
     }
@@ -23,18 +19,14 @@
 .dark-mode {
     .image-carousel-section {
         background-color: $dark-mode-grey-bg;
-    
+
         .image-carousel {
-            &__big-image {
-                &__img {
-                    filter: $image-brightness-dark-mode;
-                }
+            &__big-image__img {
+                filter: $image-brightness-dark-mode;
             }
-    
-            &__thumbnails {
-                .thumbnail {
-                    filter: $image-brightness-dark-mode;
-                }
+
+            &__thumbnails .thumbnail {
+                filter: $image-brightness-dark-mode;
             }
         }
     }
@@ -214,6 +206,46 @@
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
+    .light-mode {
+        .image-carousel-section .image-carousel__thumbnails {
+            &::-webkit-scrollbar {
+                border-radius: $border-radius-medium;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $primary-200;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $primary-400;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: $primary-500;
+            }
+        }
+    }
+
+    .dark-mode {
+        .image-carousel-section .image-carousel__thumbnails {
+            &::-webkit-scrollbar {
+                border-radius: $border-radius-medium;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $neutrals-700;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $primary-500;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: $primary-600;
+            }
+        }
+    }
+
     .image-carousel-section {
         .flex-desktop {
             align-items: center;
@@ -243,6 +275,14 @@
             &__thumbnails {
                 max-height: 417px;
                 width: calc(100% - 625px - 72px); // 625px is big-image, 72px is flex-gap
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    cursor: pointer;
+                }
             }
         }
 

@@ -1,26 +1,14 @@
 // Light mode
 .light-mode {
-    .related-articles {
-        &__article {
-            &__top {
-                i {
-                    color: $primary-500;
-                }
-            }
-        }
+    .related-articles__article__top i {
+        color: $primary-500;
     }
 }
 
 // Dark mode
 .dark-mode {
-    .related-articles {
-        &__article {
-            &__top {
-                i {
-                    color: $neutrals-200;
-                }
-            }
-        }
+    .related-articles__article__top i {
+        color: $neutrals-200;
     }
 }
 
@@ -59,7 +47,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
-            
+
             h5 {
                 max-width: 226px;
             }

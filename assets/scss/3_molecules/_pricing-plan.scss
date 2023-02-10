@@ -3,50 +3,44 @@
     .pricing-plan {
         background-color: $neutrals-200;
         border: 2px solid $neutrals-600;
-    
+
         &.discount {
             border: 2px solid $success-500;
         }
-    
+
         &.most-popular {
             border: 2px solid $info-500;
         }
-    
+
         &-header {
             background-color: $neutrals-100;
-    
+
             .tag {
                 &.comparison-price {
                     color: $neutrals-1100;
                 }
             }
-    
-            .pricing-plan {
-                &__pricing {
-                    .euro-sign {
-                        color: $neutrals-1100;
-                    }
-    
-                    .price {
-                        color: $neutrals-1100;
-                    }
-    
-                    .period {
-                        color: $neutrals-800;
-                    }
+
+            .pricing-plan__pricing {
+                .euro-sign {
+                    color: $neutrals-1100;
+                }
+
+                .price {
+                    color: $neutrals-1100;
+                }
+
+                .period {
+                    color: $neutrals-800;
                 }
             }
         }
-    
+
         &-body {
             background-color: $neutrals-200;
-    
-            .pricing-plan {
-                &__features {
-                    .feature {
-                        color: $neutrals-900;
-                    }
-                }
+
+            .pricing-plan__features .feature {
+                color: $neutrals-900;
             }
         }
     }
@@ -57,43 +51,37 @@
     .pricing-plan {
         background-color: $dark-mode-grey-bg;
         border: 0.4px solid $neutrals-800 !important;
-    
+
         &-header {
             background-color: $neutrals-800;
             border-bottom: 0.4px solid $neutrals-800;
-    
+
             .tag {
                 &.comparison-price {
                     color: $neutrals-900;
                 }
             }
-    
-            .pricing-plan {
-                &__pricing {
-                    .euro-sign {
-                        color: $neutrals-200;
-                    }
-    
-                    .price {
-                        color: $neutrals-200;
-                    }
-    
-                    .period {
-                        color: $neutrals-400;
-                    }
+
+            .pricing-plan__pricing {
+                .euro-sign {
+                    color: $neutrals-200;
+                }
+
+                .price {
+                    color: $neutrals-200;
+                }
+
+                .period {
+                    color: $neutrals-400;
                 }
             }
         }
-    
+
         &-body {
             background-color: $dark-mode-grey-bg;
-    
-            .pricing-plan {
-                &__features {
-                    .feature {
-                        color: $neutrals-200;
-                    }
-                }
+
+            .pricing-plan__features .feature {
+                color: $neutrals-200;
             }
         }
     }

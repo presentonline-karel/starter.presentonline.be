@@ -1,22 +1,14 @@
 // Light mode
 .light-mode {
-    .accordion {
-        &__header {
-            i {
-                color: $primary-500;
-            }
-        }
+    .accordion__header i {
+        color: $primary-500;
     }
 }
 
 // Dark mode
 .dark-mode {
-    .accordion {
-        &__header {
-            i {
-                color: $neutrals-200;
-            }
-        }
+    .accordion__header i {
+        color: $neutrals-200;
     }
 }
 
@@ -41,7 +33,7 @@
     &__header {
         align-items: center;
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         margin-bottom: 8px;
         transition: all $transition-time-short ease-in-out;
 
@@ -62,7 +54,7 @@
         transition: all $transition-time-short ease-in-out;
     }
 
-    // Open accordion 
+    // Open accordion
     &.active {
         .accordion__header {
             i {

@@ -175,6 +175,24 @@
     &__copyright {
         text-align: center;
 
+        .copyright {
+            margin-right: 8px;
+            padding-right: 8px;
+            border-right: 2px solid $neutrals-100;
+        }
+
+        .starterKit {
+            display: block;
+
+            a {
+                display: block;
+            }
+        }
+
+        .privacyPolicy {
+            margin-bottom: 24px;
+        }
+
         a {
             text-decoration: underline;
         }
@@ -185,6 +203,18 @@
 @media only screen and (min-width: $tablet-portrait) {
     .footer {
         padding: 64px 48px 24px 48px;
+
+        &__copyright {
+            .starterKit, .starterKit a {
+                display: inline;
+            }
+
+            .privacyPolicy {
+                border-right: 2px solid $neutrals-100;
+                margin-right: 8px;
+                padding-right: 8px;
+            }
+        }
     }
 }
 
@@ -242,14 +272,6 @@
         &__block {
             h4 {
                 margin-bottom: 24px;
-            }
-        }
-
-        &__copyright {
-            span {
-                border-right: 2px solid $neutrals-100;
-                margin-right: 8px;
-                padding-right: 8px;
             }
         }
     }

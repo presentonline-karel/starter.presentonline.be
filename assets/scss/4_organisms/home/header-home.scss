@@ -3,10 +3,8 @@
     .header-home {
         background-color: $neutrals-200;
 
-        &__content {
-            &__text h1 span {
-                color: $primary-500;
-            }
+        &__content__text h1 span {
+            color: $primary-500;
 
             .header__content__image picture img {
                 filter: $image-brightness-light-mode;

@@ -1,31 +1,23 @@
 // Light mode
 .light-mode {
-    .blog-filter {
-        .form-filter {
-            .input {
-                background-color: $neutrals-400;
-                color: $neutrals-1100;
+    .blog-filter .form-filter .input {
+        background-color: $neutrals-400;
+        color: $neutrals-1100;
 
-                &::placeholder {
-                    color: $neutrals-900;
-                }
-            }
+        &::placeholder {
+            color: $neutrals-900;
         }
     }
 }
 
 // Dark mode
 .dark-mode {
-    .blog-filter {
-        .form-filter {
-            .input {
-                background-color: $neutrals-800;
-                color: $neutrals-200;
+    .blog-filter .form-filter .input {
+        background-color: $neutrals-800;
+        color: $neutrals-200;
 
-                &::placeholder {
-                    color: $neutrals-400;
-                }
-            }
+        &::placeholder {
+            color: $neutrals-400;
         }
     }
 }
@@ -154,7 +146,7 @@
 
                 /* width */
                 &::-webkit-scrollbar {
-                    height: 5px;
+                    height: 4px;
                 }
 
                 /* Track */

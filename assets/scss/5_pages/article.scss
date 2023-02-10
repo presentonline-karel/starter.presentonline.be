@@ -1,35 +1,27 @@
 // Light mode
 .light-mode {
-    .article-section {
-        .article__content {
-            &__header {
-                .publication-date {
-                    color: $neutrals-900;
-                }
+    .article-section .article__content__header {
+        .publication-date {
+            color: $neutrals-900;
+        }
 
-                .tags .tag {
-                    background-color: $neutrals-400;
-                    color: $neutrals-1100;
-                }
-            }
+        .tags .tag {
+            background-color: $neutrals-400;
+            color: $neutrals-1100;
         }
     }
 }
 
 // Dark mode
 .dark-mode {
-    .article-section {
-        .article__content {
-            &__header {
-                .publication-date {
-                    color: $neutrals-400;
-                }
+    .article-section .article-section .article__content__header {
+        .publication-date {
+            color: $neutrals-400;
+        }
 
-                .tags .tag {
-                    background-color: $neutrals-800;
-                    color: $neutrals-100;
-                }
-            }
+        .tags .tag {
+            background-color: $neutrals-800;
+            color: $neutrals-100;
         }
     }
 }

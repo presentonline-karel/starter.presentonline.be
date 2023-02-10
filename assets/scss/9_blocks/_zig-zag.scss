@@ -3,12 +3,8 @@
     .zig-zag-section {
         background-color: $neutrals-100;
 
-        .zig-zag-container {
-            .zig-zag {
-                &__img {
-                    filter: $image-brightness-light-mode;
-                }
-            }
+        .zig-zag-container .zig-zag__img {
+            filter: $image-brightness-light-mode;
         }
     }
 }
@@ -18,12 +14,8 @@
     .zig-zag-section {
         background-color: $neutrals-1000;
 
-        .zig-zag-container {
-            .zig-zag {
-                &__img {
-                    filter: $image-brightness-dark-mode;
-                }
-            }
+        .zig-zag-container .zig-zag__img {
+            filter: $image-brightness-dark-mode;
         }
     }
 }

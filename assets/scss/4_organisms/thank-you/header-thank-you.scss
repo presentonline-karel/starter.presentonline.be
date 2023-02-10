@@ -1,18 +1,4 @@
 .container-thank-you {
-    .header__content__image {
-        aspect-ratio: 3/2;
-        height: auto;
-        overflow: hidden;
-
-        img {
-            aspect-ratio: 3/2;
-            height: inherit;
-            min-height: 100%;
-            object-fit: cover;
-            object-position: 25% 50%;
-        }
-    }
-
     .header-about .scroll-down {
         display: none;
     }

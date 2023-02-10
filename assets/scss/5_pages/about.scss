@@ -1,17 +1,13 @@
 // Light mode
 .light-mode {
-    .container-about {
-        .content-section {
-            background-color: $neutrals-100;
-        }
+    .container-about .content-section {
+        background-color: $neutrals-100;
     }
 }
 
 // Dark mode
 .dark-mode {
-    .container-about {
-        .content-section {
-            background-color: $neutrals-1000;
-        }
+    .container-about .content-section {
+        background-color: $neutrals-1000;
     }
 }

@@ -3,14 +3,8 @@
     .header-contact {
         background-color: $neutrals-100;
 
-        &__content {
-            &__hours {
-                &__item {
-                    .day {
-                        color: $neutrals-1100;
-                    }
-                }
-            }
+        &__content__hours__item .day {
+            color: $neutrals-1100;
         }
     }
 }
@@ -20,14 +14,8 @@
     .header-contact {
         background-color: $neutrals-1000;
 
-        &__content {
-            &__hours {
-                &__item {
-                    .day {
-                        color: $neutrals-200;
-                    }
-                }
-            }
+        &__content__hours__item .day {
+            color: $neutrals-200;
         }
     }
 }

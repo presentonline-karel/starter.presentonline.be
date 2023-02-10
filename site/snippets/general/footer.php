@@ -44,7 +44,7 @@
 
                 <hr class="line footer-line">
 
-                <p class="footer__copyright"><span>©Bakery. Website gemaakt met</span><br class="mobile"> <a href="https://presentonline.be" target="_blank">Present Online Starter Kit</a></p>
+                <p class="footer__copyright"><span class="copyright">© 2023 Bakery</span> <?php if($site->privacyPolicyPage()->isNotEmpty()) { ?> <a class="privacyPolicy" href="<?= $site->privacyPolicyPage()->toPage()->url() ?>"><?= $site->privacyPolicyAnchor() ?></a> <?php } ?> <span class="starterKit">Website gemaakt met <a href="https://presentonline.be" target="_blank">Present Online Starter Kit</a></span></p>
             </div>
         </footer>
 

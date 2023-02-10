@@ -2,31 +2,30 @@
 .light-mode {
     .offices-section {
         background-color: $neutrals-200;
-    
+
         .offices {
             .office {
                 background-color: $neutrals-100;
                 border: $border-card-thin;
-    
+
                 &.headOffice {
                     border: 2px solid $primary-500;
-    
+
                     .headOffice__label {
                         color: $primary-500;
                     }
                 }
-                &__info {
-                    &__item {
-                        i {
-                            color: $primary-500;
-                        }
-    
-                        &__text {
-                            color: $neutrals-900;
-                        }
+
+                &__info__item {
+                    i {
+                        color: $primary-500;
+                    }
+
+                    &__text {
+                        color: $neutrals-900;
                     }
                 }
-    
+
                 &__directions {
                     color: $neutrals-1000;
 
@@ -35,11 +34,9 @@
                     }
                 }
             }
-    
-            .swiper-pagination {
-                &-bullet {
-                    background: $neutrals-900;
-                }
+
+            .swiper-pagination-bullet {
+                background: $neutrals-900;
             }
         }
     }
@@ -49,31 +46,30 @@
 .dark-mode {
     .offices-section {
         background-color: $neutrals-1000;
-    
+
         .offices {
             .office {
                 background-color: $dark-mode-grey-bg;
                 border: $border-card-thin-dark-mode;
-    
+
                 &.headOffice {
                     border: 2px solid $primary-300;
-    
+
                     .headOffice__label {
                         color: $primary-300;
                     }
                 }
-                &__info {
-                    &__item {
-                        i {
-                            color: $neutrals-200;
-                        }
-    
-                        &__text {
-                            color: $neutrals-400;
-                        }
+                
+                &__info__item {
+                    i {
+                        color: $neutrals-200;
+                    }
+
+                    &__text {
+                        color: $neutrals-400;
                     }
                 }
-    
+
                 &__directions {
                     color: $neutrals-200;
 
@@ -82,11 +78,9 @@
                     }
                 }
             }
-    
-            .swiper-pagination {
-                &-bullet {
-                    background: $neutrals-700;
-                }
+
+            .swiper-pagination-bullet {
+                background: $neutrals-700;
             }
         }
     }
@@ -208,7 +202,7 @@
             &__title {
                 text-align: center;
             }
-    
+
             &__intro {
                 margin-bottom: 48px;
                 text-align: center;
@@ -227,7 +221,8 @@
             justify-content: space-between;
             margin-bottom: 72px;
 
-            &__title, &__intro {
+            &__title,
+            &__intro {
                 flex: 1 0;
                 margin-bottom: 0;
                 text-align: left;

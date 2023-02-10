@@ -1,20 +1,16 @@
 // Light mode
 .light-mode {
-    .clients {
-        .client {
-            background-color: $neutrals-100;
-            border: $border-card-thin;
-        }
+    .clients .client {
+        background-color: $neutrals-100;
+        border: $border-card-thin;
     }
 }
 
 // Dark mode
 .dark-mode {
-    .clients {
-        .client {
-            background-color: $neutrals-900;
-            border: $border-card-thin-dark-mode;
-        }
+    .clients .client {
+        background-color: $neutrals-900;
+        border: $border-card-thin-dark-mode;
     }
 }
 

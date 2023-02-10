@@ -2,17 +2,13 @@
 .light-mode {
     .steps-section {
         background-color: $neutrals-200;
-    
-        .steps {
-            .swiper-wrapper {
-                .step {
-                    background-color: $neutrals-100;
-                    border: $border-card-thin;
-    
-                    &__number {
-                        color: $primary-400;
-                    }
-                }
+
+        .steps .swiper-wrapper .step {
+            background-color: $neutrals-100;
+            border: $border-card-thin;
+
+            &__number {
+                color: $primary-400;
             }
         }
     }
@@ -22,17 +18,13 @@
 .dark-mode {
     .steps-section {
         background-color: $neutrals-1000;
-    
-        .steps {
-            .swiper-wrapper {
-                .step {
-                    background-color: $dark-mode-grey-bg;
-                    border: $border-card-thin-dark-mode;
-    
-                    &__number {
-                        color: $primary-300;
-                    }
-                }
+
+        .steps .swiper-wrapper .step {
+            background-color: $dark-mode-grey-bg;
+            border: $border-card-thin-dark-mode;
+
+            &__number {
+                color: $primary-300;
             }
         }
     }
@@ -99,7 +91,7 @@
         &__title {
             text-align: center;
         }
-    
+
         &__intro {
             margin-bottom: 48px;
             text-align: center;
@@ -147,7 +139,7 @@
                         right: 40px;
                         top: 32px;
                     }
-    
+
                     &__title {
                         font-size: 24px;
                         line-height: 32px;

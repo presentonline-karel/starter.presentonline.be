@@ -1,8 +1,7 @@
 // Light mode
 .light-mode {
     .container-blog {
-        .cta,
-        .cta__content {
+        .cta, .cta__content {
             background-color: $primary-100;
 
             h2 {
@@ -19,8 +18,7 @@
 // Dark mode
 .dark-mode {
     .container-blog {
-        .cta,
-        .cta__content {
+        .cta, .cta__content {
             background-color: $dark-mode-grey-bg;
 
             h2,

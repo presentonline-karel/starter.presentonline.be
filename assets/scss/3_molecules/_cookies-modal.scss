@@ -1,6 +1,29 @@
+// Light mode
+.light-mode {
+    .cookie-consent-modal .content-container {
+        background-color: $neutrals-100;
+
+        .content p a {
+            color: $neutrals-900;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .cookie-consent-modal .content-container {
+        background-color: $neutrals-1000;
+
+        .content p a {
+            color: $neutrals-400;
+        }
+    }
+}
+
+// Mobile styling
 .cookie-consent-modal {
     align-items: flex-end;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, 0.9);
     display: none;
     height: 100vh;
     left: 0;
@@ -29,7 +52,7 @@
             h3 {
                 margin-bottom: 8px;
             }
-    
+
             p {
                 margin-bottom: 24px;
 
@@ -64,7 +87,7 @@
             top: 50%;
             text-align: center;
             width: 100%;
-    
+
             .content {
                 display: block;
                 max-width: 400px;
@@ -82,25 +105,17 @@
             bottom: 48px;
             max-width: 320px;
             right: 48px;
-            transform: translate(0,0);
+            transform: translate(0, 0);
             top: initial;
 
             .content {
                 max-width: initial;
 
-                h1 {
-                    color: $neutrals-1000;
-                }
-    
-                p {
-                    color: $neutrals-900;
-                }
-    
                 .buttons {
                     display: flex;
                     flex-direction: column-reverse;
                     gap: 8px;
-    
+
                     .button {
                         width: 100%;
                     }

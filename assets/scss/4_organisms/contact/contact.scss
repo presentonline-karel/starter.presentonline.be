@@ -1,27 +1,21 @@
 // Light mode
 .light-mode {
-    .contact {
-        &__info {
-            background-color: $neutrals-200;
-    
-            &__items {
-                .info-item {
-                    color: $neutrals-1100;
-    
-                    i {
-                        color: $primary-500;
-                    }
-                }
+    .contact__info {
+        background-color: $neutrals-200;
+
+        &__items .info-item {
+            color: $neutrals-1100;
+
+            i {
+                color: $primary-500;
             }
-    
-            .socials {
-                .social {
-                    background-color: $primary-500;
-    
-                    i {
-                        color: $neutrals-100;
-                    }
-                }
+        }
+
+        .socials .social {
+            background-color: $primary-500;
+
+            i {
+                color: $neutrals-100;
             }
         }
     }
@@ -29,32 +23,26 @@
 
 // Dark mode
 .dark-mode {
-    .contact {
-        &__info {
-            background-color: $dark-mode-grey-bg;
-    
-            &__items {
-                .info-item {
-                    color: $neutrals-200;
-    
-                    i {
-                        color: $neutrals-200;
-                    }
-                }
-            }
-    
-            .socials {
-                .social {
-                    background-color: $primary-500;
+    .contact__info {
+        background-color: $dark-mode-grey-bg;
 
-                    &:hover {
-                        background-color: $primary-600;
-                    }
-    
-                    i {
-                        color: $neutrals-100;
-                    }
-                }
+        &__items .info-item {
+            color: $neutrals-200;
+
+            i {
+                color: $neutrals-200;
+            }
+        }
+
+        .socials .social {
+            background-color: $primary-500;
+
+            &:hover {
+                background-color: $primary-600;
+            }
+
+            i {
+                color: $neutrals-100;
             }
         }
     }
@@ -124,32 +112,28 @@
 
             &__info {
                 background-color: $primary-500;
-    
+
                 h2, p {
                     color: $neutrals-100;
                 }
-        
-                &__items {
-                    .info-item {
+
+                &__items .info-item {
+                    color: $neutrals-100;
+
+                    i {
                         color: $neutrals-100;
-        
-                        i {
-                            color: $neutrals-100;
-                        }
                     }
                 }
-        
-                .socials {
-                    .social {
-                        background-color: $neutrals-100;
-        
-                        i {
-                            color: $primary-500;
-                        }
+
+                .socials .social {
+                    background-color: $neutrals-100;
+
+                    i {
+                        color: $primary-500;
                     }
                 }
             }
-    
+
             &__form-section {
                 background-color: $neutrals-200;
             }

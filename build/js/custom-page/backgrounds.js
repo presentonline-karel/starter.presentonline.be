@@ -17,14 +17,11 @@ const customBlockDivider = () => {
                 sections[i].style.borderBottom = "";
             }
         }
-
-        console.log("borders: " + sessionStorage.getItem("theme"));
     }
     addBorderBottom();
 
     themeSwitch.addEventListener("click", () => {
         addBorderBottom();
-        //console.log("test");
     });
 }
 

@@ -343,6 +343,23 @@ tabs:
               machineDefault: Instelling pc gebruiker
             when:
               lightDarkModeSwitch: lightDarkMode
+          line-i:
+            type: line
+
+          privacyPolicyHeadline:
+            label: Privacybeleid
+            type: headline
+          privacyPolicyAnchor:
+            label: Tekst link naar privacybeleid
+            type: text
+            width: 1/2
+          privacyPolicyPage:
+            label: Privacybeleid pagina
+            type: pages
+            multiple: false
+            width: 1/2
+            image: icon
+          
 
   
 

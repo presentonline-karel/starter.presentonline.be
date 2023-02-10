@@ -1,41 +1,25 @@
 // Light mode
 .light-mode {
-    .prices {
-        .content-container {
-            .pricing-tables {
-                .table {
-                    tr {
-                        th {
-                            color: $neutrals-1100;
-                        }
+    .prices .content-container .pricing-tables .table tr {
+        th {
+            color: $neutrals-1100;
+        }
 
-                        td {
-                            color: $neutrals-900;
-                        }
-                    }
-                }
-            }
+        td {
+            color: $neutrals-900;
         }
     }
 }
 
 // Dark mode
 .dark-mode {
-    .prices {
-        .content-container {
-            .pricing-tables {
-                .table {
-                    tr {
-                        th {
-                            color: $neutrals-200;
-                        }
+    .prices .content-container .pricing-tables .table tr {
+        th {
+            color: $neutrals-200;
+        }
 
-                        td {
-                            color: $neutrals-400;
-                        }
-                    }
-                }
-            }
+        td {
+            color: $neutrals-400;
         }
     }
 }
@@ -152,44 +136,20 @@
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .light-mode {
-        .prices {
-            .content-container {
-                .pricing-tables {
-                    .table {
-                        tr {
-                            &.header-row {
-                                th {
-                                    color: $primary-500;
-                                    background-color: $primary-100;
-                                    border-top: 1px solid $primary-200;
-                                    border-bottom: 1px solid $primary-200;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        .prices .content-container .pricing-tables .table tr.header-row th {
+            color: $primary-500;
+            background-color: $primary-100;
+            border-top: 1px solid $primary-200;
+            border-bottom: 1px solid $primary-200;
         }
     }
 
     .dark-mode {
-        .prices {
-            .content-container {
-                .pricing-tables {
-                    .table {
-                        tr {
-                            &.header-row {
-                                th {
-                                    color: $neutrals-200;
-                                    background-color: $dark-mode-grey-bg;
-                                    border-top: 1px solid $neutrals-800;
-                                    border-bottom: 1px solid $neutrals-800;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        .prices .content-container .pricing-tables .table tr.header-row th {
+            color: $neutrals-200;
+            background-color: $dark-mode-grey-bg;
+            border-top: 1px solid $neutrals-800;
+            border-bottom: 1px solid $neutrals-800;
         }
     }
 

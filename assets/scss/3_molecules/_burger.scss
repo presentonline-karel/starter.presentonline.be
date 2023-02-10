@@ -1,21 +1,18 @@
 // Light mode
 .light-mode {
-    .burger {
-        .burger-line {
-            background-color: $neutrals-1100;
-        }
+    .burger .burger-line {
+        background-color: $neutrals-1100;
     }
 }
 
 // Dark mode
 .dark-mode {
-    .burger {
-        .burger-line {
-            background-color: $neutrals-400;
-        }
+    .burger .burger-line {
+        background-color: $neutrals-400;
     }
 }
 
+// Mobile styling
 .nav {
     .burger {
         position: absolute;
@@ -87,7 +84,6 @@
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-
     // Light mode
     .light-mode {
         .nav .burger {
