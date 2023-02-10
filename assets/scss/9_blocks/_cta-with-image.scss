@@ -90,12 +90,13 @@
 
         img {
             border-radius: $border-radius-medium;
-            max-width: 456px;
-            width: 100%;
+            height: inherit;
+            width: 456px;
         }
 
         &__content {
             padding: 48px;
+            width: calc(100% - 456px); // 456px is image
         }
     }
 }

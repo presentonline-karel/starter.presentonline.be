@@ -1,5 +1,30 @@
+// Light mode
+.light-mode {
+    .button-secondary {
+        background-color: $primary-100;
+        color: $primary-500;
+
+        &:hover {
+            background-color: $primary-200;
+        }
+    }
+}
+
+// Dark mode
+.dark-mode {
+    .button-secondary {
+        background-color: $primary-600;
+        color: $neutrals-200;
+
+        &:hover {
+            background-color: $primary-700;
+        }
+    }
+}
+
+// Mobile styling
 .button {
-    // GENERAL STYLES FOR BUTTON
+    // All buttons
     &-primary,
     &-secondary,
     &-white {
@@ -16,33 +41,26 @@
         margin: 0;
         padding: 12px 24px;
         text-decoration: none;
-        transition: all $transition-time-short;
+        transition: all $transition-time-short ease-in-out;
         -webkit-appearance: none;
         -moz-appearance: none;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    // PRIMARY BUTTON
+    // Primary button
     &-primary {
         background-color: $primary-500;
         color: $neutrals-100;
 
         &:hover {
             background-color: $primary-600;
-            cursor: pointer;
         }
     }
 
-    // SECONDARY BUTTON
-    &-secondary {
-        background-color: $primary-100;
-        color: $primary-500;
-
-        &:hover {
-            background-color: $primary-200;
-            cursor: pointer;
-        }
-    }
-
+    // Tertiary button
     &-tertiary {
         color: $neutrals-1000;
         display: inline-block;
@@ -54,16 +72,19 @@
         letter-spacing: -1%;
         text-decoration: none;
         transition: all $transition-time-short;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    // WHITE BUTTON
+    // White button
     &-white {
         background-color: $neutrals-100;
         color: $primary-500;
 
         &:hover {
             background-color: $primary-100;
-            cursor: pointer;
         }
     }
 }
@@ -71,13 +92,15 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-3) {
     .button {
-        &-primary, &-secondary, &-white {
+        &-primary,
+        &-secondary,
+        &-white {
             font-size: 20px;
             font-weight: 500;
             line-height: 20px;
         }
 
-        //PRIMARY BUTTON PRIMARY-500
+        // Button color schemes shortcuts
         &.primary-500 {
             background-color: $primary-500;
             color: $neutrals-100;
@@ -87,7 +110,6 @@
             }
         }
 
-        //PRIMARY BUTTON PRIMARY-100
         &.primary-100 {
             background-color: $primary-100;
             color: $primary-500;
@@ -97,7 +119,6 @@
             }
         }
 
-        //PRIMARY BUTTON WHITE
         &.white {
             background-color: $neutrals-100;
             color: $primary-500;

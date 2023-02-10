@@ -8,6 +8,7 @@ const lightDarkSwitch = () => {
     document.body.classList.toggle("dark-mode");
 
     sessionStorage.getItem("theme") == "light-mode" ? sessionStorage.setItem("theme", "dark-mode") : sessionStorage.setItem("theme", "light-mode");
+    console.log("themes: " + sessionStorage.getItem("theme"));
   });
 
   if (sessionStorage.getItem("theme") == null) {

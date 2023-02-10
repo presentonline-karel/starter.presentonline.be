@@ -129,11 +129,7 @@
         }
 
         .tag {
-            font-family: $title-font;
-            font-size: 14px;
-            line-height: 14px;
             white-space: nowrap;
-            transition: all $transition-time-short ease-in-out;
 
             &.discount,
             &.most-popular {

@@ -62,5 +62,10 @@
         <?php if($site->lightDarkModeSwitch() == "lightDarkMode"): ?>
             <?= js("build/js/general/light-dark-switch.js", ["defer" => true]) ?>
         <?php endif; ?>
+
+        <!-- Custom page - custom block divider -->
+        <?php if($page->template() == "custom-page"): ?>
+            <?= js("build/js/custom-page/customBlockDivider.js", ["defer" => true]) ?>
+        <?php endif; ?>
     </body>
 </html>

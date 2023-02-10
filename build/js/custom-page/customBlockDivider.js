@@ -6,7 +6,7 @@ const customBlockDivider = () => {
         for (let i = 0; i < (sections.length - 1); i++) {
             let currentBgColor = window.getComputedStyle(sections[i]).backgroundColor;
             let nextBgColor = window.getComputedStyle(sections[i + 1]).backgroundColor;
-    
+            
             if(currentBgColor == nextBgColor) {
                 if(sessionStorage.getItem("theme") == "light-mode") {
                     sections[i].style.borderBottom = "1px solid #DEE2E6";
@@ -17,14 +17,11 @@ const customBlockDivider = () => {
                 sections[i].style.borderBottom = "";
             }
         }
-
-        console.log("borders: " + sessionStorage.getItem("theme"));
     }
     addBorderBottom();
 
-    themeSwitch.addEventListener("click", () => {
-        addBorderBottom();
-        //console.log("test");
+    themeSwitch.addEventListener("click", function() {
+        setTimeout(addBorderBottom, 500); // Wait 500ms for backgrounds to change
     });
 }
 

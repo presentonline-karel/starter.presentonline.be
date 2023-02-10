@@ -46,6 +46,10 @@
             .socials {
                 .social {
                     background-color: $primary-500;
+
+                    &:hover {
+                        background-color: $primary-600;
+                    }
     
                     i {
                         color: $neutrals-100;

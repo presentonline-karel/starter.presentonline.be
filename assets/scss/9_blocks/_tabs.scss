@@ -34,6 +34,11 @@
                     background-color: $neutrals-900;
                     border: $border-card-thin-dark-mode;
                     color: $neutrals-400;
+
+                    &:hover {
+                        background-color: $neutrals-800;
+                        color: $neutrals-200;
+                    }
                 }
             }
     
