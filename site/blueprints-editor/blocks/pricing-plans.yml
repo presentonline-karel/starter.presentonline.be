@@ -1,0 +1,5 @@
+name: Pricing plans
+icon: money
+label: "| {{ pricingplanstitle }}"
+fields:
+  extends: fields/pricing-plans

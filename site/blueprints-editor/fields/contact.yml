@@ -1,0 +1,20 @@
+type: group
+fields:
+  contactInfoHeadline:
+    label: Contact gegevens
+    type: headline
+    width: 1/2
+  contactInfoSwitch:
+    extends: fields/display-switch
+  contactInfoTitle:
+    label: Titel
+    type: text
+  contactInfoText:
+    label: Tekst
+    type: writer
+    inline: true
+  contactFormInfo:
+    label: Info bij contact block
+    type: info
+    text: |
+      Your contactform is included automatically

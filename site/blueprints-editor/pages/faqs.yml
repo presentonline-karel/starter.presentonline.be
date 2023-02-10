@@ -1,0 +1,29 @@
+title: FAQs
+icon: question
+
+options:
+  changeSlug: false
+
+tabs:
+  content:
+    columns:
+
+      #HEADER
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero
+          heroNoImage: fields/heroNoImage
+      
+
+
+      #FAQS
+      - width: 1/2
+        sections:
+        fields:
+          faqs: fields/faqs
+
+
+
+  # seotab: seo  

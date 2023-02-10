@@ -1,0 +1,96 @@
+title: Home
+icon: home
+
+options:
+  changeSlug: false
+
+tabs:
+  content:
+    icon: text
+    
+    columns:
+
+      - width: 1/4
+        sections:
+        fields:
+          gap-a:
+            type: gap
+
+
+
+      #HOME TEXT CONTENT
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero
+          heroBigImage: fields/heroBigImage
+          line-a:
+            type: line
+
+
+
+          #Clients
+          clients: fields/clients
+          line-b:
+            type: line
+
+
+
+          #Services
+          services: fields/services
+          line-c:
+            type: line
+
+
+
+          #CTA1
+          firstCta: fields/firstCta
+          line-d:
+            type: line
+          
+
+
+          #Content
+          textWithImage: fields/textWithImage
+          line-e:
+            type: line
+          
+          
+
+          #Testimonials
+          testimonials: fields/testimonials
+          line-f:
+            type: line
+
+
+
+          #CTA2
+          secondCtaHeadline:
+            label: CTA
+            type: headline
+            width: 1/2
+          secondCtaSwitch:
+            extends: fields/display-switch
+          secondCtaTitle:
+            label: Titel
+            type: writer
+            inline: true
+          secondCtaTitleSpan:
+            label: Titel - Gekleurd deel
+            type: text 
+          secondCtaButtons:
+            label: Buttons
+            extends: fields/button
+
+
+      
+      - width: 1/4
+        sections:
+        fields:
+          gap-b:
+            type: gap
+
+
+
+  # seotab: seo

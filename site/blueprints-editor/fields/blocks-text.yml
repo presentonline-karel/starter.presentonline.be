@@ -1,0 +1,6 @@
+type: blocks
+fieldsets:
+  - heading
+  - text
+  - list
+  - button

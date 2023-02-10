@@ -1,0 +1,6 @@
+name: Stappen
+icon: grid
+label: "| {{ stepstitle }}"
+fields:
+  steps:
+    extends: fields/steps

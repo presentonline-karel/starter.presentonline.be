@@ -1,0 +1,94 @@
+title: Article
+icon: book
+
+options:
+  changeSlug: false
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+
+      #ARTICLE TEXT
+      - width: 1/2
+        sections:
+        fields:
+
+          #Article info
+          infoHeadline:
+            label: Artikel info
+            type: headline
+          publicationDate:
+            label: Datum van publicatie
+            type: date
+            display: DD.MM.YYYY
+          tags:
+            label: Tags
+            type: tags
+          minRead:
+            label: Min lezen
+            type: text
+          line-a:
+            type: line
+          
+          #Article header
+          headerHeadline:
+            label: Artikel inhoud
+            type: headline
+          articleTitle:
+            label: Titel
+            type: text
+            required: true
+          articleIntro:
+            label: Lead
+            type: writer
+            inline: true
+          articleContent:
+            label: Content
+            extends: fields/blocks-default
+          line-b:
+            type: line
+
+
+
+          #Related articles
+          relatedArticlesHeadline:
+            label: Gerelateerde artikels
+            type: headline
+            width: 1/2
+          relatedArticlesSwitch:
+            extends: fields/display-switch
+          relatedArticles:
+            label: Gerelateerde artikels
+            type: pages
+            query: page.siblings(true)
+            max: 2
+            layout: cardlets
+            image:
+              cover: true
+                
+
+      
+
+      #ARTICLE IMAGES
+      - width: 1/2
+        sections:
+        fields:
+
+          #Article images
+          headerImageHeadline:
+            label: Preview foto
+            type: headline
+            numbered: false
+          headerImage:
+            label: Artikel header foto
+            type: files
+            layout: cards
+            max: 1
+            image:
+              cover: true
+
+
+
+  # seotab: seo

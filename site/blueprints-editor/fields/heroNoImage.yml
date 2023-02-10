@@ -1,0 +1,15 @@
+type: group
+fields:
+  heroHeadline:
+    label: Header
+    type: headline
+  heroTitle:
+    label: Titel
+    type: text
+  heroIntro:
+    label: Intro tekst
+    type: writer
+    inline: true
+  heroButtons:
+    extends: fields/button
+    label: Buttons

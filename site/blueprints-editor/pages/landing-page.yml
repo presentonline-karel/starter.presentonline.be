@@ -1,0 +1,54 @@
+title: Landing Page
+icon: page
+
+options:
+  changeSlug: false
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+      - width: 1/4
+        sections:
+        fields:
+          gap-a:
+            type: gap
+      
+
+
+      - width: 1/2
+        sections:
+        fields:
+
+          #Title
+          titleHeadline:
+            label: Landingspagina titel
+            type: headline
+            numbered: true
+          landingPageTitle:
+            label: Titel
+            type: text
+          line-a:
+            type: line
+
+          #Content
+          contentHeadline:
+            label: Landingspagina content
+            type: headline
+            numbered: true
+          landingPageContent:
+            label: Content
+            extends: fields/blocks-default
+          
+
+
+      - width: 1/4
+        sections:
+        fields:
+          gap-b:
+            type: gap
+
+
+
+  # seotab: seo

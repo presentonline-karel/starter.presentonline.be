@@ -1,0 +1,54 @@
+type: group
+fields:
+  officesHeadline:
+    label: Kantoren
+    type: headline
+    numbered: false
+  officesTitle:
+    label: Titel
+    type: text
+  officesParagraph:
+    label: Paragraaf
+    type: writer
+    inline: true
+  line-a:
+    type: line
+  offices:
+    label: Kantoren
+    type: structure
+    columns:
+      place:
+        width: 1/4
+      address:
+        width: 1/4
+      phoneNumber:
+        width: 1/4
+      email:
+        width: 1/4
+    fields:
+      place:
+        label: Plaats
+        type: text
+        width: 1/2
+      headOfficeToggle:
+        label: Is een hoofdkantoor?
+        type: toggle
+        default: false
+        width: 1/2
+        text:
+          - "nee"
+          - "ja"
+      address:
+        label: Adres
+        type: writer
+        inline: true
+      phoneNumber:
+        label: Telefoonnummer
+        type: tel
+      email:
+        label: Email
+        type: email
+      mapsLink:
+        label: Maps link
+        type: url
+        help: Write help here

@@ -1,0 +1,10 @@
+name: Clients
+icon: grid
+label: "| {{ clientstitle }}"
+fields:
+  clients:
+    extends: fields/clients
+    fields:
+      clientsHeadline:
+        numbered: false
+      clientsSwitch: false

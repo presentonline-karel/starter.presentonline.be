@@ -1,0 +1,10 @@
+name: Google Maps
+icon: map
+label: "| Google Maps widget"
+fields:
+  maps:
+    extends: fields/maps
+    fields:
+      contactMapsHeadline:
+        numbered: false
+      contactMapsSwitch: false

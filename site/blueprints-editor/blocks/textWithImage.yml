@@ -1,0 +1,10 @@
+name: Text with image
+icon: text
+label: "| {{ contenttitle }}"
+fields:
+  textWithImage:
+    extends: fields/textWithImage
+    fields:
+      contentHeadline:
+        numbered: false
+      contentSwitch: false

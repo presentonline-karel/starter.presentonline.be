@@ -1,0 +1,10 @@
+name: History
+icon: chart
+label: "| {{ historytitle }}"
+fields:
+  history:
+    extends: fields/history
+    fields:
+      historyHeadline:
+        numbered: false
+      historySwitch: false

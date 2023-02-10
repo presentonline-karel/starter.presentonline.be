@@ -1,0 +1,18 @@
+type: group
+fields:
+  contentColumnOneHeadline:
+    label: Content kolom 1
+    type: headline
+    numbered: false
+  contentColumnOne:
+    label: Content
+    extends: fields/blocks-default
+  line-a:
+    type: line
+  contentColumnTwoHeadline:
+    label: Content kolom 2
+    type: headline
+    numbered: false
+  contentColumnTwo:
+    label: Content
+    extends: fields/blocks-default

@@ -1,0 +1,70 @@
+title: Prices
+icon: money
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+
+      #FAQ
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero
+          heroHeadline:
+            label: Title
+            type: headline
+          heroTitle:
+            label: Titel
+            type: text
+          line-a:
+            type: line
+          
+
+
+          pricesHeadline:
+            label: Prijzen
+            type: headline
+            numbered: true
+          pricesInfo:
+            label: Prijzen
+            type: info
+            text: |
+              Beste klant,
+              Op dit moment is het nog niet mogelijk om uw prijzen zelf in te stellen. Gelieve mij hiervoor te contacteren via **info@presentonline.be**
+              
+              Indien mogelijk kan u mij ook ineens een duidelijke tabel opsturen. Dan stel ik deze prijzen zelf even voor u in.
+              Karel Decoene
+          line-b:
+            type: line
+          
+
+
+          infoPricesHeadline:
+            label: Info bij de prijzen
+            type: headline
+            numbered: true
+          infoPricesTitle:
+            label: Title
+            type: text
+          infoPricesBlocks:
+            label: Paragraaf
+            extends: fields/blocks-text
+          line-c:
+            type: line
+          
+
+          
+          extraInfoHeadline:
+            label: Extra info
+            type: headline
+            numbered: true
+          extraInfo:
+            label: Nog extra info
+            extends: fields/blocks-default
+
+
+
+  # seotab: seo

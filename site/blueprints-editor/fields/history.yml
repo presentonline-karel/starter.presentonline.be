@@ -1,0 +1,27 @@
+type: group
+fields:
+  historyHeadline:
+    label: Ervaring
+    type: headline
+    width: 1/2
+  historySwitch:
+    extends: fields/display-switch
+  historyTitle:
+    label: Titel
+    type: text
+  history:
+    label: Ervaring
+    type: structure
+    fields:
+      title:
+        label: Ervaring titel
+        type: text
+      number:
+        label: Ervaring nummer
+        type: text
+        help: Zet geen "+" achter je nummer
+      withPlus:
+        label: met +
+        type: toggle
+        help: Inschakelen om "+" achter je nummer te zetten
+    max: 3

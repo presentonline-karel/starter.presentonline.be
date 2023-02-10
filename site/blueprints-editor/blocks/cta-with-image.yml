@@ -1,0 +1,5 @@
+name: CTA met afbeelding
+icon: document
+label: "| {{ ctatitle }}"
+fields:
+  extends: fields/cta-with-image

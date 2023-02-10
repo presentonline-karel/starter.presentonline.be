@@ -1,0 +1,9 @@
+name: heroDefault
+icon: grid-top
+label: "| {{ herotitle }}"
+fields:
+  heroDefault:
+    extends: fields/heroDefault
+    fields:
+      heroHeadline:
+        numbered: false

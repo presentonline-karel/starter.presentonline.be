@@ -1,0 +1,7 @@
+label:
+type: toggle
+width: 1/2
+default: true
+text:
+  - "verbergen"
+  - "weergeven"

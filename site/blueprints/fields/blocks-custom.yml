@@ -1,24 +1,47 @@
 type: blocks
 fieldsets:
-  - cta
-  - clients
-  - services
-  - textWithImage
-  - testimonials
-  - history
-  - team
-  - faqs
-  - maps
-  - centeredContent
-  - contact
-  - image-carousel
-  - blog-articles
-  - textTwoColumns
-  - cta-double
-  - cta-with-image
-  - offices
-  - tabs
-  - steps
-  - team-grouped
-  - zig-zag
-  - pricing-plans
+  cta:
+    label: CTAs
+    type: group
+    fieldsets:
+      - cta
+      - cta-double
+      - cta-with-image
+  content:
+    label: Text
+    type: group
+    fieldsets:
+      - textWithImage
+      - centeredContent
+      - textTwoColumns
+      - zig-zag
+      - tabs
+  team:
+    label: Team
+    type: group
+    open: false
+    fieldsets:
+      - team
+      - team-grouped
+  company:
+    label: Company info
+    type: group
+    open: false
+    fieldsets:
+      - history
+      - contact
+      - maps
+      - faqs
+      - offices
+      - services
+  others:
+    label: Other blocks
+    type: group
+    open: false
+    fieldsets:
+      - clients
+      - testimonials
+      - image-carousel
+      - blog-articles
+      - steps
+      - pricing-plans

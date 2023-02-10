@@ -1,0 +1,25 @@
+type: group
+fields:
+  ctaWithImageHeadline:
+    label: CTA with image
+    type: headline
+    numbered: false
+  ctaImage:
+    label: Image
+    type: files
+    layout: cards
+    max: 1
+    required: true
+    image:
+      cover: true
+      ratio: 3/2
+  ctaTitle:
+    label: Titel
+    type: text
+  ctaParagraph:
+    label: Paragraaf
+    type: writer
+    inline: true
+  ctaButtons:
+    label: Buttons
+    extends: fields/button

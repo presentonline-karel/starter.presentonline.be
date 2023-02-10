@@ -1,0 +1,25 @@
+type: group
+fields:
+  zigzagHeadline:
+    label: Zig zag blok
+    type: headline
+    numbered: false
+  zigzagTitle:
+    label: Titel
+    type: text
+  zigzags:
+    label: Zigzag's
+    type: structure
+    fields:
+      zigzagImage:
+        label: Image
+        type: files
+        layout: cards
+        required: true
+        max: 1
+        image:
+          cover: true
+          ratio: 3/2
+      zigzagContent:
+        label: Content
+        extends: fields/blocks-text

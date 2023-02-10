@@ -1,0 +1,367 @@
+title: PO - Starter Kit
+
+tabs:
+  menu:
+    icon: dashboard
+
+    columns:
+
+      #Pages
+      - width: 1/3
+        sections:
+          listed:
+            headline: Listed pages
+            type: pages
+            status: listed
+            image: icon
+          unlisted:
+            headline: Unlisted pages
+            type: pages
+            status: unlisted
+            image: icon
+          drafts:
+            headline: Pages in draft
+            type: pages
+            status: draft
+            image: icon
+      
+      #text content
+      - width: 2/3
+        sections:
+        fields:
+
+          #Navigation
+          menuHeadline:
+            label: Navigatie
+            type: headline
+          navigationLinks:
+            label: Menu items
+            type: structure
+            columns:
+              anchor:
+                width: 1/3
+              page:
+                width: 1/3
+              section:
+                width: 1/3
+            fields:
+              anchor:
+                label: Anker
+                type: text
+                required: true
+                width: 1/2
+              destination:
+                label: Link naar
+                type: toggle
+                width: 1/2
+                text: 
+                  - "interne pagina"
+                  - "externe url"
+              page:
+                label: Pagina
+                type: pages
+                width: 1/2
+                required: true
+                image: icon
+                when:
+                  destination: false
+              section:
+                label: (Sectie op pagina)
+                type: text
+                width: 1/2
+                when:
+                  destination: false
+              externalUrl:
+                label: Externe URL
+                type: url
+                required: true
+                when:
+                  destination: true
+          ctaHeadline:
+            label: Navigatie - CTA Button
+            type: headline
+            numbered: false
+          ctaButton:
+            label: Menu CTA
+            extends: fields/button
+            max: 1
+          line-a:
+            type: line
+          
+          #USP-Bar
+          uspbar:
+            extends: fields/usp-bar
+          line-b:
+            type: line
+
+          #Logos
+          logosHeadline:
+            label: Logos
+            type: headline
+          logoDark:
+            label: Logo - Standaard
+            type: files
+            max: 1
+            layout: cards
+            width: 1/2
+            image:
+              back: white
+          logoLight:
+            label: Logo - light
+            type: files
+            max: 1
+            layout: cards
+            back: black
+            width: 1/2
+            image:
+              back: black
+
+
+
+  contact:
+    icon: email
+
+    columns:
+
+      - width: 1/4
+        sections:
+        fields:
+          contactHeadline:
+            label: Contactgegevens & sociale media
+            type: headline
+            numbered: false
+      
+      - width: 3/4
+        sections:
+        fields:
+
+          #Contact
+          contactInfoHeadline:
+            label: Contactgegevens
+            type: headline
+          email:
+            label: Email
+            type: text
+          telephone:
+            label: Telefoonnummer
+            type: text
+          line-d:
+            type: line
+
+          #Socials
+          socialsHeadline:
+            label: Sociale media
+            type: headline
+          socials:
+            label: Socials
+            type: structure
+            columns:
+              social:
+                width: 1/4
+              url:
+                width: 3/4
+            fields:
+              social:
+                type: select
+                options:
+                  facebook: Facebook
+                  instagram: Instagram
+                  linkedin: LinkedIn
+                  twitter: Twitter
+              url:
+                type: url
+          line-e:
+            type: line
+
+          headerOpeninghours:
+            label: Openingsuren
+            type: headline
+            width: 3/4
+          headerOpeninghoursSwitch:
+            extends: fields/display-switch
+            width: 1/4
+          openingHours:
+            label: Openingsuren
+            type: structure
+            max: 8
+            columns:
+              day:
+                width: 3/8
+              value:
+                width: 5/8
+            fields:
+              day:
+                label: Dag
+                type: text
+                required: true
+              value:
+                label: Uren
+                type: text
+                required: true
+          
+
+
+  footer:
+    label: Footer & settings
+    icon: grid-bottom
+
+    columns:
+
+      - width: 1/4
+        sections:
+        fields:
+          footerHeadline:
+            label: Footer & settings
+            type: headline
+            numbered: false
+
+      - width: 3/4
+        sections:
+        fields:
+          #Footer
+          footerIntroHeadline:
+            label: Info over jouw organisatie
+            type: headline
+          infoIntro:
+            label:
+            type: info
+            text: 2-3 zinnen over wat jouw organisatie doet.
+            width: 1/2
+          intro:
+            label: Bedrijfsinformatie
+            type: writer
+            inline: true
+          line-c:
+            type: line
+
+          sitemapHeadline:
+            label: Sitemap
+            type: headline
+            numbered: true
+          sitemap:
+            label: Sitemap
+            type: structure
+            fields:
+              anchor:
+                label: Link text
+                type: text
+                required: true
+              page:
+                label: Pagina
+                type: pages
+                required: true
+                max: 1
+                image: icon
+              section:
+                label: Sectie op pagina
+                type: text
+          line-g:
+            type: line
+          
+          cookiesHeadline:
+            label: Cookies
+            type: headline
+            width: 3/4
+          cookiesSwitch:
+            label:
+            type: toggle
+            width: 1/4
+            default: true
+            text:
+              - "verbergen"
+              - "weergeven"
+          cookiesInfoEnabled:
+            label:
+            type: info
+            text: "Cookies voor Google Analytics staan aan. Er worden nu **wel** anonieme gegevens verzameld van gebruikers die surfen op je website."
+            theme: positive
+            when:
+              cookiesSwitch: true
+          cookiesInfoDisabled:
+            label:
+            type: info
+            text: "Cookies voor Google Analytics staan uit. Er worden nu **geen** gegevens verzameld van gebruikers die surfen op je website."
+            theme: negative
+            when:
+              cookiesSwitch: false
+          cookiesTitle:
+            label: Titel pop-up
+            type: text
+            when:
+              cookiesSwitch: true
+          cookiesParagraph:
+            label: Text pop-up
+            type: writer
+            inline: true
+            when:
+              cookiesSwitch: true
+          line-h:
+            type: line
+          
+          # lightDarkModeHeadline:
+          #   label: Light/dark mode
+          #   type: headline
+          #   width: 3/4
+          # lightDarkModeSwitch:
+          #   label: Website color mode
+          #   type: select
+          #   width: 1/4
+          #   default: lightMode
+          #   options:
+          #     lightMode: Light mode
+          #     darkMode: Dark mode
+          #     lightDarkMode: Light/dark mode
+          # InfoLightMode:
+          #   label: Lichte modus
+          #   type: info
+          #   text: "Website staat vast ingesteld op lichte kleuren modus."
+          #   when:
+          #     lightDarkModeSwitch: lightMode
+          # InfoDarkMode:
+          #   label: Donkere modus
+          #   type: info
+          #   text: "Website staat vast ingesteld op donkere kleuren modus."
+          #   when:
+          #     lightDarkModeSwitch: darkMode
+          # InfoLightDarkMode:
+          #   label: Lichte/donkere modus
+          #   type: info
+          #   text: |
+          #     Website ingesteld op lichte & donkere kleuren modus. De gebruiker kan zelf een modus instellen.
+          #     **Gelieve wel een standaard/start modus in te stellen.**
+          #   width: 3/4
+          #   when:
+          #     lightDarkModeSwitch: lightDarkMode
+          # lightDarkModeStandard:
+          #   label: Standaard/start modus
+          #   type: select
+          #   width: 1/4
+          #   required: true
+          #   options:
+          #     lightMode: Light mode
+          #     darkMode: Dark mode
+          #     machineDefault: Instelling pc gebruiker
+          #   when:
+          #     lightDarkModeSwitch: lightDarkMode
+          # line-i:
+          #   type: line
+
+          privacyPolicyHeadline:
+            label: Privacybeleid
+            type: headline
+          privacyPolicyAnchor:
+            label: Tekst link naar privacybeleid
+            type: text
+            width: 1/2
+          privacyPolicyPage:
+            label: Privacybeleid pagina
+            type: pages
+            multiple: false
+            width: 1/2
+            image: icon
+          
+
+  
+
+
+  # seotab: seo

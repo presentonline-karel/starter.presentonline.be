@@ -1,0 +1,19 @@
+type: group
+fields:
+  tabsHeadline:
+    label: Tabs
+    type: headline
+    numbered: false
+  tabsTitle:
+    label: Titel
+    type: text
+  tabs:
+    label: Tabs
+    type: structure
+    fields:
+      title:
+        label: Titel
+        type: text
+      tabContent:
+        label: Content
+        extends: fields/blocks-text

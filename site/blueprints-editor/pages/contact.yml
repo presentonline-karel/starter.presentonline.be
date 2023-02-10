@@ -1,0 +1,37 @@
+title: Contact
+icon: email
+
+options:
+  changeSlug: false
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+
+      #CONTACT TEXT CONTENT
+      - width: 1/2
+        sections:
+        fields:
+
+          #Hero
+          heroNoImage: fields/heroNoImage
+          line-a:
+            type: line
+          
+
+
+          #Contact - Info
+          contact: fields/contact
+          line-b:
+            type: line
+          
+
+
+          #Contact Maps
+          maps: fields/maps
+
+
+
+  # seotab: seo                
