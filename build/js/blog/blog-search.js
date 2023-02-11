@@ -8,7 +8,6 @@ const blogSearch = () => {
 
 
 
-    // On input start displaying matching content
     searchInput.addEventListener("input", function () {
         var searchInputValue = searchInput.value;
         var amountOfResults = 0;

@@ -144,22 +144,18 @@
             &__tags {
                 overflow-y: hidden;
 
-                /* width */
                 &::-webkit-scrollbar {
                     height: 4px;
                 }
 
-                /* Track */
                 &::-webkit-scrollbar-track {
                     background: $primary-100;
                 }
 
-                /* Handle */
                 &::-webkit-scrollbar-thumb {
                     background: $primary-200;
                 }
 
-                /* Handle on hover */
                 &::-webkit-scrollbar-thumb:hover {
                     background: $primary-500;
                 }

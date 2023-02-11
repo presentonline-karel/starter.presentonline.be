@@ -21,7 +21,6 @@ const tagFilter = () => {
 
 
 
-    // Onclick of removeTagsButton
     removeTagsButton.addEventListener("click", function() {
 
         // Reset active tags & amount of results

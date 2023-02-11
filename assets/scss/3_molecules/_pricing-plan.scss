@@ -238,7 +238,7 @@
 @media only screen and (min-width: $tablet-portrait) {
     .pricing-plan {
         &-header {
-            min-height: 209px; // !!! Actually only when there's at least one plan with a discount -> Check with PHP and inline styling
+            min-height: 209px; // Actually only when there's at least one plan with a discount -> Check with PHP and inline styling
         }
     }
 }

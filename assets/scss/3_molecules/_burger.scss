@@ -84,7 +84,6 @@
 
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    // Light mode
     .light-mode {
         .nav .burger {
             background-color: $neutrals-100;
@@ -95,7 +94,6 @@
         }
     }
 
-    // Dark mode
     .dark-mode {
         .nav .burger {
             background-color: $neutrals-1000;

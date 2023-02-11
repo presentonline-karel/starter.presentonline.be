@@ -1,0 +1,180 @@
+.languages-container {
+    h4 {
+        color: $neutrals-100;
+        margin-bottom: 12px;
+    }
+
+    .languages {
+        display: flex;
+
+        .language-active {
+            display: none;
+        }
+
+        .language-button {
+            background-color: $neutrals-100;
+            color: $neutrals-800;
+            display: block;
+            font-family: $title-font;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            padding: 8px 12px;
+            text-transform: uppercase;
+
+            &:first-of-type {
+                border-radius: $border-radius-medium 0 0 $border-radius-medium;
+                border-right: 0.4px solid $neutrals-600;
+            }
+
+            &:last-of-type {
+                border-radius: 0 $border-radius-medium $border-radius-medium 0;
+                border-left: 0.4px solid $neutrals-600;
+            }
+
+            &.active {
+                background-color: $primary-100;
+                color: $primary-500;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media screen and (min-width: $desktop-1) {
+    .light-mode {
+        .languages-container {
+            .language-active {
+                background-color: $neutrals-100;
+                border: $border-card-thin;
+                color: $neutrals-1000;
+
+                &:hover {
+                    background-color: $neutrals-300;
+                }
+
+                i {
+                    color: $neutrals-800;
+                }
+            }
+
+            .languages {
+                border: $border-card-thin;
+
+                .language-button {
+                    background-color: $neutrals-100;
+                    color: $neutrals-800;
+                }
+            }
+        }
+    }
+
+    .dark-mode {
+        .languages-container {
+            .language-active {
+                background-color: $dark-mode-grey-bg;
+                border: $border-card-thin-dark-mode;
+                color: $neutrals-200;
+
+                &:hover {
+                    background-color: $neutrals-800;
+                }
+
+                i {
+                    color: $neutrals-400;
+                }
+            }
+
+            .languages {
+                border: $border-card-thin-dark-mode;
+
+                .language-button {
+                    background-color: $neutrals-900;
+                    color: $neutrals-200;
+                }
+            }
+        }
+    }
+
+    .languages-container {
+        .language-active {
+            border-radius: $border-radius-medium;
+            font-family: $title-font;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 14px;
+            padding: 8px;
+            text-transform: uppercase;
+            transition: all $transition-time-short ease-in-out;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.open {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            i {
+                margin-left: 4px;
+                transition: all $transition-time-short ease-in-out;
+            }
+        }
+
+        .languages {
+            border-radius: $border-radius-medium;
+            flex-direction: column;
+            left: 116px;
+            opacity: 0;
+            position: absolute;
+            transition: all $transition-time-short ease-in-out;
+            top: 64px;
+            z-index: 1;
+
+            &.open {
+                opacity: 1;
+                top: 48px;
+            }
+
+            .language-button {
+                transition: all $transition-time-short ease-in-out;
+
+                &:first-of-type {
+                    border-radius: $border-radius-medium $border-radius-medium 0 0;
+                    border-right: none;
+                }
+
+                &:last-of-type {
+                    border-radius: 0 0 $border-radius-medium $border-radius-medium;
+                    border-left: none;
+                }
+
+                &:hover {
+                    background-color: $primary-100;
+                    color: $primary-500;
+                }
+
+                &.active {
+                    background-color: $primary-100;
+                    color: $primary-500;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .languages-container {
+        .languages {
+            left: 141px;
+            top: 52px;
+        }
+    }
+}

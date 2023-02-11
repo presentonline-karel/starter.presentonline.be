@@ -1,10 +1,9 @@
 const tabs = () => {
-    let tabs = document.querySelectorAll(".tab"); // Tabs
-    let tabContentItems = document.querySelectorAll(".tab-content"); // Tab content
-    let contentContainer = document.querySelector(".tab-content-container"); // Tab content container
+    let tabs = document.querySelectorAll(".tab");
+    let tabContentItems = document.querySelectorAll(".tab-content");
+    let contentContainer = document.querySelector(".tab-content-container");
     let helperTabContentItems = document.querySelectorAll(".helper-tab-content"); // Helper tab content -> dynamic height
 
-    //Initialize actions
     tabContentItems[0].classList.add("active");
     tabs[0].classList.add("active");
 

@@ -32,12 +32,10 @@ body {
     overflow-x: hidden !important;
     transition: background-color $transition-time-short ease-in-out;
 
-    // Light mode
     &.light-mode {
         background-color: $neutrals-100;
     }
 
-    // Dark mode
     &.dark-mode {
         background-color: $neutrals-1000;
     }

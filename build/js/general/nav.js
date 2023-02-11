@@ -18,10 +18,7 @@ const navSlide = () => {
             }
         });
 
-        // Disable scroll when menu is open
         document.body.classList.toggle("stop-scrolling");
-
-        // Burger animation
         burger.classList.toggle("toggle");
     });
 
@@ -30,11 +27,7 @@ const navSlide = () => {
     // Remove animation on links to add them again later
     for (i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener("click", () => {
-
-            // Mobile/tablet
             if (window.innerWidth < 1280) {
-                
-                // Disable scroll when menu is open
                 document.body.classList.toggle("stop-scrolling");
             }
         

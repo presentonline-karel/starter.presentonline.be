@@ -86,8 +86,8 @@
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .theme-switch {
-        z-index: 1;
         right: 52px;
+        z-index: 1;
     }
 }
 
@@ -97,15 +97,15 @@
         .theme-switch {
             position: relative;
             right: 0;
-            top: 4px;
+            top: 0px;
             transform: initial;
         }
     }
 
     .theme-switch {
         position: absolute;
-        transform: translate(0%, -50%);
         right: 235px;
+        transform: translate(0%, -50%);
         top: 50%;
     }
 }

@@ -37,7 +37,6 @@ const imageCarousel = () => {
 
 
 
-    // When clicking on next arrow
     nextArrow.addEventListener("click", () => {
         let currentActiveSource = bigImage.src;
 
@@ -58,7 +57,6 @@ const imageCarousel = () => {
         setActiveThumbnail();
     });
 
-    // When clicking on prev arrow
     prevArrow.addEventListener("click", () => {
         let currentActiveSource = bigImage.src;
 

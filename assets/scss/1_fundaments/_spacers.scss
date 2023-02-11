@@ -1,4 +1,4 @@
-/* BORDER-RADIUS */
+// Border settings
 $border-radius-small: 4px;
 $border-radius-medium: 8px;
 $border-radius-lg: 12px;
@@ -7,10 +7,11 @@ $border-radius-xlg: 16px;
 $border-card-thin: 0.4px solid $neutrals-400;
 $border-card-thin-dark-mode: 0.4px solid $neutrals-800;
 
+// Icon margins
 $icon-margin-button: 6px;
 $icon-margin-button-hover: 10px;
 
-/* SCREEN SIZES */
+// Breakpoints
 $tablet-portrait: 768px;
 $tablet-landscape: 1024px;
 

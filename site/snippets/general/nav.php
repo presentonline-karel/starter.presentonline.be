@@ -1,10 +1,21 @@
 <nav class="nav <?php if($page->title() == "Home") { echo("nav-home"); } ?> flex <?php if(isset($extraClass)) { echo($extraClass); } ?>">
-    <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
-        <?php if ($site->logoDark()->isNotEmpty() && $site->logoLight()->isNotEmpty()) : ?>
-            <img class="nav-links__top__logo logoDark" src="<?= $site->logoDark()->toFile()->url() ?>" alt="<?= $site->logoDark()->toFile()->alt() ?>" />
-            <img class="nav-links__top__logo logoLight" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
-        <?php endif; ?>
-    </a>
+    <div class="logo-lang-container">
+        <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
+            <?php if ($site->logoDark()->isNotEmpty() && $site->logoLight()->isNotEmpty()) : ?>
+                <img class="nav-links__top__logo logoDark" src="<?= $site->logoDark()->toFile()->url() ?>" alt="<?= $site->logoDark()->toFile()->alt() ?>" />
+                <img class="nav-links__top__logo logoLight" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
+            <?php endif; ?>
+        </a>
+
+        <!-- Languages -->
+        <div class="languages-container desktop">
+            <button class="language-active">
+                <span class="language-active__code"><?= $kirby->language()->code() ?></span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
+
+            <?php snippet("general/languages") ?>
+        </div>
+    </div>
 
 
 
@@ -16,15 +27,26 @@
             </a>
         <?php endif; ?>
 
-        <?php if ($site->navigationLinks()->isNotEmpty()) : ?>
-            <ul class="link-items">
-                <?php foreach ($site->navigationLinks()->toStructure() as $link) : ?>
-                    <li class="nav__link">
-                        <a class="nav__link__item <?php if ($link->page()->toPage()->isOpen()) { echo ("active"); } ?>" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?></a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
+        <div class="link-lang__flexbox">
+            <?php if ($site->navigationLinks()->isNotEmpty()) : ?>
+                <ul class="link-items">
+                    <?php foreach ($site->navigationLinks()->toStructure() as $link) : ?>
+                        <li class="nav__link">
+                            <a class="nav__link__item <?php if ($link->page()->toPage()->isOpen()) { echo ("active"); } ?>" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+
+            <!-- Languages -->
+            <div class="languages-container">
+                <h4>Taal</h4>
+
+                <?php snippet("general/languages") ?>
+            </div>
+        </div>
+
+
 
         <!-- Primary CTA mobile -->
         <?php if($site->ctaButton()->isNotEmpty()): ?>

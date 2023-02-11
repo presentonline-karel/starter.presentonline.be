@@ -1,16 +1,15 @@
 const formFeedback = () => {
   var submitEvent = null;
 
-  //form
   const form = document.querySelector(".contact-form");
 
-  //inputs
+  // Individual inputs
   const name = document.querySelector(".name");
   const email = document.querySelector(".email");
   const subject = document.querySelector(".subject");
   const message = document.querySelector(".message");
 
-  //all inputs
+  // All inputs
   const inputs = document.querySelectorAll(".input");
 
   form.addEventListener("submit", (e) => {
@@ -24,7 +23,8 @@ const formFeedback = () => {
     message.addEventListener("input", checkInputs);
   });
 
-  // Check inputs on submit
+
+
   function checkInputs() {
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
@@ -62,26 +62,21 @@ const formFeedback = () => {
     }
   }
 
-  // Put error on input
   function setErrorFor(input, message) {
-    const formControl = input.parentElement; //input-group
+    const formControl = input.parentElement;
     const small = formControl.querySelector("small");
 
-    // Change error message of form input
     small.innerText = message;
-
-    // Add error class to form input
     formControl.className = "input-group error";
-
-    // Prevent form from submitting
     submitEvent.preventDefault();
   }
 
-  // Put success on input
   function setSuccessFor(input) {
     const formControl = input.parentElement;
     formControl.className = "input-group success";
   }
+
+
 
   // Check if input user is a valid email
   function isEmail(email) {
