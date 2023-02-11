@@ -1,9 +1,0 @@
-name: heroBigImage
-icon: grid-top
-label: "| {{ herotitle }}"
-fields:
-  heroBigImage:
-    extends: fields/heroBigImage
-    fields:
-      heroHeadline:
-        numbered: false

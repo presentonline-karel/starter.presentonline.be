@@ -1,6 +1,0 @@
-name: Zig-zag
-icon: layers
-label: "| {{ zigzagtitle }}"
-fields:
-  zigzag:
-    extends: fields/zig-zag

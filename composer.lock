@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd19dc3f3e26a87509eb436b893969a9",
+    "content-hash": "aeeac4afa011d3aded79256b34b300f8",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -833,6 +833,42 @@
                 "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
             "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "rasteiner/k3-pagesdisplay-section",
+            "version": "0.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rasteiner/k3-pagesdisplay-section.git",
+                "reference": "7ddc96961043ac2fa7ffa1fea951d2c85c4fa518"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rasteiner/k3-pagesdisplay-section/zipball/7ddc96961043ac2fa7ffa1fea951d2c85c4fa518",
+                "reference": "7ddc96961043ac2fa7ffa1fea951d2c85c4fa518",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^3.7.2",
+                "getkirby/composer-installer": "^1.2"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ISC"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Steiner",
+                    "email": "roman@toastlab.ch"
+                }
+            ],
+            "description": "K3 plugin: display any page list in a section. Any parent, many parents, filtered, don't care.",
+            "support": {
+                "issues": "https://github.com/rasteiner/k3-pagesdisplay-section/issues",
+                "source": "https://github.com/rasteiner/k3-pagesdisplay-section/tree/0.2.4"
+            },
+            "time": "2022-12-15T13:27:55+00:00"
         },
         {
             "name": "rosell-dk/exec-with-fallback",

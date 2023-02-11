@@ -1,6 +1,0 @@
-name: textTwoColumns
-icon: text-justify
-label: "| Text in 2 kolommen"
-fields:
-  textTwoColumnsContent:
-    extends: fields/textTwoColumns

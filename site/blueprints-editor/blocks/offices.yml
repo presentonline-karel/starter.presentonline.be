@@ -1,5 +1,0 @@
-name: Kantoren
-icon: home
-label: "| {{ officestitle }}"
-fields:
-  extends: fields/offices

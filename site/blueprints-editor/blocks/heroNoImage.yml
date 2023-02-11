@@ -1,9 +1,0 @@
-name: Hero no image
-icon: text-center
-label: "| {{ herotitle }}"
-fields:
-  heroNoImage:
-    extends: fields/heroNoImage
-    fields:
-      heroHeadline:
-        numbered: false

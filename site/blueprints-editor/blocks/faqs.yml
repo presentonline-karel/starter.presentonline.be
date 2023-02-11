@@ -1,9 +1,0 @@
-name: Faqs
-icon: question
-label: "| Veelgestelde vragen"
-fields:
-  faqs:
-    extends: fields/faqs
-    fields:
-      faqsHeadline:
-        numbered: false

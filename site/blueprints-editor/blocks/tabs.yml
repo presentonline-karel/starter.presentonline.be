@@ -1,6 +1,0 @@
-name: Tabs
-icon: list-bullet
-label: "| {{ tabstitle }}"
-fields:
-  tabs:
-    extends: fields/tabs

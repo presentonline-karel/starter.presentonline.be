@@ -1,5 +1,0 @@
-name: Double CTA
-icon: divider
-label: "| {{ firstctatitle }}"
-fields:
-  extends: fields/cta-double

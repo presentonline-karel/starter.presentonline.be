@@ -1,6 +1,0 @@
-name: Teamleden in groep
-icon: users
-label: "| {{ teamgroupedtitle }}"
-fields:
-  teams:
-    extends: fields/team-grouped
