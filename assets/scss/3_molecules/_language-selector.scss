@@ -134,7 +134,8 @@
             opacity: 0;
             position: absolute;
             transition: all $transition-time-short ease-in-out;
-            top: 64px;
+            transition: opacity $transition-time-medium ease-in-out;
+            top: -164px;
             z-index: 1;
 
             &.open {
@@ -174,7 +175,10 @@
     .languages-container {
         .languages {
             left: 141px;
-            top: 52px;
+
+            &.open {
+                top: 52px;
+            }
         }
     }
 }

@@ -33,6 +33,17 @@
     }
 }
 
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .pricing-plans-section {
+        .pricing-plans .swiper-wrapper:has(.discount) {
+            .pricing-plan-header {
+                min-height: 209px;
+            }
+        }
+    }
+}
+
 /* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .pricing-plans-section {

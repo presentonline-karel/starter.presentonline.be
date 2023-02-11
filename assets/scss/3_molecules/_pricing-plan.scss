@@ -91,7 +91,7 @@
 .pricing-plan {
     align-items: flex-start;
     border-radius: $border-radius-medium;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 24px;
@@ -237,18 +237,18 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .pricing-plan {
-        &-header {
-            min-height: 209px; // Actually only when there's at least one plan with a discount -> Check with PHP and inline styling
-        }
+        height: 100% !important;
     }
 }
 
 /* DESKTOP - 1280px */
 @media only screen and (min-width: $desktop-1) {
     .pricing-plan {
-        flex: 1 1 0px;
         max-width: 343px;
         width: 100% !important;
+        flex-grow: 1;
+        flex-basis: 0;
+        min-width: 0;
     }
 }
 
