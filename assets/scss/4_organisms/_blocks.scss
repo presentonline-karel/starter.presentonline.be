@@ -85,16 +85,21 @@
     }
 
     > figure {
-        img {
-            aspect-ratio: 3/2;
-            height: auto;
+        picture {
+            border-radius: $border-radius-medium;
             margin-bottom: 32px;
-            max-width: initial;
-            margin-left: -16px;
-            object-fit: cover;
-            position: relative;
-            transition: filter $transition-time-short ease-in-out;
-            width: 100vw;
+
+            img {
+                aspect-ratio: 3/2;
+                border-radius: $border-radius-medium;
+                height: auto;
+                max-width: initial;
+                margin-left: -16px;
+                object-fit: cover;
+                position: relative;
+                transition: filter $transition-time-short ease-in-out;
+                width: 100vw;
+            }
         }
     }
 
@@ -124,8 +129,10 @@
 @media only screen and (min-width: $tablet-portrait) {
     .blocks {
         > figure {
-            img {
-                margin-left: -48px;
+            picture {
+                img {
+                    margin-left: -48px;
+                }
             }
         }
 
@@ -158,12 +165,14 @@
         }
 
         > figure {
-            img {
-                border-radius: $border-radius-medium;
-                margin-left: 0;
-                max-width: 100%;
-                min-height: initial;
-                width: 100%;
+            picture {
+                img {
+                    border-radius: $border-radius-medium;
+                    margin-left: 0;
+                    max-width: 100%;
+                    min-height: initial;
+                    width: 100%;
+                }
             }
         }
 
