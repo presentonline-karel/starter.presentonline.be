@@ -44,7 +44,7 @@
 
                 <hr class="line footer-line">
 
-                <p class="footer__copyright"><span class="copyright">© 2023 Bakery</span> <?php if($site->privacyPolicyPage()->isNotEmpty()) { ?> <a class="privacyPolicy" href="<?= $site->privacyPolicyPage()->toPage()->url() ?>"><?= $site->privacyPolicyAnchor() ?></a> <?php } ?> <span class="starterKit">Website gemaakt met <a href="https://presentonline.be" target="_blank">Present Online Starter Kit</a></span></p>
+                <p class="footer__copyright"><span class="copyright">© <?php echo date("Y"); ?> Bakery</span> <?php if($site->privacyPolicyPage()->isNotEmpty()) { ?> <a class="privacyPolicy" href="<?= $site->privacyPolicyPage()->toPage()->url() ?>"><?= $site->privacyPolicyAnchor() ?></a> <?php } ?> <span class="starterKit"><?php if($kirby->language()->code() == "nl") { ?> Website gemaakt met <?php } elseif($kirby->language()->code() == "fr") { ?> Site web créé avec <?php } elseif($kirby->language()->code() == "en") { ?> Website created with <?php } ?> <a href="https://presentonline.be/nl/starter-kit" target="_blank">Present Online Starter Kit</a></span></p>
             </div>
         </footer>
 

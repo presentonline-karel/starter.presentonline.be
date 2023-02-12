@@ -23,7 +23,7 @@
                                         <?php if($memberImage = $member->memberPicture()->toFile()): ?>
                                             <?php snippet("helpers/image-builder", ["imageFile" => $memberImage, "class" => "member__img"]) ?>
                                         <?php else: ?>
-                                            <img class="member__img" src="../../../assets/img/employee-placeholder.jpg" loading="lazy" />
+                                            <img class="member__img" src="../../../assets/img/employee-placeholder.jpg" alt="<?= $member->memberName() ?>" loading="lazy" />
                                         <?php endif; ?>
 
                                         <div class="member__info">

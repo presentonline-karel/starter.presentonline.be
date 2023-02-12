@@ -54,12 +54,12 @@
 
     <!-- KEEP READING -->
     <?php if($page->relatedArticlesSwitch()->toBool()): ?>
-        <section class="keep-reading-section section fade-section">
-            <div class="keep-reading content-container-s content-container">
-                <h2>Gerelateerde<br> artikels</h2>
+        <?php if ($page->relatedArticles()->isNotEmpty()) : ?>
+            <section class="keep-reading-section section fade-section">
+                <div class="keep-reading content-container-s content-container">
+                    <h2><?php if($kirby->language()->code() == "nl") { ?> Gerelateerde<br> artikels <?php } elseif($kirby->language()->code() == "fr") { ?> Articles<br> connexes <?php } elseif($kirby->language()->code() == "en") { ?> Related<br> articles <?php } ?></h2>
 
-                <!-- Related articles -->
-                <?php if ($page->relatedArticles()->isNotEmpty()) : ?>
+                    <!-- Related articles -->
                     <div class="related-articles">
 
                         <!-- get related articles -->
@@ -92,9 +92,9 @@
                             </article>
                         <?php endforeach; ?>
                     </div>
-                <?php endif; ?>
-            </div>
-        </section>
+                </div>
+            </section>
+        <?php endif; ?>
     <?php endif; ?>
 </div>
 

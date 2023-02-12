@@ -21,13 +21,13 @@
                 <!-- Filter search -->
                 <form class="form form-filter">
                     <input class="input input-filter" placeholder="Search on title...">
-                    <button class="button-primary button-filter">Search <i class="anchor-first no-hover fa fa-search" aria-hidden="true"></i></button>
+                    <button class="button-primary button-filter"><?php if($kirby->language()->code() == "nl") { ?> Zoeken <?php } elseif($kirby->language()->code() == "fr") { ?> Chercher <?php } elseif($kirby->language()->code() == "en") { ?> Search <?php } ?> <i class="anchor-first no-hover fa fa-search" aria-hidden="true"></i></button>
                 </form>
 
                 <!-- Filter tags -->
                 <div class="filter-tags">
                     <div class="filter-tags__remove">
-                        <button class="filter-tags__remove__tag tag">Remove tags</button>
+                        <button class="filter-tags__remove__tag tag"><?php if($kirby->language()->code() == "nl") { ?> Verwijder tags <?php } elseif($kirby->language()->code() == "fr") { ?> Supprimer tags <?php } elseif($kirby->language()->code() == "en") { ?> Remove tags <?php } ?></button>
                     </div>
 
                     <!-- Get articles from content + initialize tags array -->
@@ -117,8 +117,8 @@
 
                                     <!-- button + min-read -->
                                     <div class="article__content__bottom">
-                                        <button class="button-primary">Lees artikel <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
-                                        <span class="min-read"><?= $article->minRead() ?>min read</span>
+                                        <button class="button-primary"><?php if($kirby->language()->code() == "nl") { ?> Lees artikel <?php } elseif($kirby->language()->code() == "fr") { ?> Lire l'article <?php } elseif($kirby->language()->code() == "en") { ?> Read article <?php } ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></button>
+                                        <span class="min-read"><?= $article->minRead() ?>min <?php if($kirby->language()->code() == "nl") { ?> lezen <?php } elseif($kirby->language()->code() == "fr") { ?> lire <?php } elseif($kirby->language()->code() == "en") { ?> read <?php } ?></span>
                                     </div>
                                 </a>
                             </article>

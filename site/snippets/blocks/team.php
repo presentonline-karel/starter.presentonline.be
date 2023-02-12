@@ -15,6 +15,8 @@
                         
                         <?php if($employeeImage = $employee->image()->toFile()): ?>
                             <?php snippet("helpers/image-builder", ["imageFile" => $employeeImage, "class" => "employee__img"]) ?>
+                        <?php else: ?>
+                            <img class="employee__img" src="../../../assets/img/employee-placeholder.jpg" alt="<?= $employee->name() ?>" loading="lazy" />
                         <?php endif; ?>
 
                         <h5><?= $employee->name() ?></h5>
