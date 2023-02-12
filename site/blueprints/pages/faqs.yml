@@ -1,8 +1,8 @@
 title: FAQs
 icon: question
 
-options:
-  changeSlug: false
+# options:
+#   changeSlug: false
 
 tabs:
   content:

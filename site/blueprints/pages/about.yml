@@ -1,8 +1,8 @@
 title: About
 icon: grid-top
 
-options:
-  changeSlug: false
+# options:
+#   changeSlug: false
 
 tabs:
   content:

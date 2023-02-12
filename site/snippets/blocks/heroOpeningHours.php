@@ -43,7 +43,7 @@
         <!-- Openinghours -->
         <?php if ($site->openingHours()->isNotEmpty()) : ?>
             <div class="header-contact__content__hours">
-                <h4>Openingsuren</h4>
+                <h4><?php if($kirby->language()->code() == "nl") { ?> Openingsuren <?php } elseif($kirby->language()->code() == "fr") { ?> Heures d'ouverture <?php } elseif($kirby->language()->code() == "en") { ?> Opening hours <?php } ?></h4>
 
                 <?php foreach ($site->openingHours()->toStructure() as $openinghour) : ?>
                     <div class="header-contact__content__hours__item">

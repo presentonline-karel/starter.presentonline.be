@@ -16,8 +16,6 @@
                 </div>
             </div>
         <?php endforeach; ?>
-
-        <a class="button-primary" href="<?= $site->url() ?>/home">Home <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i></a>
     </div>
 </section>
 

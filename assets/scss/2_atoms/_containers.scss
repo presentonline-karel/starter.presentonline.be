@@ -21,13 +21,13 @@
 @media only screen and (min-width: $desktop-1) {
     .container-thank-you {
         height: auto;
-        min-height: calc(100vh - 390px);
+        min-height: calc(100vh - 388.5px);
     }
 }
 
 /* DESKTOP - 1440px */
 @media only screen and (min-width: $desktop-3) {
     .container {
-        min-height: calc(100vh - 390px);
+        min-height: calc(100vh - 388.5px);
     }
 }
