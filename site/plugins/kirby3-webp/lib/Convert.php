@@ -7,6 +7,8 @@ namespace WebP;
 use Kirby\Cms\App as Kirby;
 use WebPConvert\WebPConvert;
 
+#[\AllowDynamicProperties]
+
 class Convert
 {
     protected $quality;
@@ -18,7 +20,7 @@ class Convert
     public function __construct()
     {
         $this->quality = kirby()->option('kirby3-webp.quality', 50);
-        //$this->maxQuality = kirby()->option('kirby3-webp.maxQuality', 50);
+        $this->maxQuality = kirby()->option('kirby3-webp.maxQuality', 50);
         $this->defaultQuality = kirby()->option('kirby3-webp.defaultQuality', 50);
         $this->metadata = kirby()->option('kirby3-webp.metadata', "none");
         $this->encoding = kirby()->option('kirby3-webp.encoding', "auto");
@@ -38,7 +40,7 @@ class Convert
                 // Generating WebP image & placing it alongside the original version
                 WebPConvert::convert($input, $output, $option = [
                     'quality' => $this->quality,
-                    //'max-quality' => $this->maxQuality,
+                    'max-quality' => $this->maxQuality,
                     'default-quality' => $this->defaultQuality,
                     'metadata' => $this->metadata,
                     'encoding' => $this->encoding,
