@@ -41,6 +41,8 @@ fields:
     options:
       internal: Interne webpagina
       external: Externe webpagina
+      call: Bellen
+      email: Mailen
   internalPage:
     label: Interne webpagina
     type: pages
@@ -62,3 +64,17 @@ fields:
     required: true
     when:
       destination: external
+  callInfo:
+    label: Info bij Bellen knop
+    type: info
+    when:
+      destination: call
+    text: |
+      Deze knop zal nu een directe link zijn om je te bellen. Je telefoonnummer wordt automatisch ingevuld vanuit de contact tab (check even of dit ingevuld is).
+  emailInfo:
+    label: Info bij Mailen knop
+    type: info
+    when:
+      destination: email
+    text: |
+      Deze knop zal nu een directe link zijn om je een mail te sturen. Je email wordt automatisch ingevuld vanuit de contact tab (check even of dit ingevuld is).

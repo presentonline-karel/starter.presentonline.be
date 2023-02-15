@@ -16,11 +16,11 @@ fields:
   line-z:
     type: line
   heroImageInfo:
-    label: Info bij hero foto
+    label: Info
     type: info
     width: 1/2
     text: |
-      Kies een foto met aspect ration 2/3 voor de beste weergave.
+      Kies een foto met aspect ratio 2/3 en de focus in het midden voor de beste weergave.
   heroImage:
     label: Hero foto
     type: files

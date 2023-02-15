@@ -2,8 +2,12 @@
 
     href="<?php if ($button->destination() == "internal") {
         echo ($button->internalPage()->toPage()->url() . $button->idPage());
-    } else {
+    } elseif ($button->destination() == "external") {
         echo ($button->externalUrl());
+    } elseif ($button->destination() == "call") {
+        echo ("tel:" . $site->telephone());
+    } elseif ($button->destination() == "email") {
+        echo ("mailto:" . $site->email());
     } ?>"
     
     <?php if ($button->destination() == "external") {

@@ -81,6 +81,7 @@ tabs:
             layout: cardlets
             image:
               cover: true
+              query: page.headerImage.toFile()
           unlisted:
             headline: Artikelen toegangkelijk via URL
             type: pages

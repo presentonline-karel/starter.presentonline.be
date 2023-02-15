@@ -20,7 +20,7 @@ fields:
   line-z:
     type: line
   heroImageInfo:
-    label: Info bij de hero foto
+    label: Info
     type: info
     width: 1/2
     text: |

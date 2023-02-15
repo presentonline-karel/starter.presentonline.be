@@ -243,7 +243,7 @@ tabs:
             type: structure
             fields:
               anchor:
-                label: Link text
+                label: Link tekst
                 type: text
                 required: true
               page:
@@ -253,7 +253,7 @@ tabs:
                 max: 1
                 image: icon
               section:
-                label: Sectie op pagina
+                label: (Sectie op pagina)
                 type: text
           line-g:
             type: line

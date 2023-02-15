@@ -33,10 +33,10 @@ tabs:
             type: info
             text: |
               Beste klant,
-              Op dit moment is het nog niet mogelijk om uw prijzen zelf in te stellen. Gelieve mij hiervoor te contacteren via **info@presentonline.be**
-              
-              Indien mogelijk kan u mij ook ineens een duidelijke tabel opsturen. Dan stel ik deze prijzen zelf even voor u in.
-              Karel Decoene
+
+              Op dit moment is het nog niet mogelijk om uw prijzen zelf in te stellen. Stuur me gerust een duidelijke tabel/document met een overzicht van de prijzen & dan voeg ik deze asap toe aan deze pagina.
+
+              **-> info@presentonline.be**
           line-b:
             type: line
           
@@ -46,6 +46,9 @@ tabs:
             label: Info bij de prijzen
             type: headline
             numbered: true
+            width: 1/2
+          infoPricesSwitch:
+            extends: fields/display-switch
           infoPricesTitle:
             label: Title
             type: text
@@ -60,9 +63,9 @@ tabs:
           extraInfoHeadline:
             label: Extra info
             type: headline
-            numbered: true
+            numbered: false
           extraInfo:
-            label: Nog extra info
+            label: Extra info
             extends: fields/blocks-default
 
 

@@ -247,29 +247,31 @@
 
 
         <!-- INFO SECTION -->
-        <section id="pricing-info" class="info">
-            <div class="content-container">
-                <div class="box">
-                    <div class="box__header flex">
-                        <div class="icon-container">
-                            <i class="fa fa-info" aria-hidden="true"></i>
+        <?php if($page->infoPricesSwitch()->toBool()): ?>
+            <section id="pricing-info" class="info">
+                <div class="content-container">
+                    <div class="box">
+                        <div class="box__header flex">
+                            <div class="icon-container">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                            </div>
+
+                            <h3><?= $page->infoPricesTitle() ?></h3>
                         </div>
 
-                        <h3><?= $page->infoPricesTitle() ?></h3>
+                        <div class="blocks">
+                            <?= $page->infoPricesBlocks()->toBlocks() ?>
+                        </div>
                     </div>
 
-                    <div class="blocks">
-                        <?= $page->infoPricesBlocks()->toBlocks() ?>
+                    <div class="info-sections">
+                        <div class="blocks">
+                            <?= $page->extraInfo()->toBlocks() ?>
+                        </div>
                     </div>
                 </div>
-
-                <div class="info-sections">
-                    <div class="blocks">
-                        <?= $page->extraInfo()->toBlocks() ?>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
     </main>
 </div>
 

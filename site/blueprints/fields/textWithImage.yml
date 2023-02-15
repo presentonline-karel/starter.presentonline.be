@@ -19,7 +19,7 @@ fields:
     type: info
     width: 1/2
     text: |
-      Best een foto nemen met aspect ratio 2/3 voor de beste weergave.
+      Kies een foto met aspect ratio 2/3 en de focus in het midden voor de beste weergave.
   contentImage:
     label: Content foto
     type: files
