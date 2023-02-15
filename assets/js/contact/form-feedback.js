@@ -23,40 +23,70 @@ const formFeedback = () => {
     message.addEventListener("input", checkInputs);
   });
 
-
-
   function checkInputs() {
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
     const subjectValue = subject.value.trim();
     const messageValue = message.value.trim();
 
+    var langCode = document.documentElement.lang;
+
     //name
     if (nameValue === "") {
-      setErrorFor(name, "Vul uw naam in.");
+      if (langCode == "nl") {
+        setErrorFor(name, "Vul uw naam in.");
+      } else if (langCode == "en") {
+        setErrorFor(name, "Please enter your name.");
+      } else if (langCode == "fr") {
+        setErrorFor(name, "Entrez votre nom.");
+      }
     } else {
       setSuccessFor(name);
     }
 
     //email
     if (emailValue === "") {
-      setErrorFor(email, "Vul uw e-mail in.");
+      if (langCode == "nl") {
+        setErrorFor(email, "Vul uw e-mail in.");
+      } else if (langCode == "en") {
+        setErrorFor(email, "Please enter your email.");
+      } else if (langCode == "fr") {
+        setErrorFor(email, "Entrez votre e-mail.");
+      }
     } else if (!isEmail(emailValue)) {
-      setErrorFor(email, "Vul een geldig e-mailadres in.");
+      if (langCode == "nl") {
+        setErrorFor(email, "Vul een geldig e-mailadres in.");
+      } else if (langCode == "en") {
+        setErrorFor(email, "That is an invalid e-mail address.");
+      } else if (langCode == "fr") {
+        setErrorFor(email, "Entrez une adresse e-mail valide.");
+      }
     } else {
       setSuccessFor(email);
     }
 
     //subject
     if (subjectValue === "") {
-      setErrorFor(subject, "Vul een onderwerp in.");
+      if (langCode == "nl") {
+        setErrorFor(subject, "Vul een onderwerp in.");
+      } else if (langCode == "en") {
+        setErrorFor(subject, "Please enter a subject.");
+      } else if (langCode == "fr") {
+        setErrorFor(subject, "Entrez un sujet.");
+      }
     } else {
       setSuccessFor(subject);
     }
 
     //message
     if (messageValue === "") {
-      setErrorFor(message, "Vul een boodschap in.");
+      if (langCode == "nl") {
+        setErrorFor(message, "Vul een boodschap in.");
+      } else if (langCode == "en") {
+        setErrorFor(message, "Please enter a message.");
+      } else if (langCode == "fr") {
+        setErrorFor(message, "Entrez un message.");
+      }
     } else {
       setSuccessFor(message);
     }
@@ -75,8 +105,6 @@ const formFeedback = () => {
     const formControl = input.parentElement;
     formControl.className = "input-group success";
   }
-
-
 
   // Check if input user is a valid email
   function isEmail(email) {
