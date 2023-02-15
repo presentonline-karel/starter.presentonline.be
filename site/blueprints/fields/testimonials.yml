@@ -28,6 +28,7 @@ fields:
         label: Foto klant
         type: files
         max: 1
+        query: page.images.filterBy('extension', 'webp')
         image:
           cover: true
       name:

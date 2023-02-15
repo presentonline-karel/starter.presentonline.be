@@ -10,7 +10,7 @@ fields:
     label: Info bij gecentreerde blokken
     type: info
     text: |
-      Here comes an explanation what type of content you should place here. Also a link to a page + id where this block is used.
+      Hier kan je titels, paragrafen, foto's en meer onder elkaar plaatsen. Deze blok heeft een layout gelijkaardig aan een artikel.
   textContent:
     label: Gecentreerde blokken
     extends: fields/blocks-default

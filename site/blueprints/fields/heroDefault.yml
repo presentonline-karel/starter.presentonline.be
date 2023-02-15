@@ -29,5 +29,6 @@ fields:
     empty: Er is geen hero foto geselecteerd.
     required: true
     width: 1/2
+    query: page.images.filterBy('extension', 'webp')
     image:
       cover: true

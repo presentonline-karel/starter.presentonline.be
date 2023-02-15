@@ -29,6 +29,7 @@ fields:
         type: files
         max: 1
         required: true
+        query: page.images.filterBy('extension', 'webp')
       name:
         label: Naam
         type: text

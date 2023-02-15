@@ -14,6 +14,8 @@ if ($block->location() == 'web') {
 } elseif ($image = $block->image()->toFile()) {
     $alt = $alt ?? $image->alt();
     $src = $image->url();
+    $extension = $image->extension();
+    $imageFileNameWithoutExtension = substr($image->filename(), 0, strrpos($image->filename(), "."));
 }
 ?>
 
@@ -27,16 +29,37 @@ if ($block->location() == 'web') {
 
                 <?php else : ?>
                     <?php
-                    $imageBlockFileName = $block->image()->toFile()->filename();
-                    $imageBlockWebpFileName = substr($imageBlockFileName, 0, strrpos($imageBlockFileName, ".")) . ".webp";
-                    $imageWebpFile = $page->image($imageBlockWebpFileName);
+
+                    // Choosen image is jpg/png/jpeg -> use that one as default
+                    if($extension === "jpg" || $extension === "jpeg" || $extension === "png") {
+
+                        //set jpg file
+                        $imageJpegFile = $block->image()->toFile();
+
+                        //set webp file
+                        $imageBlockFileName = $block->image()->toFile()->filename();
+                        $imageBlockWebpFileName = substr($imageBlockFileName, 0, strrpos($imageBlockFileName, ".")) . ".webp";
+                        $imageWebpFile = $page->image($imageBlockWebpFileName);
+                    }
+                    
+                    // Choosen image is webp/... -> look for jpg/png/jpeg version as default
+                    else {
+
+                        //set jpg file
+                        $imagesWithThisFileName = $page->files()->filterBy('filename', '*=', $imageFileNameWithoutExtension);
+                        $imageJpegFile = $imagesWithThisFileName->first();
+
+                        //set webp file
+                        $imageWebpFile = $block->image()->toFile();
+                    }
                     ?>
 
                     <picture>
                         <source srcSet="<?= $imageWebpFile->url() ?>" type="image/webp" />
-                        <source srcSet="<?= $src ?>" type="image/jpg" />
-                        <img src="<?= $src ?>" alt="<?= $alt->esc() ?>" loading="lazy" />
+                        <source srcSet="<?= $imageJpegFile->url() ?>" type="image/jpg" />
+                        <img src="<?= $imageJpegFile->url() ?>" alt="<?= $imageJpegFile->alt() ?>" loading="lazy" />
                     </picture>
+
                 <?php endif; ?>
             </a>
 
@@ -47,16 +70,37 @@ if ($block->location() == 'web') {
 
             <?php else : ?>
                 <?php
-                $imageBlockFileName = $block->image()->toFile()->filename();
-                $imageBlockWebpFileName = substr($imageBlockFileName, 0, strrpos($imageBlockFileName, ".")) . ".webp";
-                $imageWebpFile = $page->image($imageBlockWebpFileName);
+
+                // Choosen image is jpg/png/jpeg -> use that one as default
+                if($extension === "jpg" || $extension === "jpeg" || $extension === "png") {
+
+                    //set jpg file
+                    $imageJpegFile = $block->image()->toFile();
+
+                    //set webp file
+                    $imageBlockFileName = $block->image()->toFile()->filename();
+                    $imageBlockWebpFileName = substr($imageBlockFileName, 0, strrpos($imageBlockFileName, ".")) . ".webp";
+                    $imageWebpFile = $page->image($imageBlockWebpFileName);
+                }
+                
+                // Choosen image is webp/... -> look for jpg/png/jpeg version as default
+                else {
+
+                    //set jpg file
+                    $imagesWithThisFileName = $page->files()->filterBy('filename', '*=', $imageFileNameWithoutExtension);
+                    $imageJpegFile = $imagesWithThisFileName->first();
+
+                    //set webp file
+                    $imageWebpFile = $block->image()->toFile();
+                }
                 ?>
 
                 <picture>
                     <source srcSet="<?= $imageWebpFile->url() ?>" type="image/webp" />
-                    <source srcSet="<?= $src ?>" type="image/jpg" />
-                    <img src="<?= $src ?>" alt="<?= $alt->esc() ?>" loading="lazy" />
+                    <source srcSet="<?= $imageJpegFile->url() ?>" type="image/jpg" />
+                    <img src="<?= $imageJpegFile->url() ?>" alt="<?= $imageJpegFile->alt() ?>" loading="lazy" />
                 </picture>
+
             <?php endif; ?>
         <?php endif ?>
 

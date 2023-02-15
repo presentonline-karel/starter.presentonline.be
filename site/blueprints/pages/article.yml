@@ -86,6 +86,7 @@ tabs:
             type: files
             layout: cards
             max: 1
+            query: page.images.filterBy('extension', 'webp')
             image:
               cover: true
 
