@@ -104,6 +104,7 @@ tabs:
             max: 1
             layout: cards
             width: 1/2
+            query: page.images.filterBy("extension", "in", ["jpg", "jpeg", "png", "svg"])
             image:
               back: white
           logoLight:
@@ -113,6 +114,7 @@ tabs:
             layout: cards
             back: black
             width: 1/2
+            query: page.images.filterBy("extension", "in", ["jpg", "jpeg", "png", "svg"])
             image:
               back: black
 

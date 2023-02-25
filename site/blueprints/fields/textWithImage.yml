@@ -28,6 +28,6 @@ fields:
     empty: Er is geen content foto geselecteerd.
     required: true
     width: 1/2
-    query: page.images.filterBy('extension', 'webp')
+    query: page.images.filterBy("extension", "in", ["jpg", "jpeg", "png", "svg"])
     image:
       cover: true

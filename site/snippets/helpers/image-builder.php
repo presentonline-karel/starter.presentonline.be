@@ -23,7 +23,7 @@
         isset($article) ? $imageWebpFile = $article->image($imageWebpFileName) : $imageWebpFile = $page->image($imageWebpFileName);
     }
 
-    // Choosen image is webp/... -> look for jpg/png/jpeg version as default
+    // Choosen image is webp/... -> look for jpg/png/jpeg version as default -> [Atm user should only be able to select jpg / jpeg / svg / png]
     else {
 
         //set jpg file
